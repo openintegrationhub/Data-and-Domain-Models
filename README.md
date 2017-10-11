@@ -1,2 +1,2 @@
-# Laboratory
-In this repo we collect findings from our laboratory.
+# Committee - core members
+![Committee of Innovation](CoI.png)
