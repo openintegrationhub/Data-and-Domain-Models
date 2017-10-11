@@ -10,6 +10,6 @@
 
 Join our meeting with a computer, tablet or smartphone https://global.gotomeeting.com/join/532522405 
 
-and even with your phone +49 692 5736 7317 
+and even with a classic phone +49 692 5736 7317 
 
 **Access code:** 532-522-405 
