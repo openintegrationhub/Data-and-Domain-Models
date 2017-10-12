@@ -3,7 +3,13 @@
 
 ![Committee of Innovation](images/CoI.png)
 
-# Fridays stand-ups at 9 am
+# Decision making process
+
+![Decision making](images/decisionMaking.png)
+
+[Official agreements](https://github.com/openintegrationhub/innovation/wiki/Agreements)
+
+# Fridays stand-up at 9 am
 1. Your **Results**
 2. Your **Goals**
 3. Your **Obstacles**
