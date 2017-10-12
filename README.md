@@ -5,7 +5,7 @@
 
 # Decision making process
 
-![Decision making](images/decisionMaking.png)
+![Decision making](images/decisionMaking.svg)
 
 [Official agreements](https://github.com/openintegrationhub/innovation/wiki/Agreements)
 
