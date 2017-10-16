@@ -1,4 +1,5 @@
-
+# Person
+```
 type Person {
   id: ID! @isUnique
   firstName: [String!]
@@ -9,7 +10,9 @@ type Person {
   address: Address @relation(name: "AddressOnPerson")
   company: Company @relation(name: "CompanyOnPerson")
 }
-
+```
+# Channel
+```
 type Channel {
   id: ID! @isUnique
   email: [String!]
@@ -20,7 +23,9 @@ type Channel {
   company: Company @relation(name: "CompanyOnChannel")
   person: Person @relation(name: "PersonOnChannel")
 }
-
+```
+# Address
+```
 type Address {
   id: ID! @isUnique
   street: String
@@ -30,7 +35,9 @@ type Address {
   companies: [Company!]! @relation(name: "AddressOnCompany")
   persons: [Person!]! @relation(name: "AddressOnPerson")
 }
-
+```
+# Company
+```
 type Company {
   id: ID! @isUnique
   name: String!
@@ -38,3 +45,4 @@ type Company {
   channel: Channel @relation(name: "CompanyOnChannel")
   persons: [Person!]! @relation(name: "CompanyOnPerson")
 }
+```
