@@ -11,7 +11,4 @@
 - Add **Sub-task** to inform others about its progress
 - Define **Acceptance criteria** derived from the user story
 
-- Track **decisions** by referring issues and votes against
-- Refer **dependencies** to the item
-
 ### If this 'item' fulfill the DoD, you can move it into the 'Backlog' lane.
