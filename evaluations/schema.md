@@ -2,17 +2,17 @@
 
 The GraphQL schema definition language provides a sustainable starting point, to describe flexible data models for the open integration hub runtime.
 
-**With this language we can explicitly describe:**
-* the data objects
+### In this language we can explicitly describe:
+* the data model (object)
   * with types
   * and its fields;
 * a type of each field
   * and if it is non- or nullable,
   * or even an array;
-* the relations between the data objects
+* the relations between the data models (objects)
   * by defining their directionality.
 
-**Then, we can easily continue with:**
+### Then, we can easily continue with:
 * developing up to one resolver (function) per field, to route:
   * any protocol,
   * any database,
@@ -20,7 +20,7 @@ The GraphQL schema definition language provides a sustainable starting point, to
   * any legacy system or API,
   * in any programming language.
 
-**The GraphQL specification:**
+### The GraphQL specification:
 * is infrastructure agnostic,
 * foster an iterative design process,
 * uses a tight and simple notation,
@@ -31,14 +31,14 @@ The GraphQL schema definition language provides a sustainable starting point, to
 
 [GraphQL cheat sheet](sources/graphql-shorthand-notation-cheat-sheet.pdf)
 
-# Schema - Customer Data
+## Schema - Customer Data (example)
 ```
 enum GENDER {
   female: String!
   male: String!
 }
 
-  # Define the data object - Person:
+  # Define the object model - Person:
   # define its fields - non- or nullable (array),
   # reference its enums - defined at the top,
   # set its relations - incl. directionality.
@@ -90,6 +90,25 @@ type Company {
   address: Address @relation(name: "AddressOnCompany")
   channel: Channel @relation(name: "CompanyOnChannel")
   persons: [Person!]! @relation(name: "CompanyOnPerson")
+}
+```
+## Schema - Product Data (draft)
+```
+type Materials {
+  id: ID!
+  type: String
+  weight: Float
+  unit: String
+  dimensionX: Float
+  dimensionY: Float
+  dimensionZ: Float
+}
+
+type Goods {
+  id: ID!
+  maker: String
+  size: String
+  color: String
 }
 ```
 # Sources
