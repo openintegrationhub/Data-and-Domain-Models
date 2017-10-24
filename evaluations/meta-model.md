@@ -30,7 +30,7 @@ As of now, there are two important contemporary forms in which structured data i
 Both should - sooner or later - be applicable by the OIH at least at its outer boundaries. When it comes to the internals of the OIH, espacially the data hub, it is essential to decide for one of those alternatives, as the OIH will provide automatisms like conflict management, and the focus on one alternative will reduce implemenation efforts and risk.
 
 Proposal: JSON!
-<!--TODO: argumentation...--
+<!--TODO: argumentation...-->
 
 ## JSON-Schema vs. GraphQL
 
