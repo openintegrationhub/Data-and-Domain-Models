@@ -24,9 +24,10 @@ The GraphQL schema definition language provides a sustainable starting point, to
 * is infrastructure agnostic,
 * foster an iterative design process,
 * uses a tight and simple notation,
-* provides only one API endpoint
+* provides one unified API endpoint
   * which is seamlessly extensible
   * where clients define custom payloads,
+  * which they discover at their finger tips,
 * and is machine readable from ground up.
 
 [GraphQL cheat sheet](sources/graphql-shorthand-notation-cheat-sheet.pdf)
@@ -34,8 +35,8 @@ The GraphQL schema definition language provides a sustainable starting point, to
 ## Schema - Customer Data (example)
 ```
 enum GENDER {
-  female: String!
-  male: String!
+  FEMALE
+  MALE
 }
 
   # Define the object model - Person:
@@ -94,21 +95,33 @@ type Company {
 ```
 ## Schema - Product Data (draft)
 ```
-type Materials {
+enum UNIT {
+  MEETER
+  FOOT
+}
+
+type RawMaterials {
   id: ID!
   type: String
   weight: Float
-  unit: String
+  unit: UNIT!
   dimensionX: Float
   dimensionY: Float
   dimensionZ: Float
 }
 
-type Goods {
+type PhysicalGoods {
   id: ID!
   maker: String
   size: String
   color: String
+}
+
+type DigitalGoods {
+  id: ID!
+  maker: String
+  drm: String
+  bytes: Float
 }
 ```
 # Sources
