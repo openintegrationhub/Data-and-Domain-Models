@@ -3,7 +3,7 @@
 This document describes the evaluation of the master data model for address data
 within in the Open Integration Hub.
 
-***What is a Master Data Model?**
+***What is a Master Data Model?***
 
 A master data model is a an abstract schema that organizes elements of data.
 With this model the data can used and kept synchronized across applications.
