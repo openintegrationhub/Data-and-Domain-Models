@@ -16,7 +16,7 @@ between applications of different domains can be matched and the master data of
 all the applications can be mapped to the database schema.
 - The model is generic and it can be extended on the application level.
 
-# Requirements for a Master Data Model
+# 1. Requirements for a Master Data Model
 
 In this specific field of investigation, the master data model for addresses
 describes a generic standard of customer data for the management of addresses
@@ -86,7 +86,7 @@ Transfer this from the old Document
 
 Transfer this from the old document
 
-# Findings
+# 2. Findings
 
 **Types and Relations**
 
@@ -118,6 +118,6 @@ To deal with privacy issues you have to consider...
 
 To deal with rights management you have to consider...
 
-# Conclusion
+# 3. Conclusion
 
 **Documentation of the final Master Data Model of Addresses** 
