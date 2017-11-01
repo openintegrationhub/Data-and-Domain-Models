@@ -18,7 +18,7 @@ all the applications can be mapped to the database schema.
 
 ## 1. Approach
 
-![Approach Modeling](images/masterdatamodel-procedure.png)
+![Approach Modeling](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/masterdatamodel-procedure.png)
 
 ## 2. Requirements for a Master Data Model
 
