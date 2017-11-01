@@ -142,6 +142,13 @@ There a different types of organizations, e. g. companies, associations, groups,
 and different types of persons, e.g. contact persons in companies,
 private contacts.
 
+
+
+![Type of addresses](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/use-case-relationship-person-organisation.png)
+
+
+
+
 **Common Fields**
 
 A typical address contains the following fields:
@@ -152,7 +159,7 @@ Organizations
 Persons
 ...
 
-![Typing of addresses](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/typing-of-addresses)
+![Typing of addresses](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/typing-of-addresses.png)
 
 **Privacy**
 
