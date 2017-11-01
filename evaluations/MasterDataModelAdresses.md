@@ -119,6 +119,8 @@ Transfer this from the old document
 
 #### 3.2.3 Rights managment
 
+#### 3.2.4 Data integrity
+
 ### 3.3 Legal requirements
 
 #### 3.3.1 Data protection
@@ -134,6 +136,9 @@ There are two types of addresses:
 - Organizations
 - Persons
 
+
+
+
 ![Type of addresses](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/types-of-addresses.png)
 
 => Extend this with the data model from Snazzy Contacts
@@ -144,7 +149,8 @@ private contacts.
 
 
 
-![Type of addresses](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/use-case-relationship-person-organisation.png)
+
+![Relationship person organisation](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/use-case-relationship-person-organisation.png)
 
 
 
@@ -159,7 +165,20 @@ Organizations
 Persons
 ...
 
+
+
+
 ![Typing of addresses](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/typing-of-addresses.png)
+
+
+
+
+
+
+![Relations of organisations](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/relations-of-organisations.png)
+
+
+
 
 **Privacy**
 
