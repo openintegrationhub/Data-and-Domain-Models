@@ -149,6 +149,13 @@ private contacts.
 
 
 
+![Typing of addresses](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/typing-of-addresses.png)
+
+
+
+
+
+
 
 ![Relationship person organisation](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/use-case-relationship-person-organisation.png)
 
@@ -168,7 +175,7 @@ Persons
 
 
 
-![Typing of addresses](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/typing-of-addresses.png)
+
 
 
 
@@ -177,7 +184,7 @@ Persons
 
 ![Relations of organisations](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/relations-of-organisations.png)
 
-   
+
 
 ![Relations of organisations](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/relations-among-persons.png)          
 
