@@ -96,7 +96,8 @@ User story: As a User I want to manage employee data of my organization to handl
 
 ##### Use case relations person to organization
 
-User story: As a user I want to assign one a more persons to an organisation to communicate with all contacts of an organisation
+| User story: | As a user I want to assign one a more persons to an organisation to communicate with all contacts of an organisation |
+| :--- | :--- |
 
 User story: As a user I want to assign a person to different organisations with different contact data to see different roles of the same person.
 
