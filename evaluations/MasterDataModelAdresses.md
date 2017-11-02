@@ -104,14 +104,14 @@ User story: As a user I want to assign a person to different organisations with 
 
 Label        | USE CASE - Person to Organization Relations
 ------------ | -------------
-Actor: | User
+**Actor:** | User
 Summary: | Describes the relation between organizations and persons.
 Trigger: | A user wants to assign persons to organizations.
 Preconditions: | nd
 Main Success Scenario: | Assignment took place
 Failure Scenario: | Assignment not possible
 Basic Workflow: | 1 Define person 2 Define organization 3 Assign person to organization relation
-Alternative Workflow | 
+Alternative Workflow |
 
 ##### Use case relations organization to others
 
