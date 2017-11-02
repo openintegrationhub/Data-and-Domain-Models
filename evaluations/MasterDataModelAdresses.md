@@ -100,21 +100,17 @@ User story: As a user I want to assign one a more persons to an organisation to 
 
 User story: As a user I want to assign a person to different organisations with different contact data to see different roles of the same person.
 
-## USE CASE - Person to Organization Relations
 
 
-Actor:       | User
+Label        | USE CASE - Person to Organization Relations
 ------------ | -------------
+Actor: | User
 Summary: | Describes the relation between organizations and persons.
 Trigger: | A user wants to assign persons to organizations.
 Preconditions: | nd
 Main Success Scenario: | Assignment took place
 Failure Scenario: | Assignment not possible
-
-### Basic Workflow
-1 Define person
-2 Define organization
-3 Assign person to organization relation
+Basic Workflow: | 1 Define person 2 Define organization 3 Assign person to organization relation
 
 ### Alternative Workflow
 
