@@ -1,3 +1,5 @@
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
 # Master Data Model Addresses
 
 This document describes the evaluation of the master data model for address data
