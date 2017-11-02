@@ -53,3 +53,9 @@ The master data model will grow with each application (specific data model) that
 * _Syntactic transformation_
 * _Semantic transformation_
 * _Object transformation - merge/split entities_
+
+## _Possible scenarios_
+* _Initial migration scenario - clone reference implementation_
+  * _append business apps_
+  * _removed business apps_
+* _Migrate into running business scenario / market place_
