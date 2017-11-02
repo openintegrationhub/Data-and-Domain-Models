@@ -1,6 +1,12 @@
+# Master Data Model Addresses
+
+
+## Table of content
+
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Master Data Model Addresses](#master-data-model-addresses)
+	- [Table of content](#table-of-content)
 	- [1. What is a Master Data Model?](#1-what-is-a-master-data-model)
 	- [2. Approach](#2-approach)
 	- [3. Requirements for a Master Data Model](#3-requirements-for-a-master-data-model)
@@ -22,7 +28,6 @@
 
 <!-- /TOC -->
 
-# Master Data Model Addresses
 
 This document describes the evaluation of the master data model for address data
 within in the Open Integration Hub.
