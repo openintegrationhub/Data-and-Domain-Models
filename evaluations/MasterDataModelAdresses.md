@@ -102,8 +102,9 @@ User story: As a user I want to assign a person to different organisations with 
 
 
 
-Label        | USE CASE - Person to Organization Relations
+
 ------------ | -------------
+Label        | USE CASE - Person to Organization Relations
 **Actor:** | User
 Summary: | Describes the relation between organizations and persons.
 Trigger: | A user wants to assign persons to organizations.
