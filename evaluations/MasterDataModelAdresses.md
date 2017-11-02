@@ -15,14 +15,14 @@
 			- [3.2.1 Topic 'Types of Objects'](#321-topic-types-of-objects)
 				- [Use case properties of organization](#use-case-properties-of-organization)
 				- [Use case properties of persons](#use-case-properties-of-persons)
-			- [3.2.2 Topic Relations](#322-topic-relations)
+			- [3.2.2 'Topic Relations'](#322-topic-relations)
 				- [Use case relations person to organization](#use-case-relations-person-to-organization)
 				- [Use case relations organization to others](#use-case-relations-organization-to-others)
-			- [3.2.3 Rights managment](#323-rights-managment)
-			- [3.2.4 Data integrity](#324-data-integrity)
+			- [3.2.3 Topic 'Rights managment'](#323-topic-rights-managment)
+			- [3.2.4 Topic 'Data integrity'](#324-topic-data-integrity)
 		- [3.3 Legal requirements](#33-legal-requirements)
-			- [3.3.1 Data protection](#331-data-protection)
-			- [3.3.2 Data sovereignty](#332-data-sovereignty)
+			- [3.3.1 Topic 'Data protection'](#331-topic-data-protection)
+			- [3.3.2 Topic 'Data sovereignty'](#332-topic-data-sovereignty)
 	- [4. Findings](#4-findings)
 	- [4. Results](#4-results)
 
@@ -121,7 +121,7 @@ User story: As a User I want to manage employee data of my organization to handl
 
 ...
 
-#### 3.2.2 Topic Relations
+#### 3.2.2 'Topic Relations'
 
 ##### Use case relations person to organization
 
@@ -177,15 +177,15 @@ Transfer this from the old document
 
 ...
 
-#### 3.2.3 Rights managment
+#### 3.2.3 Topic 'Rights managment'
 
-#### 3.2.4 Data integrity
+#### 3.2.4 Topic 'Data integrity'
 
 ### 3.3 Legal requirements
 
-#### 3.3.1 Data protection
+#### 3.3.1 Topic 'Data protection'
 
-#### 3.3.2 Data sovereignty
+#### 3.3.2 Topic 'Data sovereignty'
 
 
 ## 4. Findings
