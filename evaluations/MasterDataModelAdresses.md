@@ -111,8 +111,7 @@ Preconditions: | nd
 Main Success Scenario: | Assignment took place
 Failure Scenario: | Assignment not possible
 Basic Workflow: | 1 Define person 2 Define organization 3 Assign person to organization relation
-
-### Alternative Workflow
+Alternative Workflow | 
 
 ##### Use case relations organization to others
 
