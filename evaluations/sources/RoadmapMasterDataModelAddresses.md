@@ -6,7 +6,7 @@ The master data model will grow with each application (specific data model) that
 > The following steps describe a hands on approach which results in a master data model - at least the addresses part. Some statements need to be refined due to meetings with domain experts. _Some steps might be skipped in order to result in a master data model._
 
 ## Identify generic address fields
-* Setup a test case where at least two data models (applications) become synced - synchronously
+* Setup a test case where at least two data models (applications) become synced - **synchronously**
   * Build your app component for the individual field mapping at elastic.io
     * [Snazzy] -> [component]
     * [SilverERP] -> [component]
@@ -34,8 +34,7 @@ The master data model will grow with each application (specific data model) that
 
   **To be discussed**
   * Where will the master data model be hosted?
-  * Where is the transformation model be located at?
-  * _Is data cleansing a part of the transformation process?_
+  * Where is the transformation- and the metadata model be located at?
 
 ## Validate the master data model due to a more complex scenario
 * Extend the master data model by adding new apps (data models) into the test scenario
