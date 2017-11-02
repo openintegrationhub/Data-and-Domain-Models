@@ -34,11 +34,12 @@ The master data model will grow with each application (specific data model) that
 
   **To be discussed**
   * Where will the master data model be hosted?
-  * Where is the transformation- and the metadata model be located at?
+  * _Where is the transformation- and the metadata model be located at?_
 
 ## Validate the master data model due to a more complex scenario
 * Extend the master data model by adding new apps (data models) into the test scenario
   * Define criteria for new apps that will potentially extend the master data model
+    * Identify business apps that use an additional set of generic attributes (address data fields)
   * Hand out a technical on boarding (documentation) to its vendors, which want to connect their app
   * Synchronize (address) data (***asynchronously***) between multiple (new) apps - **bidirectionally**
 * **Expand the master data model by new generic attributes and update the transformation rule sets**
@@ -54,8 +55,10 @@ The master data model will grow with each application (specific data model) that
 * _Semantic transformation_
 * _Object transformation - merge/split entities_
 
-## _Possible scenarios_
+## _Possible OIH scenarios_
 * _Initial migration scenario - clone reference implementation_
   * _append business apps_
   * _removed business apps_
-* _Migrate into running business scenario / market place_
+* _Migrate into a running business scenario / market place_
+  * _partially on demand - relevant business data only_
+  * _initially - all business data_
