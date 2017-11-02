@@ -7,7 +7,7 @@ The master data model will grow with each application (specific data model) that
 
 ## Identify generic address fields
 * Setup a test case where at least two data models (applications) become synced - **synchronously**
-  * Build your app component for the individual field mapping at elastic.io
+  * Build your app component ([connector](https://github.com/openintegrationhub/architecture/blob/master/evaluations/ComponentQualityGuidelines.md)) for the individual field mapping at elastic.io
     * [Snazzy] -> [component]
     * [SilverERP] -> [component]
   * Map those fields that should be synced between the applications (over elastic.io)
