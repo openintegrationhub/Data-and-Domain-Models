@@ -1,3 +1,27 @@
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Master Data Model Addresses](#master-data-model-addresses)
+	- [1. What is a Master Data Model?](#1-what-is-a-master-data-model)
+	- [2. Approach](#2-approach)
+	- [3. Requirements for a Master Data Model](#3-requirements-for-a-master-data-model)
+		- [3.1 General Requirements](#31-general-requirements)
+		- [3.2 User Requirements](#32-user-requirements)
+			- [3.2.1 Topic 'Types of Objects'](#321-topic-types-of-objects)
+				- [Use case properties of organization](#use-case-properties-of-organization)
+				- [Use case properties of persons](#use-case-properties-of-persons)
+			- [3.2.2 Topic Relations](#322-topic-relations)
+				- [Use case relations person to organization](#use-case-relations-person-to-organization)
+				- [Use case relations organization to others](#use-case-relations-organization-to-others)
+			- [3.2.3 Rights managment](#323-rights-managment)
+			- [3.2.4 Data integrity](#324-data-integrity)
+		- [3.3 Legal requirements](#33-legal-requirements)
+			- [3.3.1 Data protection](#331-data-protection)
+			- [3.3.2 Data sovereignty](#332-data-sovereignty)
+	- [4. Findings](#4-findings)
+	- [4. Results](#4-results)
+
+<!-- /TOC -->
+
 # Master Data Model Addresses
 
 This document describes the evaluation of the master data model for address data
