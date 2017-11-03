@@ -1,6 +1,6 @@
 # Usefull backlog item (issue)
 
-### Since we use an 'issue' on multi purpose, let's call generally it an **item**
+### Since we use an 'issue' on multi purpose, let's call it generally an **item**
 
 > Please use the ZenHub [extension](https://www.zenhub.com/extension) with your browser and find some [help](https://help.github.com/categories/writing-on-github) on how to format with markup.
 
