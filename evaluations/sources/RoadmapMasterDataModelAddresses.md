@@ -22,6 +22,8 @@ The master data model will grow with each application (specific data model) that
   * Which format will be used to describe the master data model?
   * Will the special fields of an app only exist in its specific data model?
 
+[openintegrationhub/coordination#4](https://github.com/openintegrationhub/coordination/issues/4)
+
 ## Synchronize data over the master data model
 * Integrate the derived master data model into the test scenario
   * Define the rules for the data transformation between the data models
@@ -35,6 +37,8 @@ The master data model will grow with each application (specific data model) that
   **To be discussed**
   * Where will the master data model be hosted?
   * _Where is the transformation- and the metadata model be located at?_
+
+[openintegrationhub/coordination#6](https://github.com/openintegrationhub/coordination/issues/6)
 
 ## Validate the master data model due to a more complex scenario
 * Extend the master data model by adding new apps (data models) into the test scenario
