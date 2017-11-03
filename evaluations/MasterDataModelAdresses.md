@@ -62,8 +62,7 @@ for the implementation of the first prototype of the Open Integration Hub.
 In this specific field of investigation, the master data model for addresses
 describes a generic standard of customer data for the management of addresses.
 
-Processing personal data is a special subject of privacy rules and data
-protection laws.
+Processing personal data, such as personally identifiable information, is a special subject of privacy rules and data protection laws.
 
 The master data model for the OIH should be:
 - compatible with business models in business-to-business and business-to-consumer.
@@ -83,9 +82,8 @@ clustering the different use cases and user stories by a specific issue.
 
 - The use case describes a specific business scenario, e.g. synching data
 between two applications. It covers the long term description of the context we
-would like to implement. Use Cases are permant artefacts, which will remain as
+would like to implement. Use Cases are permanent artefacts, which will remain as
 long as the product will be developed and supported.
-
 For the use cases we use a Cockburn-style template where user goals,
 subgoals or intentions are expressed in every step of the basic flow or
 the extensions. This practice makes the requirement specification clearer, and
@@ -96,41 +94,77 @@ informal description of a feature. They define what has to be built in the
 software project later on, so we can fill our backlog.
 
 The common template of a user story should be:
-As a <role>, I want <capability> so that <receive benefit>"
+"As a *role*, I want *capability* so that *receive benefit*"
 
 #### 3.2.1 Topic 'Types of Objects'
 
-In the real world there are two different types of objects:
+If we talk here about addresses, we mean contact data such as names, addresses and telephone numbers. An address is a collection of information, presented in a mostly fixed format, used to give a location or a contact point, generally using political boundaries and street names as references, along with other identifiers such as house or apartment numbers. Some addresses also contain special codes, such as a postal code, to make identification easier and aid in the routing of mail.
+
+In the real world there are two different types of objects with different scope of contact data:
 - organization like company, foundation, institutes, ...
 - person as real human contacts
 
+Both have fields in common and have different fields. The users want to deal with this objects in different ways.
+
+##### User stories properties of organizations
+
+| User story: | As a user I need informations about the location of the organization to travel or to ship something to the organization (e.g. letters, goods, etc.) to it. |
+| :--- | :--- |
+
+| User story: | As a user I need contact data of the organization to communicate in different channels (email, phone, fax, url,  ...) |
+| :--- | :--- |
+
 ##### Use case properties of organization
 
-User story: As a user I need informations about the location of the organization
-to travel to the organization or to ship something (e.g. letters, goods, ...)
-to the organization.
+| Label        | USE CASE - properties of organizations |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** | Describes adding specific contact data to any kind of organization |
+| **Trigger:** | A user wants to store contact data for an organization |
+| **Preconditions:** | The organization is already stored |
+| **Main Success Scenario:** | Added contact data |
+| **Failure Scenario:** | Adding contact data was not successful |
+| **Basic Workflow:** | 1. Chose the organization 2. Add specific contact data, e.g. postal address, in the appropriate fields 3. Store the data  |
+| **Alternative Workflow:** | 2a. Required fields are not available or in different format 3a. Add new field 3b. Use different field similar to the appropriate field. 4. Store the data.   |
 
-User story: As a user I need contact data of the organization to communicate
-in different channels (email, phone, fax, url,  ...)
+##### User stories properties of persons
+
+| User story: | As a User I want to communicate with a person over different channels to have all possibilities to contact. |
+| :--- | :--- |
+
+| User story: | As a User I want to communicate with a person over different channels to have all possibilities to contact. |
+| :--- | :--- |
+
+| User story: | As a User I want to manage employee data of my organization to handle Requirements of HR or with user management. |
+| :--- | :--- |
 
 ##### Use case properties of persons
 
-User story: As a User I want to communicate with a person over different channels to have all possibilities to contact.
-
-User story: As a User I want to manage employee data of my organization to handle Requirements of HR or with user management.
-
-...
+| Label        | USE CASE - properties of persons |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** | Describes adding specific contact data to any kind of persons |
+| **Trigger:** | A user wants to store contact data for a person |
+| **Preconditions:** | The person is already stored |
+| **Main Success Scenario:** | Added contact data |
+| **Failure Scenario:** | Adding contact data was not successful |
+| **Basic Workflow:** | 1. Chose the person 2. Add specific contact data, e.g. postal address, in the appropriate fields 3. Store the data  |
+| **Alternative Workflow:** | 2a. Required fields are not available or in different format 3a. Add new field 3b. Use different field similar to the appropriate field. 4. Store the data.   |
 
 #### 3.2.2 'Topic Relations'
 
+##### User stories relations person to organization
+
+| User story: | As a user I want to assign one or more persons to an organization to communicate with all contacts of an organization |
+| :--- | :--- |
+
+| User story: | As a user I want to assign a person to different organizations with different contact data to see different roles of the same person. |
+| :--- | :--- |
+
+| User story: | As a user I want to register my own employee data to use this data for the administration of my employees. |
+| :--- | :--- |
+
 ##### Use case relations person to organization
-
-| User story: | As a user I want to assign one a more persons to an organisation to communicate with all contacts of an organisation |
-| :--- | :--- |
-
-| User story: | As a user I want to assign a person to different organisations with different contact data to see different roles of the same person. |
-| :--- | :--- |
-
 
 | Label        | USE CASE - Person to Organization Relations |
 | :---  | :---  |
@@ -143,49 +177,201 @@ User story: As a User I want to manage employee data of my organization to handl
 | **Basic Workflow:** | 1 Define person 2 Define organization 3 Assign person to organization relation |
 | **Alternative Workflow:** |    |
 
-##### Use case relations organization to others
+##### User stories relations of organizations to other organizations
 
-User story: As a user I want to categorize organisations to segment and select target groups (relations of my own organisation to other)
+| User story: | As a user I want to categorize organizations to segment and select target groups (relations of my own organization to other), for that i am able to do marketing campaigns. |
+| :--- | :--- |
 
-***User stories of the own organization relations to others***
+| User story: | As a user I want to know, who delivers goods to my customers to get an overview of all their supplier. |
+| :--- | :--- |
 
-Transfer this from the old document
+| User story: | As a user I want to see the structure of a group of companies, to get a better overview of my business dealings.  |
+| :--- | :--- |
 
-***Use cases organizations to organizations relations***
+| User story: | As a user I want to lay down any kind of delivery addresses for my customers, to be able to deliver my goods to any location.  |
+| :--- | :--- |
 
-Transfer this from the old Document
+| User story: | As a user I want to lay down any kind of branch of my customers, to be able to see the structure of a group of companies.  |
+| :--- | :--- |
 
-***User stories organizations to organizations relations***
+##### Use case relations of organization to other organizations
 
-Transfer this from the old document
+| Label        | USE CASE - Organization to Organization Relations |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** | Describes the relation between organizations and other organizations. |
+| **Trigger:** | A user wants to assign a branch to an organization. |
+| **Preconditions:** | nd |
+| **Main Success Scenario:** | Assignment took place |
+| **Failure Scenario:** | Assignment not possible |
+| **Basic Workflow:** | 1 Define first organization 2 Define second organization 3 Assign organization to organization relation |
+| **Alternative Workflow:** |    |
 
-***Use cases person to person relations***
 
-Transfer this from the old Document
+# ???? double ???
 
-***User stories person to person relations***
+##### User stories organizations to organizations relations
 
-Transfer this from the old document
 
-***Use cases person to organization relations***
+##### Use cases organizations to organizations relations
 
-Transfer this from the old Document
+| Label        |  |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** |  |
+| **Trigger:** |  |
+| **Preconditions:** |  |
+| **Main Success Scenario:** |  |
+| **Failure Scenario:** |  |
+| **Basic Workflow:** |  |
+| **Alternative Workflow:** |    |
 
-***User stories person to organization relations***
+##### User stories of the own organization relations to others
 
-Transfer this from the old document
+| User story: |  |
+| :--- | :--- |
 
-...
+##### Use case of the own organization relations to others
+
+| Label        |  |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** |  |
+| **Trigger:** |  |
+| **Preconditions:** |  |
+| **Main Success Scenario:** |  |
+| **Failure Scenario:** |  |
+| **Basic Workflow:** |  |
+| **Alternative Workflow:** |    |
+
+##### User stories person to person relations
+
+| User story: |  |
+| :--- | :--- |
+
+##### Use cases person to person relations
+
+| Label        |  |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** |  |
+| **Trigger:** |  |
+| **Preconditions:** |  |
+| **Main Success Scenario:** |  |
+| **Failure Scenario:** |  |
+| **Basic Workflow:** |  |
+| **Alternative Workflow:** |    |
+
+##### User stories person to organization relations
+
+| User story: |  |
+| :--- | :--- |
+
+
+##### Use cases person to organization relations
+
+| Label        |  |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** |  |
+| **Trigger:** |  |
+| **Preconditions:** |  |
+| **Main Success Scenario:** |  |
+| **Failure Scenario:** |  |
+| **Basic Workflow:** |  |
+| **Alternative Workflow:** |    |
 
 #### 3.2.3 Topic 'Rights managment'
 
+##### User stories Rights management
+
+| User story: |  |
+| :--- | :--- |
+
+#####
+
+| Label        |  |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** |  |
+| **Trigger:** |  |
+| **Preconditions:** |  |
+| **Main Success Scenario:** |  |
+| **Failure Scenario:** |  |
+| **Basic Workflow:** |  |
+| **Alternative Workflow:** |    |
+
 #### 3.2.4 Topic 'Data integrity'
+
+| User story: |  |
+| :--- | :--- |
+
+| Label        |  |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** |  |
+| **Trigger:** |  |
+| **Preconditions:** |  |
+| **Main Success Scenario:** |  |
+| **Failure Scenario:** |  |
+| **Basic Workflow:** |  |
+| **Alternative Workflow:** |    |
+
+#### 3.2.5 Topic 'Data quality'
+
+| User story: |  |
+| :--- | :--- |
+
+| Label        |  |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** |  |
+| **Trigger:** |  |
+| **Preconditions:** |  |
+| **Main Success Scenario:** |  |
+| **Failure Scenario:** |  |
+| **Basic Workflow:** |  |
+| **Alternative Workflow:** |    |
 
 ### 3.3 Legal requirements
 
 #### 3.3.1 Topic 'Data protection'
 
+| User story: |  |
+| :--- | :--- |
+
+| Label        |  |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** |  |
+| **Trigger:** |  |
+| **Preconditions:** |  |
+| **Main Success Scenario:** |  |
+| **Failure Scenario:** |  |
+| **Basic Workflow:** |  |
+| **Alternative Workflow:** |    |
+
 #### 3.3.2 Topic 'Data sovereignty'
+
+| User story: |  |
+| :--- | :--- |
+
+| Label        |  |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** |  |
+| **Trigger:** |  |
+| **Preconditions:** |  |
+| **Main Success Scenario:** |  |
+| **Failure Scenario:** |  |
+| **Basic Workflow:** |  |
+| **Alternative Workflow:** |    |
+
+### 3.4 Standardization
+
+| User story: |  |
+| :--- | :--- |
+
 
 
 ## 4. Findings
@@ -217,7 +403,7 @@ private contacts.
 
 
 
-![Relationship person organisation](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/use-case-relationship-person-organisation.png)
+![Relationship person organization](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/use-case-relationship-person-organization.png)
 
 
 
@@ -242,11 +428,11 @@ Persons
 
 
 
-![Relations of organisations](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/relations-of-organisations.png)
+![Relations of organizations](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/relations-of-organizations.png)
 
 
 
-![Relations of organisations](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/relations-among-persons.png)          
+![Relations of organizations](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/relations-among-persons.png)          
 
 
 
