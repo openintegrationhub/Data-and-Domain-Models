@@ -124,8 +124,8 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | The organization is already stored |
 | **Main Success Scenario:** | Added contact data |
 | **Failure Scenario:** | Adding contact data was not successful |
-| **Basic Workflow:** | 1. Chose the organization 2. Add specific contact data, e.g. postal address, in the appropriate fields 3. Store the data  |
-| **Alternative Workflow:** | 2a. Required fields are not available or in different format 3a. Add new field 3b. Use different field similar to the appropriate field. 4. Store the data.   |
+| **Basic Workflow:** | 1. Chose the organization<br/> 2. Add specific contact data, e.g. postal address, in the appropriate fields<br/> 3. Store the data  |
+| **Alternative Workflow:** | 2a. Required fields are not available or in different format<br/> 3a. Add new field<br/> 3b. Use different field similar to the appropriate field.<br/> 4. Store the data.   |
 
 ##### User stories properties of persons
 
@@ -148,8 +148,8 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | The person is already stored |
 | **Main Success Scenario:** | Added contact data |
 | **Failure Scenario:** | Adding contact data was not successful |
-| **Basic Workflow:** | 1. Chose the person 2. Add specific contact data, e.g. postal address, in the appropriate fields 3. Store the data  |
-| **Alternative Workflow:** | 2a. Required fields are not available or in different format 3a. Add new field 3b. Use different field similar to the appropriate field. 4. Store the data.   |
+| **Basic Workflow:** | 1. Chose the person<br/> 2. Add specific contact data, e.g. postal address, in the appropriate fields<br/> 3. Store the data  |
+| **Alternative Workflow:** | 2a. Required fields are not available or in different format<br/> 3a. Add new field<br/> 3b. Use different field similar to the appropriate field.<br/> 4. Store the data.   |
 
 #### 3.2.2 'Topic Relations'
 
@@ -174,7 +174,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | nd |
 | **Main Success Scenario:** | Assignment took place |
 | **Failure Scenario:** | Assignment not possible |
-| **Basic Workflow:** | 1 Define person 2 Define organization 3 Assign person to organization relation |
+| **Basic Workflow:** | 1 Define person<br/> 2 Define organization<br/> 3 Assign person to organization relation |
 | **Alternative Workflow:** |    |
 
 ##### User stories relations of organizations to other organizations
@@ -204,7 +204,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | nd |
 | **Main Success Scenario:** | Assignment took place |
 | **Failure Scenario:** | Assignment not possible |
-| **Basic Workflow:** | 1 Define first organization 2 Define second organization 3 Assign organization to organization relation |
+| **Basic Workflow:** | 1 Define first organization <br/> 2 Define second organization<br/> 3 Assign organization to organization relation |
 | **Alternative Workflow:** |    |
 
 
