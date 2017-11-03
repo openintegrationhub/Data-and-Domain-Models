@@ -54,8 +54,8 @@ type Person {
   gender: GENDER!
 
   channel: Channel @relation(name: "PersonOnChannel")
-  address: Address @relation(name: "AddressOnPerson")
-  company: Company @relation(name: "CompanyOnPerson")
+  address: Address @relation(name: "PersonOnAddress")
+  organization: organization @relation(name: "PersonOnOrganization")
 }
 
 type Channel {
@@ -67,7 +67,7 @@ type Channel {
   fax: [String!]
   web: [String!]
 
-  company: Company @relation(name: "CompanyOnChannel")
+  organization: organization @relation(name: "OrganizationOnChannel")
   person: Person @relation(name: "PersonOnChannel")
 }
 
@@ -79,18 +79,18 @@ type Address {
   zip: String!
   city: String!
 
-  companies: [Company!]! @relation(name: "AddressOnCompany")
-  persons: [Person!]! @relation(name: "AddressOnPerson")
+  organizations: [organization!]! @relation(name: "OrganizationOnAddress")
+  persons: [Person!]! @relation(name: "PersonOnAddress")
 }
 
-type Company {
+type Organization {
 
   id: ID! @isUnique
   name: String!
 
-  address: Address @relation(name: "AddressOnCompany")
-  channel: Channel @relation(name: "CompanyOnChannel")
-  persons: [Person!]! @relation(name: "CompanyOnPerson")
+  address: Address @relation(name: "OrganizationOnAddress")
+  channel: Channel @relation(name: "OrganizationOnChannel")
+  persons: [Person!]! @relation(name: "PersonOnOrganization")
 }
 ```
 ## Schema - Product Data (draft)
@@ -101,7 +101,7 @@ enum UNIT {
 }
 
 type RawMaterials {
-  id: ID!
+  id: ID! @isUnique
   type: String
   weight: Float
   unit: UNIT!
@@ -111,16 +111,15 @@ type RawMaterials {
 }
 
 type PhysicalGoods {
-  id: ID!
+  id: ID! @isUnique
   maker: String
   size: String
   color: String
 }
 
-type DigitalGoods {
-  id: ID!
+type NonPhysicalGoods {
+  id: ID! @isUnique
   maker: String
-  drm: String
   bytes: Float
 }
 ```
@@ -128,3 +127,5 @@ type DigitalGoods {
 [GraphQL live demo](http://graphql.org/swapi-graphql)
 
 [GraphQL specification - Oct 2016](http://facebook.github.io/graphql/October2016/)
+
+[Generic data model](https://en.wikipedia.org/wiki/Generic_data_model)
