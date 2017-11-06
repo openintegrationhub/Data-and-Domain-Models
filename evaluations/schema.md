@@ -33,16 +33,16 @@ The GraphQL schema definition language provides a sustainable starting point, to
 [GraphQL cheat sheet](sources/graphql-shorthand-notation-cheat-sheet.pdf)
 
 ## Schema - Customer Data (example)
-```
+```javascript
 enum GENDER {
   FEMALE
   MALE
 }
 
-  # Define the object model - Person:
-  # define its fields - non- or nullable (array),
-  # reference its enums - defined at the top,
-  # set its relations - incl. directionality.
+  // Define the object model - Person:
+  // define its fields - non- or nullable (array),
+  // reference its enums - defined at the top,
+  // set its relations - incl. directionality.
 
 type Person {
 
@@ -53,12 +53,12 @@ type Person {
 
   gender: GENDER!
 
-  channel: Channel @relation(name: "PersonOnChannel")
+  contact: Contact @relation(name: "PersonOnContact")
   address: Address @relation(name: "PersonOnAddress")
   organization: organization @relation(name: "PersonOnOrganization")
 }
 
-type Channel {
+type Contact {
 
   id: ID! @isUnique
   email: [String!]
@@ -67,8 +67,8 @@ type Channel {
   fax: [String!]
   web: [String!]
 
-  organization: organization @relation(name: "OrganizationOnChannel")
-  person: Person @relation(name: "PersonOnChannel")
+  organization: organization @relation(name: "OrganizationOnContact")
+  person: Person @relation(name: "PersonOnContact")
 }
 
 type Address {
@@ -89,12 +89,12 @@ type Organization {
   name: String!
 
   address: Address @relation(name: "OrganizationOnAddress")
-  channel: Channel @relation(name: "OrganizationOnChannel")
+  contact: Contact @relation(name: "OrganizationOnContact")
   persons: [Person!]! @relation(name: "PersonOnOrganization")
 }
 ```
 ## Schema - Product Data (draft)
-```
+```javascript
 enum UNIT {
   MEETER
   FOOT
