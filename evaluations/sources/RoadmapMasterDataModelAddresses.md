@@ -35,8 +35,10 @@ The master data model will grow with each application (specific data model) that
 * **Extract the master data model and the derived transformation rule sets**
 
   **To be discussed**
-  * Where will the master data model be hosted?
-  * _Where is the transformation- and the metadata model be located at?_
+  * Where exactly will the master data model be hosted - [without being part of the data hub](https://github.com/openintegrationhub/architecture/wiki/base-architecture#oih-runtime)?
+    * How will the generic part of the master data model become extensible?
+  * _How does the interface of the runtime will look like, where ISVs connect their services to?_
+  * _Where is the transformation- and the meta data model be located at?_
 
 [openintegrationhub/coordination#6](https://github.com/openintegrationhub/coordination/issues/6)
 
