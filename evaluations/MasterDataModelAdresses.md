@@ -129,14 +129,15 @@ Both have fields in common and have different fields. The users want to deal wit
 
 ##### User stories properties of persons
 
-| User story: | As a User I want to communicate with a person over different channels to have all possibilities to contact. |
+| User story: | As a user I want to communicate with a person over different channels to have all possibilities to contact. |
 | :--- | :--- |
 
-| User story: | As a User I want to communicate with a person over different channels to have all possibilities to contact. |
+| User story: | As a user I want to communicate with a person over different channels to have all possibilities to contact. |
 | :--- | :--- |
 
-| User story: | As a User I want to manage employee data of my organization to handle Requirements of HR or with user management. |
+| User story: | As a user I want to manage employee data of my organization to handle Requirements of HR or with user management. |
 | :--- | :--- |
+
 
 
 ##### Use case properties of persons
