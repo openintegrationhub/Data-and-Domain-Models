@@ -30,7 +30,11 @@ The GraphQL schema definition language provides a sustainable starting point, to
   * which they discover at their finger tips,
 * and is machine readable from ground up.
 
-[GraphQL cheat sheet](sources/graphql-shorthand-notation-cheat-sheet.pdf)
+[What is a schena](https://spacetelescope.github.io/understanding-json-schema/about.html#about)
+
+[JSON schema validation](https://www.highly.co/hl/rwKOijEQwI4JfP)
+
+[GraphQL cheat sheet](https://github.com/openintegrationhub/innovation/blob/master/evaluations/sources/graphql-shorthand-notation-cheat-sheet.pdf)
 
 ## Schema - Customer Data (example)
 ```javascript
@@ -47,11 +51,13 @@ enum GENDER {
 type Person {
 
   id: ID! @isUnique
+  title: [String]
+  gender: GENDER!
   firstName: [String!]
   lastName: String
-  birthdate: DateTime
-
-  gender: GENDER!
+  picture: String
+  birthDate: String
+  position: String
 
   contact: Contact @relation(name: "PersonOnContact")
   address: Address @relation(name: "PersonOnAddress")
@@ -61,11 +67,11 @@ type Person {
 type Contact {
 
   id: ID! @isUnique
-  email: [String!]
-  mobile: [String!]
-  phone: [String!]
-  fax: [String!]
-  web: [String!]
+  email: [String]
+  mobile: [String]
+  phone: [String]
+  fax: [String]
+  uri: [String]
 
   organization: organization @relation(name: "OrganizationOnContact")
   person: Person @relation(name: "PersonOnContact")
@@ -76,8 +82,10 @@ type Address {
   id: ID! @isUnique
   street: String
   number: String
-  zip: String!
+  postalCode: String!
   city: String!
+  state: String
+  country: String
 
   organizations: [organization!]! @relation(name: "OrganizationOnAddress")
   persons: [Person!]! @relation(name: "PersonOnAddress")
@@ -87,6 +95,7 @@ type Organization {
 
   id: ID! @isUnique
   name: String!
+  taxNumber: String!
 
   address: Address @relation(name: "OrganizationOnAddress")
   contact: Contact @relation(name: "OrganizationOnContact")
