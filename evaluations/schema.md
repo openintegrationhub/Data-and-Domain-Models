@@ -30,7 +30,7 @@ The GraphQL schema definition language provides a sustainable starting point, to
   * which they discover at their finger tips,
 * and is machine readable from ground up.
 
-[What is a schena](https://spacetelescope.github.io/understanding-json-schema/about.html#about)
+[What is a schema - JSON](https://spacetelescope.github.io/understanding-json-schema/about.html#about)
 
 [JSON schema validation](https://www.highly.co/hl/rwKOijEQwI4JfP)
 
