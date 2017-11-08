@@ -162,7 +162,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | User story: | As a user I want to assign a person to different organizations with different contact data to see different roles of the same person. |
 | :--- | :--- |
 
-| User story: | As a user I want to register my own employee data to use this data for the administration of my employees. |
+| User story: | As a user I want to register the data of my own companies employees to use this data for the administration of the employees. |
 | :--- | :--- |
 
 ##### Use case relations person to organization
@@ -202,7 +202,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Actor:** | User |
 | **Summary:** | Describes the relation between organizations and other organizations. |
 | **Trigger:** | A user wants to assign a branch to an organization. |
-| **Preconditions:** | nd |
+| **Preconditions:** | the related organizations are stored in the database |
 | **Main Success Scenario:** | Assignment took place |
 | **Failure Scenario:** | Assignment not possible |
 | **Basic Workflow:** | 1 Define first organization <br/> 2 Define second organization<br/> 3 Assign organization to organization relation |
@@ -229,52 +229,75 @@ Both have fields in common and have different fields. The users want to deal wit
 
 ##### User stories of the own organization relations to others
 
-| User story: | As a user I want to categorize the organisations as customer, lead, partner, supplier, ... to segment my target groups.|
+| User story: | As a user I want to categorize the organizations as customer, lead, partner, supplier, ... to segment my target groups.|
 | :--- | :--- |
 
-| User story: | As a user I want to categorizemy my customers, lead, supplier for e.g. in 'A - very important', 'B - imprtant' oder 'C - less important' to classify my target groups.|
+| User story: | As a user I want to categorize my my customers, lead, supplier for e.g. in 'A - very important', 'B - imprtant' oder 'C - less important' to classify my target groups.|
 | :--- | :--- |
 
 ##### Use case of the own organization relations to others
 
-| Label        |  |
+| Label        | USE CASE - Relations of own organization to others |
 | :---  | :---  |
 | **Actor:** | User |
-| **Summary:** |  |
-| **Trigger:** |  |
-| **Preconditions:** |  |
-| **Main Success Scenario:** |  |
+| **Summary:** | Describes setting the relations of a users own organization to other organizations  |
+| **Trigger:** | A user wants to assign relations of its own organization to other organizations and uses therefor categories |
+| **Preconditions:** | Addresses are stored in the database |
+| **Main Success Scenario:** | The desired addresses are assigned with the desired categories. |
 | **Failure Scenario:** |  |
-| **Basic Workflow:** |  |
-| **Alternative Workflow:** |    |
+| **Basic Workflow:** | 1. Chose the desired addresses <br/> 2. Chose the desired categories <br/> 3. Assign the categories to the addresses |
+| **Alternative Workflow:** | 2a. The desired categories are not provided.<br/> 3a. Input of the new categories<br/> 4. Assign new categories to the addresses   |
 
 ##### User stories person to person relations
 
-| User story: |  |
+| User story: | As a user I want to assign relations between contact persons of my customers to get an overview of their hierarchy. |
+| :--- | :--- |
+
+| User story: | As a user I want to store same persons in different organizations, to get in contact with them currently at the time with the particular contact data. |
+| :--- | :--- |
+
+| User story: | As a user I want to see, if a specific person in an organization is the same person as in another organization |
 | :--- | :--- |
 
 ##### Use cases person to person relations
 
-| Label        |  |
+| Label        | USE CASE - Assignment of Person to Person relations |
 | :---  | :---  |
 | **Actor:** | User |
-| **Summary:** |  |
-| **Trigger:** |  |
-| **Preconditions:** |  |
-| **Main Success Scenario:** |  |
-| **Failure Scenario:** |  |
-| **Basic Workflow:** |  |
-| **Alternative Workflow:** |    |
+| **Summary:** | Describes the Assignment of person to person relations in a specific organization |
+| **Trigger:** | A User wants to store relations of persons in an organization |
+| **Preconditions:** | The organization and the persons are stored in the database |
+| **Main Success Scenario:** | The desired persons are put in relations |
+| **Failure Scenario:** | Assignment not possible |
+| **Basic Workflow:** | 1. Chose the desired persons<br/> 2. Chose the desired description of the relations<br/> 3. Store the relation in the database |
+| **Alternative Workflow:** | 2a. The desired type of relation is not available.<br/> 3a. Input the type of relation<br/>3b. Associate the persons with the new relations 4. Store the relation in the database.   |
+
+| Label        | USE CASE - See Person to Person relations |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** | Describes the inquiry about same persons stored in different organizations  |
+| **Trigger:** | A User wants to see if a person in an organization is the same person as in another organization |
+| **Preconditions:** | The organizations and the persons are stored in the database |
+| **Main Success Scenario:** | See whether its the same person or not |
+| **Failure Scenario:** | It's not possible to see same persons. |
+| **Basic Workflow:** | 1. Chose the desired persons<br/> 2. See if there is a relation to the same person in another organization. |
+| **Alternative Workflow:** | 2a. Do a global search for similar persons   |
 
 ##### User stories person to organization relations
 
-| User story: |  |
+| User story: | As a user I want to assign distinguishing features to contact persons, so that i can categorize them.  |
+| :--- | :--- |
+
+| User story: | As a user I want to see the function of a person in his organization. |
+| :--- | :--- |
+
+| User story: | As a user I want get all the contact persons with a specific function in an organization, so that i can use them in a marketing campaign. |
 | :--- | :--- |
 
 
 ##### Use cases person to organization relations
 
-| Label        |  |
+| Label        | USE CASE - Categorize contact persons with distinguishing features. |
 | :---  | :---  |
 | **Actor:** | User |
 | **Summary:** |  |
