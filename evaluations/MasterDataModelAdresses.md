@@ -138,8 +138,6 @@ Both have fields in common and have different fields. The users want to deal wit
 | User story: | As a user I want to manage employee data of my organization to handle Requirements of HR or with user management. |
 | :--- | :--- |
 
-
-
 ##### Use case properties of persons
 
 | Label        | USE CASE - properties of persons |
@@ -233,7 +231,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | User story: | As a user I want to categorize the organizations as customer, lead, partner, supplier, ... to segment my target groups.|
 | :--- | :--- |
 
-| User story: | As a user I want to categorize my my customers, lead, supplier for e.g. in 'A - very important', 'B - imprtant' oder 'C - less important' to classify my target groups.|
+| User story: | As a user I want to categorize my my customers, lead, supplier for e.g. in 'A - very important', 'B - important' oder 'C - less important' to classify my target groups.|
 | :--- | :--- |
 
 ##### Use case of the own organization relations to others
