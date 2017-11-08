@@ -299,13 +299,13 @@ Both have fields in common and have different fields. The users want to deal wit
 | Label        | USE CASE - Categorize contact persons with distinguishing features. |
 | :---  | :---  |
 | **Actor:** | User |
-| **Summary:** |  |
-| **Trigger:** |  |
-| **Preconditions:** |  |
-| **Main Success Scenario:** |  |
+| **Summary:** | Assignment of categories to contact persons.  |
+| **Trigger:** | A user wants to assign categories to contact persons.  |
+| **Preconditions:** | Contact Persons are stored in the database. |
+| **Main Success Scenario:** | The desired contact persons are assigned with the desired categories.  |
 | **Failure Scenario:** |  |
-| **Basic Workflow:** |  |
-| **Alternative Workflow:** |    |
+| **Basic Workflow:** | 1. Chose the desired addresses<br/> 2. Chose the desired categories<br/>3. Assign the categories to the addresses  |
+| **Alternative Workflow:** | 2a. The desired categories are not provided. <br/>3a. Input of the new categories<br/> 4. Assign new categories to the addresses   |
 
 #### 3.2.3 Topic 'Rights managment'
 
@@ -379,19 +379,70 @@ Both have fields in common and have different fields. The users want to deal wit
 
 #### 3.3.2 Topic 'Data sovereignty'
 
-| User story: |  |
+| User story: | As a User I want to import contact data from an Excel file into my database |
 | :--- | :--- |
 
-| Label        |  |
+| User story: | As a User I want to import contact data from Outlook into my database. |
+| :--- | :--- |
+
+| User story: | As a User I need addresses in the vCard-Format, but my contact manangement programm only exports csv data.   |
+| :--- | :--- |
+
+| Label        | USE CASE - Import of addresses |
 | :---  | :---  |
 | **Actor:** | User |
-| **Summary:** |  |
-| **Trigger:** |  |
-| **Preconditions:** |  |
-| **Main Success Scenario:** |  |
-| **Failure Scenario:** |  |
-| **Basic Workflow:** |  |
-| **Alternative Workflow:** |    |
+| **Summary:** | Import of data.   |
+| **Trigger:** | A user wants to import contact data |
+| **Preconditions:** | Contact Data stored in a file  |
+| **Main Success Scenario:** | Data is imported |
+| **Failure Scenario:** | Import not possible |
+| **Basic Workflow:** | 1. Chose the desired contact data<br/> 2. Export or Import the data |
+| **Alternative Workflow:** | 2a. Data for the import is unsupported format. 3. Convert the data in a supported format. 4. Import the data.    |
+
+| Label        | USE CASE - Export of addresses |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** | Export of data.   |
+| **Trigger:** | A user wants to export contact data |
+| **Preconditions:** | Contact Data stored in the contact database |
+| **Main Success Scenario:** | Data is exported |
+| **Failure Scenario:** | Export not possible |
+| **Basic Workflow:** | 1. Chose the desired contact data<br/> 2. Export the data |
+| **Alternative Workflow:** | 2a. Export is not possible 3. Copy & Paste ever entry in the database by manually.    |
+
+| User story: | As a User I want to substitute our CRM-Software with another CRM-Software and i want to transfer my contact data. |
+| :--- | :--- |
+
+| User story: | As a User I want to transfer my contact data in the event of a new order from our CRM-Software to our ERP-Software. |
+| :--- | :--- |
+
+| User story: | As a User I want to transfer the e-mail-addresses and names to a newsletter system for my marketing campaigns. |
+| :--- | :--- |
+
+| User story: | As a User I want to transfer my contact data from our customer database to our telephone system for the recognition of the callers. |
+| :--- | :--- |
+
+| Label        | USE CASE - Migration of addresses |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** | Convert data into specific format.   |
+| **Trigger:** | A user wants to import or export contact data from or to a specific data format. |
+| **Preconditions:** | Contact Data stored in a contact database |
+| **Main Success Scenario:** | Data is imported or exported |
+| **Failure Scenario:** | Export or import not possible |
+| **Basic Workflow:** | 1. Chose the desired contact data<br/> 2. Chose the desired data format 3. Export or Import the data |
+| **Alternative Workflow:** | 2a. Desired format is not supported 3a. Export data in an alternative supported format.     |
+
+| Label        | USE CASE - Automatic transfer of addresses |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** | Automatic transfer of addresses from one system to another.   |
+| **Trigger:** | A user wants to have contact data automatically transfered from one system to another. |
+| **Preconditions:** | Contact Data stored in a contact database |
+| **Main Success Scenario:** | Data is transfered |
+| **Failure Scenario:** | Transfer not possible |
+| **Basic Workflow:** | 1. Chose the source system of the contact data<br/> 2. Chose the desired target system<br/> 3. Data is transfered to the target system  |
+| **Alternative Workflow:** | 2a. Target System not reachable 3a. Throw failure message.     |
 
 ### 3.4 Standardization
 
