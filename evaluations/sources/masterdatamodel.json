@@ -1,0 +1,55 @@
+
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Open Integration Hub meta-schema",
+  "definitions": {
+    "organization": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "taxNumber": { "type": "string" }
+      },
+      "required": ["name"]
+    },
+    "person": {
+      "type": "object",
+      "properties": {
+        "title": { "type": "array" },
+        "gender": { "type": "array" },
+        "firstName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "birthDate": { "type": "string", "format": "UTC" },
+        "picture": { "type": "string" },
+        "position": { "type": "string"}
+      },
+      "required": ["firstName"]
+    },
+    "address": {
+      "type": "object",
+      "properties": {
+        "street": { "type": "string" },
+        "number": { "type": "string" },
+        "zip": { "type": "string" },
+        "city": { "type": "string" },
+        "state": { "type": "string" }
+      },
+      "required": ["street", "number", "zip", "city"]
+    },
+    "contact": {
+      "type": "object",
+      "properties": {
+        "email": { "type": "array", "format": "String" },
+        "mobile": { "type": "array", "format": "String" },
+        "phone": { "type": "array", "format": "String" },
+        "fax": { "type": "array", "format": "String" },
+        "uri": { "type": "array", "format": "String" }
+      }
+    }
+  },
+
+  "type": "object",
+  "properties": {
+    "billing_address": { "$ref": "#/definitions/address" },
+    "shipping_address": { "$ref": "#/definitions/address" }
+  }
+}
