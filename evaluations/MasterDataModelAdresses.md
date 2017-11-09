@@ -12,17 +12,34 @@
 	- [3. Requirements for a Master Data Model](#3-requirements-for-a-master-data-model)
 		- [3.1 General Requirements](#31-general-requirements)
 		- [3.2 User Requirements](#32-user-requirements)
-			- [3.2.1 Topic 'Types of Objects'](#321-topic-types-of-objects)
-				- [Use case properties of organization](#use-case-properties-of-organization)
-				- [Use case properties of persons](#use-case-properties-of-persons)
-			- [3.2.2 'Topic Relations'](#322-topic-relations)
+			- [3.2.1 Epic 'Types of Objects'](#321-epic-types-of-objects)
+				- [User stories attributes of organizations](#user-stories-attributes-of-organizations)
+				- [Use case attributes of organization](#use-case-attributes-of-organization)
+				- [User stories attributes of persons](#user-stories-attributes-of-persons)
+				- [Use case attributes of persons](#use-case-attributes-of-persons)
+			- [3.2.2 'Epic Relations'](#322-epic-relations)
+				- [User stories relations person to organization](#user-stories-relations-person-to-organization)
 				- [Use case relations person to organization](#use-case-relations-person-to-organization)
-				- [Use case relations organization to others](#use-case-relations-organization-to-others)
-			- [3.2.3 Topic 'Rights managment'](#323-topic-rights-managment)
-			- [3.2.4 Topic 'Data integrity'](#324-topic-data-integrity)
+				- [User stories relations of organizations to other organizations](#user-stories-relations-of-organizations-to-other-organizations)
+				- [Use case relations of organization to other organizations](#use-case-relations-of-organization-to-other-organizations)
+- [???? double ???](#-double-)
+				- [User stories organizations to organizations relations](#user-stories-organizations-to-organizations-relations)
+				- [Use cases organizations to organizations relations](#use-cases-organizations-to-organizations-relations)
+				- [User stories of the own organization relations to others](#user-stories-of-the-own-organization-relations-to-others)
+				- [Use case of the own organization relations to others](#use-case-of-the-own-organization-relations-to-others)
+				- [User stories person to person relations](#user-stories-person-to-person-relations)
+				- [Use cases person to person relations](#use-cases-person-to-person-relations)
+				- [User stories person to organization relations](#user-stories-person-to-organization-relations)
+				- [Use cases person to organization relations](#use-cases-person-to-organization-relations)
+			- [3.2.3 Epic 'Rights Management'](#323-epic-rights-management)
+				- [User stories Rights management](#user-stories-rights-management)
+				- [](#)
+			- [3.2.4 Epic 'Data integrity'](#324-epic-data-integrity)
+			- [3.2.5 Epic 'Data quality'](#325-epic-data-quality)
 		- [3.3 Legal requirements](#33-legal-requirements)
-			- [3.3.1 Topic 'Data protection'](#331-topic-data-protection)
-			- [3.3.2 Topic 'Data sovereignty'](#332-topic-data-sovereignty)
+			- [3.3.1 Epic 'Data protection'](#331-epic-data-protection)
+			- [3.3.2 Epic 'Data sovereignty'](#332-epic-data-sovereignty)
+		- [3.4 Standardization](#34-standardization)
 	- [4. Findings](#4-findings)
 	- [4. Results](#4-results)
 
@@ -96,7 +113,7 @@ software project later on, so we can fill our backlog.
 The common template of a user story should be:
 "As a *role*, I want *capability* so that *receive benefit*"
 
-#### 3.2.1 Topic 'Types of Objects'
+#### 3.2.1 Epic 'Types of Objects'
 
 If we talk here about addresses, we mean contact data such as names, addresses and telephone numbers. An address is a collection of information, presented in a mostly fixed format, used to give a location or a contact point, generally using political boundaries and street names as references, along with other identifiers such as house or apartment numbers. Some addresses also contain special codes, such as a postal code, to make identification easier and aid in the routing of mail.
 
@@ -151,7 +168,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Basic Workflow:** | 1. choose the person<br/> 2. Add specific contact data, e.g. postal address, in the appropriate fields<br/> 3. Store the data  |
 | **Alternative Workflow:** | 2a. Required fields are not available or in different format<br/> 3a. Add new field<br/> 3b. Use different field similar to the appropriate field.<br/> 4. Store the data.   |
 
-#### 3.2.2 'Topic Relations'
+#### 3.2.2 'Epic Relations'
 
 ##### User stories relations person to organization
 
@@ -307,7 +324,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Basic Workflow:** | 1. choose the desired addresses<br/> 2. choose the desired categories<br/>3. Assign the categories to the addresses  |
 | **Alternative Workflow:** | 2a. The desired categories are not provided. <br/>3a. Input of the new categories<br/> 4. Assign new categories to the addresses   |
 
-#### 3.2.3 Topic 'Rights Management'
+#### 3.2.3 Epic 'Rights Management'
 
 ##### User stories Rights management
 
@@ -344,7 +361,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Basic Workflow:** | 1. choose the contact data<br/> 2. Alter the user group<br/> 3. Save new privileges |
 | **Alternative Workflow:** | 1a. Put or remove a user in a specific user group which can access or should nor more access an entry.<br/> 2. Save definition.   |
 
-#### 3.2.4 Topic 'Data integrity'
+#### 3.2.4 Epic 'Data integrity'
 
 | User story: |  |
 | :--- | :--- |
@@ -360,7 +377,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Basic Workflow:** |  |
 | **Alternative Workflow:** |    |
 
-#### 3.2.5 Topic 'Data quality'
+#### 3.2.5 Epic 'Data quality'
 
 | User story: | As a User I want to enrich entries in my database with additional informations from other sources, so that i have additional informations or further contact possibilities. |
 | :--- | :--- |
@@ -410,7 +427,7 @@ Both have fields in common and have different fields. The users want to deal wit
 
 ### 3.3 Legal requirements
 
-#### 3.3.1 Topic 'Data protection'
+#### 3.3.1 Epic 'Data protection'
 
 | User story: | As a User I have to delete single contact persons from all the systems in which they are stored if a person demands this. (§35 BDSG) |
 | :--- | :--- |
@@ -449,7 +466,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Basic Workflow:** | 1. Identify the contact person.<br/> 2. Flag contact person for blocking.<br/> 3. Start blocking process 4. See a list from all the systems where the contact person has been blocked.  |
 | **Alternative Workflow:** | 4a. See a list of the cases where it is not possible to block the contact person from a specific system. 5. Decide further process for this cases (e.g. remove).   |
 
-#### 3.3.2 Topic 'Data sovereignty'
+#### 3.3.2 Epic 'Data sovereignty'
 
 | User story: | As a User I want to import contact data from an Excel file into my database |
 | :--- | :--- |
@@ -585,10 +602,6 @@ Organizations
 
 Persons
 ...
-
-
-
-
 
 
 
