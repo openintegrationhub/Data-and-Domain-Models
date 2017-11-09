@@ -18,7 +18,7 @@
         "gender": { "type": "array" },
         "firstName": { "type": "string" },
         "lastName": { "type": "string" },
-        "birthDate": { "type": "string", "format": "UTC" },
+        "birthDate": { "type": "string", "format": "date-time" },
         "picture": { "type": "string" },
         "position": { "type": "string"}
       },
@@ -50,6 +50,14 @@
   "type": "object",
   "properties": {
     "billing_address": { "$ref": "#/definitions/address" },
-    "shipping_address": { "$ref": "#/definitions/address" }
+    "shipping_address": {
+      "allOf": [
+        { "$ref": "#/definitions/address" },
+        { "properties":
+          { "type": { "enum": [ "residential", "business" ] } },
+          "required": ["type"]
+        }
+      ]
+    }
   }
 }
