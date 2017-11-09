@@ -307,25 +307,42 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Basic Workflow:** | 1. Chose the desired addresses<br/> 2. Chose the desired categories<br/>3. Assign the categories to the addresses  |
 | **Alternative Workflow:** | 2a. The desired categories are not provided. <br/>3a. Input of the new categories<br/> 4. Assign new categories to the addresses   |
 
-#### 3.2.3 Topic 'Rights managment'
+#### 3.2.3 Topic 'Rights Management'
 
 ##### User stories Rights management
 
-| User story: |  |
+| User story: | As Administrator I have to control which user can read, write, edit or delete addresses. |
+| :--- | :--- |
+
+| User story: | As Administrator I have to control which external system can access the contacts in my database. |
+| :--- | :--- |
+
+| User story: | As Administrator I don't want to grant privileges to the users for every system in use. |
 | :--- | :--- |
 
 #####
 
-| Label        |  |
+| Label        | USE CASE - Rights Management Groups |
 | :---  | :---  |
-| **Actor:** | User |
-| **Summary:** |  |
-| **Trigger:** |  |
+| **Actor:** | Administrator |
+| **Summary:** | Grant or withdraw users access rights |
+| **Trigger:** | An Administrator wants to control the access rights of the users. |
 | **Preconditions:** |  |
-| **Main Success Scenario:** |  |
-| **Failure Scenario:** |  |
-| **Basic Workflow:** |  |
-| **Alternative Workflow:** |    |
+| **Main Success Scenario:** | Privileges are altered |
+| **Failure Scenario:** | Privileges not altered |
+| **Basic Workflow:** | 1. Chose a user group<br/> 2. Alter the privileges<br/> 3. Save new privileges |
+| **Alternative Workflow:** | 1a. Create new user group.<br/> 2. Define privileges.<br/> 3. Save the new group.<br/> 4. Put desired users in the new group.   |
+
+| Label        | USE CASE - Rights Management for Contacts |
+| :---  | :---  |
+| **Actor:** | Administrator |
+| **Summary:** | Grant or withdraw users access rights for individual contacts |
+| **Trigger:** | An Administrator wants to control the access rights of the users. |
+| **Preconditions:** | User groups are defined |
+| **Main Success Scenario:** | Privileges are altered |
+| **Failure Scenario:** | Privileges not altered |
+| **Basic Workflow:** | 1. Chose the contact data<br/> 2. Alter the user group<br/> 3. Save new privileges |
+| **Alternative Workflow:** | 1a. Put or remove a user in a specific user group which can access or should nor more access an entry.<br/> 2. Save definition.   |
 
 #### 3.2.4 Topic 'Data integrity'
 
@@ -345,37 +362,92 @@ Both have fields in common and have different fields. The users want to deal wit
 
 #### 3.2.5 Topic 'Data quality'
 
-| User story: |  |
+| User story: | As a User I want to enrich entries in my database with additional informations from other sources, so that i have additional informations or further contact possibilities. |
 | :--- | :--- |
 
-| Label        |  |
+| User story: | As a User I want to find double entries in my database to eliminate them to have the possibility to clean my database of double entries. |
+| :--- | :--- |
+
+| User story: | As a User I want an update of my data automatically synchronized between different systems, because I don't want to do it manually. |
+| :--- | :--- |
+
+| User story: | As a User I want to validate the existence of in one system with another system, so that i am sure, that all systems contains the same data. |
+| :--- | :--- |
+
+| Label        | USE CASE - Enrich data |
 | :---  | :---  |
 | **Actor:** | User |
-| **Summary:** |  |
-| **Trigger:** |  |
-| **Preconditions:** |  |
-| **Main Success Scenario:** |  |
-| **Failure Scenario:** |  |
-| **Basic Workflow:** |  |
-| **Alternative Workflow:** |    |
+| **Summary:** | Describes enrichment of the entries in my database with additional informations. |
+| **Trigger:** | A user wants to add further information to existing data. |
+| **Preconditions:** | Contacts are stored in the database. |
+| **Main Success Scenario:** | Additional data is stored in the database  |
+| **Failure Scenario:** | Enrichment not possible |
+| **Basic Workflow:** | 1. Chose contacts for enrichment <br/> 2. Chose data with further informations<br/> 3. The system adds the new information to the data |
+| **Alternative Workflow:** | 3a. Automatic adding of new information is not possible.<br/>4. User has to define the fields for the new informations.<br/> 5. The system adds the new information to the data.   |
+
+| Label        | USE CASE - Find double entries |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** | Describes inspection of the database for double entries |
+| **Trigger:** | A user wants to inspect the database for double entries. |
+| **Preconditions:** | Contacts are stored in the database. |
+| **Main Success Scenario:** | See if there are double entries.  |
+| **Failure Scenario:** | Inspection not possible |
+| **Basic Workflow:** | 1. Chose contacts for inspection. <br/> 2. See possible double entries. |
+| **Alternative Workflow:** | 3. Chose the double entries for merging<br/> 4. Merge the desired entries.   |
+
+| Label        | USE CASE - Validate Contact Data across different Systems |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** | Describes inspection of the database for possible double entries. |
+| **Trigger:** | A user wants to validate the entries across different systems |
+| **Preconditions:** | Running connection between the different systems |
+| **Main Success Scenario:** | See if there is a difference between the entries in the databases of the different systems.  |
+| **Failure Scenario:** | Inspection not possible |
+| **Basic Workflow:** | 1. Chose the different systems for validation <br/> 2. Start validation.<br/> 3. See the difference |
+| **Alternative Workflow:** | 4. Synchronize the different systems.   |
+
 
 ### 3.3 Legal requirements
 
 #### 3.3.1 Topic 'Data protection'
 
-| User story: |  |
+| User story: | As a User I have to delete single contact persons from all the systems in which they are stored if a person demands this. (§35 BDSG) |
 | :--- | :--- |
 
-| Label        |  |
+| User story: | As a User I have to correct individual fields from contact entries from all the systems in which they are stored of a person demands this. (§35 BDSG) |
+| :--- | :--- |
+
+| User story: | As a User I have to block individual contacts for further approaches from all the systems in which they are stored if they demands this. (§35 BDSG) |
+| :--- | :--- |
+
+| User story: | As a User I must be able to control the blocking of data for every system. (§35 BDSG) |
+| :--- | :--- |
+
+| User story: | As a User I must not delete addresses if legal requirements, statutes or contractual requirements stand in the way of this. In this case they have to be blocked. |
+| :--- | :--- |
+
+| Label        | USE CASE - Delete single contacts from all the systems.  |
 | :---  | :---  |
 | **Actor:** | User |
-| **Summary:** |  |
-| **Trigger:** |  |
-| **Preconditions:** |  |
-| **Main Success Scenario:** |  |
-| **Failure Scenario:** |  |
-| **Basic Workflow:** |  |
-| **Alternative Workflow:** |    |
+| **Summary:** | Describes the removing of contact data from all the systems  |
+| **Trigger:** | A User has to remove contacts from the databases |
+| **Preconditions:** | Contact Data is stored in the database. |
+| **Main Success Scenario:** | Contact data is removed. |
+| **Failure Scenario:** | Contact data not removable |
+| **Basic Workflow:** | 1. Identify the contact person.<br/> 2. Flag contact person for removal.<br/> 3. Start removing process 4. See a list from all the systems where the contact person has been removed.  |
+| **Alternative Workflow:** | 4a. See a list of the cases where it is not possible to remove the contact person from a specific system. 5. Decide further process for this cases (e.g. block).   |
+
+| Label        | USE CASE - Block single contacts from all the systems.  |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** | Describes the blocking of contact data from all the systems  |
+| **Trigger:** | A User has to block contacts from the databases |
+| **Preconditions:** | Contact Data is stored in the database. |
+| **Main Success Scenario:** | Contact data is blocked |
+| **Failure Scenario:** | Contact data not blockable |
+| **Basic Workflow:** | 1. Identify the contact person.<br/> 2. Flag contact person for blocking.<br/> 3. Start blocking process 4. See a list from all the systems where the contact person has been blocked.  |
+| **Alternative Workflow:** | 4a. See a list of the cases where it is not possible to block the contact person from a specific system. 5. Decide further process for this cases (e.g. remove).   |
 
 #### 3.3.2 Topic 'Data sovereignty'
 
@@ -397,7 +469,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Main Success Scenario:** | Data is imported |
 | **Failure Scenario:** | Import not possible |
 | **Basic Workflow:** | 1. Chose the desired contact data<br/> 2. Export or Import the data |
-| **Alternative Workflow:** | 2a. Data for the import is unsupported format. 3. Convert the data in a supported format. 4. Import the data.    |
+| **Alternative Workflow:** | 2a. Data for the import is an unsupported format. 3. Convert the data in a supported format. 4. Import the data.    |
 
 | Label        | USE CASE - Export of addresses |
 | :---  | :---  |
@@ -407,8 +479,8 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | Contact Data stored in the contact database |
 | **Main Success Scenario:** | Data is exported |
 | **Failure Scenario:** | Export not possible |
-| **Basic Workflow:** | 1. Chose the desired contact data<br/> 2. Export the data |
-| **Alternative Workflow:** | 2a. Export is not possible 3. Copy & Paste ever entry in the database by manually.    |
+| **Basic Workflow:** | 1. Chose the desired contact data<br/> 	2. Chose the desired format for the export 3. Export the data |
+| **Alternative Workflow:** | 3a. Export is not possible 3. Copy & Paste ever entry in the database by manually.    |
 
 | User story: | As a User I want to substitute our CRM-Software with another CRM-Software and i want to transfer my contact data. |
 | :--- | :--- |
@@ -446,9 +518,28 @@ Both have fields in common and have different fields. The users want to deal wit
 
 ### 3.4 Standardization
 
-| User story: |  |
+| User story: | As a User I want to manage international postal addresses in a standardized format, so that my colleagues search them and my company nevertheless can send letters by post in the local format. |
 | :--- | :--- |
 
+| User story: | As a User I want the telephone numbers in a standardized format, so that my telephone system can recognize the callers. |
+| :--- | :--- |
+
+| User story: | As a User I want the birthday dates in a standardized format, so that I can use them for the marketing. |
+| :--- | :--- |
+
+| User story: | As a User I want the stored statistical data (e.g. company size, revenue etc.) in a standardized format, so that I can use them for the marketing. |
+| :--- | :--- |
+
+| Label        | USE CASE - Standardization of data |
+| :---  | :---  |
+| **Actor:** | User |
+| **Summary:** | Describes standardization of data |
+| **Trigger:** | A user wants to add standardize existing data in a specific format. |
+| **Preconditions:** | Contacts are stored in the database. |
+| **Main Success Scenario:** | Data is standardized  |
+| **Failure Scenario:** | Standardization not possible |
+| **Basic Workflow:** | 1. Chose fields for standardization <br/> 2. Chose format for standardization<br/> 3. The system standardize the informations. |
+| **Alternative Workflow:** | 2a. The desired field is not suitable for standardization<br/> 2b. The format is not suitable for this field <br/> 2c. There is no standard format for this field.   |
 
 
 ## 4. Findings
