@@ -33,15 +33,26 @@
 				- [Use cases person to organization relations](#use-cases-person-to-organization-relations)
 			- [3.2.3 Epic 'Rights Management'](#323-epic-rights-management)
 				- [User stories Rights management](#user-stories-rights-management)
-				- [](#)
+				- [Use case Rights management](#use-case-rights-management)
 			- [3.2.4 Epic 'Data integrity'](#324-epic-data-integrity)
+				- [User stories Data integrity](#user-stories-data-integrity)
+				- [Use case Data integrity](#use-case-data-integrity)
 			- [3.2.5 Epic 'Data quality'](#325-epic-data-quality)
+				- [User stories Data quality](#user-stories-data-quality)
+				- [Use case Data quality](#use-case-data-quality)
 		- [3.3 Legal requirements](#33-legal-requirements)
 			- [3.3.1 Epic 'Data protection'](#331-epic-data-protection)
+				- [User stories Data protection](#user-stories-data-protection)
+				- [Use case Data protection](#use-case-data-protection)
 			- [3.3.2 Epic 'Data sovereignty'](#332-epic-data-sovereignty)
+				- [User stories Data sovereignty](#user-stories-data-sovereignty)
+				- [Use case Data sovereignty](#use-case-data-sovereignty)
 		- [3.4 Standardization](#34-standardization)
+			- [3.4.1 Standardization data formats](#341-standardization-data-formats)
+				- [User stories standardization](#user-stories-standardization)
+				- [Use case Standardization data formats](#use-case-standardization-data-formats)
 	- [4. Findings](#4-findings)
-	- [4. Results](#4-results)
+	- [5. Results](#5-results)
 
 <!-- /TOC -->
 
@@ -337,7 +348,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | User story: | As Administrator I don't want to grant privileges to the users for every system in use. |
 | :--- | :--- |
 
-#####
+##### Use case Rights management
 
 | Label        | USE CASE - Rights Management Groups |
 | :---  | :---  |
@@ -363,8 +374,11 @@ Both have fields in common and have different fields. The users want to deal wit
 
 #### 3.2.4 Epic 'Data integrity'
 
+##### User stories Data integrity
 | User story: |  |
 | :--- | :--- |
+
+##### Use case Data integrity
 
 | Label        |  |
 | :---  | :---  |
@@ -379,6 +393,8 @@ Both have fields in common and have different fields. The users want to deal wit
 
 #### 3.2.5 Epic 'Data quality'
 
+##### User stories Data quality
+
 | User story: | As a User I want to enrich entries in my database with additional informations from other sources, so that i have additional informations or further contact possibilities. |
 | :--- | :--- |
 
@@ -390,6 +406,8 @@ Both have fields in common and have different fields. The users want to deal wit
 
 | User story: | As a User I want to validate the existence of in one system with another system, so that i am sure, that all systems contains the same data. |
 | :--- | :--- |
+
+##### Use case Data quality
 
 | Label        | USE CASE - Enrich data |
 | :---  | :---  |
@@ -424,10 +442,11 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Basic Workflow:** | 1. choose the different systems for validation <br/> 2. Start validation.<br/> 3. See the difference |
 | **Alternative Workflow:** | 4. Synchronize the different systems.   |
 
-
 ### 3.3 Legal requirements
 
 #### 3.3.1 Epic 'Data protection'
+
+##### User stories Data protection
 
 | User story: | As a User I have to delete single contact persons from all the systems in which they are stored if a person demands this. (§35 BDSG) |
 | :--- | :--- |
@@ -443,6 +462,8 @@ Both have fields in common and have different fields. The users want to deal wit
 
 | User story: | As a User I must not delete addresses if legal requirements, statutes or contractual requirements stand in the way of this. In this case they have to be blocked. |
 | :--- | :--- |
+
+##### Use case Data protection
 
 | Label        | USE CASE - Delete single contacts from all the systems.  |
 | :---  | :---  |
@@ -468,6 +489,8 @@ Both have fields in common and have different fields. The users want to deal wit
 
 #### 3.3.2 Epic 'Data sovereignty'
 
+##### User stories Data sovereignty
+
 | User story: | As a User I want to import contact data from an Excel file into my database |
 | :--- | :--- |
 
@@ -476,6 +499,8 @@ Both have fields in common and have different fields. The users want to deal wit
 
 | User story: | As a User I need addresses in the vCard-Format, but my contact manangement programm only exports csv data.   |
 | :--- | :--- |
+
+##### Use case Data sovereignty
 
 | Label        | USE CASE - Import of addresses |
 | :---  | :---  |
@@ -528,12 +553,16 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Summary:** | Automatic transfer of addresses from one system to another.   |
 | **Trigger:** | A user wants to have contact data automatically transfered from one system to another. |
 | **Preconditions:** | Contact Data stored in a contact database |
-| **Main Success Scenario:** | Data is transfered |
+| **Main Success Scenario:** | Data is transferred |
 | **Failure Scenario:** | Transfer not possible |
 | **Basic Workflow:** | 1. choose the source system of the contact data<br/> 2. choose the desired target system<br/> 3. Data is transfered to the target system  |
 | **Alternative Workflow:** | 2a. Target System not reachable 3a. Throw failure message.     |
 
 ### 3.4 Standardization
+
+#### 3.4.1 Standardization data formats
+
+##### User stories standardization
 
 | User story: | As a User I want to manage international postal addresses in a standardized format, so that my colleagues search them and my company nevertheless can send letters by post in the local format. |
 | :--- | :--- |
@@ -546,6 +575,8 @@ Both have fields in common and have different fields. The users want to deal wit
 
 | User story: | As a User I want the stored statistical data (e.g. company size, revenue etc.) in a standardized format, so that I can use them for the marketing. |
 | :--- | :--- |
+
+##### Use case Standardization data formats
 
 | Label        | USE CASE - Standardization of data |
 | :---  | :---  |
@@ -625,7 +656,7 @@ To deal with privacy issues you have to consider...
 
 To deal with rights management you have to consider...
 
-## 4. Results
+## 5. Results
 
 **UML diagram**
 
