@@ -22,9 +22,6 @@
 				- [Use case relations person to organization](#use-case-relations-person-to-organization)
 				- [User stories relations of organizations to other organizations](#user-stories-relations-of-organizations-to-other-organizations)
 				- [Use case relations of organization to other organizations](#use-case-relations-of-organization-to-other-organizations)
-- [???? double ???](#-double-)
-				- [User stories organizations to organizations relations](#user-stories-organizations-to-organizations-relations)
-				- [Use cases organizations to organizations relations](#use-cases-organizations-to-organizations-relations)
 				- [User stories of the own organization relations to others](#user-stories-of-the-own-organization-relations-to-others)
 				- [Use case of the own organization relations to others](#use-case-of-the-own-organization-relations-to-others)
 				- [User stories person to person relations](#user-stories-person-to-person-relations)
@@ -233,25 +230,6 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Main Success Scenario:** | Assignment took place |
 | **Failure Scenario:** | Assignment not possible |
 | **Basic Workflow:** | 1 Define first organization <br/> 2 Define second organization<br/> 3 Assign organization to organization relation |
-| **Alternative Workflow:** |    |
-
-
-# ???? double ???
-
-##### User stories organizations to organizations relations
-
-
-##### Use cases organizations to organizations relations
-
-| Label        |  |
-| :---  | :---  |
-| **Actor:** | User |
-| **Summary:** |  |
-| **Trigger:** |  |
-| **Preconditions:** |  |
-| **Main Success Scenario:** |  |
-| **Failure Scenario:** |  |
-| **Basic Workflow:** |  |
 | **Alternative Workflow:** |    |
 
 ##### User stories of the own organization relations to others
