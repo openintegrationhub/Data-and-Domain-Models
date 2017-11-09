@@ -106,7 +106,7 @@ In the real world there are two different types of objects with different scope 
 
 Both have fields in common and have different fields. The users want to deal with this objects in different ways.
 
-##### User stories properties of organizations
+##### User stories attributes of organizations
 
 | User story: | As a user I need informations about the location of the organization to travel or to ship something to the organization (e.g. letters, goods, etc.) to it. |
 | :--- | :--- |
@@ -114,9 +114,9 @@ Both have fields in common and have different fields. The users want to deal wit
 | User story: | As a user I need contact data of the organization to communicate in different channels (email, phone, fax, url,  ...) |
 | :--- | :--- |
 
-##### Use case properties of organization
+##### Use case attributes of organization
 
-| Label        | USE CASE - properties of organizations |
+| Label        | USE CASE - Attributes of organizations |
 | :---  | :---  |
 | **Actor:** | User |
 | **Summary:** | Describes adding specific contact data to any kind of organization |
@@ -124,10 +124,10 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | The organization is already stored |
 | **Main Success Scenario:** | Added contact data |
 | **Failure Scenario:** | Adding contact data was not successful |
-| **Basic Workflow:** | 1. Chose the organization<br/> 2. Add specific contact data, e.g. postal address, in the appropriate fields<br/> 3. Store the data  |
+| **Basic Workflow:** | 1. choose the organization<br/> 2. Add specific contact data, e.g. postal address, in the appropriate fields<br/> 3. Store the data  |
 | **Alternative Workflow:** | 2a. Required fields are not available or in different format<br/> 3a. Add new field<br/> 3b. Use different field similar to the appropriate field.<br/> 4. Store the data.   |
 
-##### User stories properties of persons
+##### User stories attributes of persons
 
 | User story: | As a user I want to communicate with a person over different channels to have all possibilities to contact. |
 | :--- | :--- |
@@ -135,12 +135,12 @@ Both have fields in common and have different fields. The users want to deal wit
 | User story: | As a user I want to communicate with a person over different channels to have all possibilities to contact. |
 | :--- | :--- |
 
-| User story: | As a user I want to manage employee data of my organization to handle Requirements of HR or with user management. |
-| :--- | :--- |
+| User story: | As a User I want to manage employee data of my organization to handle requirements of HR or user management. |
+| :--- | :--- |
 
-##### Use case properties of persons
+##### Use case attributes of persons
 
-| Label        | USE CASE - properties of persons |
+| Label        | USE CASE - Attributes of persons |
 | :---  | :---  |
 | **Actor:** | User |
 | **Summary:** | Describes adding specific contact data to any kind of persons |
@@ -148,7 +148,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | The person is already stored |
 | **Main Success Scenario:** | Added contact data |
 | **Failure Scenario:** | Adding contact data was not successful |
-| **Basic Workflow:** | 1. Chose the person<br/> 2. Add specific contact data, e.g. postal address, in the appropriate fields<br/> 3. Store the data  |
+| **Basic Workflow:** | 1. choose the person<br/> 2. Add specific contact data, e.g. postal address, in the appropriate fields<br/> 3. Store the data  |
 | **Alternative Workflow:** | 2a. Required fields are not available or in different format<br/> 3a. Add new field<br/> 3b. Use different field similar to the appropriate field.<br/> 4. Store the data.   |
 
 #### 3.2.2 'Topic Relations'
@@ -244,7 +244,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | Addresses are stored in the database |
 | **Main Success Scenario:** | The desired addresses are assigned with the desired categories. |
 | **Failure Scenario:** |  |
-| **Basic Workflow:** | 1. Chose the desired addresses <br/> 2. Chose the desired categories <br/> 3. Assign the categories to the addresses |
+| **Basic Workflow:** | 1. choose the desired addresses <br/> 2. choose the desired categories <br/> 3. Assign the categories to the addresses |
 | **Alternative Workflow:** | 2a. The desired categories are not provided.<br/> 3a. Input of the new categories<br/> 4. Assign new categories to the addresses   |
 
 ##### User stories person to person relations
@@ -268,7 +268,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | The organization and the persons are stored in the database |
 | **Main Success Scenario:** | The desired persons are put in relations |
 | **Failure Scenario:** | Assignment not possible |
-| **Basic Workflow:** | 1. Chose the desired persons<br/> 2. Chose the desired description of the relations<br/> 3. Store the relation in the database |
+| **Basic Workflow:** | 1. choose the desired persons<br/> 2. choose the desired description of the relations<br/> 3. Store the relation in the database |
 | **Alternative Workflow:** | 2a. The desired type of relation is not available.<br/> 3a. Input the type of relation<br/>3b. Associate the persons with the new relations 4. Store the relation in the database.   |
 
 | Label        | USE CASE - See Person to Person relations |
@@ -279,7 +279,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | The organizations and the persons are stored in the database |
 | **Main Success Scenario:** | See whether its the same person or not |
 | **Failure Scenario:** | It's not possible to see same persons. |
-| **Basic Workflow:** | 1. Chose the desired persons<br/> 2. See if there is a relation to the same person in another organization. |
+| **Basic Workflow:** | 1. choose the desired persons<br/> 2. See if there is a relation to the same person in another organization. |
 | **Alternative Workflow:** | 2a. Do a global search for similar persons   |
 
 ##### User stories person to organization relations
@@ -304,7 +304,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | Contact Persons are stored in the database. |
 | **Main Success Scenario:** | The desired contact persons are assigned with the desired categories.  |
 | **Failure Scenario:** |  |
-| **Basic Workflow:** | 1. Chose the desired addresses<br/> 2. Chose the desired categories<br/>3. Assign the categories to the addresses  |
+| **Basic Workflow:** | 1. choose the desired addresses<br/> 2. choose the desired categories<br/>3. Assign the categories to the addresses  |
 | **Alternative Workflow:** | 2a. The desired categories are not provided. <br/>3a. Input of the new categories<br/> 4. Assign new categories to the addresses   |
 
 #### 3.2.3 Topic 'Rights Management'
@@ -330,7 +330,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** |  |
 | **Main Success Scenario:** | Privileges are altered |
 | **Failure Scenario:** | Privileges not altered |
-| **Basic Workflow:** | 1. Chose a user group<br/> 2. Alter the privileges<br/> 3. Save new privileges |
+| **Basic Workflow:** | 1. choose a user group<br/> 2. Alter the privileges<br/> 3. Save new privileges |
 | **Alternative Workflow:** | 1a. Create new user group.<br/> 2. Define privileges.<br/> 3. Save the new group.<br/> 4. Put desired users in the new group.   |
 
 | Label        | USE CASE - Rights Management for Contacts |
@@ -341,7 +341,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | User groups are defined |
 | **Main Success Scenario:** | Privileges are altered |
 | **Failure Scenario:** | Privileges not altered |
-| **Basic Workflow:** | 1. Chose the contact data<br/> 2. Alter the user group<br/> 3. Save new privileges |
+| **Basic Workflow:** | 1. choose the contact data<br/> 2. Alter the user group<br/> 3. Save new privileges |
 | **Alternative Workflow:** | 1a. Put or remove a user in a specific user group which can access or should nor more access an entry.<br/> 2. Save definition.   |
 
 #### 3.2.4 Topic 'Data integrity'
@@ -382,7 +382,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | Contacts are stored in the database. |
 | **Main Success Scenario:** | Additional data is stored in the database  |
 | **Failure Scenario:** | Enrichment not possible |
-| **Basic Workflow:** | 1. Chose contacts for enrichment <br/> 2. Chose data with further informations<br/> 3. The system adds the new information to the data |
+| **Basic Workflow:** | 1. choose contacts for enrichment <br/> 2. choose data with further informations<br/> 3. The system adds the new information to the data |
 | **Alternative Workflow:** | 3a. Automatic adding of new information is not possible.<br/>4. User has to define the fields for the new informations.<br/> 5. The system adds the new information to the data.   |
 
 | Label        | USE CASE - Find double entries |
@@ -393,8 +393,8 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | Contacts are stored in the database. |
 | **Main Success Scenario:** | See if there are double entries.  |
 | **Failure Scenario:** | Inspection not possible |
-| **Basic Workflow:** | 1. Chose contacts for inspection. <br/> 2. See possible double entries. |
-| **Alternative Workflow:** | 3. Chose the double entries for merging<br/> 4. Merge the desired entries.   |
+| **Basic Workflow:** | 1. choose contacts for inspection. <br/> 2. See possible double entries. |
+| **Alternative Workflow:** | 3. choose the double entries for merging<br/> 4. Merge the desired entries.   |
 
 | Label        | USE CASE - Validate Contact Data across different Systems |
 | :---  | :---  |
@@ -404,7 +404,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | Running connection between the different systems |
 | **Main Success Scenario:** | See if there is a difference between the entries in the databases of the different systems.  |
 | **Failure Scenario:** | Inspection not possible |
-| **Basic Workflow:** | 1. Chose the different systems for validation <br/> 2. Start validation.<br/> 3. See the difference |
+| **Basic Workflow:** | 1. choose the different systems for validation <br/> 2. Start validation.<br/> 3. See the difference |
 | **Alternative Workflow:** | 4. Synchronize the different systems.   |
 
 
@@ -468,7 +468,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | Contact Data stored in a file  |
 | **Main Success Scenario:** | Data is imported |
 | **Failure Scenario:** | Import not possible |
-| **Basic Workflow:** | 1. Chose the desired contact data<br/> 2. Export or Import the data |
+| **Basic Workflow:** | 1. choose the desired contact data<br/> 2. Export or Import the data |
 | **Alternative Workflow:** | 2a. Data for the import is an unsupported format. 3. Convert the data in a supported format. 4. Import the data.    |
 
 | Label        | USE CASE - Export of addresses |
@@ -479,7 +479,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | Contact Data stored in the contact database |
 | **Main Success Scenario:** | Data is exported |
 | **Failure Scenario:** | Export not possible |
-| **Basic Workflow:** | 1. Chose the desired contact data<br/> 	2. Chose the desired format for the export 3. Export the data |
+| **Basic Workflow:** | 1. choose the desired contact data<br/> 	2. choose the desired format for the export 3. Export the data |
 | **Alternative Workflow:** | 3a. Export is not possible 3. Copy & Paste ever entry in the database by manually.    |
 
 | User story: | As a User I want to substitute our CRM-Software with another CRM-Software and i want to transfer my contact data. |
@@ -502,7 +502,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | Contact Data stored in a contact database |
 | **Main Success Scenario:** | Data is imported or exported |
 | **Failure Scenario:** | Export or import not possible |
-| **Basic Workflow:** | 1. Chose the desired contact data<br/> 2. Chose the desired data format 3. Export or Import the data |
+| **Basic Workflow:** | 1. choose the desired contact data<br/> 2. choose the desired data format 3. Export or Import the data |
 | **Alternative Workflow:** | 2a. Desired format is not supported 3a. Export data in an alternative supported format.     |
 
 | Label        | USE CASE - Automatic transfer of addresses |
@@ -513,7 +513,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | Contact Data stored in a contact database |
 | **Main Success Scenario:** | Data is transfered |
 | **Failure Scenario:** | Transfer not possible |
-| **Basic Workflow:** | 1. Chose the source system of the contact data<br/> 2. Chose the desired target system<br/> 3. Data is transfered to the target system  |
+| **Basic Workflow:** | 1. choose the source system of the contact data<br/> 2. choose the desired target system<br/> 3. Data is transfered to the target system  |
 | **Alternative Workflow:** | 2a. Target System not reachable 3a. Throw failure message.     |
 
 ### 3.4 Standardization
@@ -538,7 +538,7 @@ Both have fields in common and have different fields. The users want to deal wit
 | **Preconditions:** | Contacts are stored in the database. |
 | **Main Success Scenario:** | Data is standardized  |
 | **Failure Scenario:** | Standardization not possible |
-| **Basic Workflow:** | 1. Chose fields for standardization <br/> 2. Chose format for standardization<br/> 3. The system standardize the informations. |
+| **Basic Workflow:** | 1. choose fields for standardization <br/> 2. choose format for standardization<br/> 3. The system standardize the informations. |
 | **Alternative Workflow:** | 2a. The desired field is not suitable for standardization<br/> 2b. The format is not suitable for this field <br/> 2c. There is no standard format for this field.   |
 
 
