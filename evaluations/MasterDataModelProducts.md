@@ -2,8 +2,6 @@
 
 ## Table of contents
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-	- [Table of contents](#table-of-contents)
-	- [1. Introduction](#1-Introduction)
 <!-- /TOC -->
 
 ## 1. Introduction
