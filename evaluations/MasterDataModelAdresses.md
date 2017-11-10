@@ -353,16 +353,16 @@ Both have fields in common and have different fields. The users want to deal wit
 #### 3.2.4 Epic 'Data integrity'
 
 ##### User stories Data integrity
-| User story: |  |
+| User story: | As a user I want to have my data consistent across multiple systems. |
 | :--- | :--- |
 
 ##### Use case Data integrity
 
-| Label        |  |
+| Label        | USE CASE Data integrity |
 | :---  | :---  |
 | **Actor:** | User |
 | **Summary:** |  |
-| **Trigger:** |  |
+| **Trigger:** | User wants consistent data across all used systems. |
 | **Preconditions:** |  |
 | **Main Success Scenario:** |  |
 | **Failure Scenario:** |  |
