@@ -7,6 +7,15 @@
   - [1. Introduction](#1-Introduction)
     - [1.1 Purpose of this document](#11-Purpose-of-this-document)
     - [1.2 Particularities of different product environments](#12-Particularities-of-different-product-environments)
+      - [1.2.1 Construction materials](#121-Construction-materials)
+      - [1.2.2 Textiles](#122-Textiles)
+      - [1.2.3 Food](#123-Food)
+      - [1.2.4 Hazardous Substances](#124-Hazardous-Substances)
+      - [1.2.5 Services](#125-Services)
+  - [2. Requirements for a Master Data Model](#2-Requirements-for-a-Master-Data-Model)
+    - [2.1 General Requirements](#21-General-Requirements)
+  - [3. Findings](#3-Findings)
+  - [4. Results](#4-Results)
 <!-- /TOC -->
 
 ## 1. Introduction
@@ -113,7 +122,7 @@ To deal with rights management you have to consider...
 - purchase prices / profit
 - supplier information
 
-## 5. Results
+## 4. Results
 
 **UML diagram**
 
