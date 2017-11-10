@@ -1,6 +1,8 @@
 # Master Data Model Products
 
 ## Table of contents
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+<!-- /TOC -->
 
 ## 1. Introduction
 ### 1.1 Purpose of this document
