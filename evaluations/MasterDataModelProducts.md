@@ -2,6 +2,8 @@
 
 ## Table of contents
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+- [Master Data Model Products](#master-data-model-Products)
+  - [Table of contents](#table-of-contents)
 <!-- /TOC -->
 
 ## 1. Introduction
@@ -93,3 +95,25 @@ While talking about products, we are generally referring to goods, which are pur
 | **Main Success Scenario:** | Added product data |
 | **Failure Scenario:** | Adding product data was not successful |
 | **Basic Workflow:** | 1. Chose the product<br/> 2. Add specific product data, e.g. unit, in the appropriate fields<br/> 3. Store the data  |
+
+## 3. Findings
+
+**Properties and Relations**
+
+**Common Fields**
+A typical product contains the following fields:
+...
+
+**Rights Management**
+
+To deal with rights management you have to consider...
+- purchase prices / profit
+- supplier information
+
+## 5. Results
+
+**UML diagram**
+
+**Json schema**
+
+**Documentation of the final Master Data Model of Products **
