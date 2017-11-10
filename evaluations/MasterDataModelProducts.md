@@ -4,6 +4,9 @@
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 - [Master Data Model Products](#master-data-model-Products)
   - [Table of contents](#table-of-contents)
+  - [1. Introduction](#1-Introduction)
+    - [1.1 Purpose of this document](#11-Purpose-of-this-document)
+    - [1.2 Particularities of different product environments](#12-Particularities-of-different-product-environments)
 <!-- /TOC -->
 
 ## 1. Introduction
