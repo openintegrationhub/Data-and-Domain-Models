@@ -570,32 +570,43 @@ Both have fields in common and have different fields. The users want to deal wit
 
 ## 4. Findings
 
-**Types and Relations**
+As seen in chapter 3, there are a lot of issues to consider when dealing with addresses. In the following chapter we want to summarize the findings of the use cases and user stories and expound the problems and questions and synchronize them with our goals.
 
-There are two types of addresses:
-- Organizations
-- Persons
+Our main goal is the vision of a generic master data model for addresses. This vision is the subject of a following refinement. From the main goals we come to subgoals. This goals and the epics are the foundation of solvable requirements we need for the master data model.
 
+### 4.1 Conceptual perspective
+
+#### 4.1.1 Type of Objects
+
+In Chapter 3.2.1 we encountered different types of objects. We named them organizations and persons with reference to the real world objects.
+
+Organizations can be companies or associations. Persons can be contacts in organizations or employees of your own company.
+
+From this real world view we derive the two main objects and go deeper in the modeling. The following graphic describes the process.
+
+![Typing of addresses](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/typing-of-addresses.png)
+
+With this dividing in persons and organizations we are able to solve the problems raised in chapter 3.2.2., so we can assign a different amount of persons to an organization, can assign on person to different organizations or can assign relations between persons.
+
+As you can see in the graphic, from organizations and persons we earn data objects for labels and relations.
+
+#### 4.1.2 Type of Relations
+
+In Chapter 3.2.2. we learned a lot about the different kind of relations. A common address for example is just a relation of a set of address field to an object of an organization or a person which are required to serve the specific purpose, for example sending a letter. This relation can be labelled with a category. The relations are for example the delivery address from the company or the business contact data for the person.
+
+With this we can solve the problems raised by the user stories and use cases in Chapter 3.2.1. and 3.2.2 which are about the different locations of one organization, the structure of a group of companies or if you have same person at different organizations and you want to contact the persons with the specific contact data from one of the organizations.
+
+A label could be a tag or category like "customer" or "lead" for an organization or "CEO" for a person. With this we can meet most of the expectations from the user stories in 3.2.1. and 3.2.2 for example we can see the function of a person in an organization or we can see the relation of our company to companies stored in the database.
+
+Derived from labels and relations we get segments for meta data and organization or personal data. Those have attributes like categories or the specific address fields.
+
+#### 4.1.3 Privacy and Rights Management 
+
+As discovered in use cases like 3.3.1. or for general data management we need additional attributes for rights management or database management. An entry in the database can have the known fields, e.g. the common contact fields and the categories, and can be vested with some access rights. Further it must have fields like unique identifiers. We grouped these attributes in a "handling data" segment.
 
 
 
 ![Type of addresses](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/types-of-addresses.png)
-
-=> Extend this with the data model from Snazzy Contacts
-
-There a different types of organizations, e. g. companies, associations, groups,
-and different types of persons, e.g. contact persons in companies,
-private contacts.
-
-
-
-![Typing of addresses](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/typing-of-addresses.png)
-
-
-
-
-
-
 
 ![Relationship person organization](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/use-case-relationship-person-organization.png)
 
