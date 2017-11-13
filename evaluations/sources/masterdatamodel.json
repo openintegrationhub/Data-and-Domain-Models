@@ -3,46 +3,72 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "description": "Open Integration Hub meta-schema",
   "definitions": {
+    "BusinessEntity": {
+      "type": "object",
+      "properties": {
+        "businessEntityID": { "type": "string" },
+        "eventID": { "type": "string" },
+        "lastModified": { "type": "string", "format": "date-time" }
+      },
+      "required": ["businessEntityID", "eventID", "lastModified"]
+    },
     "organization": {
       "type": "object",
       "properties": {
         "name": { "type": "string" },
-        "taxNumber": { "type": "string" }
+        "taxNumber": { "type": "array", "format": "string" },
+        "lastModified": { "type": "string", "format": "date-time" }
       },
       "required": ["name"]
     },
     "person": {
       "type": "object",
       "properties": {
+        "personID": { "type": "array", "format": "string" },
+        "gender": { "type": "string", "enum": [ "female", "intersexual", "male" ] },
         "title": { "type": "array" },
-        "gender": { "type": "array" },
-        "firstName": { "type": "string" },
+        "firstName": { "type": "array", "format": "string" },
+        "midName": { "type": "array", "format": "string" },
         "lastName": { "type": "string" },
         "birthDate": { "type": "string", "format": "date-time" },
-        "picture": { "type": "string" },
-        "position": { "type": "string"}
+        "position": { "type": "string"},
+        "department": { "type": "string"},
+        "alias": { "type": "string", "format": "string" },
+        "picture": { "type": "array" },
+        "note": { "type": "string"},
+        "lastModified": { "type": "string", "format": "date-time" }
       },
       "required": ["firstName"]
     },
     "address": {
       "type": "object",
       "properties": {
+        "addressID": { "type": "string" },
         "street": { "type": "string" },
         "number": { "type": "string" },
-        "zip": { "type": "string" },
+        "additionalAddress": { "type": "string" },
+        "apartment": { "type": "string" },
+        "postalCode": { "type": "string" },
         "city": { "type": "string" },
-        "state": { "type": "string" }
+        "district": { "type": "string" },
+        "country": { "type": "string" },
+        "state": { "type": "string" },
+        "lastModified": { "type": "string", "format": "date-time" }
       },
       "required": ["street", "number", "zip", "city"]
     },
     "contact": {
       "type": "object",
       "properties": {
-        "email": { "type": "array", "format": "String" },
-        "mobile": { "type": "array", "format": "String" },
-        "phone": { "type": "array", "format": "String" },
-        "fax": { "type": "array", "format": "String" },
-        "uri": { "type": "array", "format": "String" }
+        "email": { "type": "array", "format": "email" },
+        "mobile": { "type": "array", "format": "string" },
+        "phone": { "type": "array", "format": "string" },
+        "pager": { "type": "array", "format": "string" },
+        "fax": { "type": "array", "format": "string" },
+        "web": { "type": "array", "format": "string" },
+        "chat": { "type": "array", "format": "string" },
+        "social": { "type": "array", "format": "string" },
+        "lastModified": { "type": "string", "format": "date-time" }
       }
     }
   },
