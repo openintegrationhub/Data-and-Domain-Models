@@ -7,7 +7,7 @@
 - Decisions within a workgroup are made by the Committers on democratic basis (unanimity)
 - Contributors contribute to the projects but do not have a vote
 - Contributors can apply to get a vote and become a Committer
-- Committer pick Contributors to become Committers
+- Committer pick Contributors to become Committers (Committees have to agree)
 
 ## Workgroup Member
 
@@ -17,6 +17,19 @@
 |  | Name  | Committer  |
 |  | Name  | Committer  |
 |  | Name  | Contributor  |
+
+## Workgroup Content
+
+| Workgroup  | Architecture |
+| ------------- | ------------- |
+| Content  | Domain Model |
+|  | Master Data Model(s)  |
+|  | Data Mapping  |
+|  | Data Hub & Standarization of the data model  |
+|  | Backlog Data-Hub & data model  |  
+| APs | 2.08 |
+|  | 2.10 |
+|  | 2.12 |
 
 ## Contribution
 
