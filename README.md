@@ -1,6 +1,6 @@
 # Introduction
 
-## Organization
+## General Information
 - Each workgroup has at least one **status call** every two weeks
 - **Every Committer** must attend the status call
 - Each workgroup has one leader - this leader is elected every 6 month by all decision makers whitin the workgroup(re-election possible)
