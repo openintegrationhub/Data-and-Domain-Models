@@ -37,7 +37,7 @@ The master data model will grow with each application (specific data model) that
 * **Extract the master data model and the derived transformation rule sets**
 
   **To be discussed**
-  * Where exactly will the master data model be hosted - [without being part of the data hub](https://github.com/openintegrationhub/architecture/wiki/base-architecture#solution-strategy)?
+  * Where exactly will the master data model be hosted - [without being part of the data hub](https://github.com/openintegrationhub/Architecture/blob/conception-1/evaluations/baseArchitecture.md#solution-strategy)?
     * How will the generic part of the master data model become extensible?
   * _How does the interface of the runtime will look like, where ISVs connect their services to?_
   * _Where is the transformation- and the meta data model be located at?_
@@ -49,7 +49,7 @@ The master data model will grow with each application (specific data model) that
 * Extend the master data model by adding new apps (data models) into the test scenario
   * Define criteria for new apps that will potentially extend the master data model
     * Identify business apps that use an additional set of generic attributes (address data fields)
-  * Hand out a technical on boarding (documentation) to its vendors, which want to [connect](https://github.com/openintegrationhub/architecture/wiki/base-architecture#integrating-an-isv-application) their app
+  * Hand out a technical on boarding (documentation) to its vendors, which want to [connect](https://github.com/openintegrationhub/Architecture/blob/9ba511ff5875d1122a47c3da476527204a91cbc0/evaluations/ConnectorDocumentation/ConnectorGuide.md#guide-for-creating-a-connector) their app
   * Synchronize (address) data (***asynchronously***) between multiple (new) apps - **bidirectionally**
 * **Expand the master data model by new generic attributes and update the transformation rule sets**
 
