@@ -610,13 +610,48 @@ As discovered in use cases like 3.3.1. or for general data management we need ad
 
 As we talk about address data and most of the user requirements are about communication, we need standard fields to reach out persons or organizations via postal, electronic or direct communication.
 
+##### 4.2.1.1 Postal Standards
+
 The Universal Postal Union has developed two addressing standards: S42 and S53. S42 describes international postal address components and templates, where S53 describes the exchange of name and address data. Since 2004 there is a development process for an international ISO-Standard for international addresses. This ISO-Standard 19773 provides in part 8 the description of the data structure postal addresses. The UPU S42 address elements are used as a basis for constructing a postal address.
 
 In ISO 19773 an unrendered postal address consists of four postal address segments: mailee specification (optional), addressee specification (optional), mail recipient dispatching information (optional), delivery point specification (mandatory).
 
 ![Postal Address — All Components - diagram from UPU S42](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/working_datamodel/images/postal_adress_diagram_upus42.png)
 
-As we don't want to implement the whole standardization, we just keep on with the mandatory delivery point specification.
+The unrendered postal address is a nested structure comprised of elements
+As we can see, this standard divides addressee specifications in organization or individual identification as we do.
+
+For further information please read the ISO 19773 specification at http://metadata-standards.org/metadata-stds/Document-library/Meeting-reports/SC32WG2/2004-11-Washington/WG2-N0723_19773-08_rs1--upu_s42_postal_data--20041104.doc
+
+##### 4.2.1.2 The vCard Standard
+
+A very common interchange format for addresses is vCard. vCard, also known as VCF (Virtual Contact File), is a file format standard for electronic business cards. There are different versions of the vCard-Format. The most used in recent years (ref. 2016) for data interchange is vCard 3.0. The complete standard is referenced in https://tools.ietf.org/html/rfc6350.
+
+In the reference we will find different kind of fields for addresses. A typical vCard looks like this:
+
+`BEGIN:VCARD
+VERSION:2.1
+N:Gump;Forrest
+FN:Forrest Gump
+ORG:Bubba Gump Shrimp Co.
+TITLE:Shrimp Man
+PHOTO;GIF:http://www.example.com/dir_photos/my_photo.gif
+TEL;WORK;VOICE:(111) 555-1212
+TEL;HOME;VOICE:(404) 555-1212
+ADR;WORK:;;100 Waters Edge;Baytown;LA;30314;United States of America
+LABEL;WORK;ENCODING=QUOTED-PRINTABLE:100 Waters Edge=0D=0ABaytown, LA 30314=0D=0AUnited States of America
+ADR;HOME:;;42 Plantation St.;Baytown;LA;30314;United States of America
+LABEL;HOME;ENCODING=QUOTED-PRINTABLE:42 Plantation St.=0D=0ABaytown, LA 30314=0D=0AUnited States of America
+EMAIL;PREF;INTERNET:forrestgump@example.com
+REV:20080424T195243Z
+END:VCARD`
+
+As we can see, the vCard defines different fields for work and home. The "work" value implies that the property is related to an individual's work place, while the "home" value implies that the property is related to an individual's personal life. When neither "work" nor "home" is present, it is implied that the property is related to both an individual's work place and personal life. For that reason a lot of problems occur, when dropping vCards from different sources into a database which tries to guarantee high standards in address quality, because you can't match the fields properly.
+
+
+
+
+
 
 
 #### 4.2.2 Organization specific requirements
