@@ -709,3 +709,31 @@ To deal with rights management you have to consider...
 **Json schema**
 
 **Documentation of the final Master Data Model of Addresses**
+
+## 6. Questions
+
+This points should be added as issues.
+
+**Points to be clarified:**
+•	Wice takes over driver seat for master data model adresses
+•	Approach modeling
+•	We go on and finalize the master data model with our method
+•	Weekly sprints
+
+**To be discussed:**
+•	relations requirement -> intelligent or stupid OIH? (Our Suggestion: intelligent App / stupid OIH,  but in Data Model all relations (tags and categories) should be mapped
+•	mapping one table data structure <-> relationally structure
+•	generic problems
+o	handling with freely definable additional fields
+o	handling of unique oih ids and app based ids (meta data, …)
+o	handling with freely definable relations
+•	handling with same person in different roles …
+•	are employees, user persons  to take into account?
+•	date integrity
+•	architecture requirements
+
+**Next steps:**
+•	Work out findings of master data model – 80%
+•	Experiment with the sequence of UML -> ER -> Json schema
+•	Coordination with Selim, Lutz, Josef, Susanne, Igor / Renat, Franz / Stefan (partner AP 2.4 u. technical board)
+•	Goals / results for next Friday
