@@ -600,10 +600,32 @@ A label could be a tag or category like "customer" or "lead" for an organization
 
 Derived from labels and relations we get segments for meta data and organization or personal data. Those have attributes like categories or the specific address fields.
 
-#### 4.1.3 Privacy and Rights Management 
+#### 4.1.3 Privacy and Rights Management
 
 As discovered in use cases like 3.3.1. or for general data management we need additional attributes for rights management or database management. An entry in the database can have the known fields, e.g. the common contact fields and the categories, and can be vested with some access rights. Further it must have fields like unique identifiers. We grouped these attributes in a "handling data" segment.
 
+### 4.2 Specification Perspective
+
+#### 4.2.1 General specifications
+
+As we talk about address data and most of the user requirements are about communication, we need standard fields to reach out persons or organizations via postal, electronic or direct communication.
+
+The Universal Postal Union has developed two addressing standards: S42 and S53. S42 describes international postal address components and templates, where S53 describes the exchange of name and address data. Since 2004 there is a development process for an international ISO-Standard for international addresses. This ISO-Standard 19773 provides in part 8 the description of the data structure postal addresses. The UPU S42 address elements are used as a basis for constructing a postal address.
+
+In ISO 19773 an unrendered postal address consists of four postal address segments: mailee specification (optional), addressee specification (optional), mail recipient dispatching information (optional), delivery point specification (mandatory).
+
+![Postal Address — All Components - diagram from UPU S42](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/working_datamodel/images/postal_adress_diagram_upus42.png)
+
+As we don't want to implement the whole standardization, we just keep on with the mandatory delivery point specification.
+
+
+#### 4.2.2 Organization specific requirements
+
+#### 4.2.3 Person specific requirements
+
+#### 4.2.4 Relation specific requirements
+
+#### 4.2.5 Privacy specific requirements
 
 
 ![Type of addresses](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/types-of-addresses.png)
