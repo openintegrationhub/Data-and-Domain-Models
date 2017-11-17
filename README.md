@@ -13,7 +13,7 @@
 
 | Workgroup  | Member Name | Role |
 | ------------- | ------------- | ------------- |
-| Architecture  | Susanne  | **Committer & Lead**  |
+| Data and Domain Models  | Susanne  | **Committer & Lead**  |
 |  | Lutz  | Committer  |
 |  | Josef  | Committer  |
 |  | Hansjörg  | Committer  |
