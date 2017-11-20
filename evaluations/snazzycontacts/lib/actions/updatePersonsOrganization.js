@@ -6,6 +6,12 @@ const snazzy = require('./snazzy.js');
 
 exports.process = processAction;
 
+/**
+ *  This method will be called from elastic.io platform providing following data
+ *
+ * @param msg
+ * @param cfg
+ */
 function processAction(msg, cfg) {
 
   let reply = {};
@@ -33,13 +39,6 @@ function processAction(msg, cfg) {
         }, (err) => {
           emitError();
         });
-
-      // request.get(sameContactUri, requestOptions)
-      //   .then((res) => {
-      //     let result = JSON.parse(res);
-      //     // console.log(JSON.stringify(res, undefined, 2));
-      //     console.log(result.rowid);
-      //   });
     }
   });
 

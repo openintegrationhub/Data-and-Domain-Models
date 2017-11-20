@@ -6,11 +6,18 @@ const snazzy = require('./snazzy.js');
 
 exports.process = processAction;
 
+/**
+ *  This method will be called from elastic.io platform providing following data
+ *
+ * @param msg
+ * @param cfg
+ */
 function processAction(msg, cfg) {
 
   let reply = {};
   let self = this;
 
+  // Create a session in snazzycontacts and then make a post request to update a person in snazzycontacts
   snazzy.createSession(cfg, () => {
     if (cfg.mp_cookie) {
 
@@ -25,14 +32,7 @@ function processAction(msg, cfg) {
         }
       };
 
-      // request.post(uri, requestOptions, (error, response, body) => {
-      //   if (!error && response.statusCode == 200) {
-      //     reply = body;
-      //     // console.log(JSON.stringify(reply, undefined, 2));
-      //     emitData();
-      //   }
-      // });
-
+      // Make a post request to update a person in snazzycontacts
       request.post(uri, requestOptions)
         .then((res) => {
           reply = res.content;
@@ -43,6 +43,7 @@ function processAction(msg, cfg) {
     }
   });
 
+  // Emit data from promise depending on the result
   function emitData() {
     let data = messages.newMessageWithBody(reply);
     self.emit('data', data);

@@ -6,11 +6,18 @@ const snazzy = require('../actions/snazzy.js');
 
 exports.process = processTrigger;
 
+/**
+ *  This method will be called from elastic.io platform providing following data
+ *
+ * @param msg
+ * @param cfg
+ */
 function processTrigger(msg, cfg) {
 
   let organizations = [];
   let self = this;
 
+  // Create a session in snazzycontacts and then make a post request to get all organizations saved by a specific user in snazzycontacts
   snazzy.createSession(cfg, () => {
 
     let apiKey = cfg.apikey;
@@ -27,6 +34,7 @@ function processTrigger(msg, cfg) {
       }
     };
 
+    // Make a post request to get all organizations saved by a specific in snazzycontacts
     request.post(uri, requestOptions)
       .then((res) => {
         organizations = res.content;
@@ -34,24 +42,14 @@ function processTrigger(msg, cfg) {
       }, (err) => {
         emitError();
       });
-
-    // request.post(uri, requestOptions, (error, response, body) => {
-    //   if (!error && response.statusCode === 200) {
-    //     organizations = body.content;
-    //     emitData();
-    //   } else {
-    //     emitError();
-    //   }
-    // });
-
   });
 
+  // Emit data from promise depending on the result
   function emitData() {
-
     let data = messages.newMessageWithBody({
       "organizations": organizations
     });
-    console.log('Emitting data: ' + JSON.stringify(data, undefined, 2));
+    console.log('Emitdata: ' + JSON.stringify(data, undefined, 2));
     self.emit('data', data);
   }
 

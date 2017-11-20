@@ -6,11 +6,18 @@ const snazzy = require('./snazzy.js');
 
 exports.process = processAction;
 
+/**
+ *  This method will be called from elastic.io platform providing following data
+ *
+ * @param msg
+ * @param cfg
+ */
 function processAction(msg, cfg) {
 
   let reply = {};
   let self = this;
 
+  // Create a session in snazzycontacts and then make a post request to create a new person in snazzycontacts
   snazzy.createSession(cfg, () => {
     if (cfg.mp_cookie) {
 
@@ -27,6 +34,7 @@ function processAction(msg, cfg) {
         }
       };
 
+      // Generate a sameContactId before creating the user
       function getSameContactId() {
         return new Promise((resolve, reject) => {
           request(sameContactUri, {
@@ -47,10 +55,10 @@ function processAction(msg, cfg) {
         });
       }
 
+      // Make a post request to create a new person in snazzycontacts
       (function() {
         getSameContactId()
           .then((res) => {
-            console.log('IN PROMISE', res);
             msg.body.same_contactperson = res;
             console.log(`same_contactperson: ${msg.body.same_contactperson}`);
             request.post(uri, requestOptions)
@@ -67,25 +75,10 @@ function processAction(msg, cfg) {
             console.log(`ERROR: ${e}`);
           });
       }());
-
-      // request.post(uri, requestOptions, (error, response, body) => {
-      //   if (!error && response.statusCode == 200) {
-      //     reply = body;
-      //     // console.log(JSON.stringify(reply, undefined, 2));
-      //     emitData();
-      //   }
-      // });
-
-      // request.post(uri, requestOptions)
-      //   .then((res) => {
-      //     reply = res.content;
-      //     emitData();
-      //   }, (err) => {
-      //     emitError();
-      //   });
     }
   });
 
+  // Emit data from promise depending on the result
   function emitData() {
     let data = messages.newMessageWithBody(reply);
     self.emit('data', data);

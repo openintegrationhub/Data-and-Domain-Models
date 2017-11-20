@@ -19,9 +19,9 @@ exports.createSession = function(config, continueOnSuccess) {
 
           request.post('http://snazzycontacts.com/mp_base/json_login/login/verify_credentials', {
               json: {
-                token: token,
-                email: email,
-                password: password
+                token,
+                email,
+                password
               },
               headers: {
                 'X-API-KEY': apiKey
