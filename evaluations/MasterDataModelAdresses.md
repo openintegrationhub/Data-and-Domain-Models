@@ -618,8 +618,7 @@ In ISO 19773 an unrendered postal address consists of four postal address segmen
 
 ![Postal Address — All Components - diagram from UPU S42](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/working_datamodel/images/postal_adress_diagram_upus42.png)
 
-The unrendered postal address is a nested structure comprised of elements
-As we can see, this standard divides addressee specifications in organization or individual identification as we do.
+The unrendered postal address is a nested structure comprised of elements. As we can see, this standard divides addressee specifications in organization or individual identification as we do. It provides a lot of named fields for detailed address specifications to which we can refer in the object attribute specification later on.
 
 For further information please read the ISO 19773 specification at http://metadata-standards.org/metadata-stds/Document-library/Meeting-reports/SC32WG2/2004-11-Washington/WG2-N0723_19773-08_rs1--upu_s42_postal_data--20041104.doc
 
@@ -646,7 +645,17 @@ EMAIL;PREF;INTERNET:forrestgump@example.com
 REV:20080424T195243Z
 END:VCARD`
 
-As we can see, the vCard defines different fields for work and home. The "work" value implies that the property is related to an individual's work place, while the "home" value implies that the property is related to an individual's personal life. When neither "work" nor "home" is present, it is implied that the property is related to both an individual's work place and personal life. For that reason a lot of problems occur, when dropping vCards from different sources into a database which tries to guarantee high standards in address quality, because you can't match the fields properly.
+As we can see, the vCard defines different fields for work and home. The "work" value implies that the property is related to an individual's work place, while the "home" value implies that the property is related to an individual's personal life. When neither "work" nor "home" is present, it is implied that the property is related to both an individual's work place and personal life.
+
+Organizations can be mapped with the "org"-parameter. All properties in an organization vCard apply to the organization as a whole, as is the case with a group vCard. For example, an EMAIL property might specify the address of a contact point for the organization.
+
+vCard mentions a "related"-parameter to specify a relationship between another entity and the entity represented by a vCard. It's a single URI which can also be reseted to a single text value. Further on you will find categories to specify application category information about the vCard, also known as "tags". These are one or more text values separated by a comma character.
+
+To specify a value that represents a globally unique identifier corresponding to the entity associated with the vCard you can use the UID-Param. This should be a single URI value. But it MAY also be reset to free-form text.
+
+This all sounds very useful and we can use the specification later in the object attribute specification.
+
+But be aware: Standards are great if everyone follows them. Unfortunately, nobody seems to be following the card standard. Simple contact information such as email addresses, telephones numbers or postal addresses can be represented using standard properties or using standard properties grouped together with non-standard properties. For that reason a lot of problems occur, when dropping vCards from different sources into a database which tries to guarantee high standards in address quality, because you can't match the fields properly.
 
 
 
