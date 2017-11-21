@@ -657,13 +657,30 @@ This all sounds very useful and we can use the specification later in the object
 
 But be aware: Standards are great if everyone follows them. Unfortunately, nobody seems to be following the card standard. Simple contact information such as email addresses, telephones numbers or postal addresses can be represented using standard properties or using standard properties grouped together with non-standard properties. For that reason a lot of problems occur, when dropping vCards from different sources into a database which tries to guarantee high standards in address quality, because you can't match the fields properly.
 
-
-
-
-
-
-
 #### 4.2.2 Organization specific requirements
+
+As mentioned before, an organization can be a company, an association etc. For handling communication with the organization as described in the user stories from chapter 3.2.1. it must have contact data, so you can reach it via the different channels. Therefore we must have object attributes for the postal address and other communication points like telephone, mail etc.
+
+The most common address attributes for communication are:
+
+- `number` - the house number of an address
+- `street` - the street the address is on
+- `unit` - the apartment, suite, flat, etc of an address
+- `city` - the city that the address is in
+- `district` - one step up in the hierarchy from a city, such a county or metropolitan area
+- `region` - the first level administrative divisions within a country, such as state or province
+- `postcode` - the alphanumeric code used in many countries for sorting mail
+- `phone`- the numeric phone number
+- `fax` - the numeric fax number
+- `email` - a valid email address
+- `url` - a url of the website of the organization
+- `social` - one or more social network addresses
+
+In an ideal world, data sources would have a single field for each OIH conform attribute. Unfortunately that's rarely the case. So we have to deal with this problem and we will need a number of functions to separate and join fields to create appropriate values.
+
+As described in the user stories in chapter 3.2.2. you have to assign categories, tags or other features to an organization.
+
+With that in mind, we will need attributes like`categories` which describes a list of assigned categories.
 
 #### 4.2.3 Person specific requirements
 
