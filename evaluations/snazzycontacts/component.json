@@ -89,6 +89,15 @@
         "in": "./lib/schemas/updatePersonsOrganization.in.json",
         "out": "./lib/schemas/updatePersonsOrganization.out.json"
       }
+    },
+    "deletePerson": {
+      "main": "./lib/actions/deletePerson.js",
+      "title": "Delete Person",
+      "description": "Delete a person in snazzycontacts",
+      "metadata": {
+        "in": "./lib/schemas/deletePerson.in.json",
+        "out": "./lib/schemas/deletePerson.out.json"
+      }
     }
   }
 }
