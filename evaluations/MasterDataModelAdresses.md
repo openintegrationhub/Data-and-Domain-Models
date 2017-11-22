@@ -628,7 +628,8 @@ A very common interchange format for addresses is vCard. vCard, also known as VC
 
 In the reference we will find different kind of fields for addresses. A typical vCard looks like this:
 
-```BEGIN:VCARD
+```
+BEGIN:VCARD
 VERSION:2.1
 N:Gump;Forrest
 FN:Forrest Gump
@@ -643,7 +644,8 @@ ADR;HOME:;;42 Plantation St.;Baytown;LA;30314;United States of America
 LABEL;HOME;ENCODING=QUOTED-PRINTABLE:42 Plantation St.=0D=0ABaytown, LA 30314=0D=0AUnited States of America
 EMAIL;PREF;INTERNET:forrestgump@example.com
 REV:20080424T195243Z
-END:VCARD```
+END:VCARD
+```
 
 As we can see, the vCard defines different fields for work and home. The "work" value implies that the property is related to an individual's work place, while the "home" value implies that the property is related to an individual's personal life. When neither "work" nor "home" is present, it is implied that the property is related to both an individual's work place and personal life.
 
