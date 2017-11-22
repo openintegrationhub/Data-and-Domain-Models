@@ -13,10 +13,14 @@
 
 | Workgroup  | Member Name | Role |
 | ------------- | ------------- | ------------- |
-| Architecture  | Name  | **Committer & Lead**  |
-|  | Name  | Committer  |
-|  | Name  | Committer  |
-|  | Name  | Contributor  |
+| Data and Domain Models  | Susanne  | **Committer & Lead**  |
+|  | Lutz  | Committer  |
+|  | Josef  | Committer  |
+|  | Hansjörg  | Committer  |
+|  | Raphael  | Committer  |
+|  | Selim  | Contributor  |
+|  | Jürgen  | Contributor  |
+|  | Renat  | Contributor  |
 
 ## Workgroup Content
 
