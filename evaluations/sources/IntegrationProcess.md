@@ -6,6 +6,8 @@ _There are cases to consider where an application (connector) is integrated to a
 ## The transformation
 The OIH data formats need to be truly understood by any party who converts data onto this standard.
 
+> Where runs the transformation logic?
+
 ## The connector
 A connector to the open integration hub can be stupid but also smart, which means that the simple version of a connector only requires a **syntactical mapping** (stupid connector) against the master data schema in order to become qualified. Whereas the next expansion stage also includes a manual **semantical mapping** (smart connector). The optional but smart connector should be written by someone who deeply understands the purpose of the underlying data model fields.
 
