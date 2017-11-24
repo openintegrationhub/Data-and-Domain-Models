@@ -1,6 +1,8 @@
 # The integration process
 This paper is intended to clarify the **virtual integration** process of the OIH framework. In contrast to a **materialized integration** (with a centralized data storage) the origin data will stay in the source database, but must by demand be transformed into the data formats of the integrated databases. A reasonable integration must ensures a fluent interoperability between the associated data models and therewith a seamless business process. Therefore an application response time should not be perceivable - due to delays.
 
+![integration process diagram](Data-and-Domain-Models/IntegrationProcess.svg)
+
 _There are cases to consider where an application (connector) is integrated to an existing environment, where the same objects (entities) potentially coexist inside multiple databases._
 
 > In which cases, it is necessary to identify unique entities (objects) and how can those be managed?
@@ -10,7 +12,7 @@ _There are cases to consider where an application (connector) is integrated to a
 ## The transformation
 The OIH data formats need to be truly understood by any party who converts data onto this standard.
 
-> Where runs the transformation logic?
+> Where should run the transformation logic?
 
 ## The connector
 A connector to the open integration hub can be stupid but also smart, which means that the simple version of a connector only requires a **syntactical mapping** (stupid connector) against the master data schema in order to become qualified. Whereas the next expansion stage also includes a manual **semantical mapping** (smart connector). The optional but smart connector should be written by someone who deeply understands the purpose of the underlying data model fields.
@@ -42,7 +44,7 @@ For the **syntactical mapping** it is necessary that the logic of a connector at
 > How can the usage context of an entity type be mapped in the master data schema?
 
 ## The schema
-The master data schema consists of data fields, that need to be transformed between data models within an integration environment. A generic data model is derivable out of those data fields and its structure reflects the contextual usage within repetitive business process. Business data flow patterns will help to design endpoints according to typical business processes.
+The master data schema consists of that data fields, that need to be transformed between data models within an integration environment. A generic data model is derivable out of those data fields and its structure reflects the contextual usage within repetitive business process. Business data flow patterns will help to design endpoints according to typical business processes - interfaces (aka. views).
 
 _An address is unique, but can be used under certain circumstances in a variety of business contexts like mailing, shipping, accounting purposes and so on._
 
