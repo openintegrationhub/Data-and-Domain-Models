@@ -2,7 +2,7 @@
 
 ## Table of Content
 - [General Information](#general-information)
-  - [Leader](#leader)
+  - [Manager](#Manager)
   - [Commiters](#committers)
   - [Contributors](#contributors)
 - [Workgroup Member](#workgroup-member)
@@ -15,10 +15,10 @@
 - Each workgroup has at least one **status call** every two weeks
 - **Every Committer** must attend the status call
 
-### Leader
-- Each workgroup has one leader - this leader is elected every 6 month by all Committers within the workgroup (re-election possible)
-- The leader moderates discussions, documents decisions and coordinates activities, content and appointments
-- Only the leader is allowed to merge content into the master branch
+### Manager
+- Each workgroup has one manager - this manager is elected every 6 month by all Committers within the workgroup (re-election possible)
+- The manager moderates discussions, documents decisions and coordinates activities, content and appointments
+- Only the manager is allowed to merge content into the master branch
 - Is part of one of the comittees
 
 ### Committers
