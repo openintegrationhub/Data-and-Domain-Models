@@ -1,7 +1,11 @@
 # The integration process
-This paper is intended to clarify the **virtual integration** process of the OIH framework. In contrast to a **materialized integration** (with a centralized data storage) the origin data will stay in the source database, but must by demand be transformed into the data formats of the integrated databases. An reasonable integration must ensures a fluent interoperability between the associated data models and therewith a seamless business process. Therefore an application response time should not be perceivable.
+This paper is intended to clarify the **virtual integration** process of the OIH framework. In contrast to a **materialized integration** (with a centralized data storage) the origin data will stay in the source database, but must by demand be transformed into the data formats of the integrated databases. A reasonable integration must ensures a fluent interoperability between the associated data models and therewith a seamless business process. Therefore an application response time should not be perceivable - due to delays.
 
 _There are cases to consider where an application (connector) is integrated to an existing environment, where the same objects (entities) potentially coexist inside multiple databases._
+
+> In which cases, it is necessary to identify unique entities (objects) and how can those be managed?
+
+> What steps does a record go through, between an app database and the queue?
 
 ## The transformation
 The OIH data formats need to be truly understood by any party who converts data onto this standard.
@@ -15,6 +19,10 @@ On the other hand, the provider of the master data schema must define the clear 
 
 > How does a domain specific connector recognize the need to update a record?
 
+> What else needs to be translated by the adapter, besides the protocol and data format?
+
+> How is an adaptor (+ transformer) connected to the master data schema?
+
 **A connector:**
 * consists of an adaptor (+ transformer)
 * creates, reads, updates and deletes (db) records if permitted
@@ -24,15 +32,25 @@ On the other hand, the provider of the master data schema must define the clear 
 * creates tenants and returns its tenantIDs
 * modifies tenants customer data
 
-> How exactly the semantic mapping is implemented?
+> What are the minimal functionalities of an adaptor?
 
 ## The mapping
 For the **syntactical mapping** it is necessary that the logic of a connector at least transforms the origin data types and formats towards those of the master data schema. After that a the connector can be expanded by the **semantical mapping**, by initially connecting its transformed fields with the generic ones of the master data schema. A missed accordance on the contextual purpose of the origin fields, will counter the seamless business process workflow.
+
+> How exactly the semantic mapping is implemented?
+
+> How can the usage context of an entity type be mapped in the master data schema?
 
 ## The schema
 The master data schema consists of data fields, that need to be transformed between data models within an integration environment. A generic data model is derivable out of those data fields and its structure reflects the contextual usage within repetitive business process. Business data flow patterns will help to design endpoints according to typical business processes.
 
 _An address is unique, but can be used under certain circumstances in a variety of business contexts like mailing, shipping, accounting purposes and so on._
+
+> What criteria have to be considered for shaping entity types?
+
+> What kind of attributes should be typified as enum, array or object in the master data schema?
+
+> What steps could become necessary in order to replace/modify the master data schema?
 
 ---
 
