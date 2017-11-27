@@ -24,6 +24,7 @@ function processAction(msg, cfg) {
       let apiKey = cfg.apikey;
       let cookie = cfg.mp_cookie;
       let uri = `https://snazzycontacts.com/mp_contact/json_respond/address_contactperson/json_update?mp_cookie=${cookie}`;
+      let updatedUserUri = `https://snazzycontacts.com/mp_contact/json_respond/address_contactperson/json_detailview?mp_cookie=${cookie}`;
 
       let requestOptions = {
         json: msg.body,
@@ -32,14 +33,23 @@ function processAction(msg, cfg) {
         }
       };
 
-      // Make a post request to update a person in snazzycontacts
+      // Make a post request to update a person and get last_update property after user is updated
       request.post(uri, requestOptions)
         .then((res) => {
           reply = res.content;
           emitData();
         }, (err) => {
           emitError();
-        });
+        }).then(() => {
+          request.post(updatedUserUri, requestOptions)
+            .then((res) => {
+              let response = res.content;
+              console.log(response[0].last_update);
+              return response[0].last_update;
+            }, (err) => {
+              emitError();
+            });
+        });;
     }
   });
 

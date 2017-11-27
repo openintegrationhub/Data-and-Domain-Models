@@ -6,6 +6,12 @@ const snazzy = require('./snazzy.js');
 
 exports.process = processAction;
 
+/**
+ *  This method will be called from elastic.io platform providing following data
+ *
+ * @param msg
+ * @param cfg
+ */
 function processAction(msg, cfg) {
 
   let reply = {};
@@ -13,6 +19,7 @@ function processAction(msg, cfg) {
   let body = msg.body;
   body.is_deleted = 1;
 
+  // Create a session in snazzycontacts and then make a post request to delete an organization in snazzycontacts
   snazzy.createSession(cfg, () => {
     if (cfg.mp_cookie) {
 
@@ -27,6 +34,7 @@ function processAction(msg, cfg) {
         }
       };
 
+      // Make a post request to hide the organization from user`s view
       request.post(uri, requestOptions)
         .then((res) => {
           reply = res;
@@ -38,6 +46,7 @@ function processAction(msg, cfg) {
     }
   });
 
+  // Emit data from promise depending on the result
   function emitData() {
     let data = messages.newMessageWithBody(reply);
     self.emit('data', data);
