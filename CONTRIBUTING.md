@@ -15,7 +15,7 @@
 ### Creating a Pull Request
 1. Create a new .md file
 2. Select _"Create a new branch for this commit and start a pull request."_
-3. Name the branch as follows: **_RepositoryName-FolderName-YourFile_**
+3. Name the branch as follows: **FolderName-Topic**
 4. Click on _"propose new file"_
 5. Assign **at least one other person** to the pull request
 6. Assign an appropiate label to the pull request
