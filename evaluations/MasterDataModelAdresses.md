@@ -59,6 +59,9 @@
 		- [4.2.2 Organization specific requirements](#422-organization-specific-requirements)
 		- [4.2.3 Person specific requirements](#423-person-specific-requirements)
 		- [4.2.4 Relation specific requirements](#424-relation-specific-requirements)
+			- [4.2.4.1 Person to organization](#4241-person-to-organization)
+			- [4.2.4.2 Organization to organization](#4242-organization-to-organization)
+			- [4.2.4.3 Person to person](#4243-person-to-person)
 		- [4.2.5 Privacy specific requirements](#425-privacy-specific-requirements)
 - [5. Results](#5-results)
 - [6. Questions](#6-questions)
@@ -593,6 +596,8 @@ Our main goal is the vision of a generic master data model for addresses. This v
 
 In Chapter 3.2.1 we encountered different types of objects. We named them organizations and persons with reference to the real world objects.
 
+![Type of addresses](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/types-of-addresses.png)
+
 Organizations can be companies or associations. Persons can be contacts in organizations or employees of your own company.
 
 From this real world view we derive the two main objects and go deeper in the modeling. The following graphic describes the process.
@@ -701,12 +706,35 @@ With that in mind, we will need attributes like`categories` which describes a li
 
 #### 4.2.4 Relation specific requirements
 
-#### 4.2.5 Privacy specific requirements
+Generally there are three types of relations:
 
-
-![Type of addresses](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/types-of-addresses.png)
+##### 4.2.4.1 Person to organization
 
 ![Relationship person organization](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/use-case-relationship-person-organization.png)
+
+The following diagram shows how the mapping of these entitiy relations can be realized in the data model:
+
+![Relationship person organization](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/ER-Persons-relations-organizations.png)
+
+##### 4.2.4.2 Organization to organization
+
+
+![Relations of organizations](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/relations-of-organizations.png)
+
+The following diagram shows how the mapping of these entitiy relations can be realized in the data model:
+
+![Relations of organizations](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/ER-organizations-relations-organizations.png)
+
+##### 4.2.4.3 Person to person
+
+![Relations of organizations](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/relations-among-persons.png)
+
+The following diagram shows how the mapping of these entitiy relations can be realized in the data model:
+
+![Relations of organizations](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/ER-Persons-relations-persons.png)
+
+#### 4.2.5 Privacy specific requirements
+
 
 
 
@@ -727,11 +755,10 @@ Persons
 
 
 
-![Relations of organizations](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/relations-of-organizations.png)
 
 
 
-![Relations of organizations](https://github.com/openintegrationhub/innovation/blob/working_datamodel/images/relations-among-persons.png)          
+
 
 
 
