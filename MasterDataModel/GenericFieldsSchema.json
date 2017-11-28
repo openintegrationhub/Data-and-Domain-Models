@@ -1,0 +1,94 @@
+
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Open Integration Hub meta-schema",
+  "definitions": {
+    "BusinessEntity": {
+      "type": "object",
+      "properties": {
+        "businessEntityID": { "type": "string" },
+        "eventID": { "type": "string" },
+        "lastModified": { "type": "string", "format": "date-time" }
+      },
+      "required": ["businessEntityID", "eventID", "lastModified"]
+    },
+    "organization": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "taxNumber": { "type": "array", "format": "string" },
+        "credtiReportingNumber": { "type": "object", "format": "string" },
+        "lastModified": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name"]
+    },
+    "person": {
+      "type": "object",
+      "properties": {
+        "personID": { "type": "array", "format": "string" },
+        "gender": { "type": "string", "enum": [ "female", "intersexual", "male" ] },
+        "title": { "type": "array" },
+        "firstName": { "type": "array", "format": "string" },
+        "midName": { "type": "array", "format": "string" },
+        "lastName": { "type": "string" },
+        "birthDate": { "type": "string", "format": "date-time" },
+        "position": { "type": "string"},
+        "personelNumber": { "type": "string"},
+        "department": { "type": "string"},
+        "language": { "type": "string"},
+        "alias": { "type": "object", "format": "string" },
+        "picture": { "type": "array" },
+        "note": { "type": "string"},
+        "lastModified": { "type": "string", "format": "date-time" }
+      },
+      "required": ["firstName"]
+    },
+    "address": {
+      "type": "object",
+      "properties": {
+        "addressID": { "type": "string" },
+        "street": { "type": "string" },
+        "number": { "type": "string" },
+        "additionalAddress": { "type": "string" },
+        "apartment": { "type": "string" },
+        "postalCode": { "type": "string" },
+        "city": { "type": "string" },
+        "district": { "type": "string" },
+        "country": { "type": "string" },
+        "countryCode": { "type": "string" },
+        "state": { "type": "string" },
+        "geoPosition": { "type": "object", "format": "string" },
+        "lastModified": { "type": "string", "format": "date-time" }
+      },
+      "required": ["street", "number", "zip", "city"]
+    },
+    "contact": {
+      "type": "object",
+      "properties": {
+        "email": { "type": "array", "format": "email" },
+        "mobile": { "type": "array", "format": "string" },
+        "phone": { "type": "array", "format": "string" },
+        "pager": { "type": "array", "format": "string" },
+        "fax": { "type": "array", "format": "string" },
+        "web": { "type": "array", "format": "string" },
+        "chat": { "type": "array", "format": "string" },
+        "social": { "type": "array", "format": "string" },
+        "lastModified": { "type": "string", "format": "date-time" }
+      }
+    }
+  },
+
+  "type": "object",
+  "properties": {
+    "billing_address": { "$ref": "#/definitions/address" },
+    "shipping_address": {
+      "allOf": [
+        { "$ref": "#/definitions/address" },
+        { "properties":
+          { "type": { "enum": [ "residential", "business" ] } },
+          "required": ["type"]
+        }
+      ]
+    }
+  }
+}
