@@ -9,6 +9,6 @@ Before you can use the component you **must be a registered snazzy contacts user
 > Any attempt to reach [Snazzy Contacts](https://snazzycontacts.com) endpoints without registration will not be successful
 
 After you are already registered in [Snazzy Contacts](https://snazzycontacts.com) you have to activate your **API key** (in [Snazzy Contacts](https://snazzycontacts.com) named *Data Sharing Key*).
-> For activation you **have to be logged in**, then click of ``Administration`` and under ```Einstellungenthen``` click of ``Unternehmensdaten``. Once you are in ``Unternehmensdaten`` click of the button ``Data Sharing aktivieren`` for generating your API key.
+> For activation you **have to be logged in**, then click of ``Administration`` and under ```Einstellungen``` click of ``Unternehmensdaten``. Once you are in ``Unternehmensdaten`` click of the button ``Data Sharing aktivieren`` for generating your API key.
 
 Once the activation is done you have an access to **API key** which is required for an authentication when you make a request to Snazzy Contacts.
