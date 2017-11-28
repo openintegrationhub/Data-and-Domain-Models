@@ -1,4 +1,4 @@
-# Master Data Model
+# Generic Fields Schema with GraphQL
 
 The GraphQL schema definition language provides a sustainable starting point, to describe flexible data models for the open integration hub runtime.
 
@@ -34,7 +34,9 @@ The GraphQL schema definition language provides a sustainable starting point, to
 
 [JSON schema validation](https://www.highly.co/hl/rwKOijEQwI4JfP)
 
-[GraphQL cheat sheet](https://github.com/openintegrationhub/innovation/blob/master/evaluations/sources/graphql-shorthand-notation-cheat-sheet.pdf)
+[JSON cheat sheet](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Sources/SchemaCheatSheetJSON.pdf)
+
+[GraphQL cheat sheet](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Sources/SchemaCheatSheetGraphQL.pdf)
 
 ## Schema - Customer Data (example)
 ```javascript

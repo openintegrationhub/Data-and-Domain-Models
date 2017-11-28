@@ -1,7 +1,7 @@
 # The integration process
 This paper is intended to clarify the **virtual integration** process of the OIH framework. In contrast to a **materialized integration** (with a centralized data storage) the origin data will stay in the source database, but must by demand be transformed into the data formats of the integrated databases. A reasonable integration must ensures a fluent interoperability between the associated data models and therewith a seamless business process. Therefore an application response time should not be perceivable - due to delays.
 
-![integration process diagram](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/evaluations/sources/IntegrationProcess.svg)
+![integration process diagram](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Sources/IntegrationProcess.svg)
 
 _There are cases to consider where an application (connector) is integrated to an existing environment, where the same objects (entities) potentially coexist inside multiple databases._
 
