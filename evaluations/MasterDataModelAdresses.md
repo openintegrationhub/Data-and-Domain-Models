@@ -56,6 +56,7 @@
 		- [4.2.1 General specifications](#421-general-specifications)
 			- [4.2.1.1 Postal Standards](#4211-postal-standards)
 			- [4.2.1.2 The vCard Standard](#4212-the-vcard-standard)
+			- [4.2.1.3 Electronic data interchange (EDIfact)](#4213-electronic-data-interchange-edifact)
 		- [4.2.2 Organization specific requirements](#422-organization-specific-requirements)
 		- [4.2.3 Person specific requirements](#423-person-specific-requirements)
 		- [4.2.4 Relation specific requirements](#424-relation-specific-requirements)
@@ -676,6 +677,29 @@ To specify a value that represents a globally unique identifier corresponding to
 This all sounds very useful and we can use the specification later in the object attribute specification.
 
 But be aware: Standards are great if everyone follows them. Unfortunately, nobody seems to be following the card standard. Simple contact information such as email addresses, telephones numbers or postal addresses can be represented using standard properties or using standard properties grouped together with non-standard properties. For that reason a lot of problems occur, when dropping vCards from different sources into a database which tries to guarantee high standards in address quality, because you can't match the fields properly.
+
+##### 4.2.1.3 Electronic data interchange (EDIfact)
+
+Electronic Data Interchange for administration, commerce and transport (EDIfact) is the concept of businesses communicating electronically certain information that was traditionally communicated on paper. The two classic examples of such information are purchase orders and invoices. Standards for EDI exist to facilitate parties transacting such instruments without having to make special arrangements.
+
+```
+UNA:+.?'
+UNB+UNOC:3+ILNAbsender+ILNEmpfänger+130230:1025+98765'
+UNH+1+ORDERS:D:96A:UN'
+BGM+220+9'
+DTM+4:20130230:102'
+NAD+SU+++Hardwarequelle+Ladenstraße 1+Nirgendwo+NRW+54321+DE'
+NAD+BY+++Lobster:GmbH+Münchnerstr.15a+Starnberg+BAY+82319+DE'
+LIN+1++4711:SA'
+IMD+++::USB-Stick'
+QTY+1:100'
+UNS+S'
+CNT+2:1'
+UNT+11+1'
+UNZ+1+98765'
+```
+
+In EDIfact addresses are specified directly. There is no further relevance for the Master Data Model.
 
 #### 4.2.2 Organization specific requirements
 
