@@ -43,9 +43,9 @@ function processAction(msg, cfg) {
         }).then(() => {
           request.post(updatedUserUri, requestOptions)
             .then((res) => {
-              let response = res.content;
-              console.log(response[0].last_update);
-              return response[0].last_update;
+              let lastUpdate = res.content[0].last_update;
+              console.log(`rowid: ${user.rowid} was last updated: ${lastUpdate}`);
+              return lastUpdate;
             }, (err) => {
               emitError();
             });

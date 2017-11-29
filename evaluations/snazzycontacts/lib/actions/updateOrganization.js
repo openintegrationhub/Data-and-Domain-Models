@@ -24,6 +24,7 @@ function processAction(msg, cfg) {
       let apiKey = cfg.apikey;
       let cookie = cfg.mp_cookie;
       let uri = `https://snazzycontacts.com/mp_contact/json_respond/address_company/json_update?mp_cookie=${cookie}`;
+      let updatedOrganisationUri = `https://snazzycontacts.com/mp_contact/json_respond/address_company/json_detailview?mp_cookie=${cookie}`;
 
       let requestOptions = {
         json: msg.body,
@@ -39,6 +40,16 @@ function processAction(msg, cfg) {
           emitData();
         }, (err) => {
           emitError();
+        })
+        .then(() => {
+          request.post(updatedOrganisationUri, requestOptions)
+            .then((res) => {
+              let lastUpdate = res.content[0].last_update;
+              console.log(`rowid: ${organization.rowid} was last updated: ${lastUpdate}`);
+              return lastUpdate;
+            }, (err) => {
+              console.log(`ERROR: ${err}`);
+            });
         });
     }
   });
