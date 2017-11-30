@@ -3,7 +3,7 @@ This paper is intended to clarify the **virtual integration** process of the OIH
 
 **NOTE:** The ```Raw Data``` can be stored (on premise environment) within the connector - _transformed syntactically_. Also the naming can be miss leading while the ```Adapter``` translates the protocol and [transforms data format etc.](https://github.com/openintegrationhub/OIH-Board/blob/master/protocols/2017-11-13BoardWorkshop.md#adapter) but the ```Transformer``` includes [the mapping](https://github.com/openintegrationhub/OIH-Board/blob/master/protocols/2017-11-13BoardWorkshop.md#transformator).
 
-![integration process diagram](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/Architecture/Assets/IntegrationProcess.svg)
+![integration process diagram](https://github.com/openintegrationhub/Architecture/blob/master/Assets/IntegrationProcess.svg)
 
 _There are cases to consider where an application (connector) is integrated to an existing environment, where the same objects (entities) potentially coexist inside multiple databases._
 
