@@ -57,7 +57,7 @@ The master data model will grow with each application (specific data model) that
   * When is the master data model ready to be discussed with the Community?
   * _What a vendor is willing to invest, for developing a connector?_
 
-![System scope](https://github.com/openintegrationhub/Architecture/blob/master/Sources/SystemScopeV1.1.png)
+![System scope](https://github.com/openintegrationhub/Architecture/blob/master/Assets/SystemScopeV1.1.png)
 
 ## _Cases to be considered_
 * _Cleansing process_
