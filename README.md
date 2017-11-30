@@ -1,21 +1,62 @@
-# Committee of innovation - core members
-**Mention the team** @openintegrationhub/innovation-committee
+# Introduction
 
-![Committee of Innovation](images/CoI.png)
+## Table of Content
+- [General Information](#general-information)
+  - [Manager](#Manager)
+  - [Commiters](#committers)
+  - [Contributors](#contributors)
+- [Workgroup Member](#workgroup-member)
 
-# Decision making process
+- [Workgroup Content](#workgroup-content)
 
-![Decision making](images/decisionMaking.svg)
+- [Contribution](#contribution)
 
-[Official agreements](https://github.com/openintegrationhub/innovation/wiki/Agreements)
+## General Information
+- Each workgroup has at least one **status call** every two weeks
+- **Every Committer** must attend the status call
 
-# Fridays stand-up at 9 am
-1. Your **Results**
-2. Your **Goals**
-3. Your **Obstacles**
+### Manager
+- Each workgroup has one manager - this manager is elected every 6 month by all Committers within the workgroup (re-election possible)
+- The manager moderates discussions, documents decisions and coordinates activities, content and appointments
+- Only the manager is allowed to merge content into the master branch
+- Is part of one of the comittees
 
-Join our meeting with a computer, tablet or smartphone https://global.gotomeeting.com/join/532522405
+### Committers
+- Decisions within a workgroup are made by the Committers on democratic basis (unanimity)
+- Committers can chosse which contributors shall become committers (Committees have to agree on choice)
+- Need to actively contribute to the workgroup
 
-and even with a classic phone +49 692 5736 7317
+### Contributors
+- Contributors contribute to the projects but do not have a vote
+- Contributors can apply to get a vote and become a Committer
 
-**Access code:** 532-522-405
+
+## Workgroup Member
+
+| Workgroup  | Member Name | Role |
+| ------------- | ------------- | ------------- |
+| Data and Domain Models  | Susanne  | **Manager & Committer**  |
+|  | Lutz  | Committer  |
+|  | Josef  | Committer  |
+|  | Hansjörg  | Committer  |
+|  | Raphael  | Committer  |
+|  | Selim  | Contributor  |
+|  | Jürgen  | Contributor  |
+|  | Renat  | Contributor  |
+
+## Workgroup Content
+
+| Workgroup  | Architecture |
+| ------------- | ------------- |
+| Content  | Domain Model |
+|  | Master Data Model(s)  |
+|  | Data Mapping  |
+|  | Data Hub & Standarization of the data model  |
+|  | Backlog Data-Hub & data model  |  
+| APs | 2.08 |
+|  | 2.10 |
+|  | 2.12 |
+
+## Contribution
+
+Before you contribute, please read the [contribution guideline](https://github.com/openintegrationhub/data-and-domain-models/blob/master/CONTRIBUTING.md).
