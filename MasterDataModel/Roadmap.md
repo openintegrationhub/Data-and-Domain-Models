@@ -49,7 +49,7 @@ The master data model will grow with each application (specific data model) that
 * Extend the master data model by adding new apps (data models) into the test scenario
   * Define criteria for new apps that will potentially extend the master data model
     * Identify business apps that use an additional set of generic attributes (address data fields)
-  * Hand out a technical on boarding (documentation) to its vendors, which want to [connect](https://github.com/openintegrationhub/Architecture/blob/master/adapters/ConnectorGuide.md) their app
+  * Hand out a technical on boarding (documentation) to its vendors, which want to [connect](https://github.com/openintegrationhub/Architecture/blob/master/Connectors/AdapterGuide.md) their app
   * Synchronize (address) data (***asynchronously***) between multiple (new) apps - **bidirectionally**
 * **Expand the master data model by new generic attributes and update the transformation rule sets**
 
