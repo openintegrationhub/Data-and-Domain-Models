@@ -22,15 +22,15 @@ _There are cases to consider where an application (connector) is integrated to a
 * creates tenants and returns its tenantIDs
 * modifies tenants customer data
 
+> What else needs to be done by the adapter, besides the protocol translation and data format transformation?
+
 > What are the minimal functionalities of an adaptor?
 
 A connector to the open integration hub can be stupid but also smart, which means that the simple version of a connector only requires a **syntactical mapping** (stupid connector) against the master data schema in order to become qualified. Whereas the next expansion stage also includes a manual **semantical mapping** (smart connector). The optional but smart connector should be written by someone who deeply understands the purpose of the underlying data model fields.
 
-On the other hand, the provider of the master data schema must define the clear purpose of each field. Those have to reflect any required transformation case, within a integration environment. An independent development of connectors could be granted by handing out typical (test) data sets, which cover frequent transformation cases - aggregates (aka. business processes).
+On the other hand, the provider of the master data schema must define the clear purpose of each field. Those have to reflect any required transformation case, within an integration environment. An independent development of connectors could be granted by handing out typical (test) data sets, which cover frequent transformation cases - aggregates (aka. business processes).
 
 > How does a domain specific connector recognize the need to update a record?
-
-> What else needs to be done by the adapter, besides the protocol translation and data format transformation?
 
 > How is an adaptor (+ transformer) connected to the master data schema - in detail?
 
