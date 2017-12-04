@@ -20,8 +20,6 @@ Each sub-model consists of one or more entities. In case the model consists of m
 Hence, the root of a Master Data Model's sub-model **must** inherit from / extend _OIH Dataset_, no matter whether it is modeled as an aggregate or as a single entity.
 
 
-
-
 # Example: Order aggregate
 
 For a sales application, one could split the data model at least into the following sub-models, each of which built as an aggregate:
