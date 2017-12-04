@@ -1,0 +1,45 @@
+# Protocol
+
+**Attendees:** Hansjörg, Lutz, Josef, Raphael, Susanne, Frank, Selim, Stephan, Andy, Philipp
+
+## Discussion / Findings
+
+- Due to relevant coherences it is necessary to build `aggregates`. This will result in n sub models and schemata for a master data models
+- The greatest challenge is to keep the onboarding effort as low a possible
+- `OIH-Records` will be introduced. Aggergates and entities have to declare that they also are an OIH-record
+- The master data model has a tree structure with _one root_.
+- Aggregates represent logical business relationships in such a master data model.
+- Domain models are aggregates of a master data models
+- The core of the tree structure is the `OIH record`
+
+- A detailed definition of the expression `** generic model**` is provided in the file about [MasterDataModelAdresses](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/MasterDataModelAdresses.md):
+
+      "In this specific field of investigation, the master data model for addresses describes a generic standard of customer data for the management of addresses.
+
+      Processing personal data, such as personally identifiable information, is a special subject of privacy rules and data protection laws.
+
+      The master data model for the OIH should be:
+
+      - compatible with business models in business-to-business and business-to-consumer.
+      - generic but extendable for individual applications
+      - used by the integration services and by the data hub
+      - cover most of the integration scenarios
+      - cover the privacy rules and data protection laws
+      - de facto standard for the address integration scenarios for SME"
+
+- To this point YQ developed the adapter for the elastic.io platform
+- A `database` component shall act as a `DataHub` on the elastic.io platform. With this component the following scenario shall be realized: `SilverERP` --> `DataHub` --> `Snazzy Contacts`. In a first step the `DataHub` should only revice and centrally store the data and afterwards broadcast it so all following applications.
+- Currently the interface is prorpietary to elastic.io. In a later stage the interface must be generalized.
+- Currently it is not possible to trigger events through a component but everything is triggered by elastic.io (See timer component)
+
+## Next Steps
+### Derived Tasks
+- [ ] Suggest tools for creating UML-Diagrams **@Lutz**
+- [ ] Provide a schema for the creation of the `tree structure` **@Lutz** till 01.12.2017
+- [ ] Evaluate Lutz' suggestions **`@Josef + Hansjörg**
+- [ ] Provide first results on basis of Lutz' suggestions **@Josef + @Hansjörg** till 04.12.2017
+- [ ] Provide deliverables on basis of Lutz' suggestions (Tool + Schema) **@Josef & @Hansjörg** (Latest 31.12.2017)
+- [ ] Discuss options to enable `triggering` through other components than the timer component
+
+### Next meeting / workshop
+- [ ] **Date:** 17.01.2018. **Location:** To be determined.
