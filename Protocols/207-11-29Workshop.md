@@ -12,7 +12,7 @@
 - Domain models are aggregates of a master data models
 - The core of the tree structure is the `OIH record`
 
-- A detailed definition of the expression `** generic model**` is provided in the file about [MasterDataModelAdresses](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/MasterDataModelAdresses.md#31-general-requirements):
+- A detailed definition of the expression `generic model` is provided in the file about [MasterDataModelAdresses](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/MasterDataModelAdresses.md#31-general-requirements):
 
       "In this specific field of investigation, the master data model for addresses describes a generic standard of customer data for the management of addresses.
 
