@@ -1,5 +1,5 @@
 # OIH Datasets
-Every OIH-Master-Data-Model consists of multiple loosely coupled sub-models. Every sub-model is marked as an *OID Dataset*:
+Every OIH-Master-Data-Model consists of one or multiple loosely coupled sub-models. Each of those sub-models has to be marked as an *OID Dataset*:
 
 ![OIH Record](assets/oih-dataset.png)
 
@@ -35,4 +35,4 @@ As an example to model an aggregate capable of being processed of an OIH instanc
 
 ![Aggregate example: Order](assets/aggregate-example.png)
 
-The Order's root defines the model as an OIH Dataset by extending it. This way, the _Order_ entity is the one and only entry point to the aggragte!
+The Order's root defines the model as an OIH Dataset by extending it. This way, the _Order_ entity is the one and only entry point to the aggregate!
