@@ -37,14 +37,14 @@ On the other hand, the provider of the master data schema must define the clear 
 ## The transformation - Adapter
 The OIH data formats need to be truly understood by any party who converts data onto this standard.
 
-> Where should run the transformation logic?
+> What needs to be taken into account, for developing the transformation logic?
 
 ## The mapping - Transformer
-For the **syntactical mapping** it is necessary that the logic of a connector at least transforms the origin data types and formats towards those of the master data schema. After that a the connector can be expanded by the **semantical mapping**, by initially connecting its transformed fields with the generic ones of the master data schema. A missed accordance on the contextual purpose of the origin fields, will counter the seamless business process workflow.
+For the **syntactical mapping** it is necessary that the logic of a connector at least transforms the origin data types and formats towards those of the master data schema. After that the connector can be expanded by the **semantical mapping**, by initially connecting its transformed fields with the generic ones of the master data schema. A missed accordance on the contextual purpose of the origin fields, will counter the seamless business process workflow.
 
 > How exactly - in which way - the semantic mapping is implemented?
 
-> How can the usage context (aka. bounded context) of an entity type be mapped in the master data schema?
+> How can the usage context (aka. bounded context) of an entity type be sliced in the master data schema?
 
 ## The schema
 The master data schema only consists of data fields, that need to be transformed between data models within a custom integration environment (an OIH instance). Aggregates - data flow patterns - point to reasonable shapes of entity types according to typical business processes (records) - of views (aka. user interfaces).
@@ -55,8 +55,8 @@ The master data schema only consists of data fields, that need to be transformed
 
 > What criteria have to be considered for shaping entity types - aggregates derived from bounded context (typical records) as tree structure?
 
-> What steps could become necessary in order to replace/modify/extend the master data schema?
-
 _An address is unique, but can be used under certain circumstances in a variety of business contexts like mailing, shipping, accounting purposes and so on._
 
 > What kind of attributes should be typified as enum, array or object in the master data schema?
+
+> What steps could become necessary in order to replace/modify/extend the master data schema?
