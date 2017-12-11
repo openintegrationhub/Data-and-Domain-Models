@@ -37,7 +37,7 @@
 - [ ] Suggest tools for creating UML-Diagrams **@Lutz**
 - [ ] Provide a schema for the creation of the `tree structure` **@Lutz** till 01.12.2017
 - [ ] Evaluate Lutz' suggestions **`@Josef + Hansjörg**
-- [ ] Provide first results on basis of Lutz' suggestions **@Josef + @Hansjörg** till 04.12.2017
+- [ ] Provide first results on basis of Lutz' suggestions **@Josef + @Hansjörg** till 11.12.2017
 - [ ] Provide deliverables on basis of Lutz' suggestions (Tool + Schema) **@Josef & @Hansjörg** (Latest 31.12.2017)
 - [ ] Discuss options to enable `triggering` through other components than the timer component
 
