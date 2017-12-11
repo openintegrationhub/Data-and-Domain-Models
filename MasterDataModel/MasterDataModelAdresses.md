@@ -763,10 +763,12 @@ Up to now we mentioned the different kind relations of persons or organizations 
 
 Generally there are three types of relations:
 - Persons to organizations
-- Persons to Persons
+- Persons to persons
 - Organizations to organizations
 
+If the task would only be a relation between the two objects persons and organizations, we could directly link them together. But we need a naming of this relation and as mentioned in chapter 3.2.2. users want to categorize single entries for the description of the relations of a users own organization to other organizations or persons or to see the function of a person in his organization. Therefore we need a more generic approach for storing relations, categories, tags or other distinguishing features. That's the reason, why we introduce a specific object this.
 
+In the following chapters, we outline the different kind of relations. The attributes in the graphic are only placeholders for better differentiation.
 
 ##### 4.2.4.1 Person to organization
 
@@ -777,7 +779,6 @@ The following diagram shows how the mapping of these entity relations can be rea
 ![Relationship person organization](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/ER-Persons-relations-organizations.png)
 
 ##### 4.2.4.2 Organization to organization
-
 
 ![Relations of organizations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/relations-of-organizations.png)
 
@@ -793,42 +794,19 @@ The following diagram shows how the mapping of these entity relations can be rea
 
 ![Relations of organizations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/ER-Persons-relations-persons.png)
 
+The relations data object could have attributes like:
+- `label`- a label, which describes the relation
+- `labeltype` - a value, which describes the type of relation
+- `idin` - a unique id from the incoming entry
+- `idout` - a unique id from the outgoing entry
+
 #### 4.2.5 Privacy specific requirements
 
+As discovered in the use cases in chapter 3.3.1. and described in chapter 4.1.3 we need additional attributes for rights management and privacy enforcement. The user stories in chapter 3.3.1 tell us about the requirements of the privacy laws (in Germany the "Bundesdatenschutzgesetz", EU-wide it's the "EU General Data Protection Regulation" ).
 
+We must be able to delete, alter or block entries in the connected systems. To complicate things, we must be able to delete an entry in one system and block it in another system, because there can be some other legal issues, which forbid the deletion of an entry. Deeper down, we need the ability to regulate, which system or user can alter individual attributes of an object.
 
-
-
-**Common Fields**
-
-A typical address contains the following fields:
-
-Organizations
-...
-
-Persons
-...
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**Privacy**
-
-To deal with privacy issues you have to consider...
-
-**Rights Management**
-
-To deal with rights management you have to consider...
+For the privacy requirements (and the rights management requirements as well) we propose to use a handling object, like the one we used for the categories.
 
 ## 5. Results
 
@@ -842,26 +820,11 @@ To deal with rights management you have to consider...
 
 This points should be added as issues.
 
-**Points to be clarified:**
-- Wice takes over driver seat for master data model adresses
-- Approach modeling
-- We go on and finalize the master data model with our method
-- Weekly sprints
 
 **To be discussed:**
-- relations requirement -> intelligent or stupid OIH? (Our Suggestion: intelligent App / stupid OIH,  but in Data Model all relations (tags and categories) should be mapped
-- mapping one table data structure <-> relationally structure
 - generic problems
 - handling with freely definable additional fields
-- handling of unique oih ids and app based ids (meta data, …)
-- handling with freely definable relations
 - handling with same person in different roles …
 - are employees, user persons  to take into account?
 - date integrity
 - architecture requirements
-
-**Next steps:**
-- Work out findings of master data model – 80%
-- Experiment with the sequence of UML -> ER -> Json schema
-- Coordination with Selim, Lutz, Josef, Susanne, Igor / Renat, Franz / Stefan (partner AP 2.4 u. technical board)
-- Goals / results for next Friday
