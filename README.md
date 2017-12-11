@@ -35,11 +35,11 @@
 
 | Workgroup  | Member Name | Role |
 | ------------- | ------------- | ------------- |
-| Data and Domain Models  | Susanne  | **Manager & Committer**  |
+| Data and Domain Models  | Raphael  | **Manager & Committer**  |
 |  | Lutz  | Committer  |
 |  | Josef  | Committer  |
 |  | Hansjörg  | Committer  |
-|  | Raphael  | Committer  |
+|  | Andreas  | Committer  |
 |  | Selim  | Contributor  |
 |  | Jürgen  | Contributor  |
 |  | Renat  | Contributor  |
