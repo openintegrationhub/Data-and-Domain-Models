@@ -2,7 +2,7 @@
 
 ## Table of Content
 - [General Information](#general-information)
-  - [Manager](#Manager)
+  - [Manager](#manager)
   - [Commiters](#committers)
   - [Contributors](#contributors)
 - [Workgroup Member](#workgroup-member)
@@ -35,11 +35,11 @@
 
 | Workgroup  | Member Name | Role |
 | ------------- | ------------- | ------------- |
-| Data and Domain Models  | Susanne  | **Manager & Committer**  |
+| Data and Domain Models  | Raphael  | **Manager & Committer**  |
 |  | Lutz  | Committer  |
 |  | Josef  | Committer  |
 |  | Hansjörg  | Committer  |
-|  | Raphael  | Committer  |
+|  | Andreas  | Committer  |
 |  | Selim  | Contributor  |
 |  | Jürgen  | Contributor  |
 |  | Renat  | Contributor  |
@@ -53,9 +53,13 @@
 |  | Data Mapping  |
 |  | Data Hub & Standarization of the data model  |
 |  | Backlog Data-Hub & data model  |  
-| APs | 2.08 |
-|  | 2.10 |
-|  | 2.12 |
+| APs | 2.03 |
+|  | 2.04 |
+|  | 2.05 |
+|  | 2.06 |
+|  | 2.07 |
+|  | 2.09 |
+|  | 2.15 |
 
 ## Contribution
 

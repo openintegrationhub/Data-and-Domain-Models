@@ -724,28 +724,65 @@ In an ideal world, data sources would have a single field for each OIH conform a
 
 As described in the user stories in chapter 3.2.2. you have to assign categories, tags or other features to an organization.
 
-With that in mind, we will need attributes like`categories` which describes a list of assigned categories.
+With that in mind, we will need attributes like `categories` which describes a list of assigned categories. And we must be able to bring different organizations in relation to other organizations and to single individuals.
 
 #### 4.2.3 Person specific requirements
 
+As mentioned before, if we deal with addresses we often need to store, retrieve or update contact data of persons. A person can be a single individual or a member of an organization. With that in mind, we need contact data attributes and we need relations to the organization.
+
+If we store personal informations of individuals we are in contact with the privacy rules and privacy laws. This specific requirements are described later on.
+
+To reach a single individual we need the typical address attributes as mentioned in the chapter above (4.2.2.). But there are some complications. Whereas an organization will have a clear regularity for emails or telephone numbers, like xxx@yyy.de or +494012345-xx, individuals tends towards having multiple email-addresses without any regularity, like humptydumpy@googlemail.com and nittygritty@web.de, and multiple telephone numbers.
+
+We often don't have a complete set of contact data but only a name and an email address (e.g. in the marketing use cases). For example for better sales conversions, companies want to aggregate contact data from different sources into one entry (see chapter 3.2.5.). So we must be able to deal with low data quality and improve it over the time. That means, we will need a number of functions to separate and join fields to create appropriate values.
+
+With that in mind, we can approach the attributes for persons.
+
+A person is identified with the following attributes:
+- `name`- a surname
+- `firstname`- a given name
+
+There are a lot of additional attributes describing a person, like:
+- `middlename` - a given second name
+- `salutation` - a form of address
+- `title` - a title or academic grade
+- `gender` - a persons sex
+
+Then you will find a set of direct communication attributes, like:
+- `phone`- one or more numeric phone numbers
+- `email` - one or more valid email addresses
+- `social`- one or more social network profiles
+
+In postal communication we need the typical attributes as mentioned before for the organizations.
+
+As described in the user stories in chapter 3.2.2. you have to assign categories, tags or other features to a person. That means, we will need attributes like `categories` which describes a list of assigned categories. And we must be able to bring persons in relation to organizations and to other single individuals.
+
 #### 4.2.4 Relation specific requirements
 
+Up to now we mentioned the different kind relations of persons or organizations in different chapters of this document. Dealing with this relations is a crucial requirement in the address management.
+
 Generally there are three types of relations:
+- Persons to organizations
+- Persons to persons
+- Organizations to organizations
+
+If the task would only be a relation between the two objects persons and organizations, we could directly link them together. But we need a naming of this relation and as mentioned in chapter 3.2.2. users want to categorize single entries for the description of the relations of a users own organization to other organizations or persons or to see the function of a person in his organization. Therefore we need a more generic approach for storing relations, categories, tags or other distinguishing features. That's the reason, why we introduce a specific object this.
+
+In the following chapters, we outline the different kind of relations. The attributes in the graphic are only placeholders for better differentiation.
 
 ##### 4.2.4.1 Person to organization
 
 ![Relationship person organization](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/use-case-relationship-person-organization.png)
 
-The following diagram shows how the mapping of these entitiy relations can be realized in the data model:
+The following diagram shows how the mapping of these entity relations can be realized in the data model:
 
 ![Relationship person organization](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/ER-Persons-relations-organizations.png)
 
 ##### 4.2.4.2 Organization to organization
 
-
 ![Relations of organizations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/relations-of-organizations.png)
 
-The following diagram shows how the mapping of these entitiy relations can be realized in the data model:
+The following diagram shows how the mapping of these entity relations can be realized in the data model:
 
 ![Relations of organizations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/ER-organizations-relations-organizations.png)
 
@@ -753,46 +790,23 @@ The following diagram shows how the mapping of these entitiy relations can be re
 
 ![Relations of organizations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/relations-among-persons.png)
 
-The following diagram shows how the mapping of these entitiy relations can be realized in the data model:
+The following diagram shows how the mapping of these entity relations can be realized in the data model:
 
 ![Relations of organizations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/ER-Persons-relations-persons.png)
 
+The relations data object could have attributes like:
+- `label`- a label, which describes the relation
+- `labeltype` - a value, which describes the type of relation
+- `idin` - a unique id from the incoming entry
+- `idout` - a unique id from the outgoing entry
+
 #### 4.2.5 Privacy specific requirements
 
+As discovered in the use cases in chapter 3.3.1. and described in chapter 4.1.3 we need additional attributes for rights management and privacy enforcement. The user stories in chapter 3.3.1 tell us about the requirements of the privacy laws (in Germany the "Bundesdatenschutzgesetz", EU-wide it's the "EU General Data Protection Regulation" ).
 
+We must be able to delete, alter or block entries in the connected systems. To complicate things, we must be able to delete an entry in one system and block it in another system, because there can be some other legal issues, which forbid the deletion of an entry. Deeper down, we need the ability to regulate, which system or user can alter individual attributes of an object.
 
-
-
-**Common Fields**
-
-A typical address contains the following fields:
-
-Organizations
-...
-
-Persons
-...
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**Privacy**
-
-To deal with privacy issues you have to consider...
-
-**Rights Management**
-
-To deal with rights management you have to consider...
+For the privacy requirements (and the rights management requirements as well) we propose to use a handling object, like the one we used for the categories.
 
 ## 5. Results
 
@@ -806,26 +820,11 @@ To deal with rights management you have to consider...
 
 This points should be added as issues.
 
-**Points to be clarified:**
-- Wice takes over driver seat for master data model adresses
-- Approach modeling
-- We go on and finalize the master data model with our method
-- Weekly sprints
 
 **To be discussed:**
-- relations requirement -> intelligent or stupid OIH? (Our Suggestion: intelligent App / stupid OIH,  but in Data Model all relations (tags and categories) should be mapped
-- mapping one table data structure <-> relationally structure
 - generic problems
 - handling with freely definable additional fields
-- handling of unique oih ids and app based ids (meta data, …)
-- handling with freely definable relations
 - handling with same person in different roles …
 - are employees, user persons  to take into account?
 - date integrity
 - architecture requirements
-
-**Next steps:**
-- Work out findings of master data model – 80%
-- Experiment with the sequence of UML -> ER -> Json schema
-- Coordination with Selim, Lutz, Josef, Susanne, Igor / Renat, Franz / Stefan (partner AP 2.4 u. technical board)
-- Goals / results for next Friday
