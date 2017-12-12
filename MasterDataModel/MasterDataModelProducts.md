@@ -1,4 +1,4 @@
-URL: https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/MasterDataModelProducts.md
+# Work (Translation) in Progress #
 
 # Master Data Model Products 
 
