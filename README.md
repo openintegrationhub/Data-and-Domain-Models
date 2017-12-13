@@ -11,6 +11,8 @@
 
 - [Contribution](#contribution)
 
+- [Decisions](#decisions)
+
 ## General Information
 - Each workgroup has at least one **status call** every two weeks
 - **Every Committer** must attend the status call
@@ -64,3 +66,7 @@
 ## Contribution
 
 Before you contribute, please read the [contribution guideline](https://github.com/openintegrationhub/data-and-domain-models/blob/master/CONTRIBUTING.md).
+
+## Decisions
+
+In the [DecisionsMade.md](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/DecisionsMade.md) you can find all decisions that were made by the committers of the Data & Domain Model Workgroup.
