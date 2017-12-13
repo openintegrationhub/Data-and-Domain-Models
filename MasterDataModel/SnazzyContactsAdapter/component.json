@@ -25,8 +25,8 @@
     }
   },
   "triggers": {
-    "getPersons": {
-      "main": "./lib/triggers/getPersons.js",
+    "getPersonsPolling": {
+      "main": "./lib/triggers/getPersonsPolling.js",
       "type": "polling",
       "description": "Fetch all persons from snazzycontacts saved by the user",
       "title": "Get Persons",
@@ -34,8 +34,8 @@
         "out": "./lib/schemas/getPersons.out.json"
       }
     },
-    "getOrganizations": {
-      "main": "./lib/triggers/getOrganizations.js",
+    "getOrganizationsPolling": {
+      "main": "./lib/triggers/getOrganizationsPolling.js",
       "type": "polling",
       "description": "Fetch all organizations from snazzycontacts saved by the user",
       "title": "Get Organizations",
