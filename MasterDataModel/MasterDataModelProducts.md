@@ -40,24 +40,23 @@ Following are a few examples of product environments which will show the particu
 Work with construction materials requires that products can be managed in different units, and ideally, converted within.  
 For example it is common to order wooden planks in standardized dimensions, but be invoiced in cubic meters. In that case, the product references a certain wood type (possibly of a certain quality), which is warehoused as planks  at the same time, though, the stock will be accounted for in cubic meters.   
 Similar conversions are common with sheet metals or cast products. These items are usually sold according to their weight, but will be stocked by length, piece or their square measurement. Especially with manufacturing companies it is not uncommon to sell yard good products that can be cut and converted to piece goods, to then also manage the related stock in both units.  
-Neben den Einheiten und der Lagerhaltung spielen auch Zusatzkosten, wie Kupfer- und Verschrottungszuschläge bei Metalen eine große Rolle. Die entsprechenden Daten müssen für die Preisfindung vorgehalten werden. 
+In addition to the handling of units and storage there also other costs to keep in mind, for example the scrapping costs or the copper surchage. Both play an important role in metal processing. All of these costs must be considered in the process of price determination. 
 
 ##### 1.2.2 Textiles
 Textile products usually are stock managed in variants. This way a t-shirt can be maintained as one article in the system, but it is available in different sizes, materials and colors. Although not every combination needs to be possible. In addition, product characteristics might be different for each variant. Specifications (and dimensions) can  be different per article, but they might also be applied to a whole product group.
-Fragen, die an das System gestellt werden, könnten beispielsweise lauten "welche Größen roter Schuhe des Typs XYZ haben wir im Portfolio", welche davon sind als Damen- und welche als Herrenschuh ausgearbeitet? Es muss also unter den verschiedenen Varianten eines Artikel beliebig gruppiert werden können.
+The system must be able to answer complicated queries teh following: 'what are the sizes we have available for a particular typ of footwear in the color red?' and 'which of these sizes are the men's and which are the lady's version?'. These kinds of queries are only possible if the different variants of an article can be grouped in any which way.
 
 ##### 1.2.3 Food
-Bei Nahrungsmitteln spielen insbesondere Verpackungseinheiten und Verfallsdaten eine große Rolle. In welchen Gebinden kann das Lebenmittel geliefert werden? Wieviel Stücke passen in eine Packung? Wieveiele Packungen passen auf eine Palette? Der Einlageungszeitpunkt und das Ablaufdatum müssen jederzeitverfügbar sein um beispielsweise bei der Kommissionierung von Waren bei der Auslieferung nach dem FiFo-Prinzip herangezogen zu werden. 
-Bei Nahrungsmitteln, die speziellen Steuern unterliegen, wie z.B. der Sekt- oder Alkoholsteuer, müssen diese spezifischen inhärenten Kosten für die Ermittlung der Verkaufspreise und der zugehörigen Abgaben verfügbar sein.
-
+In regard to food items, packaging units and expiry dates play an important role. For example, what kinds of bundles are available? How many pieces will fit in one package? How many packages will fit on a pallet? The "packaged on" and "best before" date must always be available, so the "first in - first out" principle can be considered while picking the goods for delivery.
+When determining the prices of types of food that are subject to special taxes, as with the alcohol or sparkling wine tax, these additional costs must be included in the process. 
 
 ##### 1.2.4 Hazardous Substances
-Gefahrgut und Gefahrstoffe müssen bei Lieferung und Lagerung berücksichtigt werden. 
-Gefahrstoffe müssen durch standartisierte Kennsätze (R-, S-, H-, P- und EUH-Sätze) nach den jeweils zugehörigen Regelwerken gekennzeichnet werden können, die zugehörigen GHS-Symbole müssen benannt werden können und für den Ausdruck auf Dokumenten (wie z.B. dem Lieferschein) müssen die internationalen Kennzeichen mit den zugehörigen Langtexten (wie z.B. E, T+, T, F+, F O, C, Xn oder N) angedruckt werden. Die Schutzstufe, Brand- und Wasserklasse müssen pro Produkt benannt werden können.  
-Bei Gefahrgut müssen neben der passenden Beschreibung UN-Nummer, LQ, Klasse, Tunnelcode, Kategorie, Verpackungsgruppe und auch Notfallangaben hinzterlegt werden können. 
+Dangerous goods and hazardous substances have certain requirements for storage and handling. According to standardized regulations (i.e. Risk and Safety Phrases as well as the Hazard and Precautionary Statements) hazardous substances have to be labelled as such. Further the items need to comply to the Globally Harmonized System of Classification, Labelling and Packaging of Chemicals and include the required labels and pictograms on the shipping documentation and mention the related codes (for example "Explosive", "Very Toxic", "Toxic", "Extremely Flammable", "Flammable" "Oxidizing", "Corrosive", "Harmful" or "Dangerous for the environment"). 
+
+Per product it is required to be able to recall the degree of protection, the fire class and the class of water. Dangerous goods need to have the correct description, the UN-number, LQ, class, tunnel code, category, packing group and emergency information.     
 
 ##### 1.2.5 Services
-Dienstleistungen können nach Stunden oder pauschal berechnet werden. (Hm, da fällt mir gerade nicht viel dazu ein, muss ich mal mit Gerry drüber sprechen morgen)
+Services can be charged by the hour or as a lump sum.
 
 ## 2. Requirements for a Master Data Model
 
