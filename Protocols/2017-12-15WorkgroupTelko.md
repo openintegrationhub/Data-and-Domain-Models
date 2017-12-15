@@ -44,8 +44,9 @@ Alternative date at the 3rd KW'18 - possible?
 
 ## Next Steps
 - [ ] Provide a JSON Schema **Lutz** till **19.12.2017**
-- [ ] Write down concrete attributes and update UML diagram **Hansjörg** till **15.12.2017**
 - [ ] Reconcilation of Hansjörg's results and afterwards provide the results on GitHub **Lutz, Hansjörg, Josef (Suggested)** till **15.12.2017**
-- [ ] [Provide the regulations on how to design a generic domain model](https://github.com/openintegrationhub/Data-and-Domain-Models/issues/22) by @lashauer @hschmidthh @JosefBraeuer 
+- [ ] [Provide the regulations on how to design a generic domain model](https://github.com/openintegrationhub/Data-and-Domain-Models/issues/22) by @lashauer @hschmidthh @JosefBraeuer till **15.12.2017**
+- [ ] Write down concrete attributes and update UML diagram **Hansjörg** till **15.12.2017**
+- [ ] Supplement from a subsequent converstion: the UML diagrams for addresses and products will be converted into the provisioned JSON 'tree structure' **Hansjörg, Josef** till **19.12.2017**  
 - [ ] Remove ZenHub broadcast functionality about its Board activities - for Slack **Raphael** till **15.12.2017**
 - [ ] Next appointment **19.12.2017** at **10:00 am**
