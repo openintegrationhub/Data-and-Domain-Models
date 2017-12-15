@@ -1,6 +1,6 @@
 # Protocol
 
-**Attendess:** Andreas G., Lutz, Hansjörg, Josef, Raphael, Philipp (minute taker)
+**Attendees:** Andreas G., Lutz, Hansjörg, Josef, Raphael, Philipp (minute taker)
 
 **Absent:** Josef
 
