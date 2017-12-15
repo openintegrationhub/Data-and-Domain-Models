@@ -46,5 +46,5 @@ Alternative date at the 3rd KW'18 - possible?
 - [ ] Provide a JSON Schema **Lutz** till **19.12.2017**
 - [ ] Write down concrete attributes and update UML diagram **Hansjörg** till **15.12.2017**
 - [ ] Reconcilation of Hansjörg's results (and the regulations) and afterwards provide the results on GitHub **Lutz, Hansjörg, Josef (Suggested)** till **15.12.2017**
-- [ ] Remove Zenhub extensions from Slack **Raphael** till **15.12.2017**
+- [ ] Remove ZenHub broadcast functionality about its Board activities - for Slack **Raphael** till **15.12.2017**
 - [ ] Next appointment **19.12.2017** at **10:00 am**
