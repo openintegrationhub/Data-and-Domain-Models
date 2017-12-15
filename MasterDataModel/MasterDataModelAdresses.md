@@ -810,7 +810,7 @@ For the privacy requirements (and the rights management requirements as well) we
 
 ## 5. Results
 
-**UML diagram**
+![UML Draf OIH Master Data Model Addresses](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/OIHMasterDataModelAddressesUML.png)
 
 **Json schema**
 
