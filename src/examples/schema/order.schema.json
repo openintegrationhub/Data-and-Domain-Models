@@ -1,58 +1,109 @@
 {
   "$schema": "http://json-schema.org/schema#",
-
   "$id": "http://openintegrationhub.org/examples/schemas/order",
-
-  "title" : "Order",
-  "allOf": [ { "$ref" : "http://openintegrationhub.org/schemas/oih-data-record" } ],
-  "properties" : {
-    "orderNumber" : { "type" : "string" },
-    "customerNumber" : { "type" : "integer" },
-    "shippingAddressUid" : { "type": "integer" },
-    "billingAddressUid" : { "type": "integer" },
-    "date" : {
-      "type" : "string",
-      "format" : "date-time"
+  "title": "Order",
+  "allOf": [
+    {
+      "$ref": "http://openintegrationhub.org/schemas/oih-data-record"
+    }
+  ],
+  "properties": {
+    "orderNumber": {
+      "type": "string"
     },
-    "lineItems" : {
+    "customerNumber": {
+      "type": "integer"
+    },
+    "shippingAddressUid": {
+      "type": "integer"
+    },
+    "billingAddressUid": {
+      "type": "integer"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lineItems": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/LineItem",
-        "minItems": 1
-      }
-    },
-    "total" : {
-      "type" : "number"
-    },
-    "creditCardPaymentInfo" : {
-      "type" : "object",
-      "properties" : {
-        "cardNumber" : { "type" : "integer" },
-        "expirationMonth" : {
-          "type" : "integer",
-          "minimum" : 1,
-          "maximum" : 12
+        "type" : "object",
+        "properties" : {
+          "position" : { "type" : "integer", "minimum" : 1 },
+          "articleUid" : { "type" : "string" },
+          "description" : { "type" : "string" },
+          "quantity" : { "type" : "number" },
+          "cost" : { "type" : "number" },
+          "amount" : { "type" : "number" }
         },
-        "expirationYear" : { "type" : "integer" },
-        "cardHolder" : { "type" : "string" }
+        "required" : [ "applicationUid", "recordUid" ]
       },
-      "required" : [ "cardNumber", "expirationMonth", "expirationYear", "cardHolder" ]
+      "minItems": 1
+    },
+    "total": {
+      "type": "number"
+    },
+    "creditCardPaymentInfo": {
+      "type": "object",
+      "properties": {
+        "cardNumber": {
+          "type": "integer"
+        },
+        "expirationMonth": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12
+        },
+        "expirationYear": {
+          "type": "integer"
+        },
+        "cardHolder": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "cardNumber",
+        "expirationMonth",
+        "expirationYear",
+        "cardHolder"
+      ]
     }
   },
-  "required" : [ "orderNumber", "customerNumber", "date", "lineItems", "total" ],
-
-  "definitions" : {
-    "LineItem" : {
-      "type" : "object",
-      "properties" : {
-        "position" : { "type" : "integer", "minimum" : 1 },
-        "articleUid" : { "type" : "string" },
-        "description" : { "type" : "string" },
-        "quantity" : { "type" : "number" },
-        "cost" : { "type" : "number" },
-        "amount" : { "type" : "number" }
+  "required": [
+    "orderNumber",
+    "customerNumber",
+    "date",
+    "lineItems",
+    "total"
+  ],
+  "definitions": {
+    "LineItem": {
+      "type": "object",
+      "properties": {
+        "position": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "articleUid": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "number"
+        },
+        "cost": {
+          "type": "number"
+        },
+        "amount": {
+          "type": "number"
+        }
       },
-      "required" : [ "applicationUid", "recordUid" ]
+      "required": [
+        "applicationUid",
+        "recordUid"
+      ]
     }
   }
 }
