@@ -2,7 +2,7 @@
 
 ## Table of Content
 - [General Information](#general-information)
-  - [Manager](#Manager)
+  - [Manager](#manager)
   - [Commiters](#committers)
   - [Contributors](#contributors)
 - [Workgroup Member](#workgroup-member)
@@ -10,6 +10,8 @@
 - [Workgroup Content](#workgroup-content)
 
 - [Contribution](#contribution)
+
+- [Decisions](#decisions)
 
 ## General Information
 - Each workgroup has at least one **status call** every two weeks
@@ -35,11 +37,11 @@
 
 | Workgroup  | Member Name | Role |
 | ------------- | ------------- | ------------- |
-| Data and Domain Models  | Susanne  | **Manager & Committer**  |
+| Data and Domain Models  | Raphael  | **Manager & Committer**  |
 |  | Lutz  | Committer  |
 |  | Josef  | Committer  |
 |  | Hansjörg  | Committer  |
-|  | Raphael  | Committer  |
+|  | Andreas  | Committer  |
 |  | Selim  | Contributor  |
 |  | Jürgen  | Contributor  |
 |  | Renat  | Contributor  |
@@ -53,10 +55,18 @@
 |  | Data Mapping  |
 |  | Data Hub & Standarization of the data model  |
 |  | Backlog Data-Hub & data model  |  
-| APs | 2.08 |
-|  | 2.10 |
-|  | 2.12 |
+| APs | 2.03 |
+|  | 2.04 |
+|  | 2.05 |
+|  | 2.06 |
+|  | 2.07 |
+|  | 2.09 |
+|  | 2.15 |
 
 ## Contribution
 
 Before you contribute, please read the [contribution guideline](https://github.com/openintegrationhub/data-and-domain-models/blob/master/CONTRIBUTING.md).
+
+## Decisions
+
+In the [DecisionsMade.md](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/DecisionsMade.md) you can find all decisions that were made by the committers of the Data & Domain Model Workgroup.
