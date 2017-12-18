@@ -75,35 +75,5 @@
     "date",
     "lineItems",
     "total"
-  ],
-  "definitions": {
-    "LineItem": {
-      "type": "object",
-      "properties": {
-        "position": {
-          "type": "integer",
-          "minimum": 1
-        },
-        "articleUid": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "quantity": {
-          "type": "number"
-        },
-        "cost": {
-          "type": "number"
-        },
-        "amount": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "applicationUid",
-        "recordUid"
-      ]
-    }
-  }
+  ]
 }
