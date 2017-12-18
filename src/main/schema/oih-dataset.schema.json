@@ -1,6 +1,0 @@
-{
-	"$id": "http://openintegrationhub.org/schema/dataset.json",
-	"$schema": "http://json-schema.org/draft-07/hyper-schema#",
-	"type": "object",
-	"title" : "oih-record",
-}
