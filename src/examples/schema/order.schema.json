@@ -36,7 +36,7 @@
           "cost" : { "type" : "number" },
           "amount" : { "type" : "number" }
         },
-        "required" : [ "applicationUid", "recordUid" ]
+        "required" : [ "position", "description", "amount" ]
       },
       "minItems": 1
     },
