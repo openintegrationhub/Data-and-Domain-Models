@@ -1,5 +1,6 @@
 # OIH Datasets
-Every OIH-Master-Data-Model consists of one or multiple loosely coupled sub-models. Each of those sub-models has to be marked as an *OID Dataset*:
+Every OIH-Master-Data-Model consists of one or multiple loosely coupled sub-models. Each of those sub-models has to be marked as an *OID 
+Data Record*:
 
 ![OIH Record](assets/oih-data-record.png)
 
@@ -17,8 +18,12 @@ Each sub-model consists of one or more entities. In case the model consists of m
 >
 > [s. [Martin Fowler: DDD_Aggregate](https://martinfowler.com/bliki/DDD_Aggregate.html)]
 
-Hence, the root of a Master Data Model's sub-model **must** inherit from / extend _OIH Dataset_, no matter whether it is modeled as an aggregate or as a single entity.
+Hence, the root of a Master Data Model's sub-model **must** inherit from / extend _OIHDataRecord_, no matter whether it is modeled as an 
+aggregate or as a single entity.
 
+## Schema
+
+s. [oih-data-record.schema.json](../src/main/schema/oih-data-record.schema.json)
 
 # Example: Order aggregate
 
@@ -34,3 +39,7 @@ As an example to model an aggregate capable of being processed of an OIH instanc
 ![Aggregate example: Order](assets/aggregate-example.png)
 
 The Order's root defines the model as an OIH Dataset by extending it. This way, the _Order_ entity is the one and only entry point to the aggregate!
+
+## Schema
+
+s. [order.schema.json](../src/examples/schema/order.schema.json)
