@@ -62,5 +62,6 @@
   - For this purpose one file will be created with a set of general regulations
 - [ ] Upload the UML diagram on GitHub **Josef** till **late 19.12.2017**
 - [ ] Upload JSON Schema and regulations on GitHub **Josef** till **late 19.12.2017**
+- [ ] Upload JSON Schema on GitHub **Hansjörg** till **late 19.12.2017**
 - [ ] Reconciliation of fix appointment for the 1st workshop in 2018 **Raphael**
 - [ ] Next appointment on **21.12.2017** at **10:00 am**
