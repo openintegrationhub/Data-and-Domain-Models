@@ -2,7 +2,7 @@
 Every OIH-Master-Data-Model consists of one or multiple loosely coupled sub-models. Each of those sub-models has to be marked as an *OID 
 Data Record*:
 
-![OIH Record](assets/oih-data-record.png)
+![OIH Record](assets/oih-data-record.svg)
 
 Every record passed into an OIH instance gets a unique ID controlled by the OIH. Additionally, the OIH adds meta data for every application the record is synchronized with to the dataset:
 
@@ -36,7 +36,7 @@ For a sales application, one could split the data model at least into the follow
 
 As an example to model an aggregate capable of being processed of an OIH instance, the following diagram shows a simplified order:
 
-![Aggregate example: Order](assets/aggregate-example.png)
+![Aggregate example: Order](assets/aggregate-example.svg)
 
 The Order's root defines the model as an OIH Dataset by extending it. This way, the _Order_ entity is the one and only entry point to the aggregate!
 
