@@ -5,7 +5,7 @@
 **Absent:** Andreas G.
 
 ## Workshop Protocol (from 15.12.2017)
-[2017-12-15WorkgroupTelko.md](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/Protocols/2017-12-15WorkgroupTelko.md) - accidentally merged already due to
+[2017-12-15WorkgroupTelko.md](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/Protocols/2017-12-15WorkgroupTelko.md) - accidentally merged already due to [DecisionsMade.md](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/DecisionsMade.md)
 
 ## Final results for the 1st milestone
 [Provide deliverables on basis of Lutz' suggestions (Tool + Schema)](https://github.com/openintegrationhub/Data-and-Domain-Models/issues/19) by @hschmidthh @JosefBraeuer till **15.12.2017**
@@ -13,7 +13,7 @@
 [Provide the regulations on how to design a generic domain model](https://github.com/openintegrationhub/Data-and-Domain-Models/issues/22) by @lashauer @hschmidthh @JosefBraeuer till **15.12.2017**
 
 ### Lutz
-- [ ] JSON Schema ' tree structure' **by @lashauer till early 19.12.2017**
+- [ ] JSON Schema 'tree structure' **by @lashauer till early 19.12.2017**
 - [ ] General regulations for generic data models **by @lashauer till 19.12.17**
 
 ### Hansjörg
