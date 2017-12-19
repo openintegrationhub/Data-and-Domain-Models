@@ -1,0 +1,147 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+
+	"$id": "http://openintegrationhub.org/schemas/product",
+
+	"title" : "Product",
+	"allOf": [ { "$ref" : "http://openintegrationhub.org/schemas/oih-data-record" } ],
+
+	"properties" : {
+		"articleNo": { "type": "string" },
+		"matchcode": { "type": "string" },
+		"description": { "type": "string" },
+		"gtin": { "type": "string" },
+		"costCalc": { "type": "decimal" },
+		"costAvg": { "type": "decimal" },
+		"costLast": { "type": "decimal" },
+		"costList": { "type": "decimal" },
+		"costInventory": { "type": "decimal" },
+		"dtCostLast": { "type": "date" },
+		"articleGroups": {
+			"type": "array",
+			"minItems": 1
+			"items": {
+				"$ref": "#/definitions/ArticleGroup",
+			}
+		},
+		"isSale": { "type": "bool" },
+		"isPurchase": { "type": "bool" },
+		"isWorkStep": { "type": "bool" },
+		"isProduction": { "type": "bool" },
+		"isStockTracing": { "type": "bool" },
+		"isCheckStock": { "type": "bool" },
+		"isService": { "type": "bool" },
+		"isPacking": { "type": "bool" },
+		"isConsumable": { "type": "bool" },
+		"isDivisible": { "type": "bool" },
+		"isShipping": { "type": "bool" },
+		"isCharges": { "type": "bool" },
+		"isSerialNo": { "type": "bool" },
+		"status": { "type": "string", "enum": [ "Neu", "Freigabe", "Auslaufartikel", "gesperrt" ] },
+		"drawingNo": { "type": "string" },
+		"version": { "type": "string" },
+		"dinStandard": { "type": "string" },
+		"isRohsCompliant": { "type": "bool" },
+		"netWeight": { "type": "float" },
+		"grossWeight": { "type": "float" },
+		"density": { "type": "float" },
+		"length": { "type": "float" },
+		"width": { "type": "float" },
+		"strength": { "type": "float" },
+		"innerDiameter": { "type": "float" },
+		"outerDiameter": { "type": "float" },
+		"volume": { "type": "float" },
+		"isReverseCharge": { "type": "bool" },
+		"isDiscount": { "type": "bool" },
+		"isReduction": { "type": "bool" },
+		"isIntrastat": { "type": "bool" },
+		"isPreferential": { "type": "bool" },
+		"customsTariff": { "type": "string" },
+		"countryOrigin": { "$ref": "#/definitions/Country" },
+		"replacementTime": { "type": "integer" },
+		"units": {
+			"type": "array",
+			"minItems": 1
+			"items": {
+				"$ref": "#/definitions/Unit",
+			}
+		},
+		"storages": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/Storage"
+			}
+		}
+	},
+	"required": ["articleNo"],	
+	"definitions" : {
+		"ArticleGroup": {
+			"type": "object",
+			"properties": {
+				"type": { "type": "string", "enum": [ "default", "shop" ] },
+				"description": { "type": "string" }
+				},
+			"required": ["type"]
+		},	
+		"Country": {
+			"type": "object",
+			"properties": {
+				"code": { "type": "string" },
+				"numberPlate": { "type": "string" },
+				"description": { "type": "string" },
+				"areaCode": { "type": "string" },
+				"isoCode": { "type": "string" },
+				"isoDescription": { "type": "string" },
+				"countryCodePhone": { "type": "string" },
+				"intrastatCode": { "type": "string" },
+				"currency": {"$ref": "#/definitions/Currency" },
+				"language": {"$ref": "#/definitions/Language"},
+			},
+			"required": ["code"]
+		},
+		"Unit": {
+			"type": "object",
+			"properties": {
+				"isPurchase": { "type": "bool" },
+				"isSale": { "type": "bool" },
+				"isProduction": { "type": "bool" },
+				"description": { "type": "string" },
+				"abbreviation": { "type": "string" }
+			},
+			"required": ["description"]
+		},
+		"Storage": {
+			"type": "object",
+			"properties": {
+				"description": { "type": "string" },
+				"area": { "type": "string" },
+				"complex": { "type": "string" },
+				"hall": { "type": "string" },
+				"corridor": { "type": "string" },
+				"height": { "type": "string" }
+				},
+			"required": ["description"]
+		},
+		"Currency": {
+			"type": "object",
+			"properties": {
+				"code": { "type": "string" },
+				"description": { "type": "string" },
+				"decimalDigits": { "type": "integer" },
+				"subCode": { "type": "string" },
+				"subDescription": { "type": "string" },
+				"currencySymbol": { "type": "string" }
+				},
+			"required": ["code"]
+		},
+		"Language": {
+			"type": "object",
+			"properties": {
+				"code": { "type": "string" },
+				"description": { "type": "string" }
+				},
+			"required": ["code"]
+		}
+	}
+  }
+}
