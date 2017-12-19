@@ -1,34 +1,51 @@
 {
   "$schema": "http://json-schema.org/schema#",
-
-	"$id": "http://openintegrationhub.org/schemas/oih-data-record",
-
-	"title" : "OIHDataRecord",
-	"type": "object",
-	"properties" : {
-		"oihUid" : { "type" : "string" },
-    "oihCreated" : { "type" : "integer" },
-    "oihLastModified" : { "type": "integer" },
-    "oihApplicationRecords" : {
-      "type" : "array",
-      "items" : {
-        "$ref" : "#/definitions/ApplicationDataRecord",
-        "minItems" : 1
-      }
-    }
-	},
-	"required" : [ "oihUid", "oihApplicationRecords" ],
-
-  "definitions" : {
-    "ApplicationDataRecord" : {
-      "type" : "object",
-      "properties" : {
-        "applicationUid" : { "type" : "string" },
-        "recordUid" : { "type" : "string" },
-        "created" : { "type" : "integer" },
-        "lastModified" : { "type" : "integer" }
+  "$id": "http://openintegrationhub.org/schemas/oih-data-record",
+  "title": "OIHDataRecord",
+  "type": "object",
+  "properties": {
+    "oihUid": {
+      "type": "string"
+    },
+    "oihCreated": {
+      "type": "integer"
+    },
+    "oihLastModified": {
+      "type": "integer"
+    },
+    "oihApplicationRecords": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ApplicationDataRecord"
       },
-      "required" : [ "applicationUid", "recordUid" ]
+      "minItems": 1
+    }
+  },
+  "required": [
+    "oihUid",
+    "oihApplicationRecords"
+  ],
+  "definitions": {
+    "ApplicationDataRecord": {
+      "type": "object",
+      "properties": {
+        "applicationUid": {
+          "type": "string"
+        },
+        "recordUid": {
+          "type": "string"
+        },
+        "created": {
+          "type": "integer"
+        },
+        "lastModified": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "applicationUid",
+        "recordUid"
+      ]
     }
   }
 }
