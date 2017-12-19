@@ -521,7 +521,7 @@ A typical product contains the following fields:
 ## 4. Results
 
 **UML diagram**
-![UML Draft OIH Master Data Model Products](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/OIHDataModelProductUML.png)
+![UML Draft OIH Master Data Model Products](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/OIHDataModelProductUML.svg)
 
 **Json schema**
 
