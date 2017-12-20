@@ -13,6 +13,8 @@
 
 - [Decisions](#decisions)
 
+- [Results](#results)
+
 ## General Information
 - Each workgroup has at least one **status call** every two weeks
 - **Every Committer** must attend the status call
@@ -70,3 +72,8 @@ Before you contribute, please read the [contribution guideline](https://github.c
 ## Decisions
 
 In the [DecisionsMade.md](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/DecisionsMade.md) you can find all decisions that were made by the committers of the Data & Domain Model Workgroup.
+
+
+## Results
+
+Find all results of the [first Milestone](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MilestoneOne.md) from this workgroup.
