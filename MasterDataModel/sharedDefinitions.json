@@ -1,0 +1,60 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"$id": "http://openintegrationhub.org/schemas/addresses/sharedDefinitions",
+	"title": "SharedDefinitions",
+	"description": "Shared Definitions for the Master Data Model for Addresses to use in the Open Integration Hub",
+
+	"sharedDefinitions": {
+		"address": {
+			"type": "object",
+			"properties": {
+				"street": { "type": "string" },
+				"streetNumber": { "type": "string" },
+				"unit": { "type": "string" },
+				"zipcode": { "type": "string" },
+				"town": { "type": "string" },
+				"district": { "type": "string" },
+				"region": { "type": "string" },
+				"country": { "type": "string" },
+			}
+		},
+		"phone": {
+			"type": "object",
+			"properties": {
+				"phoneNumber": { "type": "string" }
+			}
+		},
+		"fax": {
+			"type": "object",
+			"properties": {
+				"faxNumber": { "type": "string" }
+			}
+		},
+		"eMail": {
+			"type": "object",
+			"properties": {
+				"eMail": { "type": "email" }
+			}
+		},
+		"social": {
+			"type": "object",
+			"properties": {
+				"eMail": { "type": "string" }
+			}
+		},
+		"url": {
+			"type": "object",
+			"properties": {
+				"eMail": { "type": "uri" }
+			}
+		},
+		"category": {
+			"type": "object",
+			"properties": {
+				"categoryName": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
