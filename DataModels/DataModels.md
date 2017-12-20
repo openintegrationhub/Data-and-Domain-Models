@@ -96,6 +96,6 @@ As an example to model an aggregate capable of being processed of an OIH instanc
 
 ![Aggregate example: Order](assets/aggregate-example.svg)
 
-The Order's root defines the model as an OIH Dataset by extending it. This way, the _Order_ entity is the one and only entry point to the aggregate!
+The Order's root defines the model as an OIH Data Record by extending it. This way, the _Order_ entity is the one and only entry point to the aggregate.
 
 The JSON schema for this example is accessible [here](../src/examples/schema/order.schema.json).
