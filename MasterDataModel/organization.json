@@ -1,0 +1,57 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"$id": "http://openintegrationhub.org/schemas/addresses/organization",
+	"title": "Organization",
+	"description": "Master Data Model for Addresses to use in the Open Integration Hub",
+	"allOf": [
+		{
+			"$ref": "http://openintegrationhub.org/schemas/oih-data-record"
+		}
+	],
+	"properties": {
+		"organizationName": { "type": "string" },
+		"categories": {
+			"type": "array",
+			"items": {
+				"$ref": "sharedDefinitions.json#sharedDefinitions/category"
+			}
+		},
+		"addresses": {
+			"type": "array",
+			"items": {
+				"$ref": "sharedDefinitions.json#sharedDefinitions/address"
+			},
+		},
+		"phoneNumbers": {
+			"type": "array",
+			"items": {
+				"$ref": "sharedDefinitions.json#sharedDefinitions/phone"
+			},
+		},
+		"faxNumbers": {
+			"type": "array",
+			"items": {
+				"$ref": "sharedDefinitions.json#sharedDefinitions/fax"
+			},
+		},
+		"eMailAddresses": {
+			"type": "array",
+			"items": {
+				"$ref": "sharedDefinitions.json#sharedDefinitions/eMail"
+			},
+		},
+		"socials": {
+			"type": "array",
+			"items": {
+				"$ref": "sharedDefinitions.json#sharedDefinitions/social"
+			},
+		},
+		"urls": {
+			"type": "array",
+			"items": {
+				"$ref": "sharedDefinitions.json#sharedDefinitions/url"
+			},
+		}
+	},
+	"required": ["organizationName"]
+}
