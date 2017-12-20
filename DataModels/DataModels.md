@@ -1,6 +1,6 @@
 # OIH Data Models
 
-The Open Integration Hub (OIH) provides an asynchronous way of integrating applications and services. Modelling data which is processed by an OIH instance must consider this fact!
+The Open Integration Hub (OIH) provides an asynchronous way of integrating applications and services. Modelling data which is processed by an OIH instance must always consider this fact!
 
 One consequence is, that it must be possible to sent data records to and receive them from an OIH without the need or even possibility for the receiver to eagerly fetch referenced further records of any kindthrough an API or data store (like the _optional_ OIH Data Hub).
 
