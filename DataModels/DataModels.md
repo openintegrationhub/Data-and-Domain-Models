@@ -2,7 +2,7 @@
 
 The Open Integration Hub (OIH) provides an asynchronous way of integrating applications and services. Modelling data which is processed by an OIH instance must always consider this fact!
 
-One consequence is, that it must be possible to sent data records to and receive them from an OIH without the need or even possibility for the receiver to eagerly fetch referenced further records of any kindthrough an API or data store (like the _optional_ OIH Data Hub).
+One consequence is, that it must be possible to sent data records to and receive them from an OIH without the need or even possibility for the receiver to eagerly fetch referenced further records of any kind through an API or data store (like the _optional_ OIH Data Hub).
 
 A data model representing a certain professional domain normally consists of numerous entities. Hence, it is necessary to split such a data model into smaller parts to enable the transfer of optimized amounts of data through an OIH:
 
@@ -28,13 +28,13 @@ To enable the OIH to follow its purpose, the data records being processed have t
 
 ## OIH Data Records
 
-An OIH expects and needs, depending on the scenario and the involved components (e.g. with or without a Data Hub involved), more or less meta data on a data record to integrate two or more applications. This is achieved by modelling each sub-model of an MDM as a so called _OIH Data Record_. OIHDataRecord defines a superset of mandatory and optional (meta) data for records processed by an OIH instance:
+An OIH expects and needs, depending on the scenario and the involved components (e.g. with or without a Data Hub involved), more or less meta data on a data record to integrate two or more applications. This is achieved by modelling each sub-model of an MDM as a so called _OIH Data Record_. The OIHDataRecord defines a superset of mandatory and optional (meta) data for records processed by an OIH instance:
 
 ![OIH Record](assets/oih-data-record.svg)
 
 * __Each of the the sub-models of a MDM has to be marked as an *OIHDataRecord*.__
 
-Hence, the root of a Master Data Model's sub-model **must** inherit from / extend _OIHDataRecord_, no matter whether it is modeled as an 
+I.e., the root of an MDM's sub-model **must** inherit from / extend _OIHDataRecord_, no matter whether it is modeled as an 
 aggregate or as a single entity.
 
 * __Every record passed into an OIH instance must at least be provided with a reference to the record of the application or service being the source of the record__,
@@ -45,7 +45,7 @@ called an _OIHApplicationDataRecord_ containing ...
 + the record's ID within the application (both mandatory) and
 + optionally its creation and last modification dates within the application.
 
-When receiving such a record from an OIH, there might also be entries for other apllication being part of the integrations scenario with the same MDM.
+When receiving such a record from an OIH, there might also be entries of other applications being part of the integrations scenario with the same MDM in the same OIH.
 
 Additionally, depending on the scenario and the involved components again, the OIH itself or a connector (according to rules provided by the OIH __==> TO BE DISCUSSED!__) may also provide an OIH-internal UID for the record, along with the creation and last modification dates of the record within the OIH.
 
@@ -69,17 +69,18 @@ There is a predefined JSON-Schema defining the OIHDataRecord (s. [oih-data-recor
 
 This is done by adding an `allOf`-element to every sub-model's schema:
 
-```
+```javascript
 {
   "$schema": "http://json-schema.org/schema#",
   "$id": "http://example.com/schemas/oih/my-model.json",
-  "title": "MyAggregate",
+  "title": "MySubmodelAggregate",
   "allOf": [
     {
       "$ref": "http://openintegrationhub.org/schemas/oih-data-record.json"
     }
   ],
   "properties": {
+    ...
 ```
 
 # Example: the Order aggregate
