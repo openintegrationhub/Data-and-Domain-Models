@@ -18,7 +18,7 @@
 * Generic data model as [JSON schema for addresses - person](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/person.json)
 * Generic data model as [JSON schema for addresses - relation](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/relation.json)
 
-### Products model
+### Product model
 * Generic data model as [UML class diagram for products](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/OIHDataModelProductUML.svg)
 * Generic data model as [JSON schema for products](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/OIHDataModelProductSchema.json)
 
