@@ -14,7 +14,7 @@
 
 ## Provision results of our 1st milestone
 * Current results overview [of the Board](https://github.com/openintegrationhub/Board/blob/de265ec062beb0a293629bc5aa67320fb73de776/Milestones.md#result-3---generic-datamodel-for-addresses-and-products-including-guidelines-and-decision-processes)
-* Give [direct access]() through our repo page
+* Give [direct access](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MilestoneOne.md) through our repo page
 
 ## Align the files and folders naming syntax
 * File sorting and CamelCases
