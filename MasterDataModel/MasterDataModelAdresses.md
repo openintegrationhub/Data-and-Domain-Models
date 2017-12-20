@@ -812,11 +812,11 @@ For the privacy requirements (and the rights management requirements as well) we
 
 ![UML Draf OIH Master Data Model Addresses](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/OIHDataModelAdressesUML.png)
 
-![JSON Schema for organizations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/organization.json)
+[JSON Schema for organizations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/organization.json)
 
-![JSON Schema for persons](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/person.json)
+[JSON Schema for persons](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/person.json)
 
-![JSON Schema for relations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/relation.json)
+[JSON Schema for relations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/relation.json)
 
 
 
