@@ -1,8 +1,7 @@
 # Milestone 1
 
-```
-"Generic data model for addresses and products including regulations and decision processes."
-```
+
+> Generic data model for addresses and products including regulations and decision processes.
 
 ## Generic data models
 
