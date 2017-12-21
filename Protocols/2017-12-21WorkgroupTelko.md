@@ -27,19 +27,17 @@
   - Mandatory if a dataset is pushed into the open integration hub: _ApplicationDataRecord_
   - Snippets are used to explain and illustrate certain statements
 
-
-
-
 ## Provision results of our 1st milestone
 * Current results overview [of the Board](https://github.com/openintegrationhub/Board/blob/de265ec062beb0a293629bc5aa67320fb73de776/Milestones.md#result-3---generic-datamodel-for-addresses-and-products-including-guidelines-and-decision-processes)
 * Give [direct access](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MilestoneOne.md) through our repo page
+- Provision an entry page to our MS1 results, for our repo - use permanent links.
 
 ## Align the files and folders naming syntax
 - Source Code (currently json schemas) is located within a **src** folder in the root
 - All files (excluding source code files) will be named in _Camel Case_ format
 
 ## 1st Workshop in 2018
-* Shall we stick with the 17th Jan. '18 - **location?**
+* We stick with the 17th Jan. '18 - **Hafenamt**
 
 ## Contribute to the next milestone
 - Expanding the prototype by including a smart data framework (datahub) component on the elastic.io platform
@@ -52,3 +50,5 @@
 - [ ] Create consistent wording across all master data model files **Hansjörg, Lutz, Josef** till **21.12.2017**
 - [ ] Find a date for regular status calls - postponed till Andreas G. is back from vacation
 - [ ] Exporting the final results for milestone 1 into the needed format latest **03.01.2018**
+- [ ] Next appointment on **02.01.2018** at **14:00 am**
+- [ ] Next workshop takes place on the **17th of January 2018** at **Altes Hafenamt - Cloud Ecosystem**
