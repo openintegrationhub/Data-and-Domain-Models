@@ -5,50 +5,50 @@
 	"description": "Shared Definitions for the Master Data Model for Addresses to use in the Open Integration Hub",
 
 	"definitions": {
-		"address": {
+		"Address": {
 			"type": "object",
 			"properties": {
 				"street": { "type": "string" },
 				"streetNumber": { "type": "string" },
 				"unit": { "type": "string" },
-				"zipcode": { "type": "string" },
+				"zipCode": { "type": "string" },
 				"town": { "type": "string" },
 				"district": { "type": "string" },
 				"region": { "type": "string" },
 				"country": { "type": "string" }
 			}
 		},
-		"phone": {
+		"Phone": {
 			"type": "object",
 			"properties": {
 				"phoneNumber": { "type": "string" }
 			}
 		},
-		"fax": {
+		"Fax": {
 			"type": "object",
 			"properties": {
 				"faxNumber": { "type": "string" }
 			}
 		},
-		"eMail": {
+		"EMail": {
 			"type": "object",
 			"properties": {
 				"eMail": { "type": "email" }
 			}
 		},
-		"social": {
+		"Social": {
 			"type": "object",
 			"properties": {
 				"eMail": { "type": "string" }
 			}
 		},
-		"url": {
+		"Url": {
 			"type": "object",
 			"properties": {
 				"eMail": { "type": "uri" }
 			}
 		},
-		"category": {
+		"Category": {
 			"type": "object",
 			"properties": {
 				"categoryName": {

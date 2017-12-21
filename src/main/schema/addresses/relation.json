@@ -21,30 +21,30 @@
 		"OrganizationToOrganizationRelation": {
 			"properties": {
 				"firstOrganization" : {
-					"$ref": "#/definitions/organization"
+					"$ref": "#/definitions/Organization"
 				},
 				"secondOrganization" : {
-					"$ref": "#/definitions/organization"
+					"$ref": "#/definitions/Organization"
 				}
 			}
 		},
 		"OrganizationToPersonRelation": {
 			"properties": {
 				"organization" : {
-					"$ref": "#/definitions/organization"
+					"$ref": "#/definitions/Organization"
 				},
 				"person" : {
-					"$ref": "#/definitions/person"
+					"$ref": "#/definitions/Person"
 				}
 			}
 		},
 		"PersonToPersonRelation": {
 			"properties": {
 				"firstPerson" : {
-					"$ref": "#/definitions/person"
+					"$ref": "#/definitions/Person"
 				},
 				"secondPerson" : {
-					"$ref": "#/definitions/person"
+					"$ref": "#/definitions/Person"
 				}
 			}
 		}

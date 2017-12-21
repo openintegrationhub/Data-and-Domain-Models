@@ -13,43 +13,43 @@
 		"categories": {
 			"type": "array",
 			"items": {
-				"$ref": "shared-definitions.json#definitions/category"
+				"$ref": "shared-definitions.json#definitions/Category"
 			}
 		},
 		"addresses": {
 			"type": "array",
 			"items": {
-				"$ref": "shared-definitions.json#definitions/address"
+				"$ref": "shared-definitions.json#definitions/Address"
 			}
 		},
 		"phoneNumbers": {
 			"type": "array",
 			"items": {
-				"$ref": "shared-definitions.json#definitions/phone"
+				"$ref": "shared-definitions.json#definitions/Phone"
 			}
 		},
 		"faxNumbers": {
 			"type": "array",
 			"items": {
-				"$ref": "shared-definitions.json#definitions/fax"
+				"$ref": "shared-definitions.json#definitions/Fax"
 			}
 		},
 		"eMailAddresses": {
 			"type": "array",
 			"items": {
-				"$ref": "shared-definitions.json#definitions/eMail"
+				"$ref": "shared-definitions.json#definitions/EMail"
 			}
 		},
 		"socials": {
 			"type": "array",
 			"items": {
-				"$ref": "shared-definitions.json#definitions/social"
+				"$ref": "shared-definitions.json#definitions/Social"
 			}
 		},
 		"urls": {
 			"type": "array",
 			"items": {
-				"$ref": "shared-definitions.json#definitions/url"
+				"$ref": "shared-definitions.json#definitions/Url"
 			}
 		}
 	},
