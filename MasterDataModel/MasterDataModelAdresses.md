@@ -766,7 +766,7 @@ Generally there are three types of relations:
 - Persons to persons
 - Organizations to organizations
 
-If the task would only be a relation between the two objects persons and organizations, we could directly link them together. But we need a naming of this relation and as mentioned in chapter 3.2.2. users want to categorize single entries for the description of the relations of a users own organization to other organizations or persons or to see the function of a person in his organization. Therefore we need a more generic approach for storing relations, categories, tags or other distinguishing features. That's the reason, why we introduce a specific object this.
+If the task would only be a relation between the two objects persons and organizations, we could directly link them together. But we need a naming of this relation and as mentioned in chapter 3.2.2. users want to categorize single entries for the description of the relations of a users own organization to other organizations or persons or to see the function of a person in his organization. Therefore we need a more generic approach for storing relations, categories, tags or other distinguishing features. That's the reason, why we introduce a specific object for this.
 
 In the following chapters, we outline the different kind of relations. The attributes in the graphic are only placeholders for better differentiation.
 
@@ -797,8 +797,6 @@ The following diagram shows how the mapping of these entity relations can be rea
 The relations data object could have attributes like:
 - `label`- a label, which describes the relation
 - `labeltype` - a value, which describes the type of relation
-- `idin` - a unique id from the incoming entry
-- `idout` - a unique id from the outgoing entry
 
 #### 4.2.5 Privacy specific requirements
 
@@ -809,28 +807,24 @@ We must be able to delete, alter or block entries in the connected systems. To c
 For the privacy requirements (and the rights management requirements as well) we propose to use a handling object, like the one we used for the categories.
 
 ## 5. Results
+In the following you see the Master Data Model for addresses.
 
-![UML Draf OIH Master Data Model Addresses](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/OIHDataModelAdressesUML.png)
+The Master Data Model for Addresses is a sub-model of the so called [OIH Data Record](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/DataModels/DataModels.md).
+The OIHDataRecord defines a superset of mandatory and optional (meta) data for records processed by an OIH instance.
 
-[JSON Schema for organizations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/organization.json)
+![UML Draft OIH Master Data Model Addresses](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/OIHDataModelAddresses.svg)
 
-[JSON Schema for persons](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/person.json)
+The OIH specifies JSON as the format that data is processed with.
+Accordingly, JSON Schema is the given format to describe MDMs.
 
-[JSON Schema for relations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/relation.json)
+From the UML we derive the JSON-Schemas, where we encapsulate the three object types in three different JSON-Schemas.
 
+[JSON Schema for organizations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/organization.json)
 
+[JSON Schema for persons](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/person.json)
 
-**Documentation of the final Master Data Model of Addresses**
+[JSON Schema for relations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/relation.json)
 
-## 6. Questions
+The joint shared definitions are described in a fourth schema.
 
-This points should be added as issues.
-
-
-**To be discussed:**
-- generic problems
-- handling with freely definable additional fields
-- handling with same person in different roles …
-- are employees, user persons  to take into account?
-- date integrity
-- architecture requirements
+[JSON Schema for shared definitions](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/sharedDefinitions.json)
