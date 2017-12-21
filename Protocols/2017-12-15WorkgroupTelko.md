@@ -18,7 +18,7 @@
 - Provided a [Data Model](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/DataModels/DataModels.md) which includes the description of the OIH datasets.
 
 ### Hansjörg
-- Provided a [UML diagram](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModels/Assets/OIHDataModelAdressesUML.png) on basis of the previous elaborations and the provided by Lutz.
+- Provided a [UML diagram](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/OIHDataModelAdressesUML.png) on basis of the previous elaborations and the provided by Lutz.
 - Lutz: Field (String, enumartion etc.) so specify the sort of the address.
 - Lutz: The Fields like _street_, _streetNumber_, _unit_, etc. can be modeled as attributes within the addresses
 - The idea behind the object `relations` shall be generic

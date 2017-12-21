@@ -51,7 +51,7 @@ The master data schema only consists of data fields, that need to be transformed
 
 **NOTE:** A ```businessEntityID``` represents the business subject as a person or an organization. On this approach an inheritance (aka. relation or tree) can be defined by concatenated IDs of those entity types, an aggregate is built of. The usage context (aka. bounded context) is defined by the order of ```.typeObjects```. It is important that the ```.concatinationIDs``` consist of **reference keys**, as a logical syntax.
 
-![Generic fields - concatenated typeObjects (trees)](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModels/Assets/GenericFields.svg)
+![Generic fields - concatenated typeObjects (trees)](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/GenericFields.svg)
 
 > What criteria have to be considered for shaping entity types - aggregates derived from bounded context (typical records) as tree structure?
 

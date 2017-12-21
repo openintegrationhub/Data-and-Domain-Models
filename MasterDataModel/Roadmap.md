@@ -5,7 +5,7 @@ The master data model will grow with each application (specific data model) that
 
 > The following steps describe a **hands on approach** which results in a master data model - at least the addresses part. Some statements need to be refined due to meetings with domain experts. _Some steps might be skipped in order to result in a master data model._
 
-**NOTE:** The conceptual approach follows the [MasterDataModelAdresses.md](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModels/MasterDataModelAdresses.md). All findings together should foster a robust master data model.
+**NOTE:** The conceptual approach follows the [MasterDataModelAdresses.md](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/MasterDataModelAdresses.md). All findings together should foster a robust master data model.
 
 ## Identify generic address fields
 * Setup a test case where at least two data models (applications) become synced - **synchronously**

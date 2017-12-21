@@ -30,7 +30,7 @@ To enable the OIH to follow its purpose, the data records being processed have t
 
 An OIH expects and needs, depending on the scenario and the involved components (e.g. with or without a Data Hub involved), more or less meta data on a data record to integrate two or more applications. This is achieved by modelling each sub-model of an MDM as a so called _OIH Data Record_. The OIHDataRecord defines a superset of mandatory and optional (meta) data for records processed by an OIH instance:
 
-![OIH Record](Assets/OIHDataRecord.svg)
+![OIH Record](assets/oih-data-record.svg)
 
 * __Each of the the sub-models of a MDM has to be marked as an *OIHDataRecord*.__
 
@@ -63,7 +63,7 @@ As there are situations where entities are reused in (i.e. are part of) two or m
 
 ### Making a sub-model of an MDM an OIH Data Record on the schema level
 
-There is a predefined JSON-Schema defining the OIHDataRecord (s. [oih-data-record.json](../src/main/schemas/oih-data-record.json)).
+There is a predefined JSON-Schema defining the OIHDataRecord (s. [oih-data-record.schema.json](../src/main/schema/oih-data-record.schema.json)).
 
 * __Every sub-model of an MDM must reference the OIHDataRecord schema and "inherit" from the defined type.__
 
@@ -94,8 +94,8 @@ For a sales application, one could split the data model at least into the follow
 
 As an example to model an aggregate capable of being processed of an OIH instance, the following diagram shows a simplified order with its line items:
 
-![Aggregate example: Order](Assets/AggregateExample.svg)
+![Aggregate example: Order](assets/aggregate-example.svg)
 
 The Order's root defines the model as an OIH Data Record by extending it. This way, the _Order_ entity is the one and only entry point to the aggregate.
 
-The JSON schema for this example is accessible [here](../src/examples/schema/order.json).
+The JSON schema for this example is accessible [here](../src/examples/schema/order.schema.json).
