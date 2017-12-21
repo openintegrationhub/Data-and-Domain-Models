@@ -6,9 +6,9 @@
 * Agreeing [2017-12-19WorkgroupTelko.md](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/Agenda-19.12.2017/Protocols/2017-12-19WorkgroupTelko.md)
 
 ## Walkthrough results on GitHub
-- [ ] JSON schema [addresses](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/organization.json) **by Hansjörg**
-- [ ] JSON schema [addresses](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/person.json) **by Hansjörg**
-- [ ] JSON schema [addresses](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/relation.json) **by Hansjörg**
+- [ ] JSON schema [addresses - organization](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/organization.json) **by Hansjörg**
+- [ ] JSON schema [addresses - person](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/person.json) **by Hansjörg**
+- [ ] JSON schema [addresses - relation](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/relation.json) **by Hansjörg**
 - [ ] JSON schema [products](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/examples/schema/order.schema.json) **by Josef**
 - [ ] [Regulations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/DataModels/RulesandRegulations.md) **by Lutz**
 
