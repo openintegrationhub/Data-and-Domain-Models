@@ -8,15 +8,15 @@
 - Agreed on protocol. Will be merged into master.
 
 ## Walkthrough results on GitHub
-- [x] JSON schema [addresses - organization](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/organization.json) **by Hansjörg**
+- [x] JSON schema [addresses - organization](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/organization.json) **by Hansjörg**
   - This schema decribes the obect organization
   - Arrays of objects to represent the multiplicities e.g. an organization can have varying numbers of addresses
-- [x] JSON schema [addresses - person](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/person.json) **by Hansjörg**
+- [x] JSON schema [addresses - person](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/person.json) **by Hansjörg**
   - This schema decribes the obect person
-- [x] JSON schema [addresses - relation](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/relation.json) **by Hansjörg**
+- [x] JSON schema [addresses - relation](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/relation.json) **by Hansjörg**
   - This schema decribes the obect relation
   - Used to describe the different relation types e.g. organization to organization
-- [x] JSON schema [addresses - sharedDefinitions](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/sharedDefinitions.json) **by Hansjörg**
+- [x] JSON schema [addresses - sharedDefinitions](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/sharedDefinitions.json) **by Hansjörg**
   - The schema includes definitions which are used in the three other JSON schemas, e.g. category
 - [x] JSON schema [products](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/examples/schema/order.schema.json) **by Josef**
   - Create consistent wording between UML and JSON
