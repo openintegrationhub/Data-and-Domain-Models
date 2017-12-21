@@ -9,12 +9,12 @@
 
 ## Walkthrough results on GitHub
 - [x] JSON schema [addresses - organization](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/organization.json) **by Hansjörg**
-  - This schema decribes the obect organization
+  - This schema decribes the object organization
   - Arrays of objects to represent the multiplicities e.g. an organization can have varying numbers of addresses
 - [x] JSON schema [addresses - person](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/person.json) **by Hansjörg**
-  - This schema decribes the obect person
+  - This schema decribes the object person
 - [x] JSON schema [addresses - relation](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/relation.json) **by Hansjörg**
-  - This schema decribes the obect relation
+  - This schema decribes the object relation
   - Used to describe the different relation types e.g. organization to organization
 - [x] JSON schema [addresses - sharedDefinitions](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/sharedDefinitions.json) **by Hansjörg**
   - The schema includes definitions which are used in the three other JSON schemas, e.g. category
