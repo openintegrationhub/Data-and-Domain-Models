@@ -42,7 +42,7 @@
 ## Contribute to the next milestone
 - Expanding the prototype by including a smart data framework (datahub) component on the elastic.io platform
 - Test models with real data and adjust the model
-- Feedback by the architects & developers fur further discussions
+- Feedback by the architects & developers for further discussions
   - Adjust the existing results to the feedback
 
 ## Next Steps
