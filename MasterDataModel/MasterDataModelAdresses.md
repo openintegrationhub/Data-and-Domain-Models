@@ -812,7 +812,7 @@ In the following you see the Master Data Model for addresses.
 The Master Data Model for Addresses is a sub-model of the so called [OIH Data Record](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/DataModels/DataModels.md).
 The OIHDataRecord defines a superset of mandatory and optional (meta) data for records processed by an OIH instance.
 
-![UML Draft OIH Master Data Model Addresses](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/OIHDataModelAddressesUML.svg)
+![UML Draft OIH Master Data Model Addresses](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/OIHDataModelAddresses.svg)
 
 The OIH specifies JSON as the format that data is processed with.
 Accordingly, JSON Schema is the given format to describe MDMs.
