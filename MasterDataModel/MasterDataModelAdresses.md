@@ -95,7 +95,7 @@ informations for the analysis of the general requirements up to the description
 of the final master data model. Purpose of this document is to fill the backlog
 for the implementation of the first prototype of the Open Integration Hub.
 
-![Approach Modeling](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/masterdatamodel-procedure.png)
+![Approach Modeling](Assets/masterdatamodel-procedure.png)
 
 ## 3. Requirements for a Master Data Model
 
@@ -597,13 +597,13 @@ Our main goal is the vision of a generic master data model for addresses. This v
 
 In Chapter 3.2.1 we encountered different types of objects. We named them organizations and persons with reference to the real world objects.
 
-![Type of addresses](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/types-of-addresses.png)
+![Type of addresses](Assets/types-of-addresses.png)
 
 Organizations can be companies or associations. Persons can be contacts in organizations or employees of your own company.
 
 From this real world view we derive the two main objects and go deeper in the modeling. The following graphic describes the process.
 
-![Typing of addresses](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/typing-of-addresses.png)
+![Typing of addresses](Assets/typing-of-addresses.png)
 
 With this dividing in persons and organizations we are able to solve the problems raised in chapter 3.2.2., so we can assign a different amount of persons to an organization, can assign on person to different organizations or can assign relations between persons.
 
@@ -635,7 +635,7 @@ The Universal Postal Union has developed two addressing standards: S42 and S53. 
 
 In ISO 19773 an unrendered postal address consists of four postal address segments: mailee specification (optional), addressee specification (optional), mail recipient dispatching information (optional), delivery point specification (mandatory).
 
-![Postal Address — All Components - diagram from UPU S42](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/postal_adress_diagram_upus42.png)
+![Postal Address — All Components - diagram from UPU S42](Assets/postal_adress_diagram_upus42.png)
 
 The unrendered postal address is a nested structure comprised of elements. As we can see, this standard divides addressee specifications in organization or individual identification as we do. It provides a lot of named fields for detailed address specifications to which we can refer in the object attribute specification later on.
 
@@ -772,27 +772,27 @@ In the following chapters, we outline the different kind of relations. The attri
 
 ##### 4.2.4.1 Person to organization
 
-![Relationship person organization](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/use-case-relationship-person-organization.png)
+![Relationship person organization](Assets/use-case-relationship-person-organization.png)
 
 The following diagram shows how the mapping of these entity relations can be realized in the data model:
 
-![Relationship person organization](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/ER-Persons-relations-organizations.png)
+![Relationship person organization](Assets/ER-Persons-relations-organizations.png)
 
 ##### 4.2.4.2 Organization to organization
 
-![Relations of organizations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/relations-of-organizations.png)
+![Relations of organizations](Assets/relations-of-organizations.png)
 
 The following diagram shows how the mapping of these entity relations can be realized in the data model:
 
-![Relations of organizations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/ER-organizations-relations-organizations.png)
+![Relations of organizations](Assets/ER-organizations-relations-organizations.png)
 
 ##### 4.2.4.3 Person to person
 
-![Relations of organizations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/relations-among-persons.png)
+![Relations of organizations](Assets/relations-among-persons.png)
 
 The following diagram shows how the mapping of these entity relations can be realized in the data model:
 
-![Relations of organizations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/ER-Persons-relations-persons.png)
+![Relations of organizations](Assets/ER-Persons-relations-persons.png)
 
 The relations data object could have attributes like:
 - `label`- a label, which describes the relation
@@ -809,22 +809,26 @@ For the privacy requirements (and the rights management requirements as well) we
 ## 5. Results
 In the following you see the Master Data Model for addresses.
 
-The Master Data Model for Addresses is a sub-model of the so called [OIH Data Record](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/DataModels/DataModels.md).
+The Master Data Model for Addresses is a sub-model of the so called [OIH Data Record](../DataModels/DataModels.md).
 The OIHDataRecord defines a superset of mandatory and optional (meta) data for records processed by an OIH instance.
 
-![UML Draft OIH Master Data Model Addresses](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/OIHDataModelAddresses.svg)
+### 5.1 UML Diagram of the OIH Master Data Model for Addresses
+
+![UML Draft OIH Master Data Model Addresses](Assets/OIHDataModelAddresses.svg)
+
+### 5.2 JSON Schema of the OIH Master Data Model for Addresses
 
 The OIH specifies JSON as the format that data is processed with.
 Accordingly, JSON Schema is the given format to describe MDMs.
 
 From the UML we derive the JSON-Schemas, where we encapsulate the three object types in three different JSON-Schemas.
 
-[JSON Schema for organizations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/organization.json)
+[JSON Schema for organizations](../src/main/schema/addresses/organization.json)
 
-[JSON Schema for persons](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/person.json)
+[JSON Schema for persons](../src/main/schema/addresses/person.json)
 
-[JSON Schema for relations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/relation.json)
+[JSON Schema for relations](../src/main/schema/addresses/relation.json)
 
 The joint shared definitions are described in a fourth schema.
 
-[JSON Schema for shared definitions](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/sharedDefinitions.json)
+[JSON Schema for shared definitions](../src/main/schema/addresses/sharedDefinitions.json)
