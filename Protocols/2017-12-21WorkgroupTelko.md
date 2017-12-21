@@ -46,7 +46,7 @@
   - Adjust the existing results to the feedback
 
 ## Next Steps
-- [ ] Create consistent wording between UML and JSON **Josf** till **late 21.12.2017**
+- [ ] Create consistent wording between UML and JSON **Josef** till **late 21.12.2017**
 - [ ] Create consistent wording across all master data model files **Hansjörg, Lutz, Josef** till **21.12.2017**
 - [ ] Find a date for regular status calls - postponed till Andreas G. is back from vacation
 - [ ] Exporting the final results for milestone 1 into the needed format latest **03.01.2018**
