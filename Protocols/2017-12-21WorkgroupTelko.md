@@ -3,7 +3,7 @@
 **Attendees:** Lutz, Hansjörg, Josef, Raphael **Guests:** Frank, Philipp (minute taker) **Absent:** Andreas G.
 
 ## Workshop Protocol (from 19.12.2017)
-* Agreeing [2017-12-19WorkgroupTelko.md](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/Agenda-19.12.2017/Protocols/2017-12-19WorkgroupTelko.md)
+* Agreeing [2017-12-19WorkgroupTelko.md](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/Protocols/2017-12-19WorkgroupTelko.md)
 
 - Agreed on protocol. Will be merged into master.
 
@@ -18,7 +18,7 @@
   - Used to describe the different relation types e.g. organization to organization
 - [x] JSON schema [addresses - sharedDefinitions](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/sharedDefinitions.json) **by Hansjörg**
   - The schema includes definitions which are used in the three other JSON schemas, e.g. category
-- [x] JSON schema [products](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/examples/schema/order.schema.json) **by Josef**
+- [x] JSON schema [products](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/products/product.json) **by Josef**
   - Create consistent wording between UML and JSON
 - [x] [Regulations](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/DataModels/DataModels.md#rules-and-regulation-for-mdms) **by Lutz**
   - Suggestion by Lutz: Always describe the first letter of a class in uppercase
