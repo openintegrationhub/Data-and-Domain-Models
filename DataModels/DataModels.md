@@ -63,7 +63,7 @@ As there are situations where entities are reused in (i.e. are part of) two or m
 
 ### Making a sub-model of an MDM an OIH Data Record on the schema level
 
-There is a predefined JSON-Schema defining the OIHDataRecord (s. [oih-data-record.schema.json](../src/main/schema/oih-data-record.schema.json)).
+There is a predefined JSON-Schema defining the OIHDataRecord (s. [oih-data-record.json](../src/main/schema/oih-data-record.json)).
 
 * __Every sub-model of an MDM must reference the OIHDataRecord schema and "inherit" from the defined type.__
 
@@ -98,4 +98,4 @@ As an example to model an aggregate capable of being processed of an OIH instanc
 
 The Order's root defines the model as an OIH Data Record by extending it. This way, the _Order_ entity is the one and only entry point to the aggregate.
 
-The JSON schema for this example is accessible [here](../src/examples/schema/order.schema.json).
+The JSON schema for this example is accessible [here](../src/examples/schema/order.json).
