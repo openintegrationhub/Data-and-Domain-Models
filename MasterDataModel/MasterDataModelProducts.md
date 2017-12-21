@@ -1,5 +1,3 @@
-# Work (Translation) in Progress #
-
 # Master Data Model Products 
 
 ## Table of contents
@@ -520,13 +518,15 @@ A typical product contains the following fields:
 
 ## 4. Results
 
-**UML diagram**
+### 4.1 UML Diagram of the OIH Master Data Model for Addresses
 
-![UML Draft OIH Master Data Model Products](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/OIHDataModelProductUML.svg)
+![UML Draft OIH Master Data Model Products](Assets/OIHDataModelProducts.svg)
 
-**Json schema**
+### 4.2 JSON Schema of the OIH Master Data Model for Addresses
 
-https://github.com/openintegrationhub/Data-and-Domain-Models/src/main/schema/products/product.json
+The OIH specifies JSON as the format that data is processed with.
+Accordingly, JSON Schema is the given format to describe MDMs.
 
+From the UML we derive the JSON-Schema.
 
-**Documentation of the final Master Data Model of Products **
+[JSON Schema for products](../src/main/schema/products/product.json)
