@@ -1,11 +1,11 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"$id": "http://openintegrationhub.org/schemas/addresses/person",
+	"$id": "http://openintegrationhub.org/schemas/addresses/person.json",
 	"title": "Person",
 	"description": "Master Data Model for Addresses to use in the Open Integration Hub",
 	"allOf": [
 		{
-			"$ref": "http://openintegrationhub.org/schemas/oih-data-record"
+			"$ref": "http://openintegrationhub.org/schemas/oih-data-record.json"
 		}
 	],
 	"properties": {
@@ -19,50 +19,48 @@
 		"categories": {
 			"type": "array",
 			"items": {
-				"$ref": "sharedDefinitions.json#sharedDefinitions/category"
+				"$ref": "shared-definitions.json#definitions/category"
 			}
 		},
 		"addresses": {
 			"type": "array",
 			"items": {
-				"$ref": "sharedDefinitions.json#sharedDefinitions/address"
-			},
+				"$ref": "shared-definitions.json#definitions/address"
+			}
 		},
 		"phoneNumbers": {
 			"type": "array",
 			"items": {
-				"$ref": "sharedDefinitions.json#sharedDefinitions/phone"
-			},
+				"$ref": "shared-definitions.json#definitions/phone"
+			}
 		},
 		"faxNumbers": {
 			"type": "array",
 			"items": {
-				"$ref": "sharedDefinitions.json#sharedDefinitions/fax"
-			},
+				"$ref": "definitions.json#definitions/fax"
+			}
 		},
 		"eMailAddresses": {
 			"type": "array",
 			"items": {
-				"$ref": "sharedDefinitions.json#sharedDefinitions/eMail"
-			},
+				"$ref": "shared-definitions.json#definitions/eMail"
+			}
 		},
 		"socials": {
 			"type": "array",
 			"items": {
-				"$ref": "sharedDefinitions.json#sharedDefinitions/social"
-			},
+				"$ref": "shared-definitions.json#definitions/social"
+			}
 		},
 		"urls": {
 			"type": "array",
 			"items": {
-				"$ref": "sharedDefinitions.json#sharedDefinitions/url"
-			},
+				"$ref": "shared-definitions.json#definitions/url"
+			}
 		}
 	},
-	"anyOf": [{
-		"required": ["firstName"]
-	},
-	{
-		"required": ["lastName"]
-	}]
+	"anyOf": [
+		{ "required": ["firstName"] },
+		{ "required": ["lastName"] }
+	]
 }
