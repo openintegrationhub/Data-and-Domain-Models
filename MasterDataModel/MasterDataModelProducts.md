@@ -526,6 +526,7 @@ A typical product contains the following fields:
 
 **Json schema**
 
-https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/OIHDataModelProductSchema.json
+https://github.com/openintegrationhub/Data-and-Domain-Models/src/main/schema/products/product.json
+
 
 **Documentation of the final Master Data Model of Products **
