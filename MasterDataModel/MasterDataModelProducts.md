@@ -36,7 +36,7 @@ Following are a few examples of product environments which will show the particu
 
 #### 1.2.1 Construction materials
 Work with construction materials requires that products can be managed in different units, and ideally, converted within.  
-For example it is common to order wooden planks in standardized dimensions, but be invoiced in cubic meters. In that case, the product references a certain wood type (possibly of a certain quality), which is warehoused as planks  at the same time, though, the stock will be accounted for in cubic meters.   
+For example it is common to order wooden planks in standardized dimensions, but be invoiced in cubic meters. In that case, the product references a certain wood type (possibly of a certain quality), which is warehoused as planks, at the same time, though, the stock will be accounted for in cubic meters.   
 Similar conversions are common with sheet metals or cast products. These items are usually sold according to their weight, but will be stocked by length, piece or their square measurement. Especially with manufacturing companies it is not uncommon to sell yard good products that can be cut and converted to piece goods, to then also manage the related stock in both units.  
 In addition to the handling of units and storage there also other costs to keep in mind, for example the scrapping costs or the copper surchage. Both play an important role in metal processing. All of these costs must be considered in the process of price determination. 
 
