@@ -2,20 +2,55 @@
 
 ## Table of contents
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-- [Master Data Model Products](#master-data-model-products)
-  - [Table of contents](#table-of-contents)
-  - [1. Introduction](#1-introduction)
-    - [1.1 Purpose of this document](#11-purpose-of-this-document)
-    - [1.2 Particularities of different product environments ](#12-particularities-of-different-product-environments)
-      - [1.2.1 Construction materials](#121-construction-materials)
-      - [1.2.2 Textiles](#122-Textiles)
-      - [1.2.3 Food](#123-Food)
-      - [1.2.4 Hazardous Substances](#124-Hazardous-Substances)
-      - [1.2.5 Services](#125-Services)
-  - [2. Requirements for a Master Data Model](#2-Requirements-for-a-Master-Data-Model)
-    - [2.1 General Requirements](#21-General-Requirements)
-  - [3. Findings](#3-Findings)
-  - [4. Results](#4-Results)
+  -[Master Data Model Products](#master-data-model-products)
+    -[Table of contents](#table-of-contents)
+    -[1. Introduction](#1-introduction)
+      -[1.1 Purpose of this document](#11-purpose-of-this-document)
+      -[1.2 Particularities of different product environments](#12-particularities-of-different-product-environments)
+        -[1.2.1 Construction materials](#121-construction-materials)
+        -[1.2.2 Textiles](#122-textiles)
+        -[1.2.3 Food](#123-food)
+        -[1.2.4 Hazardous Substances](#124-hazardous-substances)
+        -[1.2.5 Services](#125-services)
+    -[2. Requirements for a Master Data Model](#2-requirements-for-a-master-data-model)
+      -[2.1 General Requirements](#21-general-requirements)
+      -[2.2 User Requirements](#22-user-requirements)
+        -[2.2.1 Topic 'Types of Objects'](#221-topic-'types-of-objects')
+          -[User stories properties of products](#user-stories-properties-of-products)
+          -[Use case properties of products](#use-case-properties-of-products)
+          -[Use case properties for dangerous materials](#use-case-properties-for-dangerous-materials)
+          -[Use case properties for units](#use-case-properties-for-units)
+          -[Use case properties for variants](#use-case-properties-for-variants)
+        -[2.2.2 Topic 'Types of Relations'](#222-topic-'types-of-relations')
+          -[Use case relations product to customer](#use-case-relations-product-to-customer)
+          -[Use case relations product to supplier](#use-case-relations-product-to-supplier)
+          -[Use case relations product to product](#use-case-relations-product-to-product)
+          -[Use case define bill of materials out of the availiable products and services for production](#use-case-define-bill-of-materials-out-of-the-availiable-products-and-services-for-production)
+          -[Use case define bill of materials out of the availiable products and services for trading](#use-case-define-bill-of-materials-out-of-the-availiable-products-and-services-for-trading)
+    -[3. Findings](#3-findings)
+      -[Common Fields](#common-fields)
+      -[Rights Management](#rights-management)
+        -[User stories Rights management](#user-stories-rights-management)
+        -[Use case Rights management](#use-case-rights-management)
+      -[Data integrity](#data-integrity)
+        -[User stories Data integrity](#user-stories-data-integrity)
+        -[Use case Data integrity](#use-case-data-integrity)
+      -[Data quality](#data-quality)
+        -[User stories Data quality](#user-stories-data-quality)
+        -[Use case Data quality](#use-case-data-quality)
+      -[Legal requirements](#legal-requirements)
+        -['Data protection'](#'data-protection')
+          -[User stories Data protection](#user-stories-data-protection)
+          -[Use case Data protection](#use-case-data-protection)
+      -['Data sovereignty'](#'data-sovereignty')
+        -[User stories Data sovereignty](#user-stories-data-sovereignty)
+        -[Use case Data sovereignty](#use-case-data-sovereignty)
+      -[Standardization](#standardization)
+        -[User stories standardization](#user-stories-standardization)
+        -[Use case Standardization data formats](#use-case-standardization-data-formats)
+    -[4. Results](#4-results)
+      -[4.1 UML Diagram of the OIH Master Data Model for Addresses](#41-uml-diagram-of-the-oih-master-data-model-for-addresses)
+      -[4.2 JSON Schema of the OIH Master Data Model for Addresses](#42-json-schema-of-the-oih-master-data-model-for-addresses)
 <!-- /TOC -->
 
 ## 1. Introduction
@@ -40,20 +75,20 @@ For example it is common to order wooden planks in standardized dimensions, but 
 Similar conversions are common with sheet metals or cast products. These items are usually sold according to their weight, but will be stocked by length, piece or their square measurement. Especially with manufacturing companies it is not uncommon to sell yard good products that can be cut and converted to piece goods, to then also manage the related stock in both units.  
 In addition to the handling of units and storage there also other costs to keep in mind, for example the scrapping costs or the copper surchage. Both play an important role in metal processing. All of these costs must be considered in the process of price determination. 
 
-##### 1.2.2 Textiles
+#### 1.2.2 Textiles
 Textile products usually are stock managed in variants. This way a t-shirt can be maintained as one article in the system, but it is available in different sizes, materials and colors. Although not every combination needs to be possible. In addition, product characteristics might be different for each variant. Specifications (and dimensions) can  be different per article, but they might also be applied to a whole product group.
 The system must be able to answer complicated queries teh following: 'what are the sizes we have available for a particular typ of footwear in the color red?' and 'which of these sizes are the men's and which are the lady's version?'. These kinds of queries are only possible if the different variants of an article can be grouped in any which way.
 
-##### 1.2.3 Food
+#### 1.2.3 Food
 In regard to food items, packaging units and expiry dates play an important role. For example, what kinds of bundles are available? How many pieces will fit in one package? How many packages will fit on a pallet? The "packaged on" and "best before" date must always be available, so the "first in - first out" principle can be considered while picking the goods for delivery.
 When determining the prices of types of food that are subject to special taxes, as with the alcohol or sparkling wine tax, these additional costs must be included in the process. 
 
-##### 1.2.4 Hazardous Substances
+#### 1.2.4 Hazardous Substances
 Dangerous goods and hazardous substances have certain requirements for storage and handling. According to standardized regulations (i.e. Risk and Safety Phrases as well as the Hazard and Precautionary Statements) hazardous substances have to be labelled as such. Further the items need to comply to the Globally Harmonized System of Classification, Labelling and Packaging of Chemicals and include the required labels and pictograms on the shipping documentation and mention the related codes (for example "Explosive", "Very Toxic", "Toxic", "Extremely Flammable", "Flammable" "Oxidizing", "Corrosive", "Harmful" or "Dangerous for the environment"). 
 
 Per product it is required to be able to recall the degree of protection, the fire class and the class of water. Dangerous goods need to have the correct description, the UN-number, LQ, class, tunnel code, category, packing group and emergency information.     
 
-##### 1.2.5 Services
+#### 1.2.5 Services
 Services can be charged by the hour or as a lump sum.
 
 ## 2. Requirements for a Master Data Model
