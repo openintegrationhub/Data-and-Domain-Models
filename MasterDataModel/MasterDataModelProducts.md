@@ -2,12 +2,12 @@
 
 ## Table of contents
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-- [Master Data Model Products](#master-data-model-Products)
+- [Master Data Model Products](#master-data-model-products)
   - [Table of contents](#table-of-contents)
-  - [1. Introduction](#1-Introduction)
-    - [1.1 Purpose of this document](#11-Purpose-of-this-document)
-    - [1.2 Particularities of different product environments](#12-Particularities-of-different-product-environments)
-      - [1.2.1 Construction materials](#121-Construction-materials)
+  - [1. Introduction](#1-introduction)
+    - [1.1 Purpose of this document](#11-purpose-of-this-document)
+    - [1.2 Particularities of different product environments ](#12-particularities-of-different-product-environments)
+      - [1.2.1 Construction materials](#121-construction-materials)
       - [1.2.2 Textiles](#122-Textiles)
       - [1.2.3 Food](#123-Food)
       - [1.2.4 Hazardous Substances](#124-Hazardous-Substances)
@@ -104,8 +104,6 @@ While talking about products, we are generally referring to goods, which are pur
 | User story: | As a user I need information to offer / sell the product.
 | :--- | :--- |
 
-
-
 ##### Use case properties of products
 
 | Label        | USE CASE - properties of products |
@@ -117,8 +115,6 @@ While talking about products, we are generally referring to goods, which are pur
 | **Main Success Scenario:** | Added product data |
 | **Failure Scenario:** | Adding product data was not successful |
 | **Basic Workflow:** | 1. Chose the product<br/> 2. Add specific product data, e.g. unit, in the appropriate fields<br/> 3. Store the data  |
-
-
 
 ##### Use case properties for dangerous materials 
 
@@ -132,8 +128,6 @@ While talking about products, we are generally referring to goods, which are pur
 | **Failure Scenario:** | Adding hazmat data was not successful |
 | **Basic Workflow:** | 1. Choose the product<br/> 2. Add specific hazmat data to the product, e.g. EUH-Sentences, in the appropriate specification list<br/> 3. Store the data  |
 
-
-
 ##### Use case properties for units 
 
 | Label        | USE CASE - define units and conversions (from one unit to another) for a product |
@@ -146,8 +140,6 @@ While talking about products, we are generally referring to goods, which are pur
 | **Failure Scenario:** | Adding a unit was not successful |
 | **Basic Workflow:** | 1. Choose the product<br/> 2. Add specific unit and the conversions to the product<br/> 3. Store the data  |
 
-
-
 ##### Use case properties for variants 
 
 | Label        | USE CASE - define variants for a product |
@@ -159,9 +151,6 @@ While talking about products, we are generally referring to goods, which are pur
 | **Main Success Scenario:** | Added product variants |
 | **Failure Scenario:** | Adding a variant was not successful |
 | **Basic Workflow:** | 1. Choose the product<br/> 2. Add a variant to the product<br/> 3. Store the data  |
-
-
-
 
 #### 2.2.2 Topic 'Types of Relations'
 
@@ -181,7 +170,6 @@ While talking about products, we are generally referring to goods, which are pur
 | **Basic Workflow:** | 1 Define product<br/> 2 Define customer<br/> 3 Assign product to customer relation |
 | **Alternative Workflow:** |    |
 
-
 | User story: | As a user I want to assign one or more products to a supplier to store the number and description that the supplier uses for the product as well as the delivery-time or the delivery-route|
 | :--- | :--- |
 
@@ -198,7 +186,6 @@ While talking about products, we are generally referring to goods, which are pur
 | **Basic Workflow:** | 1 Define product<br/> 2 Define supplier<br/> 3 Assign product to supplier relation |
 | **Alternative Workflow:** |    |
 
-
 | User story: | As a user I want to assign one or more products to a product as alternatives or replacements|
 | :--- | :--- |
 
@@ -214,7 +201,6 @@ While talking about products, we are generally referring to goods, which are pur
 | **Failure Scenario:** | Assignment not possible |
 | **Basic Workflow:** | 1 Define products<br/> 2 Assign product to product relation |
 | **Alternative Workflow:** |    |
-
 
 | User story: | As a user I want to define bill of materials out of the availiable products and services for production|
 | :--- | :--- |
@@ -249,21 +235,58 @@ While talking about products, we are generally referring to goods, which are pur
 | **Basic Workflow:** | 1 Define products<br/> 2 Assign the bill of material relations for the trading |
 | **Alternative Workflow:** |    |
 
-
-
 ## 3. Findings
 
-**Properties and Relations**
-
-**Common Fields**
+### Common Fields
 A typical product contains the following fields:
-...
+- articleNo
+- matchcode
+- description
+- gtin
+- costCalc
+- costAvg
+- costLast
+- costList
+- costInventory
+- dtCostLast
+- isSale
+- isPurchase
+- isWorkStep
+- isProduction
+- isStockTracing
+- isCheckStock
+- isService
+- isPacking
+- isConsumable
+- isDivisible
+- isShipping
+- isCharges
+- isSerialNo
+- status
+- drawingNo
+- version
+- dinStandard
+- isRohsCompliant
+- netWeight
+- grossWeight
+- density
+- length
+- width
+- strength
+- innerDiameter
+- outerDiameter
+- volume
+- isReverseCharge
+- isDiscount
+- isReduction
+- isIntrastat
+- isPreferential
+- customsTariff
+- replacementTime
 
+### Rights Management
 
-
-**Rights Management**
-
-##### User stories Rights management
+#### User stories Rights management
 
 | User story: | As Administrator I have to control which user can read, write, edit or delete products. |
 | :--- | :--- |
@@ -277,7 +300,7 @@ A typical product contains the following fields:
 | User story: | As Administrator I don't want to grant privileges to the users for every system in use. |
 | :--- | :--- |
 
-##### Use case Rights management
+#### Use case Rights management
 
 | Label        | USE CASE - Rights Management Groups |
 | :---  | :---  |
@@ -301,14 +324,13 @@ A typical product contains the following fields:
 | **Basic Workflow:** | 1. choose the contact data<br/> 2. Alter the user group<br/> 3. Save new privileges |
 | **Alternative Workflow:** | 1a. Put or remove a user in a specific user group which can access or should nor more access an entry.<br/> 2. Save definition.   |
 
+### Data integrity
 
-**Data integrity**
-
-##### User stories Data integrity
+#### User stories Data integrity
 | User story: | As a user I want to have my data consistent across multiple systems. |
 | :--- | :--- |
 
-##### Use case Data integrity
+#### Use case Data integrity
 
 | Label        | USE CASE Data integrity |
 | :---  | :---  |
@@ -321,12 +343,9 @@ A typical product contains the following fields:
 | **Basic Workflow:** |  |
 | **Alternative Workflow:** |    |
 
+### Data quality
 
-
-
-**Data quality**
-
-##### User stories Data quality
+#### User stories Data quality
 
 | User story: | As a User I want to enrich entries in my database with additional informations from other sources, so that i have additional informations or further contact possibilities. |
 | :--- | :--- |
@@ -340,7 +359,7 @@ A typical product contains the following fields:
 | User story: | As a User I want to validate the existence of in one system with another system, so that i am sure, that all systems contains the same data. |
 | :--- | :--- |
 
-##### Use case Data quality
+#### Use case Data quality
 
 | Label        | USE CASE - Enrich data |
 | :---  | :---  |
@@ -375,9 +394,7 @@ A typical product contains the following fields:
 | **Basic Workflow:** | 1. choose the different systems for validation <br/> 2. Start validation.<br/> 3. See the difference |
 | **Alternative Workflow:** | 4. Synchronize the different systems.   |
 
-
-
-**Legal requirements**
+### Legal requirements
 
 #### 'Data protection'
 
@@ -422,10 +439,9 @@ A typical product contains the following fields:
 | **Basic Workflow:** | 1. Identify the contact person.<br/> 2. Flag contact person for blocking.<br/> 3. Start blocking process 4. See a list from all the systems where the contact person has been blocked.  |
 | **Alternative Workflow:** | 4a. See a list of the cases where it is not possible to block the contact person from a specific system. 5. Decide further process for this cases (e.g. remove).   |
 
+### 'Data sovereignty'
 
-#### 'Data sovereignty'
-
-##### User stories Data sovereignty
+#### User stories Data sovereignty
 
 | User story: | As a User I want to import contact data from an Excel file into my database |
 | :--- | :--- |
@@ -433,8 +449,7 @@ A typical product contains the following fields:
 | User story: | As a User I want to import contact data from Outlook into my database. |
 | :--- | :--- |
 
-
-##### Use case Data sovereignty
+#### Use case Data sovereignty
 
 | Label        | USE CASE - Import of products |
 | :---  | :---  |
@@ -486,12 +501,9 @@ A typical product contains the following fields:
 | **Basic Workflow:** | 1. choose the source system of the product data<br/> 2. choose the desired target system<br/> 3. Data is transfered to the target system  |
 | **Alternative Workflow:** | 2a. Target System not reachable 3a. Throw failure message.     |
 
+### Standardization
 
-**Standardization**
-
-#### Standardization data formats
-
-##### User stories standardization
+#### User stories standardization
 
 | User story: | As a User I want the product numbers in a standardized format, so that my edi system can recognize the products. |
 | :--- | :--- |
@@ -499,7 +511,7 @@ A typical product contains the following fields:
 | User story: | As a User I want the stored statistical data (e.g. product size, revenue etc.) in a standardized format, so that I can use them for the marketing. |
 | :--- | :--- |
 
-##### Use case Standardization data formats
+#### Use case Standardization data formats
 
 | Label        | USE CASE - Standardization of data |
 | :---  | :---  |
@@ -511,10 +523,6 @@ A typical product contains the following fields:
 | **Failure Scenario:** | Standardization not possible |
 | **Basic Workflow:** | 1. choose fields for standardization <br/> 2. choose format for standardization<br/> 3. The system standardize the informations. |
 | **Alternative Workflow:** | 2a. The desired field is not suitable for standardization<br/> 2b. The format is not suitable for this field <br/> 2c. There is no standard format for this field.   |
-
-
-
-
 
 ## 4. Results
 
