@@ -30,7 +30,7 @@ To enable the OIH to follow its purpose, the data records being processed have t
 
 An OIH expects and needs, depending on the scenario and the involved components (e.g. with or without a Data Hub involved), more or less meta data on a data record to integrate two or more applications. This is achieved by modelling each sub-model of an MDM as a so called _OIH Data Record_. The OIHDataRecord defines a superset of mandatory and optional (meta) data for records processed by an OIH instance:
 
-![OIH Record](assets/oih-data-record.svg)
+![OIH Record](assets/OIHDataRecord.svg)
 
 * __Each of the the sub-models of a MDM has to be marked as an *OIHDataRecord*.__
 
@@ -94,7 +94,7 @@ For a sales application, one could split the data model at least into the follow
 
 As an example to model an aggregate capable of being processed of an OIH instance, the following diagram shows a simplified order with its line items:
 
-![Aggregate example: Order](assets/aggregate-example.svg)
+![Aggregate example: Order](assets/AggregateExample.svg)
 
 The Order's root defines the model as an OIH Data Record by extending it. This way, the _Order_ entity is the one and only entry point to the aggregate.
 
