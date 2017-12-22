@@ -1,0 +1,149 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+
+	"$id": "http://openintegrationhub.org/schemas/products/product.json",
+
+	"title" : "Product",
+	"allOf": [ 
+		{ 
+			"$ref" : "http://openintegrationhub.org/schemas/oih-data-record.json" 
+		} 
+	],
+	"properties" : {
+		"articleNo": { "type": "string" },
+		"matchcode": { "type": "string" },
+		"description": { "type": "string" },
+		"gtin": { "type": "string" },
+		"costCalc": { "type": "number" },
+		"costAvg": { "type": "number" },
+		"costLast": { "type": "number" },
+		"costList": { "type": "number" },
+		"costInventory": { "type": "number" },
+		"dtCostLast": { "type": "string", "format": "date-time" },
+		"articleGroups": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"$ref": "#/definitions/ArticleGroup"
+			}
+		},
+		"isSale": { "type": "boolean" },
+		"isPurchase": { "type": "boolean" },
+		"isWorkStep": { "type": "boolean" },
+		"isProduction": { "type": "boolean" },
+		"isStockTracing": { "type": "boolean" },
+		"isCheckStock": { "type": "boolean" },
+		"isService": { "type": "boolean" },
+		"isPacking": { "type": "boolean" },
+		"isConsumable": { "type": "boolean" },
+		"isDivisible": { "type": "boolean" },
+		"isShipping": { "type": "boolean" },
+		"isCharges": { "type": "boolean" },
+		"isSerialNo": { "type": "boolean" },
+		"status": { "type": "string", "enum": [ "new", "expiring", "blocked" ] },
+		"drawingNo": { "type": "string" },
+		"version": { "type": "string" },
+		"dinStandard": { "type": "string" },
+		"isRohsCompliant": { "type": "boolean" },
+		"netWeight": { "type": "number" },
+		"grossWeight": { "type": "number" },
+		"density": { "type": "number" },
+		"length": { "type": "number" },
+		"width": { "type": "number" },
+		"strength": { "type": "number" },
+		"innerDiameter": { "type": "number" },
+		"outerDiameter": { "type": "number" },
+		"volume": { "type": "number" },
+		"isReverseCharge": { "type": "boolean" },
+		"isDiscount": { "type": "boolean" },
+		"isReduction": { "type": "boolean" },
+		"isIntrastat": { "type": "boolean" },
+		"isPreferential": { "type": "boolean" },
+		"customsTariff": { "type": "string" },
+		"countryOrigin": { "$ref": "#/definitions/Country" },
+		"replacementTime": { "type": "integer" },
+		"units": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"$ref": "#/definitions/Unit"
+			}
+		},
+		"storages": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/Storage"
+			}
+		}
+	},
+	"required": ["articleNo"],	
+	"definitions" : {
+		"ArticleGroup": {
+			"type": "object",
+			"properties": {
+				"type": { "type": "string", "enum": [ "default", "shop" ] },
+				"description": { "type": "string" }
+				},
+			"required": ["type"]
+		},	
+		"Country": {
+			"type": "object",
+			"properties": {
+				"code": { "type": "string" },
+				"numberPlate": { "type": "string" },
+				"description": { "type": "string" },
+				"areaCode": { "type": "string" },
+				"isoCode": { "type": "string" },
+				"isoDescription": { "type": "string" },
+				"countryCodePhone": { "type": "string" },
+				"intrastatCode": { "type": "string" },
+				"currency": {"$ref": "#/definitions/Currency" },
+				"language": {"$ref": "#/definitions/Language"}
+			},
+			"required": ["code"]
+		},
+		"Unit": {
+			"type": "object",
+			"properties": {
+				"isPurchase": { "type": "boolean" },
+				"isSale": { "type": "boolean" },
+				"isProduction": { "type": "boolean" },
+				"description": { "type": "string" },
+				"abbreviation": { "type": "string" }
+			},
+			"required": ["description"]
+		},
+		"Storage": {
+			"type": "object",
+			"properties": {
+				"description": { "type": "string" },
+				"area": { "type": "string" },
+				"complex": { "type": "string" },
+				"hall": { "type": "string" },
+				"corridor": { "type": "string" },
+				"height": { "type": "string" }
+				},
+			"required": ["description"]
+		},
+		"Currency": {
+			"type": "object",
+			"properties": {
+				"code": { "type": "string" },
+				"description": { "type": "string" },
+				"decimalDigits": { "type": "integer" },
+				"subCode": { "type": "string" },
+				"subDescription": { "type": "string" },
+				"currencySymbol": { "type": "string" }
+				},
+			"required": ["code"]
+		},
+		"Language": {
+			"type": "object",
+			"properties": {
+				"code": { "type": "string" },
+				"description": { "type": "string" }
+				},
+			"required": ["code"]
+		}
+	}
+}

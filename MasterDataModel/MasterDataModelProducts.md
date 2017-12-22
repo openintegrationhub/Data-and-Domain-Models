@@ -1,28 +1,60 @@
-# Work (Translation) in Progress #
-
 # Master Data Model Products 
 
 ## Table of contents
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-- [Master Data Model Products](#master-data-model-Products)
-  - [Table of contents](#table-of-contents)
-  - [1. Introduction](#1-Introduction)
-    - [1.1 Purpose of this document](#11-Purpose-of-this-document)
-    - [1.2 Particularities of different product environments](#12-Particularities-of-different-product-environments)
-      - [1.2.1 Construction materials](#121-Construction-materials)
-      - [1.2.2 Textiles](#122-Textiles)
-      - [1.2.3 Food](#123-Food)
-      - [1.2.4 Hazardous Substances](#124-Hazardous-Substances)
-      - [1.2.5 Services](#125-Services)
-  - [2. Requirements for a Master Data Model](#2-Requirements-for-a-Master-Data-Model)
-    - [2.1 General Requirements](#21-General-Requirements)
-  - [3. Findings](#3-Findings)
-  - [4. Results](#4-Results)
-<!-- /TOC -->
+  - [Master Data Model Products](#master-data-model-products)
+    - [Table of contents](#table-of-contents)
+    - [1. Introduction](#1-introduction)
+      - [1.1 Purpose of this document](#11-purpose-of-this-document)
+      - [1.2 Particularities of different product environments](#12-particularities-of-different-product-environments)
+        - [1.2.1 Construction materials](#121-construction-materials)
+        - [1.2.2 Textiles](#122-textiles)
+        - [1.2.3 Food](#123-food)
+        - [1.2.4 Hazardous Substances](#124-hazardous-substances)
+        - [1.2.5 Services](#125-services)
+    - [2. Requirements for a Master Data Model](#2-requirements-for-a-master-data-model)
+      - [2.1 General Requirements](#21-general-requirements)
+      - [2.2 User Requirements](#22-user-requirements)
+        - [2.2.1 Topic 'Types of Objects'](#221-topic-'types-of-objects')
+          - [User stories properties of products](#user-stories-properties-of-products)
+          - [Use case properties of products](#use-case-properties-of-products)
+          - [Use case properties for dangerous materials](#use-case-properties-for-dangerous-materials)
+          - [Use case properties for units](#use-case-properties-for-units)
+          - [Use case properties for variants](#use-case-properties-for-variants)
+        - [2.2.2 Topic 'Types of Relations'](#222-topic-'types-of-relations')
+          - [Use case relations product to customer](#use-case-relations-product-to-customer)
+          - [Use case relations product to supplier](#use-case-relations-product-to-supplier)
+          - [Use case relations product to product](#use-case-relations-product-to-product)
+          - [Use case define bill of materials out of the availiable products and services for production](#use-case-define-bill-of-materials-out-of-the-availiable-products-and-services-for-production)
+          - [Use case define bill of materials out of the availiable products and services for trading](#use-case-define-bill-of-materials-out-of-the-availiable-products-and-services-for-trading)
+    - [3. Findings](#3-findings)
+      - [Common Fields](#common-fields)
+      - [Rights Management](#rights-management)
+        - [User stories Rights management](#user-stories-rights-management)
+        - [Use case Rights management](#use-case-rights-management)
+      - [Data integrity](#data-integrity)
+        - [User stories Data integrity](#user-stories-data-integrity)
+        - [Use case Data integrity](#use-case-data-integrity)
+      - [Data quality](#data-quality)
+        - [User stories Data quality](#user-stories-data-quality)
+        - [Use case Data quality](#use-case-data-quality)
+      - [Legal requirements](#legal-requirements)
+        - ['Data protection'](#'data-protection')
+          - [User stories Data protection](#user-stories-data-protection)
+          - [Use case Data protection](#use-case-data-protection)
+      - ['Data sovereignty'](#'data-sovereignty')
+        - [User stories Data sovereignty](#user-stories-data-sovereignty)
+        - [Use case Data sovereignty](#use-case-data-sovereignty)
+      - [Standardization](#standardization)
+        - [User stories standardization](#user-stories-standardization)
+        - [Use case Standardization data formats](#use-case-standardization-data-formats)
+    - [4. Results](#4-results)
+      - [4.1 UML Diagram of the OIH Master Data Model for Addresses](#41-uml-diagram-of-the-oih-master-data-model-for-addresses)
+      - [4.2 JSON Schema of the OIH Master Data Model for Addresses](#42-json-schema-of-the-oih-master-data-model-for-addresses)<!-- /TOC -->
 
 ## 1. Introduction
 ### 1.1 Purpose of this document
-This document describes the evaluation of the master data model for product data. The aim is to establish a comprehensive data model that can meet the requirements of small and medium sized businesses in a variety of lines of sectors. The concept must consider that all data is stored centralized at OIH but will be accessed simultaneously by multiple applications. The model must be applicable both in simplified, reduced settings but also in unique, one of a kind, product cases.    
+This document describes the evaluation of the master data model for product data. The aim is to establish a comprehensive data model that can meet the requirements of small and medium sized businesses in a variety of lines of sectors. The concept must consider that all data will be accessed simultaneously by multiple applications. The model must be applicable both in simplified, reduced settings but also in unique, one of a kind, product cases. The use of a centralized data Storage is optional.
 
 Work package title:
 Requirement Analysis, Concepts & Standardization 
@@ -38,24 +70,24 @@ Following are a few examples of product environments which will show the particu
 
 #### 1.2.1 Construction materials
 Work with construction materials requires that products can be managed in different units, and ideally, converted within.  
-For example it is common to order wooden planks in standardized dimensions, but be invoiced in cubic meters. In that case, the product references a certain wood type (possibly of a certain quality), which is warehoused as planks  at the same time, though, the stock will be accounted for in cubic meters.   
+For example it is common to order wooden planks in standardized dimensions, but be invoiced in cubic meters. In that case, the product references a certain wood type (possibly of a certain quality), which is warehoused as planks, at the same time, though, the stock will be accounted for in cubic meters.   
 Similar conversions are common with sheet metals or cast products. These items are usually sold according to their weight, but will be stocked by length, piece or their square measurement. Especially with manufacturing companies it is not uncommon to sell yard good products that can be cut and converted to piece goods, to then also manage the related stock in both units.  
 In addition to the handling of units and storage there also other costs to keep in mind, for example the scrapping costs or the copper surchage. Both play an important role in metal processing. All of these costs must be considered in the process of price determination. 
 
-##### 1.2.2 Textiles
+#### 1.2.2 Textiles
 Textile products usually are stock managed in variants. This way a t-shirt can be maintained as one article in the system, but it is available in different sizes, materials and colors. Although not every combination needs to be possible. In addition, product characteristics might be different for each variant. Specifications (and dimensions) can  be different per article, but they might also be applied to a whole product group.
 The system must be able to answer complicated queries teh following: 'what are the sizes we have available for a particular typ of footwear in the color red?' and 'which of these sizes are the men's and which are the lady's version?'. These kinds of queries are only possible if the different variants of an article can be grouped in any which way.
 
-##### 1.2.3 Food
+#### 1.2.3 Food
 In regard to food items, packaging units and expiry dates play an important role. For example, what kinds of bundles are available? How many pieces will fit in one package? How many packages will fit on a pallet? The "packaged on" and "best before" date must always be available, so the "first in - first out" principle can be considered while picking the goods for delivery.
 When determining the prices of types of food that are subject to special taxes, as with the alcohol or sparkling wine tax, these additional costs must be included in the process. 
 
-##### 1.2.4 Hazardous Substances
+#### 1.2.4 Hazardous Substances
 Dangerous goods and hazardous substances have certain requirements for storage and handling. According to standardized regulations (i.e. Risk and Safety Phrases as well as the Hazard and Precautionary Statements) hazardous substances have to be labelled as such. Further the items need to comply to the Globally Harmonized System of Classification, Labelling and Packaging of Chemicals and include the required labels and pictograms on the shipping documentation and mention the related codes (for example "Explosive", "Very Toxic", "Toxic", "Extremely Flammable", "Flammable" "Oxidizing", "Corrosive", "Harmful" or "Dangerous for the environment"). 
 
 Per product it is required to be able to recall the degree of protection, the fire class and the class of water. Dangerous goods need to have the correct description, the UN-number, LQ, class, tunnel code, category, packing group and emergency information.     
 
-##### 1.2.5 Services
+#### 1.2.5 Services
 Services can be charged by the hour or as a lump sum.
 
 ## 2. Requirements for a Master Data Model
@@ -106,8 +138,6 @@ While talking about products, we are generally referring to goods, which are pur
 | User story: | As a user I need information to offer / sell the product.
 | :--- | :--- |
 
-
-
 ##### Use case properties of products
 
 | Label        | USE CASE - properties of products |
@@ -119,8 +149,6 @@ While talking about products, we are generally referring to goods, which are pur
 | **Main Success Scenario:** | Added product data |
 | **Failure Scenario:** | Adding product data was not successful |
 | **Basic Workflow:** | 1. Chose the product<br/> 2. Add specific product data, e.g. unit, in the appropriate fields<br/> 3. Store the data  |
-
-
 
 ##### Use case properties for dangerous materials 
 
@@ -134,8 +162,6 @@ While talking about products, we are generally referring to goods, which are pur
 | **Failure Scenario:** | Adding hazmat data was not successful |
 | **Basic Workflow:** | 1. Choose the product<br/> 2. Add specific hazmat data to the product, e.g. EUH-Sentences, in the appropriate specification list<br/> 3. Store the data  |
 
-
-
 ##### Use case properties for units 
 
 | Label        | USE CASE - define units and conversions (from one unit to another) for a product |
@@ -148,8 +174,6 @@ While talking about products, we are generally referring to goods, which are pur
 | **Failure Scenario:** | Adding a unit was not successful |
 | **Basic Workflow:** | 1. Choose the product<br/> 2. Add specific unit and the conversions to the product<br/> 3. Store the data  |
 
-
-
 ##### Use case properties for variants 
 
 | Label        | USE CASE - define variants for a product |
@@ -161,9 +185,6 @@ While talking about products, we are generally referring to goods, which are pur
 | **Main Success Scenario:** | Added product variants |
 | **Failure Scenario:** | Adding a variant was not successful |
 | **Basic Workflow:** | 1. Choose the product<br/> 2. Add a variant to the product<br/> 3. Store the data  |
-
-
-
 
 #### 2.2.2 Topic 'Types of Relations'
 
@@ -183,7 +204,6 @@ While talking about products, we are generally referring to goods, which are pur
 | **Basic Workflow:** | 1 Define product<br/> 2 Define customer<br/> 3 Assign product to customer relation |
 | **Alternative Workflow:** |    |
 
-
 | User story: | As a user I want to assign one or more products to a supplier to store the number and description that the supplier uses for the product as well as the delivery-time or the delivery-route|
 | :--- | :--- |
 
@@ -200,7 +220,6 @@ While talking about products, we are generally referring to goods, which are pur
 | **Basic Workflow:** | 1 Define product<br/> 2 Define supplier<br/> 3 Assign product to supplier relation |
 | **Alternative Workflow:** |    |
 
-
 | User story: | As a user I want to assign one or more products to a product as alternatives or replacements|
 | :--- | :--- |
 
@@ -216,7 +235,6 @@ While talking about products, we are generally referring to goods, which are pur
 | **Failure Scenario:** | Assignment not possible |
 | **Basic Workflow:** | 1 Define products<br/> 2 Assign product to product relation |
 | **Alternative Workflow:** |    |
-
 
 | User story: | As a user I want to define bill of materials out of the availiable products and services for production|
 | :--- | :--- |
@@ -251,21 +269,58 @@ While talking about products, we are generally referring to goods, which are pur
 | **Basic Workflow:** | 1 Define products<br/> 2 Assign the bill of material relations for the trading |
 | **Alternative Workflow:** |    |
 
-
-
 ## 3. Findings
 
-**Properties and Relations**
-
-**Common Fields**
+### Common Fields
 A typical product contains the following fields:
-...
+- articleNo
+- matchcode
+- description
+- gtin
+- costCalc
+- costAvg
+- costLast
+- costList
+- costInventory
+- dtCostLast
+- isSale
+- isPurchase
+- isWorkStep
+- isProduction
+- isStockTracing
+- isCheckStock
+- isService
+- isPacking
+- isConsumable
+- isDivisible
+- isShipping
+- isCharges
+- isSerialNo
+- status
+- drawingNo
+- version
+- dinStandard
+- isRohsCompliant
+- netWeight
+- grossWeight
+- density
+- length
+- width
+- strength
+- innerDiameter
+- outerDiameter
+- volume
+- isReverseCharge
+- isDiscount
+- isReduction
+- isIntrastat
+- isPreferential
+- customsTariff
+- replacementTime
 
+### Rights Management
 
-
-**Rights Management**
-
-##### User stories Rights management
+#### User stories Rights management
 
 | User story: | As Administrator I have to control which user can read, write, edit or delete products. |
 | :--- | :--- |
@@ -279,7 +334,7 @@ A typical product contains the following fields:
 | User story: | As Administrator I don't want to grant privileges to the users for every system in use. |
 | :--- | :--- |
 
-##### Use case Rights management
+#### Use case Rights management
 
 | Label        | USE CASE - Rights Management Groups |
 | :---  | :---  |
@@ -303,14 +358,13 @@ A typical product contains the following fields:
 | **Basic Workflow:** | 1. choose the contact data<br/> 2. Alter the user group<br/> 3. Save new privileges |
 | **Alternative Workflow:** | 1a. Put or remove a user in a specific user group which can access or should nor more access an entry.<br/> 2. Save definition.   |
 
+### Data integrity
 
-**Data integrity**
-
-##### User stories Data integrity
+#### User stories Data integrity
 | User story: | As a user I want to have my data consistent across multiple systems. |
 | :--- | :--- |
 
-##### Use case Data integrity
+#### Use case Data integrity
 
 | Label        | USE CASE Data integrity |
 | :---  | :---  |
@@ -323,12 +377,9 @@ A typical product contains the following fields:
 | **Basic Workflow:** |  |
 | **Alternative Workflow:** |    |
 
+### Data quality
 
-
-
-**Data quality**
-
-##### User stories Data quality
+#### User stories Data quality
 
 | User story: | As a User I want to enrich entries in my database with additional informations from other sources, so that i have additional informations or further contact possibilities. |
 | :--- | :--- |
@@ -342,7 +393,7 @@ A typical product contains the following fields:
 | User story: | As a User I want to validate the existence of in one system with another system, so that i am sure, that all systems contains the same data. |
 | :--- | :--- |
 
-##### Use case Data quality
+#### Use case Data quality
 
 | Label        | USE CASE - Enrich data |
 | :---  | :---  |
@@ -377,9 +428,7 @@ A typical product contains the following fields:
 | **Basic Workflow:** | 1. choose the different systems for validation <br/> 2. Start validation.<br/> 3. See the difference |
 | **Alternative Workflow:** | 4. Synchronize the different systems.   |
 
-
-
-**Legal requirements**
+### Legal requirements
 
 #### 'Data protection'
 
@@ -424,10 +473,9 @@ A typical product contains the following fields:
 | **Basic Workflow:** | 1. Identify the contact person.<br/> 2. Flag contact person for blocking.<br/> 3. Start blocking process 4. See a list from all the systems where the contact person has been blocked.  |
 | **Alternative Workflow:** | 4a. See a list of the cases where it is not possible to block the contact person from a specific system. 5. Decide further process for this cases (e.g. remove).   |
 
+### 'Data sovereignty'
 
-#### 'Data sovereignty'
-
-##### User stories Data sovereignty
+#### User stories Data sovereignty
 
 | User story: | As a User I want to import contact data from an Excel file into my database |
 | :--- | :--- |
@@ -435,8 +483,7 @@ A typical product contains the following fields:
 | User story: | As a User I want to import contact data from Outlook into my database. |
 | :--- | :--- |
 
-
-##### Use case Data sovereignty
+#### Use case Data sovereignty
 
 | Label        | USE CASE - Import of products |
 | :---  | :---  |
@@ -488,12 +535,9 @@ A typical product contains the following fields:
 | **Basic Workflow:** | 1. choose the source system of the product data<br/> 2. choose the desired target system<br/> 3. Data is transfered to the target system  |
 | **Alternative Workflow:** | 2a. Target System not reachable 3a. Throw failure message.     |
 
+### Standardization
 
-**Standardization**
-
-#### Standardization data formats
-
-##### User stories standardization
+#### User stories standardization
 
 | User story: | As a User I want the product numbers in a standardized format, so that my edi system can recognize the products. |
 | :--- | :--- |
@@ -501,7 +545,7 @@ A typical product contains the following fields:
 | User story: | As a User I want the stored statistical data (e.g. product size, revenue etc.) in a standardized format, so that I can use them for the marketing. |
 | :--- | :--- |
 
-##### Use case Standardization data formats
+#### Use case Standardization data formats
 
 | Label        | USE CASE - Standardization of data |
 | :---  | :---  |
@@ -514,18 +558,17 @@ A typical product contains the following fields:
 | **Basic Workflow:** | 1. choose fields for standardization <br/> 2. choose format for standardization<br/> 3. The system standardize the informations. |
 | **Alternative Workflow:** | 2a. The desired field is not suitable for standardization<br/> 2b. The format is not suitable for this field <br/> 2c. There is no standard format for this field.   |
 
-
-
-
-
 ## 4. Results
 
-**UML diagram**
+### 4.1 UML Diagram of the OIH Master Data Model for Addresses
 
-![UML Draft OIH Master Data Model Products](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/OIHDataModelProductUML.svg)
+![UML Draft OIH Master Data Model Products](Assets/OIHDataModelProducts.png)
 
-**Json schema**
+### 4.2 JSON Schema of the OIH Master Data Model for Addresses
 
-https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/OIHDataModelProductSchema.json
+The OIH specifies JSON as the format that data is processed with.
+Accordingly, JSON Schema is the given format to describe MDMs.
 
-**Documentation of the final Master Data Model of Products **
+From the UML we derive the JSON-Schema.
+
+[JSON Schema for products](../src/main/schema/products/product.json)
