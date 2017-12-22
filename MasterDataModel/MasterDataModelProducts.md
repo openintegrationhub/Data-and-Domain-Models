@@ -54,7 +54,7 @@
 
 ## 1. Introduction
 ### 1.1 Purpose of this document
-This document describes the evaluation of the master data model for product data. The aim is to establish a comprehensive data model that can meet the requirements of small and medium sized businesses in a variety of lines of sectors. The concept must consider that all data is stored centralized at OIH but will be accessed simultaneously by multiple applications. The model must be applicable both in simplified, reduced settings but also in unique, one of a kind, product cases.    
+This document describes the evaluation of the master data model for product data. The aim is to establish a comprehensive data model that can meet the requirements of small and medium sized businesses in a variety of lines of sectors. The concept must consider that all data will be accessed simultaneously by multiple applications. The model must be applicable both in simplified, reduced settings but also in unique, one of a kind, product cases. The use of a centralized data Storage is optional.
 
 Work package title:
 Requirement Analysis, Concepts & Standardization 
