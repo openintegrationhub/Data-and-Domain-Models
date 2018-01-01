@@ -168,16 +168,16 @@ For these models, there are some further rules and regulations to follow in orde
 
 ### 6.2 UML Class Diagrams
 
-* __Every OMDM must be depicted by one or more UML Class Diagrams__, which illustrate the static aspect of the model. I.e, amongst others:
+* __Every OMDM must be depicted by one or more UML Class Diagrams__, which illustrate the static aspect of the model. I.e., amongst others:
 	* of which different OIH Data Records and entities (types) the OMDM constists,
 	* how every OIH Data Record itself is composed,
 	* how the OIH Data Records are related to each other,
 	* which properties every entity (type) has.
-* __Every OIH Data Record is defined by a Generalization relation__ (_OIHDataRecord_ is modelled as the superclass of the respective sub-model).
+* __Every OIH Data Record is defined by a Generalization relation__ (_OIHDataRecord_ is modelled as the superclass of the respective sub-model, s. [5. Example: the Order aggregate](#5-example--the-order-aggregate)).
 * __Property types may, but must not be declared__ in the diagrams as the main purpose of these diagrams is to clarify the structure of an OMDM.
 
 ### 6.3 Clarify all further aspects of a model with diagrams and/or textually
 
-Schemas and class diagrams only point out static aspects of a data model. Normally, there are further (e.g. dynamic) aspects of a model, that those descriptions do not point out. To enable ISVs and any other developer to understand and work with a model,
+Schemas and class diagrams only point out static aspects of a data model. Normally, there are further (e.g. dynamic) aspects of a model, that those descriptions do not point out (e.g. the conscious acceptance of redundancy). To enable ISVs and any other developers to understand and work with an OMDM,
 
 * __all relevant aspects of a model, that are not derivable from JSON-Schemas or UML Class Diagramms have to be described textually and by further illustrations of any kind.__
