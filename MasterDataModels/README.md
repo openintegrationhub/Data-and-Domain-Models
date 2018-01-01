@@ -28,9 +28,9 @@ This is where the OIH's _Master Data Models_ come into play:
 
 ## 2. What is a Master Data Model?
 
-There is not _the one_ canonical data model for the OIH as a canonical data model would result in massive communication effort, idle times and workarounds. Instead a model for each context (domain) is used:
+There is not _the one_ canonical data model for the OIH as such a canonical data model would result in massive communication effort, idle times and workarounds. Instead a model for each context (domain) is defined:
 
-* __An OIH Master Data Model (OMDM) describes the data of a certain domain in a depth which is sufficient enough to map and synchronize the specific data of multiple applications.__
+* __An OIH Master Data Model (OMDM) describes the data of a certain domain in a depth which is sufficient enough to map and synchronize the specific data of multiple applications in that domain.__
 
 In other words, an OMDM is a generic data model in the context of a specific domain, which is designed to cover, if possible, all content-related requirements of the applications integrated with the model. It should be designed with following criteria in focus:
 
@@ -51,7 +51,7 @@ Although it is necessary to split (especially big) data models into smaller sub-
 
 ### 3.1 Aggregates
 
-* __In case the model consists of multiple entities, it *must* be modeled as an _aggregate_:__
+* __In case a sub-model consists of multiple entities, it *must* be modeled as an _aggregate_:__
 
 > __Aggregate__ is a pattern in Domain-Driven Design. A DDD aggregate is a cluster of domain objects that can be treated as a single unit. An example may be an order and its line-items, these will be separate objects, but it's useful to treat the order (together with its line items) as a single aggregate.
 >
