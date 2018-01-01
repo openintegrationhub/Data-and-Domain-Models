@@ -24,7 +24,7 @@ The Open Integration Hub (OIH) provides an asynchronous way of integrating appli
 
 One consequence is, that it must be possible to send data records to and receive them from an OIH without the need or even possibility for the receiver to eagerly fetch referenced further records of any kind through an API or data store (like the (optional) OIH Data Hub).
 
-This is where the OIH's _Master Data Model_s come into play:
+This is where the OIH's _Master Data Models_ come into play:
 
 ## 2. What is a Master Data Model?
 
