@@ -6,11 +6,11 @@ One consequence is, that it must be possible to sent data records to and receive
 
 A data model representing a certain professional domain normally consists of numerous entities. Hence, it is necessary to split such a data model into smaller parts to enable the transfer of optimized amounts of data through an OIH:
 
-* __Every OIH-Master-Data-Model (MDM) consists of one or multiple _loosely coupled_ sub-models.__
+* __Every OIH Data-Model consists of one or multiple _loosely coupled_ sub-models.__
 
 Although it is necessary to split (especially big) data models into smaller sub-models, it often does not make sense to send each entity on its own, when there is a _high cohesion_ between certain entities. Hence,
 
-* __each sub-model of an MDM can consist of one _or more_ entities.__
+* __each sub-model of an OIH Data-Model can consist of one _or more_ entities.__
 
 ## Aggregates
 
@@ -22,19 +22,19 @@ In case the model consists of multiple entities, it *must* be modeled as an __ag
 >
 > [s. [Martin Fowler: DDD_Aggregate](https://martinfowler.com/bliki/DDD_Aggregate.html)]
 
-# Rules and Regulation for MDMs
+# Rules and Regulation for OIH Data-Models
 
 To enable the OIH to follow its purpose, the data records being processed have to fulfill some criteria and follow some rules. Some of these rules have to be applied already on the modelling level.
 
 ## OIH Data Records
 
-An OIH expects and needs, depending on the scenario and the involved components (e.g. with or without a Data Hub involved), more or less meta data on a data record to integrate two or more applications. This is achieved by modelling each sub-model of an MDM as a so called _OIH Data Record_. The OIHDataRecord defines a superset of mandatory and optional (meta) data for records processed by an OIH instance:
+An OIH expects and needs, depending on the scenario and the involved components (e.g. with or without a Data Hub involved), more or less meta data on a data record to integrate two or more applications. This is achieved by modelling each sub-model of an OIH Data-Model as a so called _OIH Data Record_. The OIHDataRecord defines a superset of mandatory and optional (meta) data for records processed by an OIH instance:
 
 ![OIH Record](Assets/OIHDataRecord.svg)
 
-* __Each of the the sub-models of a MDM has to be marked as an *OIHDataRecord*.__
+* __Each of the the sub-models of a OIH Data-Model has to be marked as an *OIHDataRecord*.__
 
-I.e., the root of an MDM's sub-model **must** inherit from / extend _OIHDataRecord_, no matter whether it is modeled as an 
+I.e., the root of an OIH Data-Model's sub-model **must** inherit from / extend _OIHDataRecord_, no matter whether it is modeled as an 
 aggregate or as a single entity.
 
 * __Every record passed into an OIH instance must at least be provided with a reference to the record of the application or service being the source of the record__,
@@ -45,7 +45,7 @@ called an _OIHApplicationDataRecord_ containing ...
 + the record's ID within the application (both mandatory) and
 + optionally its creation and last modification dates within the application.
 
-When receiving such a record from an OIH, there might also be entries of other applications being part of the integrations scenario with the same MDM in the same OIH.
+When receiving such a record from an OIH, there might also be entries of other applications being part of the integrations scenario with the same OIH Data-Model in the same OIH.
 
 Additionally, depending on the scenario and the involved components again, the OIH itself or a connector (according to rules provided by the OIH __==> TO BE DISCUSSED!__) may also provide an OIH-internal UID for the record, along with the creation and last modification dates of the record within the OIH.
 
@@ -53,19 +53,19 @@ Additionally, depending on the scenario and the involved components again, the O
 
 The OIH specifies JSON as the format that data is processed with. Accordingly,
 
-* __[JSON Schema](http://json-schema.org) is the given format to describe MDMs__
+* __[JSON Schema](http://json-schema.org) is the given format to describe OIH Data-Models__
 
-in a way an OIH instance is able to validate data at runtime. And, as MDMs are split into sub-models and the records of those sub-models must be processable independently,
+in a way an OIH instance is able to validate data at runtime. And, as OIH Data-Models are split into sub-models and the records of those sub-models must be processable independently,
 
-* __for every sub-model of an MDM there must be a _seperate_ JSON schema describing the entity or aggregate.__
+* __for every sub-model of an OIH Data-Model there must be a _seperate_ JSON schema describing the entity or aggregate.__
 
 As there are situations where entities are reused in (i.e. are part of) two or more aggregates, it is of course adequat to encapsulate those entities in an additional schema file and reference them from the several sub-models to avoid redundancy.
 
-### Making a sub-model of an MDM an OIH Data Record on the schema level
+### Making a sub-model of an OIH Data-Model an OIH Data Record on the schema level
 
 There is a predefined JSON-Schema defining the OIHDataRecord (s. [oih-data-record.json](../src/main/schema/oih-data-record.json)).
 
-* __Every sub-model of an MDM must reference the OIHDataRecord schema and "inherit" from the defined type.__
+* __Every sub-model of an OIH Data-Model must reference the OIHDataRecord schema and "inherit" from the defined type.__
 
 This is done by adding an `allOf`-element to every sub-model's schema:
 
