@@ -173,7 +173,7 @@ For these models, there are some further rules and regulations to follow in orde
 	* how every OIH Data Record itself is composed,
 	* how the OIH Data Records are related to each other,
 	* which properties every entity (type) has.
-* __Every OIH Data Record is defined by a Generalization relation__ (_OIHDataRecord_ is modelled as the superclass of the respective sub-model, s. [5. Example: the Order aggregate](#5-example--the-order-aggregate)).
+* __Every OIH Data Record is defined by a Generalization relation__ (_OIHDataRecord_ is modelled as the superclass of the respective sub-model, s. [5. Example: the Order aggregate](#5-example-the-order-aggregate)).
 * __Property types may, but must not be declared__ in the diagrams as the main purpose of these diagrams is to clarify the structure of an OMDM.
 
 ### 6.3 Clarify all further aspects of a model with diagrams and/or textually
