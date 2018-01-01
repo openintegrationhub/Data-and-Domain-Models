@@ -809,7 +809,7 @@ For the privacy requirements (and the rights management requirements as well) we
 ## 5. Results
 In the following you see the Master Data Model for addresses.
 
-The Master Data Model for Addresses is a sub-model of the so called [OIH Data Record](../DataModels/DataModels.md).
+The Master Data Model for Addresses is a sub-model of the so called [OIH Data Record](../MasterDataModels/README.md).
 The OIHDataRecord defines a superset of mandatory and optional (meta) data for records processed by an OIH instance.
 
 ### 5.1 UML Diagram of the OIH Master Data Model for Addresses
@@ -831,4 +831,4 @@ From the UML we derive the JSON-Schemas, where we encapsulate the three object t
 
 The joint shared definitions are described in a fourth schema.
 
-[JSON Schema for shared definitions](../src/main/schema/addresses/sharedDefinitions.json)
+[JSON Schema for shared definitions](../src/main/schema/addresses/shared-definitions.json)
