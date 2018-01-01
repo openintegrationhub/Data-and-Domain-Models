@@ -13,13 +13,13 @@
 ### Address model
 
 * Generic data model as [UML class diagram for addresses](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModels/Assets/OIHDataModelAdressesUML.png)
-* Generic data model as [JSON schema for addresses - organization](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModels/organization.json)
-* Generic data model as [JSON schema for addresses - person](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModels/person.json)
-* Generic data model as [JSON schema for addresses - relation](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModels/relation.json)
+* Generic data model as [JSON schema for addresses - organization](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/organization.json)
+* Generic data model as [JSON schema for addresses - person](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/person.json)
+* Generic data model as [JSON schema for addresses - relation](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/relation.json)
 
 ### Product model
-* Generic data model as [UML class diagram for products](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModels/Assets/OIHDataModelProductUML.svg)
-* Generic data model as [JSON schema for products](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModels/Assets/OIHDataModelProductSchema.json)
+* Generic data model as [UML class diagram for products](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModels/Assets/OIHDataModelProducts.png)
+* Generic data model as [JSON schema for products](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/products/product.json)
 
 ## Decision processes
 * Conceptual elaborations for [addresses](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModels/MasterDataModelAdresses.md)
