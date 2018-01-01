@@ -2,20 +2,20 @@
 
 <!-- toc -->
   * [1. Preface](#1-preface)
-  * [2. What is a Master Data Model?](#2-what-is-a-master-data-model-)
+  * [2. What is a Master Data Model?](#2-what-is-a-master-data-model)
   * [3. Structure](#3-structure)
     + [3.1 Aggregates](#31-aggregates)
   * [4. Global Rules and Regulations for OMDMs](#4-global-rules-and-regulations-for-omdms)
     + [4.1 OIH Data Records](#41-oih-data-records)
     + [4.2 JSON-Schema](#42-json-schema)
       - [4.2.1 Making a sub-model of an OMDM an OIH Data Record on the schema level](#421-making-a-sub-model-of-an-omdm-an-oih-data-record-on-the-schema-level)
-  * [5. Example: the Order aggregate](#5-example--the-order-aggregate)
+  * [5. Example: the Order aggregate](#5-example-the-order-aggregate)
   * [6. Rules and Regulations for OMDMs provided by the OIH community](#6-rules-and-regulations-for-omdms-provided-by-the-oih-community)
     + [6.1 Naming Conventions](#61-naming-conventions)
       - [6.1.1 Types and Properties](#611-types-and-properties)
       - [6.1.2 JSON-Schema](#612-json-schema)
     + [6.2 UML Class Diagrams](#62-uml-class-diagrams)
-    + [6.3 Clarify all further aspects of a model with diagrams and/or textually](#63-clarify-all-further-aspects-of-a-model-with-diagrams-and-or-textually)
+    + [6.3 Clarify all further aspects of a model with diagrams and/or textually](#63-clarify-all-further-aspects-of-a-model-with-diagrams-andor-textually)
 <!-- end toc-->
 
 ## 1. Preface
