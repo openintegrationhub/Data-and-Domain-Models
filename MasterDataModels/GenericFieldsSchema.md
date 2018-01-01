@@ -34,9 +34,9 @@ The GraphQL schema definition language provides a sustainable starting point, to
 
 [JSON schema validation](https://www.highly.co/hl/rwKOijEQwI4JfP)
 
-[JSON cheat sheet](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/SchemaCheatSheetJSON.pdf)
+[JSON cheat sheet](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModels/Assets/SchemaCheatSheetJSON.pdf)
 
-[GraphQL cheat sheet](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/SchemaCheatSheetGraphQL.pdf)
+[GraphQL cheat sheet](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModels/Assets/SchemaCheatSheetGraphQL.pdf)
 
 ## Schema - Customer Data (example)
 ```javascript
@@ -137,6 +137,6 @@ type NonPhysicalGoods {
 # Sources
 [GraphQL live demo](http://graphql.org/swapi-graphql)
 
-[GraphQL specification - Oct 2016](http://facebook.github.io/graphql/October2016/)
+[GraphQL specification - Oct 2016](http://facebook.github.io/graphql/October2016)
 
 [Generic data model](https://en.wikipedia.org/wiki/Generic_data_model)
