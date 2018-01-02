@@ -37,7 +37,7 @@ In other words, an OMDM is a generic data model in the context of a specific dom
 - All use cases for the different integration scenarios between the involved applications can be matched and the data of all those applications can be mapped to the model.
 - The model is generic and it can be extended on the application level.
 
-Using the OIH's (optional) _Data Hub_, a OMDM enables a _Master Data Management_ for the respective domain by centrally storing the data of the integrated applications.
+Using the OIH's (optional) _Data Hub_, an OMDM enables a _Master Data Management_ for the respective domain by centrally storing the data of the integrated applications.
 
 ## 3. Structure
 
@@ -69,7 +69,7 @@ An OIH expects and needs, depending on the scenario and the involved components 
 
 ![OIH Record](Assets/OIHDataRecord.svg)
 
-* __Each of the the sub-models of a OMDM has to be marked as an *OIHDataRecord*.__
+* __Each of the the sub-models of an OMDM has to be marked as an *OIHDataRecord*.__
 
 I.e., the root of an OMDM's sub-model **must** inherit from / extend _OIHDataRecord_, no matter whether it is modeled as an 
 aggregate or as a single entity.
@@ -100,7 +100,7 @@ As there are situations where entities are reused in (i.e. are part of) two or m
 
 #### 4.2.1 Making a sub-model of an OMDM an OIH Data Record on the schema level
 
-There is a predefined JSON-Schema defining the OIHDataRecord (s. [oih-data-record.json](../src/main/schema/oih-data-record.json)).
+There is a predefined JSON-Schema defining the OIHDataRecord (s. [/src/main/schema/oih-data-record.json](../src/main/schema/oih-data-record.json)).
 
 * __Every sub-model of an OMDM must reference the OIHDataRecord schema and "inherit" from the defined type.__
 
@@ -135,7 +135,7 @@ As an example to model an aggregate capable of being processed of an OIH instanc
 
 The Order's root defines the model as an OIH Data Record by extending it. This way, the _Order_ entity is the one and only entry point to the aggregate.
 
-The JSON schema for this example is accessible [here](../src/examples/schema/order.json).
+The JSON schema for this example is accessible under [/src/examples/schema/order.json](../src/examples/schema/order.json).
 
 ## 6. Rules and Regulations for OMDMs provided by the OIH community
 
@@ -153,7 +153,7 @@ For these models, there are some further rules and regulations to follow in orde
 	* Type names are always spelled in _upper_ camel case (e.g., UpperCamelCaseType).
 	* Property names are always spelled in _lower_ camel case (e.g., lowerCamelCaseProperty).
 * __All type and property naming has to be done in English language.__
-* __The prefixes _OIH_ and *OIH_*  (or _oih_ and *oih_* for properties) are reserved for types and properties of OIH related Types and fields and my not be used for definitions in concrete models.__
+* __The prefixes _OIH_ and *OIH_*  (or _oih_ and *oih_* for properties) are reserved for types and properties of OIH related Types and fields and may not be used for definitions in concrete models.__
 
 #### 6.1.2 JSON-Schema
 
@@ -164,7 +164,7 @@ For these models, there are some further rules and regulations to follow in orde
 	* followed by a context directory and the name of the schema file (including the _.json_ suffix)
 	
 	Example: ```"$id": "http://openintegrationhub.org/schemas/products/product.json"```
-* __Every field in a JSON-Schema must have a _description_ property__, as long as it's (even potentially) not self-explanatory	.
+* __Every field in a JSON-Schema must have a _description_ property__, as long as it's (even potentially) not self-explanatory.
 
 ### 6.2 UML Class Diagrams
 
