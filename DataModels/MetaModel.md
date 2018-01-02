@@ -35,7 +35,7 @@ Decision: JSON!
 
 ## Schema Definition Language (SDL)
 
-Decision: [JSON-Schema](http://json-schema.org) (s. [https://github.com/openintegrationhub/Data-and-Domain-Models/issues/5](https://github.com/openintegrationhub/Data-and-Domain-Models/issues/5) and [../MasterDataModels/README.md](../MasterDataModels/README.md))
+Decision: [JSON-Schema](http://json-schema.org) (s. [https://github.com/openintegrationhub/Data-and-Domain-Models/issues/5](https://github.com/openintegrationhub/Data-and-Domain-Models/issues/5) and [../MasterDataModels/README(.md/.pdf)](../MasterDataModels/README.md))
 
 
 # Granularity
@@ -46,7 +46,7 @@ Decision: [JSON-Schema](http://json-schema.org) (s. [https://github.com/openinte
 	- loose coupling
 	- multiple aggregates/entities per master data model
 
-(Done, s. [../MasterDataModels/README.md](../MasterDataModels/README.md))
+(Done, s. [../MasterDataModels/README(.md/.pdf)](../MasterDataModels/README.md))
 	
 
 # Security / Authorization
