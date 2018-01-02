@@ -26,7 +26,8 @@
 				"secondOrganization" : {
 					"$ref": "#/definitions/Organization"
 				}
-			}
+			},
+			"required": ["firstOrganization", "secondOrganization"]
 		},
 		"OrganizationToPersonRelation": {
 			"properties": {
@@ -36,7 +37,8 @@
 				"person" : {
 					"$ref": "#/definitions/Person"
 				}
-			}
+			},
+			"required": ["organization", "person"]
 		},
 		"PersonToPersonRelation": {
 			"properties": {
@@ -46,7 +48,8 @@
 				"secondPerson" : {
 					"$ref": "#/definitions/Person"
 				}
-			}
+			},
+			"required": ["firstPerson", "secondPerson"]
 		}
 	}
 }

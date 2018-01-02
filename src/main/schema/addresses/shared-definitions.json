@@ -39,8 +39,14 @@
 		"Social": {
 			"type": "object",
 			"properties": {
-				"social": { "type": "string" }
-			}
+				"network" : {
+					"type" : "string",
+					"description": "Provision name of social network"
+				},
+				"id": {
+					"type": "string",
+					"description": "Provision social network ID or username"
+				}
 		},
 		"Url": {
 			"type": "object",
