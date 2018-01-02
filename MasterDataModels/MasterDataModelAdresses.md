@@ -65,10 +65,10 @@
 			- [4.2.4.3 Person to person](#4243-person-to-person)
 		- [4.2.5 Privacy specific requirements](#425-privacy-specific-requirements)
 - [5. Results](#5-results)
-- [6. Questions](#6-questions)
+	- [5.1 UML Diagram of the OIH Master Data Model for Addresses](#51-uml-diagram-of-the-oih-master-data-model-for-addresses)
+	- [5.2 JSON Schema of the OIH Master Data Model for Addresses](#52-json-schema-of-the-oih-master-data-model-for-addresses)
 
 <!-- /TOC -->
-
 
 
 This document describes the evaluation of the master data model for address data
@@ -809,7 +809,7 @@ For the privacy requirements (and the rights management requirements as well) we
 ## 5. Results
 In the following you see the Master Data Model for addresses.
 
-The Master Data Model for Addresses is a sub-model of the so called [OIH Data Record](../DataModels/DataModels.md).
+The Master Data Model for Addresses is a sub-model of the so called [OIH Data Record](../MasterDataModels/README.md).
 The OIHDataRecord defines a superset of mandatory and optional (meta) data for records processed by an OIH instance.
 
 ### 5.1 UML Diagram of the OIH Master Data Model for Addresses
@@ -831,4 +831,4 @@ From the UML we derive the JSON-Schemas, where we encapsulate the three object t
 
 The joint shared definitions are described in a fourth schema.
 
-[JSON Schema for shared definitions](../src/main/schema/addresses/sharedDefinitions.json)
+[JSON Schema for shared definitions](../src/main/schema/addresses/shared-definitions.json)

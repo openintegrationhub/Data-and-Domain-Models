@@ -26,7 +26,7 @@
 ### Hansjörg
 - [x] Generic data model addresses in the shape of an UML class diagram (attached) **by @hschmidthh till 19.12.17**
  * Write down concrete attributes and update UML diagram **by @hschmidt till 15.12.2017**
- - [UML diagram](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModel/Assets/OIHDataModelAdressesUML.png) Lutz: Field (String, enumeration etc.) to specify the sort of the address.
+ - [UML diagram](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModels/Assets/OIHDataModelAdressesUML.png) Lutz: Field (String, enumeration etc.) to specify the sort of the address.
 - [x] Specific regulations for the generic data model addresses **by @hschmidthh till 19.12.17**
 - [ ] Generic data model addresses in the shape of a JSON schema **by @hschmidthh till late 19.12.17**
 
