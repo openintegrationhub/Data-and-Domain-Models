@@ -27,7 +27,6 @@ _Suggestion:_
 ```
 
 ## Unify/Merge VisualPradigm projects
-* Provision an OIH UML class diagram
 - Visual Paradigm _projects_ need to be part of the open integration hub project (not part of the single partner projects/repos), to enhance collaboration.
   - The solution finding process for this issue is moved to the workshop on the 17.01.2018
   - Provide a suggestion how to solve/handle this issue **Lutz**
@@ -35,7 +34,7 @@ _Suggestion:_
 ## Workshop agenda planning
 * Expanding the prototype by including a smart data framework (data hub) component on the elastic.io platform
   - What can be done without the support of elastic.io?
-  - _Josef:_ The "data hub component" is not problematic. Elastic.io needs to be asked for support, when it comes to the mapping of the tree structure (aggregates)
+  - _Josef:_ The "data hub component" is not problematic. Elastic.io needs to be asked for support, when it comes to the mapping of tree structures (aggregates)
   - A call with Igor needs to be arranged prior to the workshop to discuss the next steps of the prototype
 * Test models with real data and adjust the model
 * Explicit feedback by the architects & developers for further discussions
