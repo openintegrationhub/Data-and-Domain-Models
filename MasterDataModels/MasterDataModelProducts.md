@@ -571,4 +571,4 @@ Accordingly, JSON Schema is the given format to describe MDMs.
 
 From the UML we derive the JSON-Schema.
 
-[JSON Schema for products](../src/main/schema/products/product.json)
+[/src/main/schema/products/product.json](../src/main/schema/products/product.json)
