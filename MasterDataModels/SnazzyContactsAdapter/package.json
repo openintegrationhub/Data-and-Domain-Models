@@ -1,22 +1,22 @@
 {
-    "name": "@elasticio/petstore-component-nodejs",
-    "version": "0.0.1",
-    "description": "elastic.io component for the Petstore API",
+    "name": "snazzycontacts",
+    "version": "0.1.0",
+    "description": "elastic.io Snazzy Contacts component",
     "scripts": {
         "test": "exit 0"
     },
     "repository": {
         "type": "git",
-        "url": "git@github.com:elasticio/petstore-component-nodejs.git"
+        "url": "git@github.com:openintegrationhub/Data-and-Domain-Models.git"
     },
-    "author": "elastic.io GmbH",
+    "author": "Wice GmbH",
     "license": "BSD-2-Clause",
     "engines": {
         "node": "6.4.0"
     },
     "dependencies": {
         "co": "4.6.0",
-        "elasticio-node": "0.0.7",
+        "elasticio-node": "0.0.8",
         "elasticio-sailor-nodejs": "2.1.0",
         "q": "^1.5.0",
         "request": "^2.76.0",
