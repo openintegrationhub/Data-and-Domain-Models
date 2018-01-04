@@ -825,10 +825,10 @@ From the UML we derive the JSON-Schemas, where we encapsulate the three object t
 
 JSON Schema for organizations [/src/main/schema/addresses/organization.json](../src/main/schema/addresses/organization.json)
 
-JSON Schema for persons[/src/main/schema/addresses/person.json](../src/main/schema/addresses/person.json)
+JSON Schema for persons [/src/main/schema/addresses/person.json](../src/main/schema/addresses/person.json)
 
-JSON Schema for relations[/src/main/schema/addresses/relation.json](../src/main/schema/addresses/relation.json)
+JSON Schema for relations [/src/main/schema/addresses/relation.json](../src/main/schema/addresses/relation.json)
 
 The joint shared definitions are described in a fourth schema.
 
-JSON Schema for shared definitions[/src/main/schema/addresses/shared-definitions.json](../src/main/schema/addresses/shared-definitions.json)
+JSON Schema for shared definitions [/src/main/schema/addresses/shared-definitions.json](../src/main/schema/addresses/shared-definitions.json)
