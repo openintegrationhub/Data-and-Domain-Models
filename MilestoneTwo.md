@@ -54,9 +54,6 @@ Sync via custom mapping - per integration
 Sync via standard scheme mapping - per runtime
 ```
 
-### Expansion stages
-  - [ ]
-
 ### Provision a transformer extension - threshold towards smart connector
   - [ ] Transformer as extension to silverERP's adapter
   - [ ] Transformer as extension to Snazzy's adapter
