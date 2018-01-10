@@ -33,7 +33,7 @@ Sync via custom mapping - per integration
   * Config. settings - authentication info
 
 ### Provision a data storage component
-  - [ ] Raw data s torage component for Snazzy's Adapter
+  - [ ] Raw data storage component for Snazzy's Adapter
   - [ ] Raw data storage component for SilverERP's Adapter
   - [ ] Raw data storage component for Wice's Adapter - later
 
