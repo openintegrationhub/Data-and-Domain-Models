@@ -562,7 +562,7 @@ A typical product contains the following fields:
 
 ### 4.1 UML Diagram of the OIH Master Data Model for Addresses
 
-![UML Draft OIH Master Data Model Products](Assets/OIHDataModelProducts.png)
+![UML Draft OIH Master Data Model Products](Assets/OIHDataModelProducts.svg)
 
 ### 4.2 JSON Schema of the OIH Master Data Model for Addresses
 
