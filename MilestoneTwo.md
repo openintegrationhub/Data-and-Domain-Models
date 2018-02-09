@@ -1,7 +1,8 @@
 # Goals of the 2nd milestone - scope 2018
-> Requirements analysis in terms of data security, protection, sovereignty and Master Data Model
 
 > Open Integration Hub platform version 0.5 - focused on data domain addresses & products
+
+> Document procedure model for Integration Cloud Provider
 
 ---
 
@@ -12,9 +13,9 @@
 Sync via custom mapping - per integration
 ```
 
-### Provision a CRUD Interface - permissions of access-level
-  - [ ] Bidirectional interface for Snazzy - proprietary API
-  - [ ] Bidirectional interface for SilverERP - aligned API
+### Provision a CRUD Interface (API) - permissions of access-level
+  - [ ] Bidirectional interface for Snazzy
+  - [ ] Bidirectional interface for SilverERP
   - [ ] Bidirectional interface for Wice
   - [ ] **Permitted** interface access permissions - read/write vs. read only
   - [ ] **Permitted** user access permissions - to consider
@@ -32,11 +33,6 @@ Sync via custom mapping - per integration
   * Functionality trigger/action
   * Inputs/Outputs
   * Config. settings - authentication info
-
-### Provision a data storage component
-  - [ ] Raw data storage component for Snazzy's Adapter
-  - [ ] Raw data storage component for SilverERP's Adapter
-  - [ ] Raw data storage component for Wice's Adapter - later
 
 ### Challenge custom integration flows
   - [ ] Custom integration flow mapping from Snazzy model towards SilverERP model
@@ -80,11 +76,12 @@ Sync via standard scheme mapping - per runtime
 
 ### Challenge standard integration flow via smart data framework
   - [ ] **Permitted** semantic transformations (derived specs)
-  * Rules about hierarchy and relations between data objects - privacy flags
+  * Rules about hierarchy and relations between data objects / roles - privacy flags
+  - [ ] **Valid** permission model
   - [ ] **Valid** conflict case predictions
   * Reduce potential of write conflicts - optimize integration flows
   - [ ] **Valid** JSON schema for meta data
-  * Determine kind and scope also reusability of metadata - in delimitation towards domain models
+  * Determine kind and scope also reusability of meta data - in delimitation towards domain models
     * Event (uni/multi/broadcast/segmented), ownership (tenant, group, user), source/target app
       * Characteristics: name, type, size, etc. - event
       * Rule & policy: permission, CRUD timestamp and relation - event
@@ -92,6 +89,12 @@ Sync via standard scheme mapping - per runtime
   - [ ] **Stable** standard + custom integration data flows
 
 ---
+
+**Good to know:**
+
+[Interfaces to retrieve/propagate the integrated models](https://github.com/openintegrationhub/Data-and-Domain-Models/issues/65#issuecomment-364101112)
+
+[Information to collect per data point](https://github.com/openintegrationhub/Data-and-Domain-Models/issues/68#issuecomment-364100972)
 
 **Sources:**
 
