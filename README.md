@@ -15,7 +15,7 @@
 
 - [Results](#results)
 
-## General Information
+### General Information
 - Each workgroup has at least one **status call** every two weeks
 - **Every Committer** must attend the status call
 
@@ -56,7 +56,7 @@
 |  | Master Data Model(s)  |
 |  | Data Mapping  |
 |  | Data Hub & Standarization of the data model  |
-|  | Backlog Data-Hub & data model  |  
+|  | Backlog Data-Hub & data model  |
 | APs | 2.03 |
 |  | 2.04 |
 |  | 2.05 |
