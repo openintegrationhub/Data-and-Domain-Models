@@ -15,7 +15,7 @@
 
 - [Results](#results)
 
-### General Information
+## General Information
 - Each workgroup has at least one **status call** every two weeks
 - **Every Committer** must attend the status call
 
