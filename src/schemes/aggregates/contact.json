@@ -1,0 +1,39 @@
+
+"Contact":{
+  "type": "object",
+  "properties": {
+
+    "email": {
+      "type": "string",
+      "description": "email address of the contact"
+    },
+    "mobile": {
+      "type": "string",
+      "description": "mobile number of the contact"
+    },
+    "phone": {
+      "type": "string",
+      "description": "phone number of the contact"
+    },
+    "page": {
+      "type": "string",
+      "description": "pager number of the contact"
+    },
+    "fax": {
+      "type": "string",
+      "description": "fax number of the contact"
+    },
+    "web": {
+      "type": "string",
+      "description": "web adress of the contact"
+    },
+    "alias": {
+      "type": "string",
+      "description": "alias of the contact"
+    },
+    "network": {
+      "type": "object",
+      "description": "network IDs of the contact"
+    }
+
+}

@@ -1,0 +1,39 @@
+
+"Payment":{
+  "type": "object",
+  "properties": {
+
+    "bank": {
+      "type": "string",
+      "description": "name of the bank"
+    },
+    "iban": {
+      "type": "string",
+      "description": "International Bank Account Number of ..."
+    },
+    "bic": {
+      "type": "string",
+      "description": "Bank Identifier Code of the bank"
+    },
+    "provicer": {
+      "type": "string",
+      "description": "credit card provider"
+    },
+    "card": {
+      "type": "string",
+      "description": "credit card maker"
+    },
+    "number": {
+      "type": "string",
+      "description": "credit card number"
+    },
+    "expiration": {
+      "type": "string",
+      "description": "expiration date of the credit card"
+    },
+    "owner": {
+      "type": "string",
+      "description": "credit card owner"
+    }
+
+}

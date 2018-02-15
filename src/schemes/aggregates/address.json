@@ -1,0 +1,44 @@
+
+"Address":{
+  "type": "object",
+  "properties": {
+
+		"street": {
+			"type": "string",
+			"description": "street name"
+    },
+		"number": {
+			"type": "string",
+			"description": "street number"
+		},
+    "extended": {
+			"type": "array",
+			"description": "extend address"
+    },
+		"disctrict": {
+			"type": "string",
+			"description": "district name"
+		},
+    "city": {
+      "type": "string",
+			"description": "city name"
+    },
+    "postal": {
+      "type": "string",
+			"description": "postal code"
+    },
+		"state": {
+			"type": "string",
+			"description": "state name"
+		},
+    "country": {
+      "type": "string",
+			"description": "country name"
+    },
+    "code": {
+      "type": "string",
+			"description": "country code",
+			"format" : "ISO 3166"
+    }
+
+}

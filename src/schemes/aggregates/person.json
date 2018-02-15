@@ -1,0 +1,59 @@
+
+"Person":{
+  "type": "object",
+  "properties": {
+
+    "gender": {
+      "type": "string",
+      "description": "gender of the person"
+    },
+    "title": {
+      "type": "string",
+      "description": "title of the person"
+    },
+    "first": {
+      "type": "string",
+      "description": "first name of the person"
+    },
+    "mid": {
+      "type": "string",
+      "description": "mid name of the person"
+    },
+    "last": {
+      "type": "string",
+      "description": "last name of the person"
+    },
+    "birth": {
+      "type": "string",
+      "description": "gender of the person"
+    },
+    "signature": {
+      "type": "string",
+      "description": "path to the person's signature"
+    },
+    "position": {
+      "type": "string",
+      "description": "business role of the person"
+    },
+    "number": {
+      "type": "string",
+      "description": "personel number of the person"
+    },
+    "overtime": {
+      "type": "string",
+      "description": " work overtime of the person"
+    },
+    "holidays": {
+      "type": "object",
+      "description": "holidays of the person"
+    },
+    "department": {
+      "type": "string",
+      "description": "comapnies department of the person"
+    },
+    "picture": {
+      "type": "string",
+      "description": "path to the person's photo"
+    }
+
+}
