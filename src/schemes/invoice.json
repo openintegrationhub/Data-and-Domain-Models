@@ -1,0 +1,190 @@
+
+"Invoice": {
+  "type": "object",
+  "properties": {
+    "sender": {
+      "type" : "object",
+      "properties": {
+
+        "company": {
+          "type": "string",
+          "description": "name of the company"
+        },
+        "address": {
+          "type": "object",
+          "properties": {
+
+            "street": {
+              "type": "string",
+              "description": "sender's street name"
+            },
+            "number": {
+              "type": "string",
+              "descriptiuon": "sender's street number"
+            },
+            "code": {
+              "type": "string",
+              "description": "sender's postal code"
+            },
+            "city": {
+              "type": "string",
+              "description": "sender's city name"
+            }
+          }
+        },
+        "contact": {
+          "type": "object",
+          "properties": {
+
+            "phone": {
+              "type": "string",
+              "description": "sender's phone number"
+            },
+            "fax": {
+              "type": "string",
+              "descriptiuon": "sender's fax number"
+            },
+            "website": {
+              "type": "string",
+              "description": "sender's internet address"
+            },
+            "mail": {
+              "type": "string",
+              "description": "sender's mail address"
+            }
+          }
+        },
+        "bank" : {
+          "type": "object",
+          "properties" :{
+
+            "name": {
+              "type": "string",
+              "description": "sender's bank name"
+            },
+            "iban": {
+              "type": "string",
+              "description": "sender's International Bank Account Number"
+            },
+            "bic": {
+              "type": "string",
+              "description": "sender's Bank Identifier Code"
+            }
+          }
+        },
+        "registration": {
+          "type": "string",
+          "description": "sender's district court"
+        },
+        "uid": {
+          "type": "string",
+          "description": "sender's revenue tax id"
+        },
+        "tax": {
+          "type": "string",
+          "description": "sender's tax number"
+        },
+        "lead": {
+          "type": "string",
+          "description": "sender's lead of the company"
+        }
+      },
+    "receiver": {
+      "type" : "object",
+      "properties": {
+        "name": {
+          "type": "object",
+          "poperties": {
+
+            "company": {
+              "type": "string",
+              "description": "receivers's name of the company"
+            },
+            "person": {
+              "type": "string",
+              "description": "receiver's name of the person"
+            }
+          }
+        },
+        "address": {
+          "type": "object",
+          "properties": {
+
+            "street": {
+              "type": "string",
+              "description": "receiver's street name"
+            },
+            "number": {
+              "type": "string",
+              "descriptiuon": "reveiver's street number"
+            },
+            "code": {
+              "type": "string",
+              "description": "receiver's postal code"
+            },
+            "city": {
+              "type": "string",
+              "description": "receiver's city name"
+            }
+          }
+        }
+      }
+    },
+    "receipt": {
+      "type": "string",
+      "description": "number of this invoice"
+    },
+    "date": {
+      "type": "string",
+      "description": "date of this invoice"
+    },
+    "customer": {
+      "type": "string",
+      "description": "receiver's customer number"
+    },
+    "subject": {
+      "type": "string",
+      "description": "senders's subject"
+    },
+    "intro": {
+      "type": "string",
+      "description": "senders's intro text"
+    },
+    "order": {
+      "type": "object",
+      "properties" :{
+        "item": {
+          "type" : "string",
+          "description": "name of an item"
+        },
+        "description": {
+          "type" : "string",
+          "description": "description of an item"
+        },
+        "unit": {
+          "type" : "string",
+          "description": "unit of an item"
+        },
+        "amount": {
+          "type" : "string",
+          "description": "amount of an item"
+        },
+        "price": {
+          "type" : "string",
+          "description": "net price of an item"
+        },
+        "taxation": {
+          "type" : "string",
+          "description": "taxation of an item"
+        }
+      }
+    },
+    "conditions": {
+      "type": "string",
+      "description": "sender's payment conditions"
+    },
+    "outro": {
+      "type": "string",
+      "description": "sender's outro text"
+    },
+}
