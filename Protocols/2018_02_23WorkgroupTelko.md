@@ -4,7 +4,7 @@
 
 ## Updates on next steps
 * Upload SilverERP Adapter on GitHub **by Josef**
-	* Done
+	* Done. Upload pending.
 * Commit to the OData documentation standard for public REST APIs - recommended **by Andy & Dieter**
 	* Examined
 	* Accepted
