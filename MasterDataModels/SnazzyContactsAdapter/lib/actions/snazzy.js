@@ -1,6 +1,6 @@
 const request = require('request');
 
-exports.createSession = function(config, continueOnSuccess) {
+exports.createSession = function (config, continueOnSuccess) {
     let token;
     let apiKey = config.apikey;
     let email = config.email;
