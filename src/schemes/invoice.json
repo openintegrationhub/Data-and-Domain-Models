@@ -1,11 +1,13 @@
-
-"Invoice": {
-  "type": "object",
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://openintegrationhub.org/schemas/invoice.json",
+  "title": "Invoice",
+  "description": "Standard invoice aggregate",
+  "allOf": [ { "$ref" : "http://openintegrationhub.org/schemas/oih-data-record.json" } ],
   "properties": {
     "sender": {
       "type" : "object",
       "properties": {
-
         "company": {
           "type": "string",
           "description": "name of the company"
@@ -13,7 +15,6 @@
         "address": {
           "type": "object",
           "properties": {
-
             "street": {
               "type": "string",
               "description": "sender's street name"
@@ -35,7 +36,6 @@
         "contact": {
           "type": "object",
           "properties": {
-
             "phone": {
               "type": "string",
               "description": "sender's phone number"
@@ -57,7 +57,6 @@
         "bank" : {
           "type": "object",
           "properties" :{
-
             "name": {
               "type": "string",
               "description": "sender's bank name"
@@ -109,7 +108,6 @@
         "address": {
           "type": "object",
           "properties": {
-
             "street": {
               "type": "string",
               "description": "receiver's street name"
@@ -186,5 +184,7 @@
     "outro": {
       "type": "string",
       "description": "sender's outro text"
-    },
+      }
+    }
+  }
 }
