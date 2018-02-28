@@ -1,0 +1,404 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://openintegrationhub.org/schemas/address.json",
+  "title": "BusinesEntity",
+  "description": "Standard Data Model for Address",
+  "allOf": [ { "$ref" : "http://openintegrationhub.org/schemas/oih-data-record.json" } ],
+  "properties": {
+    "id":{
+      "type": "string",
+      "description": "Busines entity object identifier"
+    },
+    "customerNumber":{
+      "type": "string",
+      "description": "Number of the customer"
+    },
+    "organization": {
+      "type" : "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Identifier of the organization object"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the organization"
+        },
+        "suffix": {
+          "type": "string",
+          "descriptiuon": "Additionl name of the organization"
+        },
+        "legalForm": {
+          "type": "string",
+          "description": "Legal form of the organization"
+        },
+        "profitDetermination": {
+          "type": "string",
+          "description": "Net income method / accounting, of organization's profit determination - EÜR / Bilanz"
+        },
+        "accountsFramework": {
+          "type": "string",
+          "description": "Standard accounts framework of the organization - SKR03/04"
+        },
+        "branch": {
+          "type": "string",
+          "description": "Branch of the organization"
+        },
+        "representative": {
+          "type": "string",
+          "description": "Representative of the orginazation - lead"
+        },
+        "rating": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Identifier of organization's rating"
+            },
+            "agency": {
+              "type": "string",
+              "description": "Name or abbreviation of the rating identifier"
+            },
+            "identifier": {
+              "type": "string",
+              "description": "Identifier of the organization's rating"
+            }
+          }
+        },
+        "employee": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Identifier of organization's employees object"
+            },
+            "number": {
+              "type": "string",
+              "description": "Number of the organization's employee"
+            },
+            "department": {
+              "type": "string",
+              "description": "Department of the organization's employee"
+            },
+            "position": {
+              "type": "string",
+              "description": "Position of the organization's employee"
+            },
+            "overtime": {
+              "type": "number",
+              "description": "Amount of overtime of the organization's employee"
+            },
+            "holidays": {
+              "type": "number",
+              "description": "Amount of holidays of the organization's employee"
+            },
+            "picture": {
+              "type": "string",
+              "description": "Picture's path of the organization's employee"
+            }
+          }
+        },
+        "tax": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Identifier of organization's tax object"
+            },
+            "name": {
+              "type": "string",
+              "description": "Name of organization's tax number"
+            },
+            "identifier": {
+              "type": "string",
+              "description": "Tax number of the organization"
+            }
+          }
+        },
+        "taxation" :{
+          "type": "string",
+          "description" : "Taxation on payment/invoice of the organization"
+        },
+        "taxOffice" :{
+          "type": "string",
+          "description" : "Tax office of the organization"
+        },
+        "register": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Identifier of organization's rating"
+            },
+            "districtCourt": {
+              "type": "string",
+              "description": "District court of organization's registration"
+            },
+            "department": {
+              "type": "string",
+              "description": "Department of the district court"
+            },
+            "digit": {
+              "type": "string",
+              "description": "Digit of the register"
+            }
+          }
+        },
+        "logo" :{
+          "type": "string",
+          "description" : "Image's path of orginazation's logo"
+        }
+      }
+    },
+    "person": {
+      "type" : "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Identifier of the person object"
+        },
+        "salutation": {
+          "type": "string",
+          "description": "Salutation of the person"
+        },
+        "gender": {
+          "type": "string",
+          "description": "Gender of the person"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the person"
+        },
+        "firstName": {
+          "type": "string",
+          "description": "First name of the person"
+        },
+        "midName": {
+          "type": "string",
+          "description": "Middle name of the person"
+        },
+        "lastNAme": {
+          "type": "string",
+          "description": "Last name of the person"
+        },
+        "alias": {
+          "type": "string",
+          "description": "Alias of the person"
+        },
+        "birthDate": {
+          "type": "string",
+          "description": "Birth date of the person"
+        },
+        "signature": {
+          "type": "string",
+          "description": "Path of the person's signature"
+        }
+      }
+    },
+    "address": {
+      "type" : "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Identifier of the address object"
+        },
+        "street": {
+          "type": "string",
+          "description": "Street name of the address"
+        },
+        "number": {
+          "type": "string",
+          "description": "Street number of the address"
+        },
+        "extension": {
+          "type": "string",
+          "description": "Extension of the address"
+        },
+        "apartment": {
+          "type": "string",
+          "description": "Apartment number of the address"
+        },
+        "postalCode": {
+          "type": "string",
+          "description": "Postal code of the address - aka. ZIP"
+        },
+        "city": {
+          "type": "string",
+          "description": "City name of the address"
+        },
+        "district": {
+          "type": "string",
+          "description": "District of the address"
+        },
+        "countryCode": {
+          "type": "string",
+          "description": "Country code of the address"
+        },
+        "country": {
+          "type": "string",
+          "description": "Country name of the address"
+        },
+        "state": {
+          "type": "string",
+          "description": "State name of the address"
+        },
+        "context": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Identifier of the address context"
+            },
+            "usage": {
+              "type": "string",
+              "description": "Usage context of the address"
+            }
+          }
+        }
+      }
+    },
+    "contact": {
+      "type" : "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Identifier of the contact object"
+        },
+        "channel": {
+          "type": "string",
+          "description": "Name of the contact channel"
+        },
+        "value": {
+          "type": "string",
+          "description": "Value of the contact channel"
+        },
+        "prefered": {
+          "type": "boolean",
+          "description": "Prefered contact channel of the BusinessEntity"
+        }
+      }
+    },
+    "payment": {
+      "type" : "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Identifier of the payment object"
+        },
+        "channel": {
+          "provider": "string",
+          "description": "Provider name of the payment method"
+        },
+        "identifier": {
+          "type": "string",
+          "description": "Identifier of the payment provider"
+        },
+        "account": {
+          "type": "string",
+          "description": "Account number of the payment method"
+        },
+        "expiration": {
+          "type": "string",
+          "description": "Expiration date of the payment method"
+        },
+        "owner": {
+          "type": "string",
+          "description": "Owner of the account"
+        },
+        "terms": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Identifier of the payment terms object"
+            },
+            "respite": {
+              "type": "string",
+              "description": "Payment deadline under this payment method"
+            },
+            "delivery": {
+              "type": "string",
+              "description": "Delivery conditions under this payment method"
+            },
+            "taxRate": {
+              "type": "string",
+              "description": "Tax rate for this BusinessEntity"
+            },
+            "discount": {
+              "type": "string",
+              "description": "Discount under this payment method"
+            }
+          }
+        },
+        "currency": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Identifier of the currency object"
+            },
+            "pair": {
+              "type": "string",
+              "description": "Pair of currency - EUR/USD"
+            },
+            "rate": {
+              "type": "string",
+              "description": "Exchange rate of the currency pair"
+            }
+          }
+        },
+        "prefered": {
+          "type": "boolean",
+          "description": "Prefered pair of currency"
+        }
+      }
+    },
+    "language": {
+      "type" : "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Identifier of the language object"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the language"
+        },
+        "primary": {
+          "type": "boolean",
+          "description": "Prefered language"
+          }
+        }
+    },
+    "type": {
+      "type" : "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Identifier of the business entity type object"
+        },
+        "relation": {
+          "type": "string",
+          "description": "Relation towards the business entity type"
+        }
+      }
+    },
+    "note": {
+      "type" : "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Identifier of the note object"
+        },
+        "title": {
+          "type": "string",
+          "description": "Note title"
+        },
+        "text": {
+          "type": "string",
+          "description": "Note text"
+        }
+      }
+    }
+  }
+}
