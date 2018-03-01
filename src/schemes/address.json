@@ -4,401 +4,501 @@
   "title": "BusinesEntity",
   "description": "Standard Data Model for Address",
   "allOf": [ { "$ref" : "http://openintegrationhub.org/schemas/oih-data-record.json" } ],
+  "type": "object",
   "properties": {
     "id":{
       "type": "string",
-      "description": "Busines entity object identifier"
+      "description": "Busines entity object identifier",
+      "example": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     "customerNumber":{
       "type": "string",
-      "description": "Number of the customer"
+      "description": "Number of the customer",
+      "example": "CN12345"
     },
     "organization": {
       "type" : "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Identifier of the organization object"
+          "description": "Identifier of the organization object",
+          "example": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         },
         "name": {
           "type": "string",
-          "description": "Name of the organization"
+          "description": "Name of the organization",
+          "example": "Big Corp."
         },
         "suffix": {
           "type": "string",
-          "descriptiuon": "Additionl name of the organization"
+          "descriptiuon": "Additionl name of the organization",
+          "example": "Awesome Products"
         },
         "legalForm": {
           "type": "string",
-          "description": "Legal form of the organization"
+          "description": "Legal form of the organization",
+          "example": "Inc."
         },
         "profitDetermination": {
           "type": "string",
-          "description": "Net income method / accounting, of organization's profit determination - EÜR / Bilanz"
+          "description": "Net income method / accounting, of organization's profit determination - EÜR/Bilanz/EBIT",
+          "example": "EBIT"
         },
         "accountsFramework": {
           "type": "string",
-          "description": "Standard accounts framework of the organization - SKR03/04"
+          "description": "Standard accounts framework of the organization - SKR03/04/IFRS",
+          "example": "IFRS"
         },
         "branch": {
           "type": "string",
-          "description": "Branch of the organization"
+          "description": "Branch of the organization",
+          "example": "eCommerce"
         },
         "representative": {
           "type": "string",
-          "description": "Representative of the orginazation - lead"
+          "description": "Representative of the orginazation - lead",
+          "example": "Jeff Bezos"
         },
         "rating": {
           "type": "object",
           "properties": {
             "id": {
               "type": "string",
-              "description": "Identifier of organization's rating"
+              "description": "Identifier of organization's rating",
+              "example": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             },
             "agency": {
               "type": "string",
-              "description": "Name or abbreviation of the rating identifier"
+              "description": "Name or abbreviation of the rating identifier",
+              "example": "Euler Hermes Rating GmbH"
             },
             "identifier": {
               "type": "string",
-              "description": "Identifier of the organization's rating"
+              "description": "Identifier of the organization's rating",
+              "example": "391200QXGLWHK9VK6V27"
             }
-          }
+          },
+          "required": [ "id" ]
         },
         "employee": {
           "type": "object",
           "properties": {
             "id": {
               "type": "string",
-              "description": "Identifier of organization's employees object"
+              "description": "Identifier of organization's employees object",
+              "example": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             },
             "number": {
               "type": "string",
-              "description": "Number of the organization's employee"
+              "description": "Number of the organization's employee",
+              "example": "P1234"
             },
             "department": {
               "type": "string",
-              "description": "Department of the organization's employee"
+              "description": "Department of the organization's employee",
+              "example": "Sales"
             },
             "position": {
               "type": "string",
-              "description": "Position of the organization's employee"
+              "description": "Position of the organization's employee",
+              "example": "Head of Sales"
             },
             "overtime": {
               "type": "number",
-              "description": "Amount of overtime of the organization's employee"
+              "description": "Amount of overtime in hours of the organization's employee",
+              "example": "24"
             },
             "holidays": {
               "type": "number",
-              "description": "Amount of holidays of the organization's employee"
+              "description": "Amount of holidays of the organization's employee",
+              "example": "21"
             },
             "picture": {
               "type": "string",
-              "description": "Picture's path of the organization's employee"
+              "description": "Picture's path of the organization's employee",
+              "example": "/root/path/image.jpg"
             }
-          }
+          },
+          "required": [ "id" ]
         },
         "tax": {
           "type": "object",
           "properties": {
             "id": {
               "type": "string",
-              "description": "Identifier of organization's tax object"
+              "description": "Identifier of organization's tax object",
+              "example": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             },
             "name": {
               "type": "string",
-              "description": "Name of organization's tax number"
+              "description": "Name of organization's tax number",
+              "example": "USt-ID"
             },
             "identifier": {
               "type": "string",
-              "description": "Tax number of the organization"
+              "description": "Tax number of the organization",
+              "example": "DE123456789"
             }
-          }
+          },
+          "required": [ "id" ]
         },
         "taxation" :{
           "type": "string",
-          "description" : "Taxation on payment/invoice of the organization"
+          "description" : "Taxation on payment/invoice of the organization",
+          "example": "Invoice"
         },
         "taxOffice" :{
           "type": "string",
-          "description" : "Tax office of the organization"
+          "description" : "Tax office of the organization",
+          "example": "Berlin (Charlottenburg)"
         },
         "register": {
           "type": "object",
           "properties": {
             "id": {
               "type": "string",
-              "description": "Identifier of organization's rating"
+              "description": "Identifier of organisation's register",
+              "example": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             },
             "districtCourt": {
               "type": "string",
-              "description": "District court of organization's registration"
+              "description": "District court of organization's registration",
+              "example": "Berlin (Charlottenburg)"
             },
             "department": {
               "type": "string",
-              "description": "Department of the district court"
+              "description": "Department of the district court",
+              "example": "HR"
             },
             "digit": {
               "type": "string",
-              "description": "Digit of the register"
+              "description": "Digit of the register",
+              "example": "A"
             }
-          }
+          },
+          "required": [ "id" ]
         },
         "logo" :{
           "type": "string",
-          "description" : "Image's path of orginazation's logo"
+          "description" : "Image's path of orginazation's logo",
+          "example": "/root/path/image.jpg"
         }
-      }
+      },
+      "required": [ "id", "name" ]
     },
     "person": {
       "type" : "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Identifier of the person object"
+          "description": "Identifier of the person object",
+          "example": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         },
         "salutation": {
           "type": "string",
-          "description": "Salutation of the person"
+          "description": "Salutation of the person",
+          "example": "Dear Ms/Mr <lastName>"
         },
         "gender": {
           "type": "string",
-          "description": "Gender of the person"
+          "description": "Gender of the person",
+          "example": "Inter"
         },
         "title": {
           "type": "string",
-          "description": "Title of the person"
+          "description": "Title of the person",
+          "example": "Dr. Dr. Prof. "
         },
         "firstName": {
           "type": "string",
-          "description": "First name of the person"
+          "description": "First name of the person",
+          "example": "Rory"
         },
         "midName": {
           "type": "string",
-          "description": "Middle name of the person"
+          "description": "Middle name of the person",
+          "example": "Lee"
         },
         "lastNAme": {
           "type": "string",
-          "description": "Last name of the person"
+          "description": "Last name of the person",
+          "example": "Jones"
         },
         "alias": {
           "type": "string",
-          "description": "Alias of the person"
+          "description": "Alias of the person",
+          "example": "User123"
         },
         "birthDate": {
           "type": "string",
-          "description": "Birth date of the person"
+          "description": "Birth date of the person",
+          "example": "06/15/2000"
         },
         "signature": {
           "type": "string",
-          "description": "Path of the person's signature"
+          "description": "Path of the person's signature",
+          "example": "/root/path/signature.jpg"
         }
-      }
+      },
+      "required": [ "id", "lastName" ]
     },
     "address": {
       "type" : "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Identifier of the address object"
+          "description": "Identifier of the address object",
+          "example": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         },
         "street": {
           "type": "string",
-          "description": "Street name of the address"
+          "description": "Street name of the address",
+          "example": "Center Street"
         },
         "number": {
           "type": "string",
-          "description": "Street number of the address"
+          "description": "Street number of the address",
+          "example": "C 23"
         },
         "extension": {
           "type": "string",
-          "description": "Extension of the address"
+          "description": "Extension of the address",
+          "example": "3rd floor"
         },
         "apartment": {
           "type": "string",
-          "description": "Apartment number of the address"
+          "description": "Apartment number of the address",
+          "example": "128"
         },
         "postalCode": {
           "type": "string",
-          "description": "Postal code of the address - aka. ZIP"
+          "description": "Postal code of the address - aka. ZIP",
+          "example": "12345"
         },
         "city": {
           "type": "string",
-          "description": "City name of the address"
+          "description": "City name of the address",
+          "example": "Berlin"
         },
         "district": {
           "type": "string",
-          "description": "District of the address"
+          "description": "District of the address",
+          "example": "Charlottenburg"
         },
         "countryCode": {
           "type": "string",
-          "description": "Country code of the address"
+          "description": "Country code of the address",
+          "example": "DE"
         },
         "country": {
           "type": "string",
-          "description": "Country name of the address"
+          "description": "Country name of the address",
+          "example": "Germany"
         },
         "state": {
           "type": "string",
-          "description": "State name of the address"
+          "description": "State name of the address",
+          "example": "Berlin"
         },
         "context": {
           "type": "object",
           "properties": {
             "id": {
               "type": "string",
-              "description": "Identifier of the address context"
+              "description": "Identifier of the address context",
+              "example": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             },
             "usage": {
               "type": "string",
-              "description": "Usage context of the address"
+              "description": "Usage context of the address",
+              "example": "Shipping"
             }
-          }
+          },
+          "required": [ "id" ]
         }
-      }
+      },
+      "required": [ "id", "street", "number", "postalCode", "city" ]
     },
     "contact": {
       "type" : "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Identifier of the contact object"
+          "description": "Identifier of the contact object",
+          "example": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         },
         "channel": {
           "type": "string",
-          "description": "Name of the contact channel"
+          "description": "Name of the contact channel",
+          "example": "Phone"
         },
         "value": {
           "type": "string",
-          "description": "Value of the contact channel"
+          "description": "Value of the contact channel",
+          "example": "+49-123-4567890"
         },
         "prefered": {
           "type": "boolean",
-          "description": "Prefered contact channel of the BusinessEntity"
+          "description": "Prefered contact channel of the BusinessEntity",
+          "example": "True",
+          "default": "False"
         }
-      }
+      },
+      "required": [ "id", "channel", "value" ]
     },
     "payment": {
       "type" : "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Identifier of the payment object"
+          "description": "Identifier of the payment object",
+          "example": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         },
-        "channel": {
+        "provider": {
           "provider": "string",
-          "description": "Provider name of the payment method"
+          "description": "Provider name of the payment method",
+          "example": "HSBC"
         },
         "identifier": {
           "type": "string",
-          "description": "Identifier of the payment provider"
+          "description": "Identifier of the payment provider",
+          "example": "TUBDDEDD100"
         },
         "account": {
           "type": "string",
-          "description": "Account number of the payment method"
+          "description": "Account number of the payment method",
+          "example": "GB15MIDL40051512345678"
         },
         "expiration": {
           "type": "string",
-          "description": "Expiration date of the payment method"
+          "description": "Expiration date of the payment method",
+          "example": "-"
         },
         "owner": {
           "type": "string",
-          "description": "Owner of the account"
+          "description": "Owner of the account",
+          "example": "John Doe"
         },
         "terms": {
           "type": "object",
           "properties": {
             "id": {
               "type": "string",
-              "description": "Identifier of the payment terms object"
+              "description": "Identifier of the payment terms object",
+              "example": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             },
             "respite": {
-              "type": "string",
-              "description": "Payment deadline under this payment method"
+              "type": "number",
+              "description": "Payment deadline in days under this payment method",
+              "example": "14"
             },
             "delivery": {
-              "type": "string",
-              "description": "Delivery conditions under this payment method"
+              "type": "number",
+              "description": "Delivery conditions in days under this payment method",
+              "example": "3"
             },
             "taxRate": {
-              "type": "string",
-              "description": "Tax rate for this BusinessEntity"
+              "type": "number",
+              "description": "Tax rate for this BusinessEntity",
+              "example": "0.19",
+              "default": "0.0"
             },
             "discount": {
-              "type": "string",
-              "description": "Discount under this payment method"
+              "type": "number",
+              "description": "Discount under this payment method",
+              "example": "0.05"
             }
-          }
+          },
+          "required": [ "id", "taxRate" ]
         },
         "currency": {
           "type": "object",
           "properties": {
             "id": {
               "type": "string",
-              "description": "Identifier of the currency object"
+              "description": "Identifier of the currency object",
+              "example": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             },
             "pair": {
               "type": "string",
-              "description": "Pair of currency - EUR/USD"
+              "description": "Pair of currency",
+              "example": "EUR/USD"
             },
             "rate": {
-              "type": "string",
-              "description": "Exchange rate of the currency pair"
+              "type": "number",
+              "description": "Exchange rate of the currency pair",
+              "example": "1.2345"
             }
-          }
+          },
+          "required": [ "id", "pair", "rate" ]
         },
         "prefered": {
           "type": "boolean",
-          "description": "Prefered pair of currency"
+          "description": "Prefered pair of currency",
+          "example": "True",
+          "default": "False"
         }
-      }
+      },
+      "required": [ "id", "account"  ]
     },
     "language": {
       "type" : "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Identifier of the language object"
+          "description": "Identifier of the language object",
+          "example": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         },
         "name": {
           "type": "string",
-          "description": "Name of the language"
+          "description": "Name of the language",
+          "example": "EN"
         },
         "primary": {
           "type": "boolean",
-          "description": "Prefered language"
-          }
+          "description": "Prefered language",
+          "example": "True",
+          "default": "False"
         }
+      },
+      "required": [ "id", "name" ]
     },
     "type": {
       "type" : "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Identifier of the business entity type object"
+          "description": "Identifier of the business entity type object",
+          "example": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         },
         "relation": {
           "type": "string",
-          "description": "Relation towards the business entity type"
+          "description": "Relation towards the business entity type",
+          "example": "Customer"
         }
-      }
+      },
+      "required": [ "id", "relation" ]
     },
     "note": {
       "type" : "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Identifier of the note object"
+          "description": "Identifier of the note object",
+          "example": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         },
         "title": {
           "type": "string",
-          "description": "Note title"
+          "description": "Note title",
+          "example": "Needs"
         },
         "text": {
           "type": "string",
-          "description": "Note text"
+          "description": "Note text",
+          "example": "This can become a long note."
         }
-      }
+      },
+      "required": [ "id", "text" ]
     }
   }
 }
