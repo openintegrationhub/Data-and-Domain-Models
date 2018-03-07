@@ -26,4 +26,4 @@ If we want to connect two components using [elastic.io ](http://www.elastic.io "
 
 ### Result
 
-If these above steps were successfully completed you will be able to see all persons from [SilverERP](http://www.silvererp.com/) already saved in your [Snazzy Contacts](https://snazzycontacts.com) account.
+If the above steps were successfully completed you will be able to see all persons from [SilverERP](http://www.silvererp.com/) already saved in your [Snazzy Contacts](https://snazzycontacts.com) account.
