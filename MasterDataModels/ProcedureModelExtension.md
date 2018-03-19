@@ -44,8 +44,8 @@ Therefore, changes of this kind are in general **not allowed** (For some major c
 
 The following table sums up different model changes, categorizes them and states if the change is allowed or not:
 
-| Change | Category |
-|---|---|
+| Change | Category |Allowed|
+|---|---|---|
 |Adding a nullable attrribute|Minor|Yes|
 |Adding an object to the model|Minor|Yes|
 |Adding an option to an enumaration|Minor|Yes|
@@ -65,8 +65,8 @@ Depending on the change a certain threshold has to be passed in order to change 
 
 The following table defines some thresholds for the different changes (Thresholds are not fix yet):
 
-| Change | Threshold |Allowed|
-|---|---|---|
+| Change | Threshold |
+|---|---|
 |Adding a nullable attrribute|Suggested at least 3 times|
 |Adding an object to the model|Suggested at least 3 times|
 |Adding an option to an enumaration|3 suggestions|
