@@ -12,14 +12,6 @@ Third iteration of the address data model description. vCard attributes added to
 	- [Fax](#fax)
 	- [EMail](#email)
 	- [Social](#social)
-- [Enumerations](#enumerations)
-	- [Person enumerations](#person-enumerations)
-	- [OrganizationType enumerations](#organizationtype-enumerations)
-	- [Url enumerations](#url-enumerations)
-	- [Phone enumerations](#phone-enumerations)
-	- [Fax enumerations](#fax-enumerations)
-	- [Email enumerations](#email-enumerations)
-	- [Social enumerations](#social-enumerations)
 
 <!-- /TOC -->
 
