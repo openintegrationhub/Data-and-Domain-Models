@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://github.com/philecs/philecs/blob/master/OIHMasterDataModelAddressesOrganization.json",
+  "title": "Organization",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://github.com/philecs/philecs/blob/master/oih-data-record.json"
+    }
+  ],
+  "definitions": {
+    "OrganizationType": {
+      "type": "object",
+      "description": "Describes the groups the organization belongs to",
+      "properties": {
+        "organizationGroup": {
+          "type": "string",
+          "enum": ["customer", "supplier", "partent company", "subsidiary"],
+          "description": "Name of the organization group"
+        },
+        "abcType": {
+          "type": "string",
+          "enum": ["a","b","c", ""],
+          "description": "Categorizes customer into a/b/c groups"
+        }
+      }
+    }
+  },
+  "properties": {
+    "organizationName": {
+      "type": "string",
+      "description": "Name of the organization",
+      "example": "Great Company"
+    },
+    "createdAt": {
+      "type": "string",
+      "description": "Creation date of the data record",
+      "example": "10-02-2018"
+    },
+    "updatedAt": {
+      "type": "string",
+      "description": "Modification date of the data record",
+      "example": "01-03-2018"
+    },
+    "logo": {
+      "type": "string",
+      "description": "Logo of the organization",
+      "example": "http://example.org/logo.png"
+    },
+    "address": {
+      "type": "array",
+      "items": {
+        "$ref": "https://github.com/philecs/philecs/blob/master/SharedDefinitionsAddresses.json#/definitions/Address"
+      }
+    },
+    "phone": {
+      "type": "array",
+      "items": {
+        "$ref": "https://github.com/philecs/philecs/blob/master/SharedDefinitionsAddresses.json#/definitions/Phone"
+      }
+    },
+    "fax": {
+      "type": "array",
+      "items": {
+        "$ref": "https://github.com/philecs/philecs/blob/master/SharedDefinitionsAddresses.json#/definitions/Fax"
+      }
+    },
+    "email": {
+      "type": "array",
+      "items": {
+        "$ref": "https://github.com/philecs/philecs/blob/master/SharedDefinitionsAddresses.json#/definitions/Email"
+      }
+    },
+    "social": {
+      "type": "array",
+      "items": {
+        "$ref": "https://github.com/philecs/philecs/blob/master/SharedDefinitionsAddresses.json#/definitions/Social"
+      }
+    },
+    "url": {
+      "type": "array",
+      "items": {
+        "$ref": "https://github.com/philecs/philecs/blob/master/SharedDefinitionsAddresses.json#/definitions/Url"
+      }
+    },
+    "organizationCategory": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/OrganizationType"
+      }
+    },
+    "personToOrganizationRelationship":
+    {
+      "type": "array",
+      "description": "Describes the relationships of a organization to a person",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "https://github.com/philecs/philecs/blob/master/OIHMasterDataModelAddressesRelation.json"
+          }
+        ]
+      }
+    },
+    "OrganizationToOrganizationRelationship":
+    {
+      "type": "array",
+      "description": "Describes the relationships between two organizations",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "https://github.com/philecs/philecs/blob/master/OIHMasterDataModelAddressesRelation.json"
+          }
+        ]
+      }
+    }
+  }
+}
