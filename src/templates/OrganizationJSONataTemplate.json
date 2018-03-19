@@ -1,0 +1,87 @@
+{
+  "organizationName": "",
+  "createdAt": ".",
+  "updatedAt": "",
+  "logo": "",
+  "address": [
+    {
+      "street": "",
+      "streetNumber": ,
+      "unit": "",
+      "zipCode": "",
+      "city": "",
+      "district": "",
+      "region": "",
+      "country": "",
+      "countryCode": "",
+      "primaryContact":"",
+      "addressType": ""
+    }
+  ],
+  "phone": [
+    {
+      "phoneNumber": "",
+      "type": "",
+      "category": "",
+      "messenger": [
+        "",
+        ""
+      ],
+      "isTextPhone": false,
+      "textingEnabled": false
+    }
+  ],
+  "fax": [
+    {
+      "faxNumber": "",
+      "type": "",
+      "category": ""
+    }
+  ],
+  "email":[
+    {
+      "email": "",
+      "type": "",
+      "category": ""
+    }
+  ],
+  "social": [
+    {
+      "network": [""],
+      "userIdentifier": "",
+      "type": ""
+    }
+  ],
+  "url": [
+    {
+      "url": "",
+      "urlType": ""
+    }
+  ],
+  "organiztationCategory": [
+    {
+      "organizationGroup": "",
+      "abcType": ""
+    },
+    {
+      "organizationGroup": "",
+      "abcType": ""
+    }
+  ],
+  "personToOrganizationRelationship":[
+    {
+      "relationshipType": ,
+      "function": ,
+      "department": ,
+      "organizationUid": ,
+      "personUid":
+    }
+  ],
+  "OrganizationToOrganizationRelationship":[
+    {
+      "relationshipType":,
+      "organizationUid": ,
+      "organizationUid2":
+    }
+  ]
+}
