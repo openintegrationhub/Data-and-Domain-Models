@@ -166,7 +166,7 @@ When different types of changes are associated with one release, the version num
 A changelog should exist for each version number, to track all changes of a model. This changelog needs to include information about the _action_ (what was done), the _affected object_, the _new value_, the _date-time_ of the change and the _model version_. Thus, a changelog could look like the one presented in the following:
 
 |Model Version|Action|Category|Affected Object|Affected Attriute|Old Value|New Value|updated at|
-|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|
 |OIHMasterDataModelAddresses_v1.1.0|Nullable attribute added|minor|Person|jobTitle|-|jobTitle|2018-01-01|
 |OIHMasterDataModelAddresses_v1.1.0|Nullable attribute added|minor|OrganizationCategory|abcType|-|abcType|2018-01-01|
 |OIHMasterDataModelAddresses_v1.2.0|Nullable attribute added|minor|Organization|logo|-|logo|2018-07-01|
