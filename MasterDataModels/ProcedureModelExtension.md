@@ -59,9 +59,25 @@ The following table sums up different model changes, categorizes them and states
 |Adding an attribute that is not nullable|Major|No|
 
 ## Thumb of Rules
-Beschreibung ab wann es sinnvoll ist Änderungen aufzunehmen
-
 ### Number of Requests
+
+Depending on the change a certain threshold has to be passed in order to change a model.
+
+The following table defines some thresholds for the different changes (Thresholds are not fix yet):
+
+| Change | Threshold |Allowed|
+|---|---|---|
+|Adding a nullable attrribute|Suggested at least 3 times|
+|Adding an object to the model|Suggested at least 3 times|
+|Adding an option to an enumaration|3 suggestions|
+|Renaming an existing attribute|> 66 % of all connected applications|
+|Renaming an existing enumeration option|> 66 % of all connected applications|
+|Changing the type of an existing attribute|> 66 % of all connected applications|
+|Changing an attributes' property from _nullable_ to _not nullable_|> 66 % of all connected applications|
+|Deleting an existing attribute|100% of all connected applications|
+|Renaming an existing object|> 66 % of all connected applications|
+|Deleting an existing object|100% of all connected applications|
+|Adding an attribute that is not nullable|> 50 % of all connected applications|
 
 ### Release Cycles
 A release cycle defines in which intervals new model versions are released. Pros and cons exist for various durations of a release cycle.
