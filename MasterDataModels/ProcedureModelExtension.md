@@ -44,8 +44,8 @@ Therefore, changes of this kind are in general **not allowed** (For some major c
 
 The following table sums up different model changes, categorizes them and states if the change is allowed or not:
 
-| Change | Category |Allowed|
-|---|---|---|
+| Change | Category |
+|---|---|
 |Adding a nullable attrribute|Minor|Yes|
 |Adding an object to the model|Minor|Yes|
 |Adding an option to an enumaration|Minor|Yes|
