@@ -17,7 +17,7 @@ function processTrigger(msg, cfg) {
   let contacts = [];
   let self = this;
 
-  // Create a session in wice and then make a request to get all persons saved by a specific user
+  // Create a session in Wice
 
   wice.createSession(cfg, () => {
 
@@ -29,7 +29,7 @@ function processTrigger(msg, cfg) {
         }
       };
 
-      // Make a get request to get all persons
+      // Make a get request to fetch all persons
       request.get(requestOptions).then((res) => {
 
         let resObj = JSON.parse(res);

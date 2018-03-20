@@ -18,8 +18,7 @@ function processTrigger(msg, cfg) {
   let self = this;
   let rowid = msg.body.rowid;
 
-  // Create a session in wice and then make a request to get a person by rowid
-
+  // Create a session in Wice
   wice.createSession(cfg, () => {
       let uri = `https://oihwice.wice-net.de/plugin/wp_elasticio_backend/json?method=get_company&cookie=${cfg.cookie}&pkey=${rowid}`;
       let requestOptions = {
@@ -29,7 +28,7 @@ function processTrigger(msg, cfg) {
         }
       };
 
-      // Make a request to get an organization
+      // Make a request to get the organization
       request.get(requestOptions).then((res) => {
 
         let resObj = JSON.parse(res);
@@ -38,7 +37,7 @@ function processTrigger(msg, cfg) {
           rowid: resObj.rowid,
           name: resObj.name,
           street: resObj.street,
-          street_number: resObj.streetbumber,
+          street_number: resObj.streetnumber,
           town: resObj.town,
           country: resObj.country,
         };

@@ -18,15 +18,27 @@ function processAction(msg, cfg) {
   let self = this;
   let body = msg.body;
 
-  // Create a session in wice and then make a request to update an article
+  // Create a session in Wice
   wice.createSession(cfg, () => {
     if (cfg.cookie) {
 
       let article = JSON.stringify(body);
-      let uri = `https://oihwice.wice-net.de/plugin/wp_elasticio_backend/json?method=update_article&cookie=${cfg.cookie}&data=${article}`;
 
-      // Send a request to update an article
-      request.get(uri).then((res) => {
+      let options = {
+        method: 'POST',
+        uri: 'https://oihwice.wice-net.de/plugin/wp_elasticio_backend/json',
+        form: {
+          method: 'update_article',
+          cookie: cfg.cookie,
+          data: article
+        },
+        headers: {
+          'X-API-KEY': cfg.apikey
+        }
+      };
+
+      // Send a request to update the article
+      request.post(options).then((res) => {
         reply = res;
         emitData();
       }, (err) => {

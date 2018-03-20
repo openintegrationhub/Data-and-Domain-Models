@@ -9,7 +9,7 @@
     "description": {
       "type": "string",
       "required": false,
-      "title": "Last name"
+      "title": "Description"
     }
   }
 }

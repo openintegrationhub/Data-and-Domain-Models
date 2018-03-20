@@ -1,11 +1,6 @@
 {
     "type": "object",
     "properties": {
-        "rowid": {
-          "type": "number",
-          "required": true,
-          "title": "Rowid"
-        },
         "name": {
             "type": "string",
             "required": true,

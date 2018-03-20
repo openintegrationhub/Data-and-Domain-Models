@@ -17,8 +17,7 @@ function processTrigger(msg, cfg) {
   let articles = [];
   let self = this;
 
-  // Create a session in wice and then make a request to get all articles
-
+  // Create a session in Wice
   wice.createSession(cfg, () => {
 
       let uri = `https://oihwice.wice-net.de/plugin/wp_elasticio_backend/json?method=get_all_articles&cookie=${cfg.cookie}`;
@@ -28,15 +27,12 @@ function processTrigger(msg, cfg) {
           'X-API-KEY': cfg.apikey
         }
       };
-      // Make a get request to get all articles
+      // Make a get request to fetch all articles
       request.get(requestOptions).then((res) => {
 
         let resObj = JSON.parse(res);
         articles = resObj.loop_articles;
         emitData();
-        // console.log(`ARTICLES LENGTH:${resObj.loop_addresses.length}`);
-        // console.log(JSON.stringify(resObj.loop_addresses, undefined, 2));
-
       }, (err) => {
         emitError();
       }).catch((e) => {

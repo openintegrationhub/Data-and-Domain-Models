@@ -19,16 +19,21 @@ function processAction(msg, cfg) {
   let body = msg.body;
   body.same_contactperson = 'auto';
 
-  // Create a session in wice and then make a request to create a new person
+  // First create a session in Wice
   wice.createSession(cfg, () => {
     if (cfg.cookie) {
 
-      let contact = JSON.stringify(body);
-      // TODO: Best practice is to use email but at this time the email is not accesible
-      let uri = `https://oihwice.wice-net.de/plugin/wp_elasticio_backend/json?method=get_all_persons&cookie=${cfg.cookie}&ext_search_do=1&name=${body.name}`;
+      let person = JSON.stringify(body);
       let existingRowid = 0;
-      let requestOptions = {
-        uri,
+
+      let options = {
+        method: 'POST',
+        uri: 'https://oihwice.wice-net.de/plugin/wp_elasticio_backend/json',
+        form: {
+          method: '',
+          cookie: '',
+          data: '',
+        },
         headers: {
           'X-API-KEY': cfg.apikey
         }
@@ -36,36 +41,33 @@ function processAction(msg, cfg) {
 
       checkForExistingUser().then(() => {
         if (existingRowid == 0) {
-          const uri = `https://oihwice.wice-net.de/plugin/wp_elasticio_backend/json?method=insert_contact&cookie=${cfg.cookie}&data=${contact}`;
-
-          request.get(uri).then((res) => {
-            reply = res;
-            emitData();
-          });
+          console.log('Creating a person ...');
+          requestToWice('insert_contact', person);
 
         } else {
-          body.rowid = existingRowid;
-          contact = JSON.stringify(body);
-          const uri = `https://oihwice.wice-net.de/plugin/wp_elasticio_backend/json?method=update_contact&cookie=${cfg.cookie}&data=${contact}`;
-
-          request.get(uri).then((res) => {
-            reply = res;
-            emitData();
-          });
-
+          msg.body.rowid = existingRowid;
+          requestToWice('update_contact', person);
         }
       });
 
+      // Check it the person alredy exists
       function checkForExistingUser() {
+
+        options.form = {
+          method: 'get_all_persons',
+          cookie: cfg.cookie,
+          ext_search_do: 1,
+          name: msg.body.name // Best practice is to use email but at this point of time the email is not accesible
+
+        };
+
         return new Promise((resolve, reject) => {
-          request.get(requestOptions).then((res) => {
+          request.post(options).then((res) => {
             let resObj = JSON.parse(res);
-            console.log(JSON.stringify(resObj));
 
             if (resObj.loop_addresses) {
               existingRowid = resObj.loop_addresses[0].rowid;
-              console.log(`Person alredy exists... ${existingRowid}`);
-              // return true;
+              console.log(`Person alredy exists ... ROWID: ${existingRowid}`);
             }
             resolve(true);
           }).catch((e) => {
@@ -74,18 +76,23 @@ function processAction(msg, cfg) {
         });
       };
 
-      // // Send a request to create a new person
-      // request.get(uri).then((res) => {
-      //   reply = res;
-      //   emitData();
-      //   // let newPerson = JSON.parse(res);
-      //   // console.log(JSON.stringify(newPerson, undefined, 2));
-      // }, (err) => {
-      //   console.log(`ERROR: ${err}`);
-      // }).catch((e) => {
-      //   emitError();
-      //   console.log(`ERROR: ${e}`);
-      // });
+      // Send a request to Wice
+      function requestToWice(method, user) {
+
+        options.form = {
+          method,
+          cookie: cfg.cookie,
+          data: user
+        };
+
+        request.post(options).then((res) => {
+          reply = res;
+          emitData();
+        }).catch((e) => {
+          emitError();
+          console.log(`ERROR: ${e}`);
+        });
+      };
     }
   });
 

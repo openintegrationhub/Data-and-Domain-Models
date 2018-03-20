@@ -18,15 +18,27 @@ function processAction(msg, cfg) {
   let self = this;
   let body = msg.body;
 
-  // Create a session in wice and then make a request to delete a person in wice
+  // Create a session in Wice
   wice.createSession(cfg, () => {
     if (cfg.cookie) {
 
-      let user = JSON.stringify(body);
-      let uri = `https://oihwice.wice-net.de/plugin/wp_elasticio_backend/json?method=delete_person&cookie=${cfg.cookie}&data=${user}`;
+      let person = JSON.stringify(body);
 
-      // Send a request to delete a person in wice
-      request.get(uri).then((res) => {
+      let options = {
+        method: 'POST',
+        uri: 'https://oihwice.wice-net.de/plugin/wp_elasticio_backend/json',
+        form: {
+          method: 'delete_person',
+          cookie: cfg.cookie,
+          data: person
+        },
+        headers: {
+          'X-API-KEY': cfg.apikey
+        }
+      };
+
+      // Send a request to delete the person
+      request.post(options).then((res) => {
         reply = res;
         emitData();
       }, (err) => {

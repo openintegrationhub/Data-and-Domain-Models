@@ -19,23 +19,78 @@ function processAction(msg, cfg) {
   let body = msg.body;
   body.number = 'auto';
 
-  // Create a session in wice and then make a request to create a new article
+  // First create a session in Wice
   wice.createSession(cfg, () => {
     if (cfg.cookie) {
 
       let article = JSON.stringify(body);
-      let uri = `https://oihwice.wice-net.de/plugin/wp_elasticio_backend/json?method=insert_article&cookie=${cfg.cookie}&data=${article}`;
+      let existingRowid = 0;
 
-      // Send a request to create a new article
-      request.get(uri).then((res) => {
-        reply = res;
-        emitData();
-      }, (err) => {
-        console.log(`ERROR: ${err}`);
-      }).catch((e) => {
-        emitError();
-        console.log(`ERROR: ${e}`);
+      let options = {
+        method: 'POST',
+        uri: 'https://oihwice.wice-net.de/plugin/wp_elasticio_backend/json',
+        form: {
+          method: '',
+          cookie: '',
+          data: '',
+        },
+        headers: {
+          'X-API-KEY': cfg.apikey
+        }
+      };
+
+      checkForExistingArticle().then(() => {
+        if (existingRowid == 0) {
+          console.log('Creating an article ...');
+          requestToWice('insert_article', article);
+
+        } else {
+          body.rowid = existingRowid;
+          requestToWice('update_article', article);
+        }
       });
+
+      // Check it the article alredy exists
+      function checkForExistingArticle() {
+
+        options.form = {
+          method: 'get_all_articles',
+          cookie: cfg.cookie,
+          search_filter: body.description
+        };
+
+        return new Promise((resolve, reject) => {
+          request.post(options)
+            .then((res) => {
+              let resObj = JSON.parse(res);
+              if (resObj.loop_articles) {
+                existingRowid = resObj.loop_articles[0].rowid;
+                console.log(`Article alredy exists ... ROWID: ${existingRowid}`);
+              }
+              resolve(true);
+            })
+            .catch((err) => {
+              reject(err);
+            });
+        });
+      };
+
+      // Send a request to Wice
+      function requestToWice(method, article) {
+        options.form = {
+          method,
+          cookie: cfg.cookie,
+          data: article
+        };
+
+        request.post(options).then((res) => {
+          reply = res;
+          emitData();
+        }).catch((e) => {
+          emitError();
+          console.log(`ERROR: ${e}`);
+        });
+      };
     }
   });
 
