@@ -1,0 +1,301 @@
+{
+  "id": "/person",
+  "title": "Person",
+  "description": "Organization object in Snazzy Contacts",
+  "type": "object",
+
+  "definitions": {
+    "rowid": {
+      "type": "number",
+      "description": "Rowid",
+      "example": "197775"
+    },
+    "for_rowid": {
+      "type": "number",
+      "description": "Company rowid in which the person is part of",
+      "example": "194402"
+    },
+    "salutation": {
+      "type": "string",
+      "description": "Salutation",
+      "example": "Herr"
+    },
+    "firstname": {
+      "type": "string",
+      "description": "First name",
+      "example": "John"
+    },
+    "name": {
+      "type": "string",
+      "description": "Last name",
+      "example": "Doe"
+    },
+    "birthday": {
+      "type": "date-time",
+      "description": "Birthday",
+      "example": "1980-11-03"
+    },
+    "private_street": {
+      "type": "string",
+      "description": "Street",
+      "example": "Main Street 124"
+    },
+    "private_zip_code": {
+      "type": "string",
+      "description": "Zip code",
+      "example": "29610"
+    },
+    "private_town": {
+      "type": "string",
+      "description": "Town",
+      "example": "London"
+    },
+    "private_state": {
+      "type": "string",
+      "description": "State",
+      "example": "London District"
+    },
+    "private_country": {
+      "type": "string",
+      "description": "Country",
+      "example": "Great Britain"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone",
+      "example": "+44 20 9812 0574"
+    },
+    "fax": {
+      "type": "string",
+      "description": "Fax",
+      "example": "+44 20 9812 0590"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email",
+      "example": "jdoe@mail.com"
+    },
+    "url": {
+      "type": "string",
+      "description": "Url",
+      "example": "www.johndoe.com"
+    },
+    "updated_name": {
+      "type": "string",
+      "description": "Updated person's name",
+      "example": "Smith"
+    }
+  },
+  "required": [
+    "firstname",
+    "name",
+  ],
+  "properties": {
+    "rowid": {
+      "$ref": "#/definitions/rowid"
+    },
+    "for_rowid": {
+      "$ref": "#/definitions/for_rowid"
+    },
+    "salutation": {
+      "$ref": "#/definitions/salutation"
+    },
+    "firstname": {
+      "$ref": "#/definitions/firstname"
+    },
+    "name": {
+      "$ref": "#/definitions/name"
+    },
+    "birthday": {
+      "$ref": "#/definitions/birthday"
+    },
+    "private_street": {
+      "$ref": "#/definitions/private_street"
+    },
+    "private_zip_code": {
+      "$ref": "#/definitions/private_zip_code"
+    },
+    "private_town": {
+      "$ref": "#/definitions/private_town"
+    },
+    "private_state": {
+      "$ref": "#/definitions/private_state"
+    },
+    "private_country": {
+      "$ref": "#/definitions/private_country"
+    },
+    "phone": {
+      "$ref": "#/definitions/phone"
+    },
+    "fax": {
+      "$ref": "#/definitions/fax"
+    },
+    "email": {
+      "$ref": "#/definitions/email"
+    },
+    "url": {
+      "$ref": "#/definitions/url"
+    }
+  },
+
+  "links": [{
+      "title": "Get all persons",
+      "description": "Get all persons saved by a specific user",
+      "rel": "instances",
+      "href": "mp_contact/json_respond/address_contactperson/json_mainview",
+      "method": "GET",
+      "authentication_needed": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "mp_cookie": {
+            "type": "string",
+            "description": "Cookie",
+            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
+          }
+        }
+      },
+      "targetSchema": {
+        "type": "array",
+        "items":{
+        "properties": {
+            "rowid": {"$ref": "#/definitions/rowid"},
+            "for_rowid": {"$ref": "#/definitions/for_rowid"},
+            "salutation": {"$ref": "#/definitions/salutation"},
+            "firstname": {"$ref": "#/definitions/firstname"},
+            "name": {"$ref": "#/definitions/name"},
+            "birthday": {"$ref": "#/definitions/birthday"},
+            "private_street": {"$ref": "#/definitions/private_street"},
+            "private_zip_code": {"$ref": "#/definitions/private_zip_code"},
+            "private_town": {"$ref": "#/definitions/private_town"},
+            "private_state": {"$ref": "#/definitions/private_state"},
+            "private_country": {"$ref": "#/definitions/private_country"},
+            "phone": {"$ref": "#/definitions/phone"},
+            "fax": {"$ref": "#/definitions/fax"},
+            "email": {"$ref": "#/definitions/email"},
+            "url": {"$ref": "#/definitions/url"}
+        }
+      }
+      }
+    },
+    {
+      "title": "Create a person",
+      "description": "To create a person you have to pass at least a first name and last name.",
+      "rel": "instances",
+      "href": "mp_contact/json_respond/address_contactperson/",
+      "method": "POST",
+      "authentication_needed": true,
+      "required": ["name", "firstname"],
+      "schema": {
+        "type": "object",
+        "properties": {
+          "method": {
+            "type": "string",
+            "description": "Method json_insert in Snazzy Contacts",
+            "example": "json_insert"
+          },
+          "mp_cookie": {
+            "type": "string",
+            "description": "Cookie",
+            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
+          },
+          "data": {
+            "type": "string",
+            "description": "First name and last name",
+            "example": {
+              "firstname": "John",
+              "name": "Doe"
+            }
+          }
+        }
+      },
+      "targetSchema": {
+        "type": "object",
+        "properties": {
+            "rowid": {"$ref": "#/definitions/rowid"},
+            "firstname": {"$ref": "#/definitions/firstname"},
+            "name": {"$ref": "#/definitions/name"}
+        }
+      }
+    },
+    {
+      "title": "Update a person",
+      "description": "To update a person you need the pass person rowid and the field whih you want to update.",
+      "rel": "instances",
+      "href": "mp_contact/json_respond/address_contactperson/",
+      "method": "POST",
+      "authentication_needed": true,
+      "required": ["rowid"],
+      "schema": {
+        "type": "object",
+        "properties": {
+          "method": {
+            "type": "string",
+            "description": "Method json_update in Snazzy Contacts",
+            "example": "json_update"
+          },
+          "mp_cookie": {
+            "type": "string",
+            "description": "Cookie",
+            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
+          },
+          "data": {
+            "type": "string",
+            "description": "User's rowid and field to update",
+            "example": {
+              "rowid": "197775",
+              "name": "Smith"
+            }
+          }
+        }
+      },
+      "targetSchema": {
+        "type": "object",
+        "properties": {
+          "rowid": {"$ref": "#/definitions/rowid"},
+          "firstname": {"$ref": "#/definitions/firstname"},
+          "name": {"$ref": "#/definitions/updated_name"}
+        }
+      }
+    },
+    {
+      "title": "Delete a person",
+      "description": "To delete a person you have to pass person's rowid, which you want to delete. We do NOT really delete the person from our database, we just update the value in field is_deleted to 1 which actually hides the person from the view.",
+      "rel": "instances",
+      "href": "mp_contact/json_respond/address_contactperson/",
+      "method": "POST",
+      "authentication_needed": true,
+      "required": ["rowid"],
+      "schema": {
+        "type": "object",
+        "properties": {
+          "method": {
+            "type": "string",
+            "description": "Method json_update in Snazzy Contacts",
+            "example": "json_update"
+          },
+          "mp_cookie": {
+            "type": "string",
+            "description": "Cookie",
+            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
+          },
+          "data": {
+            "type": "string",
+            "description": "User's rowid which must be deleted",
+            "example": {
+              "rowid": "197775"
+            }
+          }
+        }
+      },
+      "targetSchema": {
+        "type": "object",
+        "properties": {
+            "rowid": {"$ref": "#/definitions/rowid"},
+            "firstname": {"$ref": "#/definitions/firstname"},
+            "name": {"$ref": "#/definitions/name"}
+        }
+      }
+    }
+  ]
+}
