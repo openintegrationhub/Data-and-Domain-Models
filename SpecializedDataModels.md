@@ -61,6 +61,3 @@ https://spacetelescope.github.io/understanding-json-schema/reference/combining.h
 https://spacetelescope.github.io/understanding-json-schema/reference/object.html, see examples in section "Properties".
 * **Nice JSON Validator**
 https://www.jsonschemavalidator.net/, if you want just to try some things out.
-
-
-
