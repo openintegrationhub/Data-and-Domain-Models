@@ -39,11 +39,11 @@
             "sales"
           ]
         },
-        "organizationUid": {
+        "organizationUId": {
           "type": "string",
           "description": "Unique identifier of the organization"
         },
-        "personUid": {
+        "personUId": {
           "type": "string",
           "description": "Unique identifier of the person"
         }
@@ -53,11 +53,11 @@
       "type": "object",
       "description": "Describes the relationship between two persons",
       "properties": {
-        "personUid": {
+        "personUId": {
           "type": "string",
           "description": "Unique identifier of the first person"
         },
-        "personUid2": {
+        "personUId2": {
           "type": "string",
           "description": "Unique identifier of the second person"
         }
@@ -67,11 +67,11 @@
       "type": "object",
       "description": "Describes the relationship between two organizations",
       "properties": {
-        "organizationUid": {
+        "organizationUId": {
           "type": "string",
           "description": "Unique identifier of the first organization"
         },
-        "organizationUid2": {
+        "organizationUId2": {
           "type": "string",
           "description": "Unique identifier of the second organization"
         }
@@ -79,6 +79,10 @@
     }
   },
   "properties": {
+    "relationUId": {
+      "type": "string",
+      "description": "Unique identifier of the relation"
+    },
     "relationshipType": {
       "type": "string",
       "description": "Describes the type of relationship",

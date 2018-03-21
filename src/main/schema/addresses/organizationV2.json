@@ -27,6 +27,10 @@
     }
   },
   "properties": {
+    "organizationUId": {
+      "type": "string",
+      "description": "Unique identifier of the organization"
+    },
     "organizationName": {
       "type": "string",
       "description": "Name of the organization",
