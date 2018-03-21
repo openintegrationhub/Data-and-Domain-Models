@@ -4,11 +4,12 @@
 
 ### 1.1 Definition of Workflows
 
-There should be well documented processes for:
+We have to support the processing and the traceability of changes to a Master Data Model. So there should be well documented processes for:
 
 * Creating a change request  
 * Reviewing a request
 * Approving/rejecting a request
+* Planning/Implementing/Evaluating the necessary changes
 * Releasing/deploying a new version
 
 For these processes we should define:
