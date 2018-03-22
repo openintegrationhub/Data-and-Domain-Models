@@ -3,8 +3,8 @@ The following table represents a mapping table between the Snazzy Contacts Model
 ## Person Object
 |SnazzyContacts Model|Matches|OIH MasterDataModel|
 |---|---|---|
-|rowid| = |(PersonToOrganizationRelationship) personUid|
-|for_rowid| = |(PersonToOrganizationRelationship) organizationUid|
+|rowid| = |(ApplicationRecord) RecordUid|
+|for_rowid| != (Can not properly be mapped) ||
 |salutation| = |salutation|
 |firstname| = |firstName|
 |name| = |lastName|
