@@ -21,7 +21,7 @@ The following table represents a mapping table between the Snazzy Contacts Model
 
 _Note:_ All other OIH MasterDataModel attributes for the person object are not needed.
 
-**SnazzyContact Model coverage:** 100% (15/15)
+**SnazzyContact Model coverage:** ~ 93% (14/15)
 
 ## Organization Object
 
