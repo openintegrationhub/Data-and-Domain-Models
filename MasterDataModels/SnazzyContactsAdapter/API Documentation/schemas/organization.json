@@ -130,26 +130,50 @@
       },
       "targetSchema": {
         "type": "array",
-        "items":{
+        "items": {
           "properties": {
-            "rowid": {"$ref": "#/definitions/rowid"},
-            "name": {"$ref": "#/definitions/name"},
-            "street": {"$ref": "#/definitions/street"},
-            "street_number": {"$ref": "#/definitions/street_number"},
-            "zip_code": {"$ref": "#/definitions/zip_code"},
-            "town": {"$ref": "#/definitions/town"},
-            "state": {"$ref": "#/definitions/state"},
-            "country": {"$ref": "#/definitions/country"},
-            "phone": {"$ref": "#/definitions/phone"},
-            "fax": {"$ref": "#/definitions/fax"},
-            "email": {"$ref": "#/definitions/email"},
-            "url": {"$ref": "#/definitions/url"}
+            "rowid": {
+              "$ref": "#/definitions/rowid"
+            },
+            "name": {
+              "$ref": "#/definitions/name"
+            },
+            "street": {
+              "$ref": "#/definitions/street"
+            },
+            "street_number": {
+              "$ref": "#/definitions/street_number"
+            },
+            "zip_code": {
+              "$ref": "#/definitions/zip_code"
+            },
+            "town": {
+              "$ref": "#/definitions/town"
+            },
+            "state": {
+              "$ref": "#/definitions/state"
+            },
+            "country": {
+              "$ref": "#/definitions/country"
+            },
+            "phone": {
+              "$ref": "#/definitions/phone"
+            },
+            "fax": {
+              "$ref": "#/definitions/fax"
+            },
+            "email": {
+              "$ref": "#/definitions/email"
+            },
+            "url": {
+              "$ref": "#/definitions/url"
+            }
           }
         }
       }
     },
     {
-      "title": "Create an organization",
+      "title": "Create organization",
       "description": "To create an organization you have to pass at least an organization's name.",
       "rel": "instances",
       "href": "mp_contact/json_respond/address_company/",
@@ -181,13 +205,17 @@
       "targetSchema": {
         "type": "object",
         "properties": {
-          "rowid": {"$ref": "#/definitions/rowid"},
-          "name": {"$ref": "#/definitions/name"}
+          "rowid": {
+            "$ref": "#/definitions/rowid"
+          },
+          "name": {
+            "$ref": "#/definitions/name"
+          }
         }
       }
     },
     {
-      "title": "Update an organization",
+      "title": "Update organization",
       "description": "To update an organization you need the pass organization rowid and the field whih you want to update.",
       "rel": "instances",
       "href": "mp_contact/json_respond/address_company/",
@@ -220,13 +248,17 @@
       "targetSchema": {
         "type": "object",
         "properties": {
-          "rowid": {"$ref": "#/definitions/rowid"},
-          "name": {"$ref": "#/definitions/updated_name"}
+          "rowid": {
+            "$ref": "#/definitions/rowid"
+          },
+          "name": {
+            "$ref": "#/definitions/updated_name"
+          }
         }
       }
     },
     {
-      "title": "Delete an organization",
+      "title": "Delete organization",
       "description": "To delete an organization you have to pass organization's rowid, which you want to delete. We do NOT really delete the organization from our database, we just move it into trashbin.",
       "rel": "instances",
       "href": "mp_contact/json_respond/address_company/",
@@ -258,8 +290,12 @@
       "targetSchema": {
         "type": "object",
         "properties": {
-          "rowid": {"$ref": "#/definitions/rowid"},
-          "name": {"$ref": "#/definitions/name"}
+          "rowid": {
+            "$ref": "#/definitions/rowid"
+          },
+          "name": {
+            "$ref": "#/definitions/name"
+          }
         }
       }
     }
