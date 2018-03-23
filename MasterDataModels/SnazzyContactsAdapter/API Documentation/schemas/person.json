@@ -145,16 +145,6 @@
       "href": "mp_contact/json_respond/address_contactperson/json_mainview",
       "method": "GET",
       "authentication_needed": true,
-      "schema": {
-        "type": "object",
-        "properties": {
-          "mp_cookie": {
-            "type": "string",
-            "description": "Cookie",
-            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
-          }
-        }
-      },
       "targetSchema": {
         "type": "array",
         "items": {
@@ -210,32 +200,24 @@
     },
     {
       "title": "Create person",
-      "description": "To create a person you have to pass at least a first name and last name.",
+      "description": "To create a person you have to pass at least first name and last name.",
       "rel": "instances",
-      "href": "mp_contact/json_respond/address_contactperson/",
+      "href": "mp_contact/json_respond/address_contactperson/json_insert",
       "method": "POST",
       "authentication_needed": true,
       "required": ["name", "firstname"],
       "schema": {
         "type": "object",
         "properties": {
-          "method": {
+          "firstname": {
             "type": "string",
-            "description": "Method json_insert in Snazzy Contacts",
-            "example": "json_insert"
+            "description": "First name ",
+            "example":  "John"
           },
-          "mp_cookie": {
+          "name": {
             "type": "string",
-            "description": "Cookie",
-            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
-          },
-          "data": {
-            "type": "string",
-            "description": "First name and last name",
-            "example": {
-              "firstname": "John",
-              "name": "Doe"
-            }
+            "description": "Last name ",
+            "example":"Doe"
           }
         }
       },
@@ -256,32 +238,24 @@
     },
     {
       "title": "Update person",
-      "description": "To update a person you need the pass person rowid and the field whih you want to update.",
+      "description": "To update a person you need to pass person's rowid and the field whih you want to update.",
       "rel": "instances",
-      "href": "mp_contact/json_respond/address_contactperson/",
+      "href": "mp_contact/json_respond/address_contactperson/json_update",
       "method": "POST",
       "authentication_needed": true,
       "required": ["rowid"],
       "schema": {
         "type": "object",
         "properties": {
-          "method": {
-            "type": "string",
-            "description": "Method json_update in Snazzy Contacts",
-            "example": "json_update"
-          },
-          "mp_cookie": {
-            "type": "string",
-            "description": "Cookie",
-            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
-          },
-          "data": {
+          "rowid": {
             "type": "string",
             "description": "User's rowid and field to update",
-            "example": {
-              "rowid": "197775",
-              "name": "Smith"
-            }
+            "example":  "197775"
+          },
+          "name": {
+            "type": "string",
+            "description": "User's name to update",
+            "example": "Smith"
           }
         }
       },
@@ -304,29 +278,17 @@
       "title": "Delete person",
       "description": "To delete a person you have to pass person's rowid, which you want to delete. We do NOT really delete the person from our database, we just update the value in field is_deleted to 1 which actually hides the person from the view.",
       "rel": "instances",
-      "href": "mp_contact/json_respond/address_contactperson/",
+      "href": "mp_contact/json_respond/address_contactperson/json_update",
       "method": "POST",
       "authentication_needed": true,
       "required": ["rowid"],
       "schema": {
         "type": "object",
         "properties": {
-          "method": {
-            "type": "string",
-            "description": "Method json_update in Snazzy Contacts",
-            "example": "json_update"
-          },
-          "mp_cookie": {
-            "type": "string",
-            "description": "Cookie",
-            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
-          },
-          "data": {
+          "rowid": {
             "type": "string",
             "description": "User's rowid which must be deleted",
-            "example": {
-              "rowid": "197775"
-            }
+            "example": "197775"
           }
         }
       },

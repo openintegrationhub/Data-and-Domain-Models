@@ -118,16 +118,6 @@
       "rel": "instances",
       "href": "mp_contact/json_respond/address_company/json_mainview",
       "method": "GET",
-      "schema": {
-        "type": "object",
-        "properties": {
-          "mp_cookie": {
-            "type": "string",
-            "description": "Cookie",
-            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
-          }
-        }
-      },
       "targetSchema": {
         "type": "array",
         "items": {
@@ -174,31 +164,19 @@
     },
     {
       "title": "Create organization",
-      "description": "To create an organization you have to pass at least an organization's name.",
+      "description": "To create an organization you have to pass at least organization's name.",
       "rel": "instances",
-      "href": "mp_contact/json_respond/address_company/",
+      "href": "mp_contact/json_respond/address_company/json_insert",
       "method": "POST",
       "authentication_needed": true,
       "required": ["name"],
       "schema": {
         "type": "object",
         "properties": {
-          "method": {
-            "type": "string",
-            "description": "Method json_insert in Snazzy Contacts",
-            "example": "json_insert"
-          },
-          "mp_cookie": {
-            "type": "string",
-            "description": "Cookie",
-            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
-          },
-          "data": {
+          "name": {
             "type": "string",
             "description": "Organization's name",
-            "example": {
-              "name": "Your Compnay Ltd."
-            }
+            "example": "Your Compnay Ltd."
           }
         }
       },
@@ -216,32 +194,24 @@
     },
     {
       "title": "Update organization",
-      "description": "To update an organization you need the pass organization rowid and the field whih you want to update.",
+      "description": "To update an organization you need to pass organization's rowid and the field whih you want to update.",
       "rel": "instances",
-      "href": "mp_contact/json_respond/address_company/",
+      "href": "mp_contact/json_respond/address_company/json_update",
       "method": "POST",
       "authentication_needed": true,
       "required": ["rowid"],
       "schema": {
         "type": "object",
         "properties": {
-          "method": {
+          "rowid": {
             "type": "string",
-            "description": "Method json_update in Snazzy Contacts",
-            "example": "json_update"
+            "description": "Organization's rowid to update",
+            "example": "197686",
           },
-          "mp_cookie": {
+          "name": {
             "type": "string",
-            "description": "Cookie",
-            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
-          },
-          "data": {
-            "type": "string",
-            "description": "Organization's rowid and field to update",
-            "example": {
-              "rowid": "197686",
-              "name": "Big Company Ltd"
-            }
+            "description": "Organization's field to update",
+            "example": "Big Company Ltd"
           }
         }
       },
@@ -261,29 +231,17 @@
       "title": "Delete organization",
       "description": "To delete an organization you have to pass organization's rowid, which you want to delete. We do NOT really delete the organization from our database, we just move it into trashbin.",
       "rel": "instances",
-      "href": "mp_contact/json_respond/address_company/",
+      "href": "mp_contact/json_respond/address_company/json_update",
       "method": "POST",
       "authentication_needed": true,
       "required": ["rowid"],
       "schema": {
         "type": "object",
         "properties": {
-          "method": {
-            "type": "string",
-            "description": "Method json_update in Snazzy Contacts",
-            "example": "json_update"
-          },
-          "mp_cookie": {
-            "type": "string",
-            "description": "Cookie",
-            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
-          },
-          "data": {
+          "rowid": {
             "type": "string",
             "description": "Organization's rowid which must be deleted",
-            "example": {
-              "rowid": "197686"
-            }
+            "example": "197686"
           }
         }
       },

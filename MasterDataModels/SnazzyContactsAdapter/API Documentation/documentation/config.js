@@ -30,8 +30,13 @@ export default {
           type: 'string',
           example: '[YOUR_API_KEY]',
           description: 'API Key from Snazzy Contacts'
+        },
+        'mp_cookie': {
+          type: 'string',
+          example: 'dqerpzf8bpj7yoc9kryzbf8zx8e4funj',
+          description: 'Cookie from Snazzy Contacts'
         }
       },
-    },
+    }
   },
 };
