@@ -117,22 +117,12 @@
       "title": "Get a single organization",
       "description": "Get a single organization saved by a specific user",
       "rel": "instances",
-      "href": "plugin/wp_elasticio_backend/json",
+      "href": "plugin/wp_elasticio_backend/json?method=get_company",
       "method": "GET",
       "authentication_needed": true,
       "schema": {
         "type": "object",
         "properties": {
-          "method": {
-            "type": "string",
-            "description": "Method get_company in Wice",
-            "example": "get_company"
-          },
-          "cookie": {
-            "type": "string",
-            "description": "Cookie",
-            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
-          },
           "pkey": {
             "type": "string",
             "description": "Rowid",
@@ -186,24 +176,9 @@
       "title": "Get all organizations",
       "description": "Get all organizations",
       "rel": "self",
-      "href": "plugin/wp_elasticio_backend/json",
+      "href": "plugin/wp_elasticio_backend/json?method=get_all_companies",
       "method": "GET",
       "authentication_needed": true,
-      "schema": {
-        "type": "object",
-        "properties": {
-          "method": {
-            "type": "string",
-            "description": "Method get_all_companies in Wice",
-            "example": "get_all_companies"
-          },
-          "cookie": {
-            "type": "string",
-            "description": "Cookie",
-            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
-          }
-        }
-      },
       "targetSchema": {
         "type": "array",
         "items": {
@@ -252,29 +227,17 @@
       "title": "Create organization",
       "description": "To create an organization you have to pass organization's name.",
       "rel": "instances",
-      "href": "plugin/wp_elasticio_backend/json",
+      "href": "plugin/wp_elasticio_backend/json?method=insert_company",
       "method": "POST",
       "authentication_needed": true,
       "required": ["name"],
       "schema": {
         "type": "object",
         "properties": {
-          "method": {
-            "type": "string",
-            "description": "Method insert_company in Wice",
-            "example": "insert_company"
-          },
-          "cookie": {
-            "type": "string",
-            "description": "Cookie",
-            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
-          },
-          "data": {
+          "name": {
             "type": "string",
             "description": "Organization's name",
-            "example": {
-              "name": "Your Compnay Ltd."
-            }
+            "example": "Your Compnay Ltd."
           }
         }
       },
@@ -292,32 +255,24 @@
     },
     {
       "title": "Update organization",
-      "description": "To update an organization you need the pass organization rowid and the field whitch you want to update.",
+      "description": "To update an organization you need to pass organization rowid and the field which you want to update.",
       "rel": "instances",
-      "href": "plugin/wp_elasticio_backend/json",
+      "href": "plugin/wp_elasticio_backend/json?method=update_company",
       "method": "POST",
       "authentication_needed": true,
       "required": ["rowid"],
       "schema": {
         "type": "object",
         "properties": {
-          "method": {
+          "rowid": {
             "type": "string",
-            "description": "Method update_company in Wice",
-            "example": "update_company"
+            "description": "Organization's rowid to update",
+            "example": "197775"
           },
-          "cookie": {
+          "name": {
             "type": "string",
-            "description": "Cookie",
-            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
-          },
-          "data": {
-            "type": "string",
-            "description": "Organization's name",
-            "example": {
-              "rowid": "197775",
-              "name": "Big Company Ltd"
-            }
+            "description": "Organization's name to update",
+            "example":"Big Company Ltd"
           }
         }
       },
@@ -365,31 +320,19 @@
     },
     {
       "title": "Delete organization",
-      "description": "To delete an organization you have to pass organization's rowid, which you want to delete. We do NOT really delete the person from our database, we just update the value in field is_deleted to 1 which actually hides the person from the view.",
+      "description": "To delete an organization you have to pass organization's rowid, which you want to delete. We do NOT really delete the organization from our database, we just move it to trash bin.",
       "rel": "instances",
-      "href": "plugin/wp_elasticio_backend/json",
+      "href": "plugin/wp_elasticio_backend/json?method=delete_company",
       "method": "POST",
       "authentication_needed": true,
       "required": ["rowid"],
       "schema": {
         "type": "object",
         "properties": {
-          "method": {
-            "type": "string",
-            "description": "Method delete_company in Wice",
-            "example": "delete_company"
-          },
-          "cookie": {
-            "type": "string",
-            "description": "Cookie",
-            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
-          },
-          "data": {
+          "rowid": {
             "type": "string",
             "description": "Organization's rowid which must be deleted",
-            "example": {
-              "rowid": "197775"
-            }
+            "example":  "197775"
           }
         }
       },

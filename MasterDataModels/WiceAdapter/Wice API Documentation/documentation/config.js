@@ -31,6 +31,11 @@ export default {
                     example: '[YOUR_API_KEY]',
                     description: 'API Key from Wice CRM',
                 },
+                'cookie': {
+                    type: 'string',
+                    example: '[YOUR_COOKIE]',
+                    description: 'Cookie from Wice CRM',
+                }
             },
         },
     },

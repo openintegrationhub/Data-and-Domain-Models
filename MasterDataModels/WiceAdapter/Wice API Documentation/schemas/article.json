@@ -94,22 +94,12 @@
       "title": "Get a single article",
       "description": "Get a single article saved by a specific user",
       "rel": "instances",
-      "href": "plugin/wp_elasticio_backend/json",
+      "href": "plugin/wp_elasticio_backend/json?method=get_article",
       "method": "GET",
       "authentication_needed": true,
       "schema": {
         "type": "object",
         "properties": {
-          "method": {
-            "type": "string",
-            "description": "Method get_article in Wice",
-            "example": "get_article"
-          },
-          "cookie": {
-            "type": "string",
-            "description": "Cookie",
-            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
-          },
           "show_detailview": {
             "type": "string",
             "description": "Rowid",
@@ -151,24 +141,9 @@
       "title": "Get all articles",
       "description": "Get all articles saved by a specific user",
       "rel": "instances",
-      "href": "plugin/wp_elasticio_backend/json",
+      "href": "plugin/wp_elasticio_backend/json?method=get_all_articles",
       "method": "GET",
       "authentication_needed": true,
-      "schema": {
-        "type": "object",
-        "properties": {
-          "method": {
-            "type": "string",
-            "description": "Method get_all_articles in Wice",
-            "example": "get_all_articles"
-          },
-          "cookie": {
-            "type": "string",
-            "description": "Cookie",
-            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
-          }
-        }
-      },
       "targetSchema": {
         "type": "array",
         "items": {
@@ -205,29 +180,17 @@
       "title": "Create article",
       "description": "To create an article you have to pass a name(in Wice called: description).",
       "rel": "instances",
-      "href": "plugin/wp_elasticio_backend/json",
+      "href": "plugin/wp_elasticio_backend/json?method=insert_article",
       "method": "POST",
       "authentication_needed": true,
       "required": ["description"],
       "schema": {
         "type": "object",
         "properties": {
-          "method": {
-            "type": "string",
-            "description": "Method insert_article in Wice",
-            "example": "insert_article"
-          },
-          "cookie": {
-            "type": "string",
-            "description": "Cookie",
-            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
-          },
-          "data": {
+          "description": {
             "type": "string",
             "description": "Article",
-            "example": {
-              "description": "Retaining bolt"
-            }
+            "example":  "Retaining bolt"
           }
         }
       },
@@ -237,7 +200,7 @@
           "rowid": {
             "$ref": "#/definitions/rowid"
           },
-          "firstname": {
+          "description": {
             "$ref": "#/definitions/description"
           }
         }
@@ -245,32 +208,24 @@
     },
     {
       "title": "Update article",
-      "description": "To update an article you need the pass article's rowid and the field whih you want to update.",
+      "description": "To update an article you need to pass article's rowid and the field which you want to update.",
       "rel": "instances",
-      "href": "plugin/wp_elasticio_backend/json",
+      "href": "plugin/wp_elasticio_backend/json?method=update_article",
       "method": "POST",
       "authentication_needed": true,
       "required": ["rowid"],
       "schema": {
         "type": "object",
         "properties": {
-          "method": {
+          "rowid": {
             "type": "string",
-            "description": "Method update_article in Wice",
-            "example": "update_article"
+            "description": "Articles's rowid to update",
+            "example": "5711"
           },
-          "cookie": {
+          "description": {
             "type": "string",
-            "description": "Cookie",
-            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
-          },
-          "data": {
-            "type": "string",
-            "description": "User's rowid and field to update",
-            "example": {
-              "rowid": "5711",
-              "name": "Bolt"
-            }
+            "description": "Articles's field to update",
+            "example": "Bolt"
           }
         }
       },
@@ -308,29 +263,17 @@
       "title": "Delete article",
       "description": "To delete an article you have to pass article's rowid, which you want to delete.",
       "rel": "instances",
-      "href": "plugin/wp_elasticio_backend/json",
+      "href": "plugin/wp_elasticio_backend/json?method=delete_article",
       "method": "POST",
       "authentication_needed": true,
       "required": ["rowid"],
       "schema": {
         "type": "object",
         "properties": {
-          "method": {
-            "type": "string",
-            "description": "Method delete_article in Wice",
-            "example": "delete_article"
-          },
-          "cookie": {
-            "type": "string",
-            "description": "Cookie",
-            "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
-          },
-          "data": {
+          "rowid": {
             "type": "string",
             "description": "Article's rowid",
-            "example": {
-              "rowid": "5711"
-            }
+            "example": "5711"
           }
         }
       },

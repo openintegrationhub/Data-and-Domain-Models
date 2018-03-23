@@ -33,7 +33,7 @@ export default {
         },
         'mp_cookie': {
           type: 'string',
-          example: 'dqerpzf8bpj7yoc9kryzbf8zx8e4funj',
+          example: '[YOUR_COOKIE]',
           description: 'Cookie from Snazzy Contacts'
         }
       },
