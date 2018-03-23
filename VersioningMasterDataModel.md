@@ -33,13 +33,47 @@ Changes of a Master Data Model may have impacts on other Open Integration Hub co
 * Which **impacts on Data Hub** (data migration …) do Master Data Model changes have?
 * Which **impacts on Connector versioning** do Master Data Model changes have?
 * Which **impacts on REST-API**  versioning do Master Data Model changes have?
+* Does the multi tenancy capability of an APP require different Master Data Model Versions (or different Special Data
+ Model Versions)?
 * Shall it be possible to run **APPs which use different versions** of a master data model?
 * How shall a **version name pattern** look like? Which impacts on the pattern do the kind of allowed changes have?
 * Which **Software Configuration Management** tool do we use? How is the process model of Master Data Model versioning 
 and upgrading implemented there?
 * Which correlations are between **Master Data Models, private Master Data Models and Specialized Master Data Models**? 
-Do they possibly influence some of the decisions described above?
+Do they possibly influence some of the decisions described above? Is there a 1:1 relation between Master Data Models 
+and Specialized Data Models?
 * Is it possible to derive **“Best Practices” for the definition of private Master Data Models**?
+
+
+## 2 Discussion of the possible solutions
+**Completely under construction**
+
+### 2.1 Definition and Workflows
+
+### 2.2 Technical Concept and Solution
+
+**The core issue is: What must be done if the MDM changes?**
+First easy step shall be: Sketch of what has to be done if a new optional attribute is added.
+
+#### 2.2.1 Impacts on Connectors
+
+Transformer: Mapping/JSONataExpression must be extended by the new attribute.
+
+#### 2.2.2 Impacts on REST APIs
+
+##### 2.2.2.1 REST API OIH Model
+
+##### 2.2.2.2 REST API ISV Model
+
+#### 2.2.3 Impacts on Data Hub
+Migration of the corresponding data table, default value for new attribute
+
+#### 2.2.4 Impacts on Specialized Data Models and Private Data Models
+* Possible name conflicts
+* New MDM-Attribute is already attribute of SDM/PDM
+
+
+
 
 
 
