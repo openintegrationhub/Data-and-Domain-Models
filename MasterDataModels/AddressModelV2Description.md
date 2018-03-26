@@ -44,6 +44,7 @@ Third iteration of the address data model description. vCard attributes added to
 |busyCalendar|URI||URL which described if the person is available or busy|http://www.example.com/busy/janedoe||
 |photo|URI||Photo related to the person|http://example.org/photo.jpg||
 |anniversary|date-time||Anniversary of the person|2018-07-01||
+|[category](#category)|Array (of category objects)||Category the person falls into|A category object||
 |[address](#address)|Array (of address objects)||Address of the person|An address object||
 |[phone](#phone)|Array (of phone objectse)||Phone of the person|A phone object||
 |[fax](#fax)|Array (of fax objects)||Fax of the person|A fax object||
@@ -61,6 +62,7 @@ Third iteration of the address data model description. vCard attributes added to
 |createdAt|Date-time||Creation date of the organization within the application|"06-02-2018"||
 |updatedAt|Date-time||Last modifacation date of the organization within the application|"10-02-2018"||
 |logo|URI||Logo of the organization|"http://example.org/logo.png"||
+|[category](#category)|Array (of category objects)||Category the organization falls into|A category object||
 |[address](#address)|Array (of address objects)||Address of the organization|An address object||
 |[phone](#phone)|Array (of phone objects)||Phone of the organization|A phone object||
 |[fax](#fax)|Array (of fax objects)||Fax of the organization|A fax object||
@@ -94,11 +96,11 @@ Third iteration of the address data model description. vCard attributes added to
 |primaryContact|String||Primary contact for the address|"Herbert Hermann"||
 |addressType|String||Type of the address|"Shipping address"|"Shipping Address", "Billing Address", "Post Address"|
 
-## OrganizationType
+## Category
 
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|organizationGroup|String|enum||"Customer"|"customer", "supplier", "parent company", "subsidiary"|
+|categoryName|String|enum||"Customer"|"customer", "supplier", "parent company", "subsidiary"|
 |abcType|String|enum|||"a", "b", "c"|
 
 ## Url
