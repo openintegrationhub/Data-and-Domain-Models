@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/organizationV2.json",
+  "title": "Organization",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://github.com/philecs/philecs/blob/master/oih-data-record.json"
+    }
+  ],
+  "definitions": {
+    "OrganizationType": {
+      "type": "object",
+      "description": "Describes the groups the organization belongs to",
+      "properties": {
+        "organizationGroup": {
+          "type": "string",
+          "enum": ["customer", "supplier", "partent company", "subsidiary"],
+          "description": "Name of the organization group"
+        },
+        "abcType": {
+          "type": "string",
+          "enum": ["a","b","c", ""],
+          "description": "Categorizes customer into a/b/c groups"
+        }
+      }
+    }
+  },
+  "properties": {
+    "organizationName": {
+      "type": "string",
+      "description": "Name of the organization",
+      "example": "Great Company"
+    },
+    "logo": {
+      "type": "string",
+      "description": "Logo of the organization",
+      "example": "http://example.org/logo.png"
+    },
+    "addresses": {
+      "type": "array",
+      "items": {
+        "$ref": "/sharedDefinitionsV2.json#definitions/address"
+      }
+    },
+    "contactData": {
+      "type": "array",
+      "items": {
+        "$ref": "/sharedDefinitionsV2.json#definitions/contactData"
+      }
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+          "$ref": "/sharedDefinitionsV2.json#definitions/category"
+      }
+    },
+    "calendars": {
+      "type": "array",
+      "items": {
+          "$ref": "/sharedDefinitionsV2.json#definitions/calendar"
+      }
+    },
+    "personToOrganizationRelationship":
+    {
+      "type": "array",
+      "description": "Describes the relationships of a organization to a person",
+      "items": {
+        "allOf": [
+          {
+          "$ref": "/relationV2.json"
+          }
+        ]
+      }
+    },
+    "OrganizationToOrganizationRelationship":
+    {
+      "type": "array",
+      "description": "Describes the relationships between two organizations",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "/relationV2.json"
+          }
+        ]
+      }
+    }
+  }
+}
