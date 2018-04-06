@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://github.com/philecs/philecs/blob/master/OIHMasterDataModelAddressesRelation.json",
+  "$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/relationsV2.json",
   "title": "Relationship",
   "description": "Describes the relationship between a person and an organization",
   "type": "object",
@@ -25,6 +25,14 @@
       "type": "object",
       "description": "Describes the relationship between a person and an organization",
       "properties": {
+        "organizationUId": {
+          "type": "string",
+          "description": "Unique identifier of the organization"
+        },
+        "personUId": {
+          "type": "string",
+          "description": "Unique identifier of the person"
+        },
         "function": {
           "type": "string",
           "description": "Function of the person within the organization",
@@ -38,14 +46,6 @@
           "examples": [
             "sales"
           ]
-        },
-        "organizationUId": {
-          "type": "string",
-          "description": "Unique identifier of the organization"
-        },
-        "personUId": {
-          "type": "string",
-          "description": "Unique identifier of the person"
         }
       }
     },
@@ -79,16 +79,14 @@
     }
   },
   "properties": {
-    "relationUId": {
-      "type": "string",
-      "description": "Unique identifier of the relation"
-    },
     "relationshipType": {
       "type": "string",
       "description": "Describes the type of relationship",
       "examples": [
         "employee",
-        "founder"
+        "same person",
+        "colleague",
+        "same organization"
       ]
     }
   }

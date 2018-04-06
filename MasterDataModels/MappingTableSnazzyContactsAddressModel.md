@@ -1,10 +1,10 @@
-The following table represents a mapping table between the Snazzy Contacts Model and the [Open Integration Hub Master Data Model V2](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/ExtenstionAddressModel/MasterDataModels/Assets/OIHMasterDataModelAddresses_V2.svg).
+The following table represents a mapping table between the Snazzy Contacts Model and the [Open Integration Hub Master Data Model V2](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/ExtenstionAddressModel/MasterDataModels/Assets/MasterDataModelAddressesV2.svg).
 
 ## Person Object
 |SnazzyContacts Model|Matches|OIH MasterDataModel|
 |---|---|---|
 |rowid| = |(ApplicationRecord) RecordUid|
-|for_rowid| != (Can not properly be mapped) ||
+|for_rowid||(Will be stored in a PersonToOrganizationRelationship)|
 |salutation| = |salutation|
 |firstname| = |firstName|
 |name| = |lastName|
@@ -14,10 +14,14 @@ The following table represents a mapping table between the Snazzy Contacts Model
 |private_town| = |(address) city|
 |private_state| = |(address) region|
 |private_country| = |(address) country|
-|phone| = |(phone) phoneNumber|
-|fax| = |(fax) faxNumber|
-|email| = |(email) email|
-|url| = |(url) url|
+|phone| = |(ContactData) value|
+|phone| = |(ContactData) type|
+|fax| = |(ContactData) value|
+|fax| = |(ContactData) type|
+|email| = |(ContactData) value|
+|email| = |(ContactData) type|
+|url| = |(ContactData) value|
+|url| = |(ContactData) type|
 
 _Note:_ All other OIH MasterDataModel attributes for the person object are not needed.
 
@@ -34,10 +38,14 @@ _Note:_ All other OIH MasterDataModel attributes for the person object are not n
 |town| = |(address) city|
 |state| = |(address) region|
 |country| = |(address) country|
-|phone| = |(phone) phoneNumber|
-|fax| = |(fax) faxNumber|
-|email| = |(email) email|
-|url| = |(url) url|
+|phone| = |(ContactData) value|
+|phone| = |(ContactData) type|
+|fax| = |(ContactData) value|
+|fax| = |(ContactData) type|
+|email| = |(ContactData) value|
+|email| = |(ContactData) type|
+|url| = |(ContactData) value|
+|url| = |(ContactData) type|
 
 _Note:_ All other OIH MasterDataModel attributes for the organization object are not needed.
 

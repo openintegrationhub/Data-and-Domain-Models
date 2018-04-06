@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://github.com/philecs/philecs/blob/master/OIHMasterDataModelAddressesOrganization.json",
+  "$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/organizationV2.json",
   "title": "Organization",
   "type": "object",
   "allOf": [
@@ -27,70 +27,38 @@
     }
   },
   "properties": {
-    "organizationUId": {
-      "type": "string",
-      "description": "Unique identifier of the organization"
-    },
     "organizationName": {
       "type": "string",
       "description": "Name of the organization",
       "example": "Great Company"
-    },
-    "createdAt": {
-      "type": "string",
-      "description": "Creation date of the data record",
-      "example": "10-02-2018"
-    },
-    "updatedAt": {
-      "type": "string",
-      "description": "Modification date of the data record",
-      "example": "01-03-2018"
     },
     "logo": {
       "type": "string",
       "description": "Logo of the organization",
       "example": "http://example.org/logo.png"
     },
-    "address": {
+    "addresses": {
       "type": "array",
       "items": {
-        "$ref": "https://github.com/philecs/philecs/blob/master/SharedDefinitionsAddresses.json#/definitions/Address"
+        "$ref": "/sharedDefinitionsV2.json#definitions/address"
       }
     },
-    "phone": {
+    "contactData": {
       "type": "array",
       "items": {
-        "$ref": "https://github.com/philecs/philecs/blob/master/SharedDefinitionsAddresses.json#/definitions/Phone"
+        "$ref": "/sharedDefinitionsV2.json#definitions/contactData"
       }
     },
-    "fax": {
+    "categories": {
       "type": "array",
       "items": {
-        "$ref": "https://github.com/philecs/philecs/blob/master/SharedDefinitionsAddresses.json#/definitions/Fax"
+          "$ref": "/sharedDefinitionsV2.json#definitions/category"
       }
     },
-    "email": {
+    "calendars": {
       "type": "array",
       "items": {
-        "$ref": "https://github.com/philecs/philecs/blob/master/SharedDefinitionsAddresses.json#/definitions/Email"
-      }
-    },
-    "social": {
-      "type": "array",
-      "items": {
-        "$ref": "https://github.com/philecs/philecs/blob/master/SharedDefinitionsAddresses.json#/definitions/Social"
-      }
-    },
-    "url": {
-      "type": "array",
-      "items": {
-        "$ref": "https://github.com/philecs/philecs/blob/master/SharedDefinitionsAddresses.json#/definitions/Url"
-      }
-    },
-    "organizationCategory": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/OrganizationType"
+          "$ref": "/sharedDefinitionsV2.json#definitions/calendar"
       }
     },
     "personToOrganizationRelationship":
@@ -100,7 +68,7 @@
       "items": {
         "allOf": [
           {
-            "$ref": "https://github.com/philecs/philecs/blob/master/OIHMasterDataModelAddressesRelation.json"
+          "$ref": "/relationV2.json"
           }
         ]
       }
@@ -112,7 +80,7 @@
       "items": {
         "allOf": [
           {
-            "$ref": "https://github.com/philecs/philecs/blob/master/OIHMasterDataModelAddressesRelation.json"
+            "$ref": "/relationV2.json"
           }
         ]
       }

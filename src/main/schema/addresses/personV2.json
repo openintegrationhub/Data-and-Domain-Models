@@ -1,12 +1,12 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://github.com/philecs/philecs/blob/master/OIHMasterDataModelAddressesPerson.json",
+  "$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/personV2.json",
   "title": "Person",
   "description": "Describes a natural person",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://github.com/philecs/philecs/blob/master/oih-data-record.json"
+      "$ref": "../oih-data-record.json"
     }
   ],
   "properties": {
@@ -17,7 +17,6 @@
     "title":
     {
       "type": "string",
-      "enum": ["Prof.", "Prof.Dr.", "Dr.", "Dr.Dr.", "Prof.Dr.Dr.", "Ing.", "Dipl.Ing", "Mag.", "Ph.D.", ""],
       "description": "Title of the person",
       "examples": [
         "Dr."
@@ -58,7 +57,7 @@
     "gender":
     {
       "type": "string",
-      "enum": ["male", "female", "intersexual", ""],
+      "enum": ["male", "female", "intersexual"],
       "description": "Gender of the person"
     },
     "birthday":
@@ -71,16 +70,6 @@
       "type": "string",
       "description": "Individual notes for the person"
     },
-    "createdAt":
-    {
-      "type": "string",
-      "description": "Creation date-time of the person data set"
-    },
-    "updatedAt":
-    {
-      "type": "string",
-      "description": "Last modification date-time of the person data set"
-    },
     "displayName":
     {
       "type": "string",
@@ -88,22 +77,6 @@
       "examples": [
         "mscheinder",
         "heNiha"
-      ]
-    },
-    "tags":
-    {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "owner":
-    {
-      "type": "string",
-      "description": "Creator/owner of the data set of the person",
-      "examples": [
-        "Herbert Hermann",
-        "Silke Schaefer"
       ]
     },
     "language":
@@ -128,30 +101,6 @@
         "Software architect"
       ]
     },
-    "calendar":
-    {
-      "type": "string",
-      "description": "URI to the calendar of the person",
-      "examples": [
-        "http://www.example.com/calA"
-      ]
-    },
-    "requestCalendar":
-    {
-      "type": "string",
-      "description": "URI to request an appointment with the person",
-      "examples": [
-        "janedoe@example.com"
-      ]
-    },
-    "busyCalendar":
-    {
-      "type": "string",
-      "description": "URI to get see when the person is available/blocked",
-      "examples": [
-        "http://www.example.com/busy/janedoe"
-      ]
-    },
     "photo":
     {
       "type": "string",
@@ -165,51 +114,30 @@
       "type": "string",
       "description": "Anniversary of the person"
     },
-    "email":
-    {
-      "type": "array",
-      "items": {
-        "$ref": "https://github.com/philecs/philecs/blob/master/SharedDefinitionsAddresses.json#/definitions/Email"
-      }
-    },
-    "social":
-    {
-      "type": "array",
-      "description": "Social media accounts of the person",
-      "items": {
-        "$ref": "https://github.com/philecs/philecs/blob/master/SharedDefinitionsAddresses.json#/definitions/Social"
-      }
-    },
-    "phone":
-    {
-      "type": "array",
-      "description": "Social media accounts of the person",
-      "items": {
-        "$ref": "https://github.com/philecs/philecs/blob/master/SharedDefinitionsAddresses.json#/definitions/Phone"
-      }
-    },
-    "url":
-    {
-      "type": "array",
-      "description": "Social media accounts of the person",
-      "items": {
-        "$ref": "https://github.com/philecs/philecs/blob/master/SharedDefinitionsAddresses.json#/definitions/Url"
-      }
-    },
-    "fax":
-    {
-      "type": "array",
-      "description": "Social media accounts of the person",
-      "items": {
-        "$ref": "https://github.com/philecs/philecs/blob/master/SharedDefinitionsAddresses.json#/definitions/Fax"
-      }
-    },
     "address":
     {
       "type": "array",
       "description": "Social media accounts of the person",
       "items": {
-        "$ref": "https://github.com/philecs/philecs/blob/master/SharedDefinitionsAddresses.json#/definitions/Address"
+        "$ref": "#/sharedDefinitionsV2.json#definitions/address"
+      }
+    },
+    "contactData": {
+      "type": "array",
+      "items": {
+        "$ref": "/sharedDefinitionsV2.json#definitions/contactData"
+      }
+    },
+    "calendars": {
+      "type": "array",
+      "items": {
+          "$ref": "/sharedDefinitionsV2.json#definitions/calendar"
+      }
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+          "$ref": "/sharedDefinitionsV2.json#definitions/category"
       }
     },
     "personToOrganizationRelationship":
@@ -219,7 +147,7 @@
       "items": {
         "allOf": [
           {
-            "$ref": "https://github.com/philecs/philecs/blob/master/OIHMasterDataModelAddressesRelation.json"
+            "$ref": "/relationsV2.json"
           }
         ]
       }
@@ -231,7 +159,7 @@
       "items": {
         "allOf": [
           {
-            "$ref": "https://github.com/philecs/philecs/blob/master/OIHMasterDataModelAddressesRelation.json"
+            "$ref": "/relationsV2.json"
           }
         ]
       }
