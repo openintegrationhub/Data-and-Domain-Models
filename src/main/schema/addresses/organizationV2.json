@@ -8,24 +8,6 @@
       "$ref": "https://github.com/philecs/philecs/blob/master/oih-data-record.json"
     }
   ],
-  "definitions": {
-    "OrganizationType": {
-      "type": "object",
-      "description": "Describes the groups the organization belongs to",
-      "properties": {
-        "organizationGroup": {
-          "type": "string",
-          "enum": ["customer", "supplier", "partent company", "subsidiary"],
-          "description": "Name of the organization group"
-        },
-        "abcType": {
-          "type": "string",
-          "enum": ["a","b","c", ""],
-          "description": "Categorizes customer into a/b/c groups"
-        }
-      }
-    }
-  },
   "properties": {
     "organizationName": {
       "type": "string",
