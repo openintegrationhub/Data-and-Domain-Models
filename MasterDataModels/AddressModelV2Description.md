@@ -18,7 +18,6 @@ Third iteration of the address data model description.
 
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|id|String|required|Unique identifier of the person|1|-|
 |title|String|-|Academic degree of the person|"Dr."||
 |salutation|String|-|Salutation of the person|"Mrs."|-|
 |firstname|String|-|First name of the person|"Silke|-|
