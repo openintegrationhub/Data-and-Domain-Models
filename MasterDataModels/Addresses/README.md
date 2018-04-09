@@ -1,19 +1,33 @@
 **Table of Contents**
 
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Introduction](#introduction)
+- [Basic Ideas](#basic-ideas)
+	- [Duplicates](#duplicates)
+	- [Relations](#relations)
+- [Content](#content)
+	- [UML Diagram](#uml-diagram)
+	- [JSON Schema](#json-schema)
+	- [Description Table](#description-table)
+- [Additional Content](#additional-content)
+
+<!-- /TOC -->
 
 # Introduction
 
 In the following the master data model for addresses is explained in detail. As for every Open Integration Hub Master Data Model, an UML class diagram, a JSON schema as well as a descrption table exists.
 
-## Basis Ideas
+# Basic Ideas
 
-_Beschreibung der zugrunde liegenden Logik´: Dubletten, Entkopplung der Relationen, Beschreibung der Relationen, etc._
-### Duplicates
+_Beschreibung der zugrunde liegenden Logik: Dubletten, Entkopplung der Relationen, Beschreibung der Relationen, etc._
+## Duplicates
 
 **User Story:** As a user I want to....
 
 _Ggf. mit konkretem Beispiel_
 
+## Relations
 
 # Content
 
@@ -40,3 +54,7 @@ In addition to the uml class diagram, this folder contains a [description table]
 - Short description
 - Example values
 - Enumeration options (if attribute is an enumeration)
+
+# Additional Content
+
+- `MappingTableSnazzyContactsAddressModel.md`: A concrete mapping between the data model of SnazzyContacts and the master data model for addresses.
