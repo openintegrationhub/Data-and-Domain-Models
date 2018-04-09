@@ -5,6 +5,7 @@
 - [Introduction](#introduction)
 - [Basic Ideas](#basic-ideas)
 	- [Multiple Types](#multiple-types)
+- [Operations](#operations)
 - [Content](#content)
 	- [UML Diagram](#uml-diagram)
 	- [JSON Schema](#json-schema)
@@ -18,15 +19,11 @@
 In the following the master data model for products is explained in detail. As for every Open Integration Hub Master Data Model, an UML class diagram, a JSON schema as well as a descrption table exists.
 
 # Basic Ideas
-
-_Beschreibung der zugrunde liegenden Logik. Z.b. "Produkt ist Einkaufsprodukt als auch Fertigungsprodukt_
 ## Multiple Types
+...
 
-**User Story:** As a user I want to....
-
-_Ggf. mit konkretem Beispiel_
-
-
+# Operations
+CRUD functionalities can be performed based on the model.
 
 # Content
 
