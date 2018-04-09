@@ -21,18 +21,18 @@ Sync via custom mapping - per integration
   - [ ] **Permitted** user access permissions - to consider
 
 ### Develop a data IO component
-  - [ ] Adapter of Snazzy
-  * Functionality trigger/action
-  * Inputs/Outputs
-  * Config. settings - authentication info
+  - [x] Adapter of Snazzy
+    * Functionality trigger/action
+    * Inputs/Outputs
+    * Config. settings - authentication info
   - [ ] Adapter of SilverERP
-  * Functionality trigger/action
-  * Inputs/Outputs
-  * Config. settings - authentication info
-  - [ ] Adapter of Wice
-  * Functionality trigger/action
-  * Inputs/Outputs
-  * Config. settings - authentication info
+    * Functionality trigger/action
+    * Inputs/Outputs
+    * Config. settings - authentication info
+  - [x] Adapter of Wice
+    * Functionality trigger/action
+    * Inputs/Outputs
+    * Config. settings - authentication info
 
 ### Challenge custom integration flows
   - [ ] Custom integration flow mapping from Snazzy model towards SilverERP model
@@ -53,14 +53,14 @@ Sync via standard scheme mapping - per runtime
 ### Unified REST API - Smart Data Framework
   - [ ] Addresses API
   - [ ] Addresses API documentation
-  * Error/Status codes
-  * Permissions
-  * Description - semantic scope
+    * Error/Status codes
+    * Permissions
+    * Description - semantic scope
   - [ ] Products API
   - [ ] Products API documentation
-  * Error/Status codes
-  * Permissions
-  * Description - semantic scope
+    * Error/Status codes
+    * Permissions
+    * Description - semantic scope
   - **Valid** API documentation - unified OIH interface
   - **Stable** API interface - unified OIH interface
 

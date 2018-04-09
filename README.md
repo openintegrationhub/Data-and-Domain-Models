@@ -1,79 +1,67 @@
 # Introduction
 
 ## Table of Content
-- [General Information](#general-information)
-  - [Manager](#manager)
-  - [Commiters](#committers)
-  - [Contributors](#contributors)
-- [Workgroup Member](#workgroup-member)
+- [Introduction](#introduction)
 
-- [Workgroup Content](#workgroup-content)
+- [Content](#content)
+
+  - [Folders](#folders)
+  - [Documents](#documents)
+
+- [Workgroup](#workgroup)
+
+  - [Information](#information)
+  - [Member](#member)
+
+- [Wording](#wording)
 
 - [Contribution](#contribution)
 
-- [Decisions](#decisions)
+## Introduction
 
-- [Results](#results)
+This repository includes the master data models for products and addresses, early prototypes and for decision-making relevant use cases and user stories from the cloud provider. Additionally, there is the superordinated data model and the procedure model for data model versioning. Hence, it is possible to develop the master data model and the meta model to enable standardized data synchronization across all connected applications.
 
-## General Information
-- Each workgroup has at least one **status call** every two weeks
-- **Every Committer** must attend the status call
+## Content
+#### Folders
 
-### Manager
-- Each workgroup has one manager - this manager is elected every 6 month by all Committers within the workgroup (re-election possible)
-- The manager moderates discussions, documents decisions and coordinates activities, content and appointments
-- Only the manager is allowed to merge content into the master branch
-- Is part of one of the comittees
-
-### Committers
-- Decisions within a workgroup are made by the Committers on democratic basis (unanimity)
-- Committers can chosse which contributors shall become committers (Committees have to agree on choice)
-- Need to actively contribute to the workgroup
-
-### Contributors
-- Contributors contribute to the projects but do not have a vote
-- Contributors can apply to get a vote and become a Committer
+- `DataModels`: includes the meta data model and the scheme definition language
+- `MasterDataModels`: contains the three adapter for „silverp“, „snazzy“, „wice“ as well as the master data models for the domains products and addresses
+- `Protocols`: contains meeting protocols of the workgroup meetings
+- `src`: all JSON schemes can be found here
 
 
-## Workgroup Member
+#### Documents
+
+- `DecisionsMade`: concludes all decisions made regarding the data and domain model
+- `Contribution Guideline`: gathers any rule considering contributing
+- `MilestoneOne`: contains the permanent links towards the generic data models
+- `MilestoneTwo`: includes the goals from the second milestone
+
+
+## Workgroup
+#### Information
+- Each workgroup has atleast one status call every two weeks
+- Every committer must attend the status call
+- The governance model defines the workgroup members' roles into managers, committers or contributors
+
+
+#### Member
 
 | Workgroup  | Member Name | Role |
 | ------------- | ------------- | ------------- |
-| Data and Domain Models  | Raphael  | **Manager & Committer**  |
+| Data and Domain Models  | Hansjörg  | **Manager**  |
 |  | Lutz  | Committer  |
 |  | Josef  | Committer  |
-|  | Hansjörg  | Committer  |
 |  | Andreas  | Committer  |
+|  | Philipp  | Committer  |
 |  | Selim  | Contributor  |
 |  | Jürgen  | Contributor  |
-|  | Renat  | Contributor  |
+|  | Franz  | Contributor  |
 
-## Workgroup Content
+## Wording
 
-| Workgroup  | Architecture |
-| ------------- | ------------- |
-| Content  | Domain Model |
-|  | Master Data Model(s)  |
-|  | Data Mapping  |
-|  | Data Hub & Standarization of the data model  |
-|  | Backlog Data-Hub & data model  |
-| APs | 2.03 |
-|  | 2.04 |
-|  | 2.05 |
-|  | 2.06 |
-|  | 2.07 |
-|  | 2.09 |
-|  | 2.15 |
+Within the project different terms and abbreviations are frequently used. All terms and abbrevations are explained within the [glossary](https://github.com/openintegrationhub/Connectors/wiki/Glossary) and our [list of abbrevations](https://github.com/openintegrationhub/Connectors/wiki/Abbreviations).
 
 ## Contribution
 
 Before you contribute, please read the [contribution guideline](https://github.com/openintegrationhub/data-and-domain-models/blob/master/CONTRIBUTING.md).
-
-## Decisions
-
-In the [DecisionsMade.md](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/DecisionsMade.md) you can find all decisions that were made by the committers of the Data & Domain Model Workgroup.
-
-
-## Results
-
-Find all results of the [first Milestone](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MilestoneOne.md) from this workgroup.
