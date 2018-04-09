@@ -32,7 +32,7 @@ _Ggf. mit konkretem Beispiel_
 
 ## UML Diagram
 
-![MasterDataModelAddressesV2](Assets\OIHDataModelProducts.svg)
+![MasterDataModelAddressesV2](Assets/OIHDataModelProducts.svg)
 
 ## JSON Schema
 
