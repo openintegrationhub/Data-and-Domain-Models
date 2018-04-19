@@ -42,30 +42,6 @@
       "items": {
           "$ref": "/sharedDefinitionsV2.json#definitions/calendar"
       }
-    },
-    "personToOrganizationRelationship":
-    {
-      "type": "array",
-      "description": "Describes the relationships of a organization to a person",
-      "items": {
-        "allOf": [
-          {
-          "$ref": "/relationV2.json"
-          }
-        ]
-      }
-    },
-    "OrganizationToOrganizationRelationship":
-    {
-      "type": "array",
-      "description": "Describes the relationships between two organizations",
-      "items": {
-        "allOf": [
-          {
-            "$ref": "/relationV2.json"
-          }
-        ]
-      }
     }
   }
 }

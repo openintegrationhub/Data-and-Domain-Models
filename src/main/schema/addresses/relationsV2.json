@@ -25,11 +25,11 @@
       "type": "object",
       "description": "Describes the relationship between a person and an organization",
       "properties": {
-        "organizationUId": {
+        "organizationOihUId": {
           "type": "string",
           "description": "Unique identifier of the organization"
         },
-        "personUId": {
+        "personOihUId": {
           "type": "string",
           "description": "Unique identifier of the person"
         },
@@ -53,11 +53,11 @@
       "type": "object",
       "description": "Describes the relationship between two persons",
       "properties": {
-        "personUId": {
+        "personOneOihUId": {
           "type": "string",
           "description": "Unique identifier of the first person"
         },
-        "personUId2": {
+        "personTwoOihUId2": {
           "type": "string",
           "description": "Unique identifier of the second person"
         }
@@ -67,11 +67,11 @@
       "type": "object",
       "description": "Describes the relationship between two organizations",
       "properties": {
-        "organizationUId": {
+        "organizationOneOihUId": {
           "type": "string",
           "description": "Unique identifier of the first organization"
         },
-        "organizationUId2": {
+        "organizationTwoOihUId2": {
           "type": "string",
           "description": "Unique identifier of the second organization"
         }

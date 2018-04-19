@@ -139,30 +139,6 @@
       "items": {
           "$ref": "/sharedDefinitionsV2.json#definitions/category"
       }
-    },
-    "personToOrganizationRelationship":
-    {
-      "type": "array",
-      "description": "Describes the relationships of a person to an organization",
-      "items": {
-        "allOf": [
-          {
-            "$ref": "/relationsV2.json"
-          }
-        ]
-      }
-    },
-    "personToPersonRelationship":
-    {
-      "type": "array",
-      "description": "Describes the relationships of two persons",
-      "items": {
-        "allOf": [
-          {
-            "$ref": "/relationsV2.json"
-          }
-        ]
-      }
     }
   }
 }
