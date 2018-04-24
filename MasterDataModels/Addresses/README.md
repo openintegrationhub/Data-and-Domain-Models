@@ -15,7 +15,7 @@
 <!-- /TOC -->
 # Introduction
 
-In the following the master data model for addresses is explained in detail. As for every Open Integration Hub Master Data Model, an UML class diagram, a JSON schema as well as a descrption table exists.
+In the following the master data model for the domain addresses is explained in detail. As for every Open Integration Hub Master Data Model, an UML class diagram, a JSON schema as well as a descrption table exists.
 
 # Basic Ideas
 ## Duplicates
