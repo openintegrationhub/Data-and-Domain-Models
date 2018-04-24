@@ -55,22 +55,23 @@ and Specialized Data Models?
 **The core issue is: What must be done if the MDM changes?**
 First easy step shall be: Sketch of what has to be done if a new optional attribute is added.
 
-#### 2.2.1 Impacts on Connectors
-
-Transformer: Mapping/JSONataExpression must be extended by the new attribute.
+#### 2.2.1 Impacts on Connectors/Adapters
+The JSON-schemata for the input and output of the actions/triggers concerning the extended part of the master data model must be extended by the new attribute. Potentially also the JSONata Expression must be extended.
 
 #### 2.2.2 Impacts on REST APIs
 
 ##### 2.2.2.1 REST API OIH Model
+The JSON-schemata for the input and output of the actions/triggers concerning the extended part of the master data model must be extended by the new attribute.
 
 ##### 2.2.2.2 REST API ISV Model
+The JSON-schemata for the input and output of the actions/triggers concerning the extended part of the master data model must be extended by the new attribute.
 
 #### 2.2.3 Impacts on Data Hub
-Migration of the corresponding data table, default value for new attribute
+The corresponding data table must be migrated, i.e. a new column is added to the data table and in old data records the new column gets a (defined) default value.
 
-#### 2.2.4 Impacts on Specialized Data Models and Private Data Models
-* Possible name conflicts
-* New MDM-Attribute is already attribute of SDM/PDM
+#### 2.2.4 Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)
+* Possible name conflicts: An attribute with the name of the Master Data Model's new attribute is already existing in the SDM/PDM.
+* A semantically equivalent MDM-Attribute is already attribute of SDM/PDM, but the name of the SDM/PDM attribute differs from the name of the new attribute in the master data model.
 
 
 
