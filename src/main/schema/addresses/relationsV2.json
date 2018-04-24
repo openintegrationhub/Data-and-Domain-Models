@@ -79,7 +79,7 @@
     }
   },
   "properties": {
-    "relation": {
+    "label": {
       "type": "string",
       "description": "Describes the type of relationship",
       "examples": [
