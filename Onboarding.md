@@ -6,17 +6,18 @@
 - [Master Data Model](#master-data-model)
 	- [Guidelines](#guidelines)
 	- [Examples](#examples)
+	- [Tooling](#tooling)
 - [Connectors](#connectors)
-- [Adapter](#adapter)
-	- [Guidelines](#guidelines)
-	- [Examples](#examples)
-	- [Testing](#testing)
-	- [Deployment](#deployment)
-- [Transformer](#transformer)
-	- [Guidelines](#guidelines)
-	- [Examples](#examples)
-	- [Testing](#testing)
-	- [Deployment](#deployment)
+	- [Adapter](#adapter)
+		- [Guidelines](#guidelines)
+		- [Examples](#examples)
+		- [Testing](#testing)
+		- [Deployment](#deployment)
+	- [Transformer](#transformer)
+		- [Guidelines](#guidelines)
+		- [Examples](#examples)
+		- [Testing](#testing)
+		- [Deployment](#deployment)
 
 <!-- /TOC -->
 
@@ -63,42 +64,41 @@ A connector is only a coherent part on a logical level.
 From an architectural stand point both parts have to be implemented as seperate [Docker containers](https://www.docker.com/).
 
 ![Connectors](https://github.com/openintegrationhub/Connectors/blob/master/Assets/ConnectorsV2.svg)
+## Adapter
 
-# Adapter
-
-## Guidelines
+### Guidelines
 
 - [Adapter Guide](https://github.com/openintegrationhub/Connectors/blob/master/Adapters/AdapterGuide.md) (Starting point. It explains the problems which an adapter must solve and the recommended way of solving those problems.)
 - [Desired Adapter Behaviors](https://github.com/openintegrationhub/Connectors/blob/master/Adapters/AdapterChecklists/DesiredAdapterBehaviors.md) (Lists what behaviors should be present in a complete adapter)
 - [Adapter Functionality Checklist](file:///tmp/d20180424-4-347rzp/to%20track%20connector%20completeness%20based%20on%20the%20functionality%20provided%20by%20the%20API) (To track connector completeness based on the functionality provided by the API)
 - [Description and Documentation Guidelines](https://github.com/openintegrationhub/Connectors/blob/master/Adapters/AdapterChecklists/AdapterDescriptionAndDocumentationChecklist.md) (Describes what should be documented in the adapter README.md,component.json and similar files.)
 
-## Examples
+### Examples
 
 These are component templates which act as the first step of the development for creating an adapter.
 - [Example adapter for nodejs](https://github.com/elasticio/petstore-component-nodejs)
 - [Example adapter for java](https://github.com/elasticio/petstore-component-java)
 
-## Testing
+### Testing
 
 - [Requirements to Test or Build an Adapter](https://github.com/openintegrationhub/Connectors/blob/master/Adapters/AdapterChecklists/RequirementsToTestOrBuildAnAdapter.md)
 
-## Deployment
+### Deployment
 _Current status:_ Upload the transformer on the Elastic.io plattform
 
 
-# Transformer
+## Transformer
 
-## Guidelines
+### Guidelines
 
 - [Introduction to Transformer](https://github.com/openintegrationhub/Connectors/blob/master/Transformer/README.md)
 
-## Examples
+### Examples
 - Work in progress
 
 
-## Testing
+### Testing
 - [Requirements to Test or Build an Adapter](https://github.com/openintegrationhub/Connectors/blob/master/Adapters/AdapterChecklists/RequirementsToTestOrBuildAnAdapter.md) (Currently the same requirements as for adapters)
 
-## Deployment
+### Deployment
 - _Current status:_ Upload the transformer on the Elastic.io plattform
