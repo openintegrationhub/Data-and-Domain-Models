@@ -1,8 +1,26 @@
+/**
+ * Copyright 2018 Wice GmbH
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
 "use strict";
+const Q = require('q');
 const request = require('request-promise');
 const messages = require('elasticio-node').messages;
 
 const snazzy = require('./snazzy.js');
+const BASE_URI = `https://snazzycontacts.com/mp_contact/json_respond`;
 
 exports.process = processAction;
 
@@ -12,31 +30,105 @@ exports.process = processAction;
  * @param msg
  * @param cfg
  */
+
 function processAction(msg, cfg) {
 
-  let reply = {};
+  let reply = [];
   let self = this;
 
   // Create a session in snazzycontacts and then make a post request to create a new person in snazzycontacts
   snazzy.createSession(cfg, () => {
     if (cfg.mp_cookie) {
 
-      let apiKey = cfg.apikey;
-      let cookie = cfg.mp_cookie;
+      const apiKey = cfg.apikey;
+      const cookie = cfg.mp_cookie;
+      let existingRowid = 0;
 
-      let uri = `https://snazzycontacts.com/mp_contact/json_respond/address_contactperson/json_insert?mp_cookie=${cookie}`;
-      let sameContactUri = `https://snazzycontacts.com/mp_contact/json_respond/same_contactperson/json_insert?&mp_cookie=${cookie}`;
+      function checkForExistingUser() {
 
-      let requestOptions = {
-        json: msg.body,
-        headers: {
-          'X-API-KEY': apiKey
-        }
-      };
+        return new Promise((resolve, reject) => {
+          const requestOptions = {
+            uri: `${BASE_URI}/address_contactperson/json_mainview?&mp_cookie=${cookie}`,
+            json: true,
+            // {
+            //     max_hits: 100,
+            //     print_address_data_only: 1
+            // },
+            headers: {
+              'X-API-KEY': apiKey
+            }
+          };
 
-      // Generate a sameContactId before creating the user
+          request.get(requestOptions)
+            .then((res) => {
+              res.content.forEach((person) => {
+
+                if (msg.body.name == person.name) {
+                  existingRowid = person.rowid;
+                  msg.body.rowid = existingRowid;
+                  console.log(`Person already exists ... ROWID: ${existingRowid}`);
+                }
+              });
+
+              // if (existingRowid == 0) {
+              //   console.log('Creating a person ...');
+              // } else {
+              //   msg.body.rowid = existingRowid;
+              //   console.log(`existingRowid: ${existingRowid}`);
+              //   console.log('Updating a person ...');
+              // }
+
+              resolve(existingRowid);
+            }).catch((e) => {
+              reject(e);
+            })
+        });
+      }
+
+      function createPerson() {
+
+        return new Promise((resolve, reject) => {
+          const options = {
+            json: msg.body,
+            headers: {
+              'X-API-KEY': apiKey
+            }
+          };
+
+          if (existingRowid > 0) {
+            let uri = `${BASE_URI}/address_contactperson/json_update?mp_cookie=${cookie}`;
+
+            request.post(uri, options)
+              .then((res) => {
+                reply.push(res);
+                console.log('Updating a person ...');
+                resolve(reply);
+              }).catch((e) => {
+                reject(e);
+              })
+          } else {
+            getSameContactId()
+              .then((res) => {
+                const uri = `${BASE_URI}/address_contactperson/json_insert?&mp_cookie=${cookie}`;
+                msg.body.same_contactperson = res;
+                request.post(uri, options)
+                  .then((res) => {
+                    reply.push(res);
+                    console.log('Creating a person ...');
+                    resolve(reply);
+                  }).catch((e) => {
+                    reject(e);
+                  })
+              }).catch((e) => {
+                emitError(e);
+              });
+          }
+        });
+      }
+
       function getSameContactId() {
         return new Promise((resolve, reject) => {
+          const sameContactUri = `${BASE_URI}/same_contactperson/json_insert?&mp_cookie=${cookie}`;
           request(sameContactUri, {
             headers: {
               'X-API-KEY': apiKey
@@ -47,46 +139,38 @@ function processAction(msg, cfg) {
               return;
             }
 
-            let jsonDecode = JSON.parse(body);
-            let sameContactId = jsonDecode.rowid;
+            const jsonDecode = JSON.parse(body);
+            const sameContactId = jsonDecode.rowid;
+            console.log(`sameContactId: ${sameContactId}`);
             resolve(sameContactId);
-            // console.log(`sameContactId: ${sameContactId}`);
           });
         });
       }
 
-      // Make a post request to create a new person in snazzycontacts
-      (function() {
-        getSameContactId()
-          .then((res) => {
-            msg.body.same_contactperson = res;
-            console.log(`same_contactperson: ${msg.body.same_contactperson}`);
-            request.post(uri, requestOptions)
-              .then((res) => {
-                reply = res.content;
-                emitData();
-                console.log(JSON.stringify(res, undefined, 2));
-              }, (err) => {
-                console.log(`ERROR: ${err}`);
-              });
-          })
-          .catch((e) => {
-            emitError();
-            console.log(`ERROR: ${e}`);
+      // Emit data from promise depending on the result
+      function emitData() {
+          const data = messages.newMessageWithBody({
+            "person": reply
           });
-      }());
+          self.emit('data', data);
+      }
+
+      function emitError(e) {
+        console.log('Oops! Error occurred');
+        self.emit('error', e);
+      }
+
+      function emitEnd() {
+        console.log('Finished execution');
+        self.emit('end');
+      }
+
+      Q()
+      .then(checkForExistingUser)
+      .then(createPerson)
+      .then(emitData)
+      .fail(emitError)
+      .done(emitEnd);
     }
   });
-
-  // Emit data from promise depending on the result
-  function emitData() {
-    let data = messages.newMessageWithBody(reply);
-    self.emit('data', data);
-    console.log(JSON.stringify(data, undefined, 2));
-  }
-
-  function emitError(e) {
-    console.log('Oops! Error occurred');
-    self.emit('error', e);
-  }
 }

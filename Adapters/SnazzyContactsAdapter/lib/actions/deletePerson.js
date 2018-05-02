@@ -1,4 +1,21 @@
+/**
+ * Copyright 2018 Wice GmbH
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
 "use strict";
+const Q = require('q');
 const request = require('request-promise');
 const messages = require('elasticio-node').messages;
 
@@ -6,55 +23,62 @@ const snazzy = require('./snazzy.js');
 
 exports.process = processAction;
 
-/**
- *  This method will be called from elastic.io platform providing following data
- *
- * @param msg
- * @param cfg
- */
 function processAction(msg, cfg) {
 
   let reply = {};
-  let self = this;
-  let body = msg.body;
-  body.is_deleted = 1; // we set the user`s property is_deleted to 1, which means that we don`t really delete the user, we just hide it from the view, which is not a real delete in db
+  const self = this;
+  const body = msg.body;
+  body.is_deleted = 1;
 
-  // Create a session in snazzycontacts and then make a post request to delete a person in snazzycontacts
   snazzy.createSession(cfg, () => {
     if (cfg.mp_cookie) {
 
-      let apiKey = cfg.apikey;
-      let cookie = cfg.mp_cookie;
-      let uri = `http://snazzycontacts.com/mp_contact/json_respond/address_contactperson/json_update?mp_cookie=${cookie}`;
+      function deletePerson() {
 
-      let requestOptions = {
-        json: body,
-        headers: {
-          'X-API-KEY': apiKey
-        }
-      };
+        return new Promise((resolve, reject) => {
+          const requestOptions = {
+            uri: `http://snazzycontacts.com/mp_contact/json_respond/address_contactperson/json_update?mp_cookie=${cfg.mp_cookie}`,
+            json: body,
+            headers: {
+              'X-API-KEY': cfg.apikey
+            }
+          };
 
-      // Make a post request to hide the person from user`s view
-      request.post(uri, requestOptions)
-        .then((res) => {
-          reply = res;
-          emitData();
-          console.log('Person has been deleted.');
-        }, (err) => {
-          emitError();
+          request.post(requestOptions)
+            .then((res) => {
+              reply = res;
+              console.log('Person has been deleted.');
+              resolve(reply);
+            }).catch((e) => {
+              reject(e);
+            });
         });
+      }
+
+      function emitData() {
+        const data = messages.newMessageWithBody({
+          "person": reply
+        });
+        self.emit('data', data);
+        // console.log(JSON.stringify(data, undefined, 2));
+      }
+
+      function emitError(e) {
+        console.log('Oops! Error occurred');
+        self.emit('error', e);
+      }
+
+      function emitEnd() {
+        console.log('Finished execution');
+        self.emit('end');
+      }
+
+      Q()
+        .then(deletePerson)
+        .then(emitData)
+        .fail(emitError)
+        .done(emitEnd);
+
     }
   });
-
-  // Emit data from promise depending on the result
-  function emitData() {
-    let data = messages.newMessageWithBody(reply);
-    self.emit('data', data);
-    console.log(JSON.stringify(data, undefined, 2));
-  }
-
-  function emitError(e) {
-    console.log('Oops! Error occurred');
-    self.emit('error', e);
-  }
 }
