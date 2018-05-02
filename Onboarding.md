@@ -24,14 +24,18 @@
 
 In order to simplify the onboarding process, the following document describes how to proceed when developing a master data model and a connector.
 
+Within the 2nd phase new data models for the relating domain and a connector (adapter & transformer) must be developed.
 It it suggested to perform the following steps in the given order:
 
 1. Development of the standard data model
 2. Development of an application specific adapter
 3. Development of an application specific transformer
 
-# Master Data Model
+(If enough ressources are available step 1 & 2 can be performed in parallel). As the transformer requires the input from the adapter and needs target data model to perform the mapping, steps 1 and 2 must be performed first before implementing the transformer.
 
+![DevelopmentProcess](Assets/DevelopmentProcess.svg)
+
+# Master Data Model
 ## Guidelines
 
 - [Introduction to Open Integration Hub Master Data Models](https://github.com/openintegrationhub/Data-and-Domain-Models/tree/master/MasterDataModels#2-what-is-a-master-data-model)
@@ -42,37 +46,36 @@ As described in &quot;required output&quot; a UML class diagram, Json schemas an
 
 - [Readme Template](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModels/ReadmeTemplate.md)
 
-## Examples
+This textual documentation should include all relevant information (e.g. the underlying logic) so that it can be understood by third parties without further explanation.
 
+## Examples
 - [Master Data Model Addresses](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModels/Addresses/README.md)
 - [Master Data Model Addresses Description Table](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModels/Addresses/AddressModelV2Description.md)
 
 ## Tooling
-- Visual Paradigm
-
-
+- [Visual Paradigm](https://www.visual-paradigm.com/) for UML diagrams
 
 # Connectors
 
 A connector connects a software solution to the Open Integration Hub. It consists of two distinct parts, namely adapter and transformer. The purpose of a connector is to enable an application to interact with the Open Integration Hub. It contains different functionalities e.g. to fetch and transform data. These functionalities are further explained in the sections [adapter](#adapter) and [transformer](#transformer).
 
-## Technology Stack
 A connector is only a coherent part on a logical level.
 From an architectural stand point both parts have to be implemented as seperate [Docker containers](https://www.docker.com/).
 
+![Connectors](https://github.com/openintegrationhub/Connectors/blob/master/Assets/ConnectorsV2.svg)
 
-_Note:_ Jetzt schon Docker Container oder erst wenn wir von der Elastic.io Plattform runter sind?
 # Adapter
 
 ## Guidelines
 
-- [Adapter Guide](https://github.com/openintegrationhub/Connectors/blob/master/Adapters/AdapterGuide.md) (Starting point)
+- [Adapter Guide](https://github.com/openintegrationhub/Connectors/blob/master/Adapters/AdapterGuide.md) (Starting point. It explains the problems which an adapter must solve and the recommended way of solving those problems.)
 - [Desired Adapter Behaviors](https://github.com/openintegrationhub/Connectors/blob/master/Adapters/AdapterChecklists/DesiredAdapterBehaviors.md) (Lists what behaviors should be present in a complete adapter)
 - [Adapter Functionality Checklist](file:///tmp/d20180424-4-347rzp/to%20track%20connector%20completeness%20based%20on%20the%20functionality%20provided%20by%20the%20API) (To track connector completeness based on the functionality provided by the API)
-- [Description and Documentation Guidelines](https://github.com/openintegrationhub/Connectors/blob/master/Adapters/AdapterChecklists/AdapterDescriptionAndDocumentationChecklist.md)
+- [Description and Documentation Guidelines](https://github.com/openintegrationhub/Connectors/blob/master/Adapters/AdapterChecklists/AdapterDescriptionAndDocumentationChecklist.md) (Describes what should be documented in the adapter README.md,component.json and similar files.)
 
 ## Examples
 
+These are component templates which act as the first step of the development for creating an adapter.
 - [Example adapter for nodejs](https://github.com/elasticio/petstore-component-nodejs)
 - [Example adapter for java](https://github.com/elasticio/petstore-component-java)
 
