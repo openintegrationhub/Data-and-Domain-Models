@@ -14,7 +14,7 @@ We have to support the processing and the traceability of changes to a Master Da
 
 For these processes we should define:
 
-* Who are the **contributing community members**(e.g. corporate members, associates,  individual members) and who are
+* Who are the **contributing community members** (e.g. corporate members, associates,  individual members) and who are
  the **decision makers** (e.g. steering board, technical board, technical workgroup, administrator) of this process? 
 * **Guidelines** for the decision processes
 * **Channels/Software/Tools:** By which means do we e.g. create a change request? (Website form, JIRA, Github, ...)
@@ -47,10 +47,17 @@ and Specialized Data Models?
 
 ## 2 Discussion of the Technical Concept and Solution
 
-This paper only focuses the discussion of the technical concept and solution.
+This paper only focuses the discussion of the technical concept and solution concerning possible data model changes.
 
 **The core issue is: What must be done if the MDM changes? We examine three cases: Adding, changing and deleting 
-an attribute**
+an attribute.**
+
+**Note:** There are other documents in the repository with similiar content.
+Some of them are:
+1. Data-and-Domain-Models/MasterDataModels/ProcedureModelExtension.md 
+2. Data-and-Domain-Models/SpecializedDataModels.md 
+3. Data-and-Domain-Models/SpecializedDataModelsExample.md
+
 
 ### 2.1 What has to be done if a new attribute is added?
 
