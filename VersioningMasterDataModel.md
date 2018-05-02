@@ -54,9 +54,9 @@ an attribute.**
 
 **Note:** There are other documents in the repository with similiar content.
 Some of them are:
-1. Data-and-Domain-Models/MasterDataModels/ProcedureModelExtension.md 
-2. Data-and-Domain-Models/SpecializedDataModels.md 
-3. Data-and-Domain-Models/SpecializedDataModelsExample.md
+1. [ProcedureModelExtension] (https://github.com/openintegrationhub/Data-and-Domain-Models/blob/modelExtenstionProcedure/MasterDataModels/ProcedureModelExtension.md)
+2. [SpecializedDataModels] (https://github.com/openintegrationhub/Data-and-Domain-Models/blob/DataModelVersioning/SpecializedDataModels.md)
+3. [SpecializedDataModelsExample] (https://github.com/openintegrationhub/Data-and-Domain-Models/blob/DataModelVersioning/SpecializedDataModelsExample.md)
 
 
 ### 2.1 What has to be done if a new attribute is added?
