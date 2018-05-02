@@ -1,4 +1,21 @@
+/**
+ * Copyright 2018 Wice GmbH
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
 "use strict";
+const Q = require('q');
 const request = require('request-promise');
 const messages = require('elasticio-node').messages;
 
@@ -6,57 +23,62 @@ const snazzy = require('../actions/snazzy.js');
 
 exports.process = processTrigger;
 
-/**
- *  This method will be called from elastic.io platform providing following data
- *
- * @param msg
- * @param cfg
- */
 function processTrigger(msg, cfg) {
 
   let contacts = [];
-  let self = this;
+  const self = this;
 
-// Create a session in snazzycontacts and then make a post request to get all persons saved by a specific user in snazzycontacts
   snazzy.createSession(cfg, () => {
 
-    let apiKey = cfg.apikey;
-    let cookie = cfg.mp_cookie;
-    let uri = `https://snazzycontacts.com/mp_contact/json_respond/address_contactperson/json_mainview?&mp_cookie=${cookie}`;
+    function getPersons() {
 
-    let requestOptions = {
-      json: {
-        max_hits: 100,
-        print_address_data_only: 1
-      },
-      headers: {
-        'X-API-KEY': apiKey
-      }
-    };
+      return new Promise((resolve, reject) => {
+        const requestOptions = {
+          uri: `https://snazzycontacts.com/mp_contact/json_respond/address_contactperson/json_mainview?&mp_cookie=${cfg.mp_cookie}`,
+          json: true,
+          // {
+          //   max_hits: 100,
+          //   print_address_data_only: 1
+          // },
+          headers: {
+            'X-API-KEY': cfg.apikey
+          }
+        };
 
-    // Make a post request to get all persons saved by a specific user in snazzycontacts
-    request.post(uri, requestOptions)
-    .then((res) => {
-      contacts = res.content;
-      emitData();
-    }, (err) => {
-      emitError();
-    });
+        request.get(requestOptions)
+          .then((res) => {
+            contacts = res.content;
+            // TODO: Create a custom object which does not contain all fields
+            // TODO: Add error handling if the object is empty
+            resolve(contacts)
+          }).catch((e) => {
+            reject(e);
+          });
+      });
+    }
+
+    function emitData() {
+      const data = messages.newMessageWithBody({
+        "persons": contacts
+      });
+      self.emit('data', data);
+    }
+
+    function emitError(e) {
+      console.log(`ERROR: ${e}`);
+      self.emit('error', e);
+    }
+
+    function emitEnd() {
+      console.log('Finished execution');
+      self.emit('end');
+    }
+
+    Q()
+      .then(getPersons)
+      .then(emitData)
+      .fail(emitError)
+      .done(emitEnd);
 
   });
-
-  // Emit data from promise depending on the result
-  function emitData() {
-    let data = messages.newMessageWithBody({
-      "persons": contacts
-    });
-    console.log('Emitdata: '+ JSON.stringify(data, undefined, 2));
-    self.emit('data', data);
-  }
-
-  function emitError(e) {
-    console.log(`ERROR: ${e}`);
-
-    self.emit('error', e);
-  }
 }
