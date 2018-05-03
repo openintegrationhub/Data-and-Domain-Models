@@ -1,6 +1,11 @@
-# Introduction
+<p align="center">
+  <img src="https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/Assets/medium-oih-einzeilig-zentriert.jpg" alt="Sublime's custom image" width="400"/>
+</p>
 
-## Table of Content
+The revolution in data synchronization — the Open Integration Hub enables simple data synchronization between any software applications and thus accelerates digitalisation 
+
+
+# Table of Content
 - [Introduction](#introduction)
 
 - [Content](#content)
@@ -17,26 +22,27 @@
 
 - [Contribution](#contribution)
 
+
 ## Introduction
 
 This repository includes the master data models for products and addresses, early prototypes and for decision-making relevant use cases and user stories from the cloud provider. Additionally, there is the superordinated data model and the procedure model for data model versioning. Hence, it is possible to develop the master data model and the meta model to enable standardized data synchronization across all connected applications.
+<br><br>
 
 ## Content
 #### Folders
 
-- `DataModels`: includes the meta data model and the scheme definition language
-- `MasterDataModels`: contains the three adapter for „silverp“, „snazzy“, „wice“ as well as the master data models for the domains products and addresses
+- `MasterDataModels`: contains the structure and rules for the Open Integration Hub, master data models for the domains products and addresses
+- `Milestones`: contains the documents for the milestones one and two
 - `Protocols`: contains meeting protocols of the workgroup meetings
 - `src`: all JSON schemes can be found here
 
 
 #### Documents
 
-- `DecisionsMade`: concludes all decisions made regarding the data and domain model
-- `Contribution Guideline`: gathers any rule considering contributing
-- `MilestoneOne`: contains the permanent links towards the generic data models
-- `MilestoneTwo`: includes the goals from the second milestone
-
+- `CONTRIBUTING`: gathers any rule considering the contribution
+- `DecisionsMade`: concludes all decisions made regarding the scheme definition language (meta-models) and the UML diagram tool (class-diagrams)
+- `Onboarding`: describes how to proceed when developing a master data model and a connector
+<br><br>
 
 ## Workgroup
 #### Information
@@ -58,9 +64,12 @@ This repository includes the master data models for products and addresses, earl
 |  | Jürgen  | Contributor  |
 |  | Franz  | Contributor  |
 
+<br><br>
+
 ## Wording
 
 Within the project different terms and abbreviations are frequently used. All terms and abbrevations are explained within the [glossary](https://github.com/openintegrationhub/Connectors/wiki/Glossary) and our [list of abbrevations](https://github.com/openintegrationhub/Connectors/wiki/Abbreviations).
+
 
 ## Contribution
 
