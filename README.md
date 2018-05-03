@@ -22,7 +22,6 @@ The revolution in data synchronization — the Open Integration Hub enables simp
 
 - [Contribution](#contribution)
 
-<br><br>
 
 ## Introduction
 
@@ -71,7 +70,6 @@ This repository includes the master data models for products and addresses, earl
 
 Within the project different terms and abbreviations are frequently used. All terms and abbrevations are explained within the [glossary](https://github.com/openintegrationhub/Connectors/wiki/Glossary) and our [list of abbrevations](https://github.com/openintegrationhub/Connectors/wiki/Abbreviations).
 
-<br><br>
 
 ## Contribution
 
