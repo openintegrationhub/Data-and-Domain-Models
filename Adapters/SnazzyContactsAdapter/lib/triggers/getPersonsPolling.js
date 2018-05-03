@@ -12,7 +12,7 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-*/
+ */
 
 "use strict";
 const Q = require('q');
@@ -22,6 +22,13 @@ const messages = require('elasticio-node').messages;
 const snazzy = require('../actions/snazzy.js');
 
 exports.process = processTrigger;
+
+/**
+ * This method will be called from elastic.io platform providing following data
+ *
+ * @param msg incoming message object that contains ``body`` with payload
+ * @param cfg configuration that is account information and configuration field values
+ */
 
 function processTrigger(msg, cfg) {
 
@@ -47,10 +54,15 @@ function processTrigger(msg, cfg) {
 
         request.get(requestOptions)
           .then((res) => {
+            let customPersonFormat;
+            const totalEntries = res.content[0].total_entries_readable_with_current_permissions;
+
+            if (totalEntries == 0) {
+              reject('No persons found ...');
+            }
+
             contacts = res.content;
-            // TODO: Create a custom object which does not contain all fields
-            // TODO: Add error handling if the object is empty
-            resolve(contacts)
+            resolve(contacts);
           }).catch((e) => {
             reject(e);
           });

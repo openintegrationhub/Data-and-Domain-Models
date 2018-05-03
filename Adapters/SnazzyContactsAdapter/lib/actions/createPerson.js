@@ -12,7 +12,7 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-*/
+ */
 
 "use strict";
 const Q = require('q');
@@ -25,10 +25,10 @@ const BASE_URI = `https://snazzycontacts.com/mp_contact/json_respond`;
 exports.process = processAction;
 
 /**
- *  This method will be called from elastic.io platform providing following data
+ * This method will be called from elastic.io platform providing following data
  *
- * @param msg
- * @param cfg
+ * @param msg incoming message object that contains ``body`` with payload
+ * @param cfg configuration that is account information and configuration field values
  */
 
 function processAction(msg, cfg) {
