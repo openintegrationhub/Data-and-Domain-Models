@@ -31,15 +31,29 @@ From this real world view we derive the two main objects and go deeper in the mo
 
 There are some use cases where traditional data models are having problems. For example you
 have a person, who occupies different roles in different organizations and you must be able
-to get in contact with this person over the right contact channel. So you have a person
-who is the ceo in a company you are dealing with and he is also in the board of an association.
+to get in contact with this person over the right contact channel.
+
+So you have a person who is the ceo in a company you are dealing with and he is also in the board of an association.
 If you want to mail him infos in his role as a CEO you want to use the company mail address
 and if you want to mail him as a board member, you want to use the mail address from the association.
 Some tools will use a label for different kind of mail accounts, but this does not scale.
 
+The specific user stories for this problem could be like:
+
+| User story: | As a user I want to see the function of a person in his organization. |
+| :--- | :--- |
+
+| User story: | As a user I want to assign a person to different organizations with different contact data to see different roles of the same person. |
+| :--- | :--- |
+
+| User story: | As a user I want to store same persons in different organizations, to get in contact with them currently at the time with the particular contact data. |
+| :--- | :--- |
+
 Other problems raised by use cases, for example about the different locations of one organization, the structure of a group of companies etc., arise the same questions.
 
 Our solution to solve this problem is by allowing duplicates and link them by our relation modeling.
+
+For the example above, we will store the person with his contact details for his ceo role in the company and store another entity of this person for his role as a board member in the association. Then we link them together via a relation and describe them as a "same person"-relation.
 
 ## Relations
 
@@ -51,6 +65,28 @@ Generally there are three types of relations:
 - Organizations to organizations
 
 If the task would only be a relation between the two objects persons and organizations, we could directly link them together. But we need a naming of this relation and users want to categorize single entries for the description of the relations of a users own organization to other organizations or persons or to see the function of a person in his organization. Therefore we need a more generic approach for storing relations, categories, tags or other distinguishing features. That's the reason, why we introduce a specific object for this.
+
+With this we can solve for example the following user stories:
+
+| User story: | As a user I want to see the structure of a group of companies, to get a better overview of my business dealings.  |
+| :--- | :--- |
+
+| User story: | As a user I want to assign one or more persons to an organization to communicate with all contacts of an organization |
+| :--- | :--- |
+
+| User story: | As a user I want to assign relations between contact persons of my customers to get an overview of their hierarchy. |
+| :--- | :--- |
+
+| User story: | As a user I want to see, if a specific person in an organization is the same person as in another organization |
+| :--- | :--- |
+
+In the following diagrams you can see the different relationships between persons, organizations and persons to organizations.
+
+![Relations of organizations](Assets/relations-among-persons.png)
+
+![Relations of organizations](Assets/relations-of-organizations.png)
+
+![Relationship person organization](Assets/use-case-relationship-person-organization.png)
 
 # Operations
 CRUD functionalities can be performed based on the model.
