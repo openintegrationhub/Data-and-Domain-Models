@@ -71,7 +71,7 @@ From an architectural stand point both parts have to be implemented as seperate 
 - [Adapter Guide](https://github.com/openintegrationhub/Connectors/blob/master/Adapters/AdapterGuide.md) (Starting point. It explains the problems which an adapter must solve and the recommended way of solving those problems.)
 - [Desired Adapter Behaviors](https://github.com/openintegrationhub/Connectors/blob/master/Adapters/AdapterChecklists/DesiredAdapterBehaviors.md) (Lists what behaviors should be present in a complete adapter)
 - [StandardizedActionsAndTriggers](https://github.com/openintegrationhub/Connectors/blob/master/Adapters/AdapterBehaviorStandardization/StandardizedActionsAndTriggers.md#lookup-object-by-fields) (Describes and explains standardized triggers and actions from the desired adapter behavior document)
-- [Adapter Functionality Checklist](file:///tmp/d20180424-4-347rzp/to%20track%20connector%20completeness%20based%20on%20the%20functionality%20provided%20by%20the%20API) (To track connector completeness based on the functionality provided by the API)
+- [Adapter Functionality Checklist](https://github.com/openintegrationhub/Connectors/blob/master/Adapters/AdapterChecklists/AdapterFunctionalityChecklist.md) (To track connector completeness based on the functionality provided by the API)
 - [Description and Documentation Guidelines](https://github.com/openintegrationhub/Connectors/blob/master/Adapters/AdapterChecklists/AdapterDescriptionAndDocumentationChecklist.md) (Describes what should be documented in the adapter README.md,component.json and similar files.)
 
 ### Examples
