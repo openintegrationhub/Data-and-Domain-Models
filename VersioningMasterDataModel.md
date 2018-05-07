@@ -51,7 +51,8 @@ This paper only focuses the discussion of the technical concept and solution con
 
 As already pointed out in section 1.2, changing Master Data Models is a very complex issue and and the 
 technical solution is subject to various constraints. In this section we want to carve out the possible difficulties and 
-problems we are concerned with. We consciously do this without any recommendations, because we see the need for further discussion.
+problems we are concerned with. We consciously do this without giving any recommendations, because we see the need for 
+further discussion.
 
 **The core issue is: What must be done if the MDM changes? We examine three cases: Adding, changing and deleting 
 an attribute.**
