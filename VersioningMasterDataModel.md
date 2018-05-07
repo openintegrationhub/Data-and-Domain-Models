@@ -47,10 +47,16 @@ and Specialized Data Models?
 
 ## 2 Discussion of the Technical Concept and Solution
 
-This paper only focuses the discussion of the technical concept and solution concerning possible data model changes.
+This paper only focuses the discussion of the technical concept and solution concerning possible data model changes. 
+
+As already pointed out in section 1.2, changing Master Data Models is a very complex issue and and the 
+technical solution is subject to various constraints. In this section we want to carve out the possible difficulties and 
+problems we are concerned with. We consciously do this without any recommendations, because we see the need for further discussion.
 
 **The core issue is: What must be done if the MDM changes? We examine three cases: Adding, changing and deleting 
 an attribute.**
+
+
 
 **Note:** There are other documents in the repository with similiar content.
 Some of them are:
@@ -69,8 +75,8 @@ The JSON-schemata for the input and output of the actions/triggers concerning th
 The JSON-schemata for the input and output of the actions/triggers concerning the extended part of the master data model must be extended by the new attribute.
 
 #### 2.1.3 Impacts on Data Hub
-The corresponding data table must be migrated, i.e. a new column has to be added to the data table and in old data 
-records the new column must get a (defined) default value.
+The corresponding data objects must be migrated, i.e. a new attribute has to be added to the data object's schema and
+ in old data objects the new attribute must get a (defined) default value.
 
 #### 2.1.4 Running APPs which use different versions of the MDM / Connector and REST API Versioning
 If the new attribute is only optional in all REST APIs and in the JSON-schemata of the Connector, then there is 
@@ -82,74 +88,76 @@ provide the new mandatory attribute. A solution for this problem would be that a
 version number of the MDM version it wants to use and that the corresponding versions of Connectors / REST APIs could 
 be easily accessed (at runtime).
 
-**--> Recommendation: It shall be only allowed to extend the MDM by optional attributes.**
+**--> Resulting questions: Shall it only be allowed to extend the MDM by optional attributes? Shall it be allowed that 
+APPs use different versions of the MDM in parallel?**
 
 #### 2.1.5 Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)
-* Possible name conflicts: An attribute with the name of the Master Data Model's new attribute is already existing in the SDM/PDM.
-* A semantically equivalent MDM-Attribute is already attribute of SDM/PDM, but the name of the SDM/PDM attribute differs from the name of the new attribute in the master data model.
+* Possible name conflicts: An attribute with the name of the Master Data Model's new attribute is already existing in the SDM.
+* A semantically equivalent MDM-Attribute is already attribute of SDM, but the name of the SDM attribute differs from the name of the new attribute in the master data model.
 
-### 2.1 What has to be done if an attribute is changed?
+### 2.2 What has to be done if an attribute is changed?
 
 **We distinguish two cases: Only the attribute name is changed or the attribute type is changed.**
 
-#### 2.1.1 Impacts on Connectors/Adapters
+#### 2.2.1 Impacts on Connectors/Adapters
 The JSON-schemata for the input and output of the actions/triggers concerning the changed attribute of the master data 
 model must be adapted. Potentially also the JSONata Expression must be adapted.
 
-#### 2.1.2 Impacts on REST API Models of OIH and ISV
+#### 2.2.2 Impacts on REST API Models of OIH and ISV
 
 The JSON-schemata for the input and output of the actions/triggers concerning the changed attribute of the master 
 data model must be adapted.
 
-#### 2.1.3 Impacts on Data Hub
-The corresponding data table must be migrated.
+#### 2.2.3 Impacts on Data Hub
+The corresponding data base objects must be migrated.
 
 a) Only the name of the attribute changed: 
-   The name of the data table column must be changed.
+   The name of the attribute in the data base object's schema must be changed.
    
-b)  The type of the attribute changed:  
-    The type of the data table column must be changed and the column values in old data records must be converted to 
-    the new type. This is only possible if the conversion of the old data type to the new data type is compatible.
+b)  The type of the attribute changed:
+    The type of the attribute in the data base object's schema must be changed and the attribute values in old 
+    data base objects must be converted to the new type. This is only possible if the conversion of the old data type to the new data type is compatible.
     
-**--> Recommendation: It shall be at the very most allowed to change the data type of an attribute if the new data type
- is compatible with the old one, i.e. that there is no type demotion!**
+**--> Resulting questions: Shall it be allowed to change the data type of an attribute? And, if the answer is yes, 
+shall the new data type be compatible with the old one, so that there is no type demotion?**
 
-#### 2.1.4 Running APPs which use different versions of the MDM / Connector and REST API Versioning
+#### 2.2.4 Running APPs which use different versions of the MDM / Connector and REST API Versioning
 
 APPs which use the old REST-APIs do not provide the new name or type of the attribute. A solution for this problem would be that an APP must provide the 
 version number of the MDM version it wants to use and that the corresponding versions of Connectors / REST APIs could 
 be easily accessed (at runtime).
 
-**--> Recommendation: It shall be not at all allowed to change an attribute of the MDM.**
+**--> Resulting questions: Shall it be allowed to change an attribute of the MDM? And, once more: Shall it be allowed 
+that APPs use different versions of the MDM in parallel?**
 
-#### 2.1.5 Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)
+#### 2.2.5 Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)
 * Possible name conflicts: An attribute with the name of the Master Data Model's changed attribute name is already 
-existing in the SDM/PDM.
+existing in the SDM.
 
-### 2.1 What has to be done if an attribute is deleted?
+### 2.3 What has to be done if an attribute is deleted?
 
-#### 2.1.1 Impacts on Connectors/Adapters
+#### 2.3.1 Impacts on Connectors/Adapters
 The attribute must be removed from the JSON-schemata for the input and output of the actions/triggers of the concerning master data 
 model. Potentially also the JSONata Expression must be adapted.
 
-#### 2.1.2 Impacts on REST API Models of OIH and ISV
+#### 2.3.2 Impacts on REST API Models of OIH and ISV
 
 The attribute must be removed from the JSON-schemata for the input and output of the actions/triggers of the 
 concerning master data model.
 
-#### 2.1.3 Impacts on Data Hub
-The corresponding data table must be migrated, i.e. the column must be deleted from to the data table's schema and in 
-old data records the value of the removed column has to be deleted.
+#### 2.3.3 Impacts on Data Hub
+The corresponding data base objects must be migrated, i.e. the attribute must be deleted from the data base 
+object's schema and in old data objects the value of the removed attribute has to be deleted.
 
-#### 2.1.4 Running APPs which use different versions of the MDM / Connector and REST API Versioning
+#### 2.3.4 Running APPs which use different versions of the MDM / Connector and REST API Versioning
 
 APPs which use old REST-APIs could provide the deleted attribute. Even if the old REST-APIs / Connector versions 
 could be accessed, there remains still the problem that the corresponding data column does not exist any more (if no 
 versionized data tables are used).
 
-**--> Recommendation: It shall not be allowed to delete an attribute!**
+**--> Resulting question: Shall it be allowed to delete an attribute?**
 
-#### 2.1.5 Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)
+#### 2.3.5 Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)
 There are no further impacts.
 
 
