@@ -31,17 +31,16 @@ This repository includes the master data models for products and addresses, earl
 ## Content
 #### Folders
 
-- `MasterDataModels`: contains the structure and rules for the Open Integration Hub, master data models for the domains products and addresses
-- `Milestones`: contains the documents for the milestones one and two
-- `Protocols`: contains meeting protocols of the workgroup meetings
-- `src`: all JSON schemes can be found here
+- `Decisions`: Includes the collected and divided "Open" and "Closed" decisions
+- `MasterDataModels`: Contains the structure and rules for the Open Integration Hub, master data models for the domains products and addresses
+- `Protocols`: Contains meeting protocols of the workgroup meetings
+- `src`: All JSON schemes can be found here
 
 
 #### Documents
 
-- `CONTRIBUTING`: gathers any rule considering the contribution
-- `DecisionsMade`: concludes all decisions made regarding the scheme definition language (meta-models) and the UML diagram tool (class-diagrams)
-- `Onboarding`: describes how to proceed when developing a master data model and a connector
+- `CONTRIBUTING`: Gathers any rule considering the contribution
+- `Onboarding`: Describes how to proceed when developing a master data model and a connector
 <br><br>
 
 ## Workgroup
