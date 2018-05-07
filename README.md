@@ -25,7 +25,8 @@ The revolution in data synchronization — the Open Integration Hub enables simp
 
 ## Introduction
 
-This repository includes the master data models for products and addresses, early prototypes and for decision-making relevant use cases and user stories from the cloud provider. Additionally, there is the superordinated data model and the procedure model for data model versioning. Hence, it is possible to develop the master data model and the meta model to enable standardized data synchronization across all connected applications.
+The Open Integration Hub enables data synchronization across a variety of applications. This requires unified data structures — the master data models of the Open Integration Hub. Currently, there are models for the domains addresses and products. In addition, more are to be developed in the very near future, for example, the master data models for collaboration and documents. Therefore, we need you to help us grow as a community!
+
 <br><br>
 
 ## Content
