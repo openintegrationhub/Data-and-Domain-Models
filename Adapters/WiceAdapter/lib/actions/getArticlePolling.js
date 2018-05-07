@@ -1,4 +1,21 @@
+/**
+ * Copyright 2018 Wice GmbH
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+ */
+
 "use strict";
+const Q = require('q');
 const request = require('request-promise');
 const messages = require('elasticio-node').messages;
 
@@ -7,66 +24,72 @@ const wice = require('./../actions/wice.js');
 exports.process = processTrigger;
 
 /**
- *  This method will be called from elastic.io platform providing following data
+ * This method will be called from elastic.io platform providing following data
  *
- * @param msg
- * @param cfg
+ * @param msg incoming message object that contains ``body`` with payload
+ * @param cfg configuration that is account information and configuration field values
  */
+
 function processTrigger(msg, cfg) {
 
-  let article = [];
-  let self = this;
-  let rowid = msg.body.rowid;
-
   // Create a session in Wice
-
   wice.createSession(cfg, () => {
-    let uri = `https://oihwice.wice-net.de/plugin/wp_elasticio_backend/json?method=get_article&cookie=${cfg.cookie}&show_detailview=${rowid}`;
-    let requestOptions = {
-      uri,
-      headers: {
-        'X-API-KEY': cfg.apikey
+    if (cfg.cookie) {
+
+      let article = [];
+      const self = this;
+
+      function getArticle() {
+        return new Promise((resolve, reject) => {
+          const options = {
+            uri: `https://oihwice.wice-net.de/plugin/wp_elasticio_backend/json?method=get_article&cookie=${cfg.cookie}&show_detailview=${msg.body.rowid}`,
+            headers: {
+              'X-API-KEY': cfg.apikey
+            }
+          };
+
+          request.get(options)
+            .then((res) => {
+              let resObj = JSON.parse(res);
+              article = {
+                rowid: resObj.rowid,
+                description: resObj.description,
+                sales_price: resObj.sales_price,
+                purchase_price: resObj.purchase_price,
+                in_stock: resObj.in_stock,
+                unit: resObj.unit,
+                price_list_highlight: resObj.price_list_highlight,
+                currency: resObj.currency
+              };
+              resolve(article);
+            }).catch((e) => {
+              reject(e);
+            });
+        });
       }
-    };
 
-    // Make a request to get the article
-    request.get(requestOptions).then((res) => {
+      function emitData() {
+        const data = messages.newMessageWithBody({
+          "article": article
+        });
+        self.emit('data', data);
+      }
 
-      let resObj = JSON.parse(res);
+      function emitError(e) {
+        console.log(`ERROR: ${e}`);
+        self.emit('error', e);
+      }
 
-      article = {
-        rowid: resObj.rowid,
-        description: resObj.description,
-        sales_price: resObj.sales_price,
-        purchase_price: resObj.purchase_price,
-        in_stock: resObj.in_stock,
-        unit: resObj.unit,
-        price_list_highlight: resObj.price_list_highlight,
-        currency: resObj.currency
-      };
+      function emitEnd() {
+        console.log('Finished execution');
+        self.emit('end');
+      }
 
-      emitData();
-
-    }, (err) => {
-      emitError();
-    }).catch((e) => {
-      console.log(`ERROR: ${e}`);
-    });
-
+      Q()
+        .then(getArticle)
+        .then(emitData)
+        .fail(emitError)
+        .done(emitEnd);
+    }
   });
-
-  // Emit data from promise depending on the result
-  function emitData() {
-    let data = messages.newMessageWithBody({
-      "article": article
-    });
-    console.log('Emit data: ' + JSON.stringify(data, undefined, 2));
-    self.emit('data', data);
-  }
-
-  function emitError(e) {
-    console.log(`ERROR: ${e}`);
-
-    self.emit('error', e);
-  }
 }

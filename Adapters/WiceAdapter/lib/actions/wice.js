@@ -1,11 +1,12 @@
-const request = require('request');
+const request = require('request-promise');
 
-exports.createSession = function (config, continueOnSuccess) {
+function createSession (config, continueOnSuccess) {
 
   const uri = "https://oihwice.wice-net.de/plugin/wp_elasticio_backend/json";
   console.log(`API KEY: ${config.apikey}`);
 
-  request.post(uri, {
+  const options = {
+    uri,
     form: {
       "method": "login",
       "mandant_name": config.mandant,
@@ -15,14 +16,18 @@ exports.createSession = function (config, continueOnSuccess) {
     headers: {
       'X-API-KEY': config.apikey
     }
-  }, function(error, response, body) {
-      if (!error && response.statusCode == 200) {
-        let data = JSON.parse(body);
-        config['cookie'] = data['cookie'];
-        console.log(`COOKIE: ${config['cookie']}`);
-        continueOnSuccess();
-      } else if (error) {
-        console.log(error);
-      }
-  });
+  };
+
+  request.post(options)
+    .then((res) => {
+      const data = JSON.parse(res);
+      config.cookie = data.cookie;
+      console.log(`COOKIE: ${config.cookie}`);
+      continueOnSuccess();
+    }).catch((e) => {
+      console.log(`ERROR: ${e}`);
+    });
 }
+module.exports = {
+  createSession
+};

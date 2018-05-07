@@ -1,4 +1,21 @@
+/**
+ * Copyright 2018 Wice GmbH
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+ */
+
 "use strict";
+const Q = require('q');
 const request = require('request-promise');
 const messages = require('elasticio-node').messages;
 
@@ -7,58 +24,72 @@ const wice = require('./wice.js');
 exports.process = processAction;
 
 /**
- *  This method will be called from elastic.io platform providing following data
+ * This method will be called from elastic.io platform providing following data
  *
- * @param msg
- * @param cfg
+ * @param msg incoming message object that contains ``body`` with payload
+ * @param cfg configuration that is account information and configuration field values
  */
-function processAction(msg, cfg) {
 
-  let reply = {};
-  let self = this;
-  let body = msg.body;
+function processAction(msg, cfg) {
 
   // Create a session in Wice
   wice.createSession(cfg, () => {
     if (cfg.cookie) {
 
-      let organization = JSON.stringify(body);
+      let reply = [];
+      const self = this;
 
-      let options = {
-        method: 'POST',
-        uri: 'https://oihwice.wice-net.de/plugin/wp_elasticio_backend/json',
-        form: {
-          method: 'update_company',
-          cookie: cfg.cookie,
-          data: organization
-        },
-        headers: {
-          'X-API-KEY': cfg.apikey
-        }
-      };
+      function updateOrganization() {
 
-      // Send a request to update the organization
-      request.post(options).then((res) => {
-        reply = res;
-        emitData();
-      }, (err) => {
-        console.log(`ERROR: ${err}`);
-      }).catch((e) => {
-        emitError();
-        console.log(`ERROR: ${e}`);
-      });
+        return new Promise((resolve, reject) => {
+          const organization = JSON.stringify(msg.body);
+          const options = {
+            method: 'POST',
+            uri: 'https://oihwice.wice-net.de/plugin/wp_elasticio_backend/json',
+            form: {
+              method: 'update_company',
+              cookie: cfg.cookie,
+              data: organization
+            },
+            headers: {
+              'X-API-KEY': cfg.apikey
+            }
+          };
+
+          // Send a request to update the organization
+          request.post(options)
+            .then((res) => {
+              reply = res;
+              console.log('Organization updated...');
+              resolve(reply);
+            }).catch((e) => {
+              reject(e);
+            });
+        });
+      }
+
+      function emitData() {
+        const data = messages.newMessageWithBody({
+          "organization": reply
+        });
+        self.emit('data', data);
+      }
+
+      function emitError(e) {
+        console.log('Oops! Error occurred');
+        self.emit('error', e);
+      }
+
+      function emitEnd() {
+        console.log('Finished execution');
+        self.emit('end');
+      }
+
+      Q()
+        .then(updateOrganization)
+        .then(emitData)
+        .fail(emitError)
+        .done(emitEnd);
     }
   });
-
-  // Emit data from promise depending on the result
-  function emitData() {
-    let data = messages.newMessageWithBody(reply);
-    self.emit('data', data);
-    console.log(JSON.stringify(data, undefined, 2));
-  }
-
-  function emitError(e) {
-    console.log('Oops! Error occurred');
-    self.emit('error', e);
-  }
 }
