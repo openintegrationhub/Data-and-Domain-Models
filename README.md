@@ -91,7 +91,7 @@ To see how members of the community are expected to behave, please read the [cod
 
 ### Member
 
-| Workgroup  | Member Name |GitHub Alias|| Role |
+| Workgroup  | Member Name |GitHub Alias|Email| Role |
 | --- | --- | --- | --- | --- |
 | Data and Domain Models  | Hansjörg Schmidt  |[hschmidthh](https://github.com/hschmidthh)|hschmidt@wice.de| **Manager**  |
 |  | Lutz Ashauer |[lashauer](https://github.com/lashauer)|lutz.ashauer@stoneone.de| Committer  |
