@@ -67,9 +67,9 @@ Before you contribute please read our [contribution guidelines](CONTRIBUTING.md)
 
 To see how members of the community are expected to behave, please read the [code of conduct](CODE_OF_CONDUCT.md). We apply the code of conduct defined by the Contributor Covenant, which is used across many open source projects, such as [NodeJS](https://github.com/nodejs/node), [Atom](https://github.com/atom/atom) and [Kubernetes](https://github.com/kubernetes/kubernetes).
 
-## Support
+## Contact
 
-When looking for support, please contact: philipp.hoegner@cloudecosystem.org .
+When looking for further information or support, please contact: datamodels@openintegrationhub.com .
 
 ## Content
 ### Folders
