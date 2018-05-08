@@ -31,16 +31,16 @@ The Open Integration Hub enables data synchronization across a variety of applic
 ## Content
 #### Folders
 
-- `Decisions`: Includes the collected and divided "Open" and "Closed" decisions
-- `MasterDataModels`: Contains the structure and rules for the Open Integration Hub, master data models for the domains products and addresses
+- `Decisions`: This folder contains all outstanding/made decisions by the workgroup categorized by open and closed decisions
+- `MasterDataModels`: This folder contains general information about the data models, an explanation of the OIHDataRecord and all currently existing master data models
 - `Protocols`: Contains meeting protocols of the workgroup meetings
-- `src`: All JSON schemes can be found here
+- `src`: All JSON schemes can be found here. This includes JSON schemes for all existing master data models, the overarching OIHDataRecord and a generic example as a starting point for writing JSON schemes for the relating data model
 
 
 #### Documents
 
 - `CONTRIBUTING`: Gathers any rule considering the contribution
-- `Onboarding`: Describes how to proceed when developing a master data model and a connector
+- `Onboarding`: Describes how to proceed when developing a master data model and a connector. It lists the most important documents from the connectors repository and the data and domain models repository, to simplify the onboarding process.
 <br><br>
 
 ## Workgroup
