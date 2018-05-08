@@ -2,16 +2,12 @@
 
 - [Objects](#objects)
 	- [Product](#product)
-		- [Further Product Attributes](#further-product-attributes)
 	- [ArticleGroup](#articlegroup)
-	- [Unit](#unit)
-		- [Further Unit Attributes](#further-unit-attributes)
-	- [Currency](#currency)
-		- [Further Currency Attributes](#further-currency-attributes)
+	- [Units](#units)
 	- [Country](#country)
 	- [Language](#language)
-	- [Storage](#storage)
-	- [LedgerAccount](#ledgeraccount)
+	- [Currency](#currency)
+	- [Storages](#storages)
 
 <!-- /TOC -->
 
