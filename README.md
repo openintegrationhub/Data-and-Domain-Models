@@ -17,7 +17,7 @@ Visit the official [Open Integration Hub homepage](https://www.openintegrationhu
 		- [Contribute a new Model](#contribute-a-new-model)
 	- [Contribution Guidelines](#contribution-guidelines)
 	- [Code of Conduct](#code-of-conduct)
-- [Support](#support)
+- [Contact](#contact)
 - [Content](#content)
 	- [Folders](#folders)
 	- [Documents](#documents)
