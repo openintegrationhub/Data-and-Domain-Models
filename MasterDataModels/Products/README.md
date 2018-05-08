@@ -39,7 +39,7 @@ CRUD functionalities can be performed based on the model.
 ## Description Table
 **Coming soon**
 
-In addition to the uml class diagram, this folder contains a [description table](AddressModelV2Description.md) which includes the following information for each attribute:
+In addition to the uml class diagram, this folder contains a [description table](ProductModelDescriptionTable.md) which includes the following information for each attribute:
 - Type
 - Properties
 - Short description
