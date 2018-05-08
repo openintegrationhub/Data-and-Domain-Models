@@ -30,5 +30,5 @@ Within this repository _upper_ `CamelCase` is used to name files (source code, a
 
 ### Asking for General Help
 
-For more information please contact philipp.hoegner@cloudecosystem.org for additional information on connectors.
+Please contact philipp.hoegner@cloudecosystem.org for additional information.
  
