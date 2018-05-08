@@ -1,16 +1,14 @@
 # Contribution Guideline
+
 ## Table of Content
-[General Information](#general-information)
+- [How to Contribute](#how-to-contribute)
+	- [Creating a Pull Request](#creating-a-pull-Request)
+	- [Creating an Issue](#creating-an-issue)
+- [Naming Conventions](#naming-conventions)
+- [Asking for General Help](#asking-for-general-help)
 
-[How to Contribute](#how-to-add-new-content)
-  * [Pull Request](#creating-a-pull-request)
-  * [Isues](#creating-an-issue)
 
-## General Information
-- Contribute in **English only**
-- Please use the  [ZenHub extension](https://www.zenhub.com/extension) with your browser and find some [help](https://help.github.com/categories/writing-on-github) on how to format with markup.
-
-## How to Contribute
+## How to contribute
 
 ### Creating a Pull Request
 1. Create a new .md file
@@ -22,8 +20,15 @@
 7. Click on _"create pull request"_
 
 ### Creating an Issue
-1. Click on the tab _"Issues"_
-2. Click on _"New Issue"_
-3. Give your issue a **decisive name**
-4. Assign at least **one person** to the issue
-5. Assign an appropiate **label** to the issue
+For any issue, there are fundamentally two ways an individual can contribute:
+
+ - By helping to triage the issue: This can be done either by providing supporting details (a test case that demonstrates a bug), or providing suggestions on how to address the issue.
+ - By helping to resolve the issue: Typically this is done either in the form of demonstrating that the issue reported is not a problem after all, or more often, by opening a Pull Request that changes some bit of something in Open Integrationb Hub in a concrete and reviewable manner.
+
+### Naming Conventions
+Within this repository _upper_ `CamelCase` is used to name files (source code, assets, .md files, etc.). E.g. `AdapterGuide.md`
+
+### Asking for General Help
+
+For more information please contact philipp.hoegner@cloudecosystem.org for additional information on connectors.
+ 
