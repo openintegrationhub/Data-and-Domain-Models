@@ -82,7 +82,7 @@ When looking for support, please contact: philipp.hoegner@cloudecosystem.org .
 
 ### Documents
 
-- `CONTRIBUTING`: Gathers any rule considering the contribution
+- `CONTRIBUTING`: Gathers any rule considering the contribution for the Open Integration Hub project
 - `Onboarding`: Describes how to proceed when developing a master data model and a connector. It lists the most important documents from the connectors repository and the data and domain models repository, to simplify the onboarding process.
 - `CODE_OF_CONDUCT`: Contains an explanation of the expected behavior of the community members, following  the code of conduct defined by the Contributor Covenant
 <br><br>
@@ -96,19 +96,18 @@ When looking for support, please contact: philipp.hoegner@cloudecosystem.org .
 
 ### Member
 
-| Workgroup  | Member Name |GitHub Alias|Email| Role |
-| --- | --- | --- | --- | --- |
-| Data and Domain Models  | Hansjörg Schmidt  |[hschmidthh](https://github.com/hschmidthh)|hschmidt@wice.de| **Manager**  |
-|  | Lutz Ashauer |[lashauer](https://github.com/lashauer)|lutz.ashauer@stoneone.de| Committer  |
-|  | Josef Bräuer|[JosefBraeuer](https://github.com/JosefBraeuer)|jb@yq-it.com| Committer  |
-|  | Andreas Giloj|[ag737](https://github.com/ag737)|andreas.giloj@iese.fraunhofer.de| Committer  |
-|  | Philipp Hoegner|[philecs](https://github.com/philecs)|philipp.hoegner@cloudecosystem.org| Committer  |
-|  | Selim Achmerzaev|[sachmerz](https://github.com/sachmerz)|selim.achmerzaev@basaas.com| Contributor  |
-|  | Jürgen Schüssler|[jschuesslerhh](https://github.com/jschuesslerhh)|jschuessler@wice.de| Contributor  |
-|  | Franz  Degenhardt|[FranzDegenhardt](https://github.com/FranzDegenhardt)|Franz.Degenhardt@x-integrate.com| Contributor  |
-|  | Dieter Dasberg|[ddasberg](https://github.com/ddasberg)|dieter.dasberg@yq-it.com| Contributor  |
-
-<br><br>
+#### Data and Domain Models
+| Member Name |GitHub Alias|Company| Role |
+| --- | --- | --- | --- |
+| Hansjörg Schmidt  |[hschmidthh](https://github.com/hschmidthh)|[Wice](https://wice.de/)| **Manager**  |
+| Lutz Ashauer |[lashauer](https://github.com/lashauer)|[StoneOne](http://stoneone.de)| Committer  |
+| Josef Bräuer|[JosefBraeuer](https://github.com/JosefBraeuer)|[yQ-it](http://www.yq-it.com/)| Committer  |
+| Andreas Giloj|[ag737](https://github.com/ag737)|[Fraunhofer IESE](https://www.iese.fraunhofer.de/)| Committer  |
+| Philipp Hoegner|[philecs](https://github.com/philecs)|[Cloud Ecosystem](http://www.cloudecosystem.org/)| Committer  |
+| Selim Achmerzaev|[sachmerz](https://github.com/sachmerz)|[Basaas](https://www.basaas.com/app-store)| Contributor  |
+| Jürgen Schüssler|[jschuesslerhh](https://github.com/jschuesslerhh)|[Wice](https://wice.de/)| Contributor  |
+| Franz  Degenhardt|[FranzDegenhardt](https://github.com/FranzDegenhardt)|[X-Integrate](https://x-integrate.com/x-integrate-startseite/)| Contributor  |
+| Dieter Dasberg|[ddasberg](https://github.com/ddasberg)|[yQ-it](http://www.yq-it.com/)| Contributor  |
 
 ## Wording
 
