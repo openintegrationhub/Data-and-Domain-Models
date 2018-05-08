@@ -25,7 +25,7 @@ The revolution in data synchronization — the Open Integration Hub enables simp
 
 ## Introduction
 
-The Open Integration Hub enables data synchronization across a variety of applications. This requires unified data structures — the master data models of the Open Integration Hub. Currently, there are models for the domains addresses and products. Furthermore, two more models for the domains collaboration and documents will follow soon. More models are to be developed in the very near future. To elaborate further models and to make the open integration hub even better - we need you! So join us and help us grow as an open source community!
+The Open Integration Hub enables data synchronization across a variety of applications. This requires unified data structures — the master data models of the Open Integration Hub. Currently, there are models for the domains addresses and products. In addition, two more models for the domains collaboration and documents will follow soon. More models are to be developed in the very near future. To elaborate further models and to make the open integration hub even better - we need you! So join us and help us grow as an open source community!
 <br><br>
 
 ## Content
