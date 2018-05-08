@@ -40,7 +40,7 @@ The Open Integration Hub enables data synchronization across a variety of applic
 #### Documents
 
 - `CONTRIBUTING`: Gathers any rule considering the contribution
-- `Onboarding`: Describes how to proceed when developing a master data model and a connector
+- `Onboarding`: Describes how to proceed when developing a master data model and a connector. It lists the most important documents from the connectors repository and the data and domain models repository, to simplify the onboarding process.
 <br><br>
 
 ## Workgroup
