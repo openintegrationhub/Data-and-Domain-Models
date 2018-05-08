@@ -17,6 +17,7 @@ Visit the official [Open Integration Hub homepage](https://www.openintegrationhu
 		- [Contribute a new Model](#contribute-a-new-model)
 	- [Contribution Guidelines](#contribution-guidelines)
 	- [Code of Conduct](#code-of-conduct)
+- [Support](#support)
 - [Content](#content)
 	- [Folders](#folders)
 	- [Documents](#documents)
@@ -65,6 +66,10 @@ Before you contribute please read our [contribution guidelines](CONTRIBUTING.md)
 ### Code of Conduct
 
 To see how members of the community are expected to behave, please read the [code of conduct](CODE_OF_CONDUCT.md). We apply the code of conduct defined by the Contributor Covenant, which is used across many open source projects, such as [NodeJS](https://github.com/nodejs/node), [Atom](https://github.com/atom/atom) and [Kubernetes](https://github.com/kubernetes/kubernetes).
+
+## Support
+
+When looking for support, please contact: philipp.hoegner@cloudecosystem.org .
 
 ## Content
 ### Folders
