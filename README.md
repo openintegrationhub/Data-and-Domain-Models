@@ -6,22 +6,26 @@ The revolution in data synchronization — the Open Integration Hub enables simp
 
 Visit the official [Open Integration Hub homepage](https://www.openintegrationhub.de/)
 
-# Table of Content
+## Table of Content
+<!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Table of Content](#table-of-content)
 - [Introduction](#introduction)
-
+- [Contribution](#contribution)
+	- [Getting Started](#getting-started)
+		- [Propose a Model Change](#propose-a-model-change)
+		- [Contribute a new Model](#contribute-a-new-model)
+	- [Contribution Guidelines](#contribution-guidelines)
+	- [Code of Conduct](#code-of-conduct)
 - [Content](#content)
-
-  - [Folders](#folders)
-  - [Documents](#documents)
-
+	- [Folders](#folders)
+	- [Documents](#documents)
 - [Workgroup](#workgroup)
-
-  - [Information](#information)
-  - [Member](#member)
-
+	- [Information](#information)
+	- [Member](#member)
 - [Wording](#wording)
 
-- [Contribution](#contribution)
+<!-- /TOC -->
 
 
 ## Introduction
@@ -63,7 +67,7 @@ Before you contribute please read our [contribution guidelines](CONTRIBUTING.md)
 To see how members of the community are expected to behave, please read the [code of conduct](CODE_OF_CONDUCT.md). We apply the code of conduct defined by the Contributor Covenant, which is used across many open source projects, such as [NodeJS](https://github.com/nodejs/node), [Atom](https://github.com/atom/atom) and [Kubernetes](https://github.com/kubernetes/kubernetes).
 
 ## Content
-#### Folders
+### Folders
 
 - `Decisions`: This folder contains all outstanding/made decisions by the workgroup categorized by open and closed decisions
 - `MasterDataModels`: This folder contains general information about the data models, an explanation of the OIHDataRecord and all currently existing master data models
@@ -71,20 +75,21 @@ To see how members of the community are expected to behave, please read the [cod
 - `src`: All JSON schemes can be found here. This includes JSON schemes for all existing master data models, the overarching OIHDataRecord and a generic example as a starting point for writing JSON schemes for the relating data model
 
 
-#### Documents
+### Documents
 
 - `CONTRIBUTING`: Gathers any rule considering the contribution
 - `Onboarding`: Describes how to proceed when developing a master data model and a connector. It lists the most important documents from the connectors repository and the data and domain models repository, to simplify the onboarding process.
+- `CODE_OF_CONDUCT`: Contains an explanation of the expected behavior of the community members, following  the code of conduct defined by the Contributor Covenant
 <br><br>
 
 ## Workgroup
-#### Information
+### Information
 - Each workgroup has atleast one status call every two weeks
 - Every committer must attend the status call
 - The governance model defines the workgroup members' roles into managers, committers or contributors
 
 
-#### Member
+### Member
 
 | Workgroup  | Member Name |GitHub Alias|| Role |
 | --- | --- | --- | --- | --- |
