@@ -2,8 +2,9 @@
   <img src="https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/Assets/medium-oih-einzeilig-zentriert.jpg" alt="Sublime's custom image" width="400"/>
 </p>
 
-The revolution in data synchronization — the Open Integration Hub enables simple data synchronization between any software applications and thus accelerates digitalisation 
+The revolution in data synchronization — the Open Integration Hub enables simple data synchronization between any software applications and thus accelerates digitalisation
 
+Visit the official [Open Integration Hub homepage](https://www.openintegrationhub.de/)
 
 # Table of Content
 - [Introduction](#introduction)
@@ -27,6 +28,39 @@ The revolution in data synchronization — the Open Integration Hub enables simp
 
 The Open Integration Hub enables data synchronization across a variety of applications. This requires unified data structures — the master data models of the Open Integration Hub. Currently, there are models for the domains addresses and products. In addition, two more models for the domains collaboration and documents will follow soon. More models are to be developed in the very near future. To elaborate further models and to make the open integration hub even better - we need you! So join us and help us grow as an open source community!
 <br><br>
+
+## Contribution
+### Getting Started
+Within the scope of the master data models of the Open Integration Hub you can contribute in two different ways. You can either request/propose a change to an already existing model or contribute a new model for an currently not existing domain.
+
+#### Propose a Model Change
+An existing model can be change in different ways. The possibility exists to add or remove something from the model or to change an existing part, such as an attribute.
+
+If you want to propose a model change please use the [request for model change survey](https://docs.google.com/forms/d/e/1FAIpQLScTkJNCEPTIBlc7Cumn7Y-6pfIPV90E5tVox2djnJbLUSyi4g/viewform) (Currently only available for the domain _addresses_).
+
+The unified process for changing a model is explained in the following:
+
+1. Fill out the request for model change survey
+2. Submit the proposal
+3. The relating workgroup will check the proposal according to fix rules
+4. If the proposal is approved the change will be incorporated into the model
+5. A new model version will be published within the next release
+
+#### Contribute a new Model
+
+If you want to contribute a new model for a currently not yet existing domain, please consider the following steps:
+
+1. Before you start please read the [introduction into Open Integration Hub master data models](MasterDataModels/README.md)
+2. Create a new folder within the _MasterDataModel folder_ and name it equally to the domain the model is provided for
+3. The first page of the folder has to follow the structure of the [ReadmeTemplate](MasterDataModels/ReadmeTemplate.md) to guarantee a unified description of all master data models
+
+### Contribution Guidelines
+
+Before you contribute please read our [contribution guidelines](CONTRIBUTING.md).
+
+### Code of Conduct
+
+To see how members of the community are expected to behave, please read the [code of conduct](CODE_OF_CONDUCT.md). We apply the code of conduct defined by the Contributor Covenant, which is used across many open source projects, such as [NodeJS](https://github.com/nodejs/node), [Atom](https://github.com/atom/atom) and [Kubernetes](https://github.com/kubernetes/kubernetes).
 
 ## Content
 #### Folders
@@ -52,24 +86,20 @@ The Open Integration Hub enables data synchronization across a variety of applic
 
 #### Member
 
-| Workgroup  | Member Name | Role |
-| ------------- | ------------- | ------------- |
-| Data and Domain Models  | Hansjörg  | **Manager**  |
-|  | Lutz  | Committer  |
-|  | Josef  | Committer  |
-|  | Andreas  | Committer  |
-|  | Philipp  | Committer  |
-|  | Selim  | Contributor  |
-|  | Jürgen  | Contributor  |
-|  | Franz  | Contributor  |
+| Workgroup  | Member Name |GitHub Alias|| Role |
+| --- | --- | --- | --- | --- |
+| Data and Domain Models  | Hansjörg Schmidt  |[hschmidthh](https://github.com/hschmidthh)|hschmidt@wice.de| **Manager**  |
+|  | Lutz Ashauer |[lashauer](https://github.com/lashauer)|lutz.ashauer@stoneone.de| Committer  |
+|  | Josef Bräuer|[JosefBraeuer](https://github.com/JosefBraeuer)|jb@yq-it.com| Committer  |
+|  | Andreas Giloj|[ag737](https://github.com/ag737)|andreas.giloj@iese.fraunhofer.de| Committer  |
+|  | Philipp Hoegner|[philecs](https://github.com/philecs)|philipp.hoegner@cloudecosystem.org| Committer  |
+|  | Selim Achmerzaev|[sachmerz](https://github.com/sachmerz)|selim.achmerzaev@basaas.com| Contributor  |
+|  | Jürgen Schüssler|[jschuesslerhh](https://github.com/jschuesslerhh)|jschuessler@wice.de| Contributor  |
+|  | Franz  Degenhardt|[FranzDegenhardt](https://github.com/FranzDegenhardt)|Franz.Degenhardt@x-integrate.com| Contributor  |
+|  | Dieter Dasberg|[ddasberg](https://github.com/ddasberg)|dieter.dasberg@yq-it.com| Contributor  |
 
 <br><br>
 
 ## Wording
 
 Within the project different terms and abbreviations are frequently used. All terms and abbrevations are explained within the [glossary](https://github.com/openintegrationhub/Connectors/wiki/Glossary) and our [list of abbrevations](https://github.com/openintegrationhub/Connectors/wiki/Abbreviations).
-
-
-## Contribution
-
-Before you contribute, please read the [contribution guideline](https://github.com/openintegrationhub/data-and-domain-models/blob/master/CONTRIBUTING.md).
