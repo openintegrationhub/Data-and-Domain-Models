@@ -1,3 +1,7 @@
+<style>
+body {
+  background-image: url("large-oih-bildmarke.jpg")
+}
 <p align="center">
   <img src="https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/Assets/medium-oih-einzeilig-zentriert.jpg" alt="Sublime's custom image" width="400"/>
 
@@ -122,3 +126,4 @@ When looking for further information or support, please contact: datamodels@open
 ## Wording
 
 Within the project different terms and abbreviations are frequently used. All terms and abbrevations are explained within the [glossary](https://github.com/openintegrationhub/Connectors/wiki/Glossary) and our [list of abbrevations](https://github.com/openintegrationhub/Connectors/wiki/Abbreviations).
+</style>
