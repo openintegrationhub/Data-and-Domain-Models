@@ -68,7 +68,7 @@ Some of them are:
 
 ### 2.1 What has to be done if a new attribute is added?
 
-#### 2.1.1 Impacts on Connectors/Adapters
+#### 2.1.1 Impacts on Connectors
 The JSON-schemata for the input and output of the actions/triggers concerning the extended part of the master data model must be extended by the new attribute. Potentially also the JSONata Expression must be extended.
 
 #### 2.1.2 Impacts on REST API Models of OIH and ISV
@@ -100,7 +100,7 @@ APPs use different versions of the MDM in parallel?**
 
 **We distinguish two cases: Only the attribute name is changed or the attribute type is changed.**
 
-#### 2.2.1 Impacts on Connectors/Adapters
+#### 2.2.1 Impacts on Connectors
 The JSON-schemata for the input and output of the actions/triggers concerning the changed attribute of the master data 
 model must be adapted. Potentially also the JSONata Expression must be adapted.
 
@@ -137,7 +137,7 @@ existing in the SDM.
 
 ### 2.3 What has to be done if an attribute is deleted?
 
-#### 2.3.1 Impacts on Connectors/Adapters
+#### 2.3.1 Impacts on Connectors
 The attribute must be removed from the JSON-schemata for the input and output of the actions/triggers of the concerning master data 
 model. Potentially also the JSONata Expression must be adapted.
 
