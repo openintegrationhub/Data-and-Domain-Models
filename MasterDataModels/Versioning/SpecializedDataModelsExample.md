@@ -13,7 +13,7 @@ The example described here shall serve as a basis for further discussions.
 
 * **This is an example for the versioning of Specialized Data Models and its possible consequences concerning the Master Data Models. That means the procedure described in Step 3 is only a special case of versioning a Master Data Model.**
 
-* Is there really only one SDM for a MDM, i.e. is the SDM specified on OIH level? Or could SDMs be ISV-specific? The decision will have impacts e.g. on the questions whether properties of a SDM must be optional or who is allowed to change the data with which means.
+* Is there really only one specialized data model for a master data model, i.e. is the specialized data model specified on OIH level? Or could specialized data models be ISV-specific? The decision will have impacts e.g. on the questions whether properties of a specialized data model must be optional or who is allowed to change the data with which means.
 
 
 ## Example
