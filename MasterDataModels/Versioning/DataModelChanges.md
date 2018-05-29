@@ -19,12 +19,12 @@ _Note: All Use Cases marked with a `?` are outstanding and need a decision._
 1. If a new attribute shall be mandatory or an existing optional attribute shall become mandatory, then things are
 not that easy: APPs which use the old REST-APIs do not / could potentially not provide the mandatory attribute. A
 solution for this
-problem would be that an APP must provide the version number of the MDM version it wants to use and that the
+problem would be that an APP must provide the version number of the master data model version it wants to use and that the
 corresponding versions of Transformers / REST APIs could be easily accessed (at runtime).
 
 2. APPs which use the old REST-APIs do not provide the new name or type of the object / attribute / enumeration option
 . A solution for this problem
-would be that an APP must provide the version number of the MDM version it wants to use and that the corresponding
+would be that an APP must provide the version number of the master data model version it wants to use and that the corresponding
 versions of Transformers / REST APIs could be easily accessed (at runtime).
 
 3. Impacts on Data Hub: The name of the attribute or object in the data base object's schema must be changed.
