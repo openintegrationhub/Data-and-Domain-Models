@@ -10,19 +10,19 @@
 		- [Impacts on Connectors](#impacts-on-connectors)
 		- [Impacts on REST API Models of OIH and ISV](#impacts-on-rest-api-models-of-oih-and-isv)
 		- [Impacts on Data Hub](#impacts-on-data-hub)
-		- [Running APPs which use different versions of the MDM / Connector and REST API Versioning](#running-apps-which-use-different-versions-of-the-mdm--connector-and-rest-api-versioning)
+		- [Running APPs which use different versions of the master data model / Connector and REST API Versioning](#running-apps-which-use-different-versions-of-the-master-data-model--connector-and-rest-api-versioning)
 		- [Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)](#impacts-on-specialized-data-models-sdm-and-private-data-models-pdm)
 	- [What has to be done if an attribute is changed?](#what-has-to-be-done-if-an-attribute-is-changed)
 		- [Impacts on Connectors](#impacts-on-connectors)
 		- [Impacts on REST API Models of OIH and ISV](#impacts-on-rest-api-models-of-oih-and-isv)
 		- [Impacts on Data Hub](#impacts-on-data-hub)
-		- [Running APPs which use different versions of the MDM / Connector and REST API Versioning](#running-apps-which-use-different-versions-of-the-mdm--connector-and-rest-api-versioning-1)
+		- [Running APPs which use different versions of the master data model / Connector and REST API Versioning](#running-apps-which-use-different-versions-of-the-master-data-model--connector-and-rest-api-versioning-1)
 		- [Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)](#impacts-on-specialized-data-models-sdm-and-private-data-models-pdm)
 	- [What has to be done if an attribute is deleted?](#what-has-to-be-done-if-an-attribute-is-deleted)
 		- [Impacts on Connectors](#impacts-on-connectors)
 		- [Impacts on REST API Models of OIH and ISV](#impacts-on-rest-api-models-of-oih-and-isv)
 		- [Impacts on Data Hub](#impacts-on-data-hub)
-		- [Running APPs which use different versions of the MDM / Connector and REST API Versioning](#running-apps-which-use-different-versions-of-the-mdm--connector-and-rest-api-versioning-2)
+		- [Running APPs which use different versions of the master data model / Connector and REST API Versioning](#running-apps-which-use-different-versions-of-the-master-data-model--connector-and-rest-api-versioning-2)
 		- [Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)](#impacts-on-specialized-data-models-sdm-and-private-data-models-pdm)
 - [Workflows](#workflows)
 	- [Decision Process Guidelines](#decision-process-guidelines)
@@ -92,16 +92,15 @@ technical solution is subject to various constraints. In this section we want to
 problems we are concerned with. We consciously do this without giving any recommendations, because we see the need for
 further discussion.
 
-**The core issue is: What must be done if the MDM changes? We examine three cases: Adding, changing and deleting
+**The core issue is: What must be done if the master data model changes? We examine three cases: Adding, changing and deleting
 an attribute.**
 
-
+**Note:** There is an additional document which summarized all possible data model changes, their impacts and if they are allowed or not. The document can be found unter [data model changes](DataModelChanges.md).
 
 **Note:** There are other documents in the repository with similiar content.
 Some of them are:
 1. [ProcedureModelExtension] (https://github.com/openintegrationhub/Data-and-Domain-Models/blob/modelExtenstionProcedure/MasterDataModels/ProcedureModelExtension.md)
-2. [SpecializedDataModels] (https://github.com/openintegrationhub/Data-and-Domain-Models/blob/DataModelVersioning/SpecializedDataModels.md)
-3. [SpecializedDataModelsExample] (https://github.com/openintegrationhub/Data-and-Domain-Models/blob/DataModelVersioning/SpecializedDataModelsExample.md)
+2. [SpecializedDataModelsExample] (SpecializedDataModelsExample.md)
 
 
 ### What has to be done if a new attribute is added?
@@ -117,22 +116,22 @@ The JSON-schemata for the input and output of the actions/triggers concerning th
 The corresponding data objects must be migrated, i.e. a new attribute has to be added to the data object's schema and
  in old data objects the new attribute must get a (defined) default value.
 
-#### Running APPs which use different versions of the MDM / Connector and REST API Versioning
+#### Running APPs which use different versions of the master data model / Connector and REST API Versioning
 If the new attribute is only optional in all REST APIs and in the JSON-schemata of the Connector, then there is
-no problem with running APPs which use different versions of the MDM: All APPs could use the newest versions of the
+no problem with running APPs which use different versions of the master data model: All APPs could use the newest versions of the
 REST APIs / Connectors, even if they do not "know" the new attribute.
 
 If the new attribute shall be mandatory, then things are not that easy: APPs which use the old REST-APIs do not
 provide the new mandatory attribute. A solution for this problem would be that an APP must provide the
-version number of the MDM version it wants to use and that the corresponding versions of Connectors / REST APIs could
+version number of the master data model version it wants to use and that the corresponding versions of Connectors / REST APIs could
 be easily accessed (at runtime).
 
-**--> Resulting questions: Shall it only be allowed to extend the MDM by optional attributes? Shall it be allowed that
-APPs use different versions of the MDM in parallel?**
+**--> Resulting questions: Shall it only be allowed to extend the master data model by optional attributes? Shall it be allowed that
+APPs use different versions of the master data model in parallel?**
 
 #### Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)
 * Possible name conflicts: An attribute with the name of the Master Data Model's new attribute is already existing in the SDM.
-* A semantically equivalent MDM-Attribute is already attribute of SDM, but the name of the SDM attribute differs from the name of the new attribute in the master data model.
+* A semantically equivalent master data model-Attribute is already attribute of SDM, but the name of the SDM attribute differs from the name of the new attribute in the master data model.
 
 ### What has to be done if an attribute is changed?
 
@@ -160,14 +159,14 @@ b)  The type of the attribute changed:
 **--> Resulting questions: Shall it be allowed to change the data type of an attribute? And, if the answer is yes,
 shall the new data type be compatible with the old one, so that there is no type demotion?**
 
-#### Running APPs which use different versions of the MDM / Connector and REST API Versioning
+#### Running APPs which use different versions of the master data model / Connector and REST API Versioning
 
 APPs which use the old REST-APIs do not provide the new name or type of the attribute. A solution for this problem would be that an APP must provide the
-version number of the MDM version it wants to use and that the corresponding versions of Connectors / REST APIs could
+version number of the master data model version it wants to use and that the corresponding versions of Connectors / REST APIs could
 be easily accessed (at runtime).
 
-**--> Resulting questions: Shall it be allowed to change an attribute of the MDM? And, once more: Shall it be allowed
-that APPs use different versions of the MDM in parallel?**
+**--> Resulting questions: Shall it be allowed to change an attribute of the master data model? And, once more: Shall it be allowed
+that APPs use different versions of the master data model in parallel?**
 
 #### Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)
 * Possible name conflicts: An attribute with the name of the Master Data Model's changed attribute name is already
@@ -188,7 +187,7 @@ concerning master data model.
 The corresponding data base objects must be migrated, i.e. the attribute must be deleted from the data base
 object's schema and in old data objects the value of the removed attribute has to be deleted.
 
-#### Running APPs which use different versions of the MDM / Connector and REST API Versioning
+#### Running APPs which use different versions of the master data model / Connector and REST API Versioning
 
 APPs which use old REST-APIs could provide the deleted attribute. Even if the old REST-APIs / Connector versions
 could be accessed, there remains still the problem that the corresponding data column does not exist any more (if no
