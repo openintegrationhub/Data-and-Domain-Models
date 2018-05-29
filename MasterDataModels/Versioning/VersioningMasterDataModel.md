@@ -10,7 +10,7 @@
 		- [Impacts on Connectors](#impacts-on-connectors)
 		- [Impacts on REST API Models of OIH and ISV](#impacts-on-rest-api-models-of-oih-and-isv)
 		- [Impacts on Data Hub](#impacts-on-data-hub)
-		- [Running APPs which use different versions of the MDM / Connector and REST API Versioning](#running-apps-which-use-different-versions-of-the-mdm-connector-and-rest-api-versioning)
+		- [Running APPs which use different versions of the MDM / Connector and REST API Versioning](#running-apps-which-use-different-versions-of-the-mdm--connector-and-rest-api-versioning)
 		- [Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)](#impacts-on-specialized-data-models-sdm-and-private-data-models-pdm)
 	- [What has to be done if an attribute is changed?](#what-has-to-be-done-if-an-attribute-is-changed)
 		- [Impacts on Connectors](#impacts-on-connectors)
