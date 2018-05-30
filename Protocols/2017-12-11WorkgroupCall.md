@@ -1,0 +1,43 @@
+# Protocol
+
+**Attendees:** Josef, Hansjörg, Lutz, Raphael, Andreas, Frank, Andy, Philipp (minute taker)
+
+## Election Workgroup Manager
+- Initial suggestion (Lutz) was rejected
+- **Raphael** takes over the manager position for the Data & Domain Model Workgroup
+
+## Workshop Protocol (from 29.11.2017)
+- Accepted. Can be merged into the master branch
+
+## Lutz' Suggestion for the Data Model
+Suggested structure/model see: [OIHDataModels](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/OIHDataModels/OIHDataModels.md)
+
+#### Lutz
+- The currently existing oih data model suggestion covers all existing use cases
+  - To cover all future use cases, further domain & data models are needed (realizable with this suggested model)
+  - Suggested model is applicable for the domains adresses and products
+- There won't be a perfect data model which covers all use cases
+- A pull synchronisation is only realizable with the smart data framework. If the smart data framework is not used, synchronization is only realizable via pushing.
+
+#### Josef
+- In the first step the two domains adresses and product should be covered (by a master data model).
+  - This helps to create learnings and further use cases e.g. invoices can be defined
+
+## Regulations
+- Regulations are needed for different conventions like output format, naming, etc.
+- Regulations can also be understood as guidelines, e.g. adapter guidelines
+
+## Current Results
+- Raphael presented his outputs and ideas
+  - Lutz: The ideas and questions are good but they delve to deep right now (basics need to be clarified).
+    - Thus the questions and ideas aim at a later stage, but we have to keep them in mind. We won't be able to develop the perfect model till the end of the year. The results for the first milestone will be more like a first draft
+- Josefs' results are currently in a textual form because of the missing UML modeling tool. The existing results can easily be transferred into an UML diagram.
+  - The results are not the final model but a first draft
+  - The results will be published on GitHub to provide insights for all project members
+- Hansjörg expanded the [MasterDataModelAdresses](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/MasterDataModels/MasterDataModelAdresses.md#423-person-specific-requirements) by chapter 4.2.3  
+  - Missing: Privacy- and digital rights management
+  - A vizual representation such as the one by YQ can be derived from the existing MasterDataModelAdresses file
+
+## Next Steps
+- [ ] Lutz and Josef will have a discussion about the regulations
+- [ ] Next **appointment** on **15.12.2017 at 10:30 am**
