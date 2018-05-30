@@ -16,12 +16,12 @@
 - Internal meeting on Monday on e-mail and calendar
 - User administration solution comparisons are missing 
   - ScopeVisio & CenterDevice have already been viewed
-	- Structure e.g. rights system at Office365 much clearer than at SV & CD
-	- SAPbyDesign would be an option
-	  - However very prefabricated rolls
-		- Will be consulted again in the near future
-	- Generally defined part for all industries
-		  - Specification for different industries
+    - Structure e.g. rights system at Office365 much clearer than at SV & CD
+  - SAPbyDesign would be an option
+    - However very prefabricated rolls
+    - Will be consulted again in the near future
+  - Generally defined part for all industries
+    - Specification for different industries
 - At the next workgroup call, the model is digitized and can be used for discussion.
 
 ### ELO
