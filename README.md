@@ -106,7 +106,7 @@ When looking for further information or support, please contact: datamodels@open
 
 ### Member
 
-#### Data and Domain Models
+#### Addresse, Superordinated and Product Models
 | Member Name |GitHub Alias|Company| Role |
 | --- | --- | --- | --- |
 | Hansjörg Schmidt  |[hschmidthh](https://github.com/hschmidthh)|[Wice](https://wice.de/)| **Manager**  |
@@ -118,6 +118,18 @@ When looking for further information or support, please contact: datamodels@open
 | Jürgen Schüssler|[jschuesslerhh](https://github.com/jschuesslerhh)|[Wice](https://wice.de/)| Contributor  |
 | Franz  Degenhardt|[FranzDegenhardt](https://github.com/FranzDegenhardt)|[X-Integrate](https://x-integrate.com/x-integrate-startseite/)| Contributor  |
 | Dieter Dasberg|[ddasberg](https://github.com/ddasberg)|[yQ-it](http://www.yq-it.com/)| Contributor  |
+
+
+#### Collaboration and Document Models
+| Member Name |GitHub Alias|Company| Role |
+| --- | --- | --- | --- |
+| Philipp Hoegner|[philecs](https://github.com/philecs)|[Cloud Ecosystem](http://www.cloudecosystem.org/)| **Manager**  |
+| Peter Heimig |[heimig](https://github.com/Heimig)|[Agindo](https://agindo.de/)| Committer  |
+| Nils Mosbach|[nils-mosbach](https://github.com/nils-mosbach)|[ELO Digital Office](https://www.elo.com/de-de.html)| Committer  |
+| Matthias Thiele|[MatthiasThiele](https://github.com/MatthiasThiele)|[ELO Digital Office](https://www.elo.com/de-de.html)| Committer  |
+| Benoit Clernet-Gurnaud|[bclerget](https://github.com/bclerget)|[ELO Digital Office](https://www.elo.com/de-de.html)| Committer  |
+
+
 
 ## Wording
 
