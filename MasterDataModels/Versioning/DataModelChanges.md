@@ -1,7 +1,8 @@
+The following table shall sum up the possible changes of a master data model and serve as an input for the decisions that must be made for all open issues.
 
 |Use Case|Impacts on Transformers|Impacts on REST APIs|Impacts on Data Hub | Category |Shall Be Allowed?|
 |---|---|---|---|---|---|
-|Add object|+|+|+|minor |yes|
+|Add object|+|+|+|minor |yes (see 6.)|
 |Add optional attribute|+|+|+| minor|yes|
 |Add mandatory attribute|+|+|+| major |? (see 1.)|
 |Add enumeration option|+|+|+|minor |yes|
@@ -35,6 +36,8 @@ conversion from the old data type to the new data type is compatible.
 
 5. APPs which use old REST-APIs could provide the deleted attribute. Even if the old REST-APIs / Transformer versions
 could be accessed, there still remains the problem that the corresponding data column does not exist any more (if no versionized data tables are used).
+
+6. Note: The new object must not have mandatory attributes, for the same reason as described in 1. 
 
 
 **Note:** There are other documents in the repository with similiar content.
