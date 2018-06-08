@@ -87,11 +87,14 @@ With this we can solve for example the following user stories:
 
 In the following diagrams you can see the different relationships between persons, organizations and persons to organizations.
 
-![Relations of organizations](Assets/relations-among-persons.png)
+### Use Case -  Relationships among Organizations
+![Relations of persons](Assets\RelationshipsAmongPersons.png)
 
-![Relations of organizations](Assets/relations-of-organizations.png)
+### Use Case -  Relationships among Organizations
+![Relations of organizations](Assets/RelationshipsAmongOrganizations.png)
 
-![Relationship person organization](Assets/use-case-relationship-person-organization.png)
+### Use Case -  Relationships between Organizations and Persons
+![Relationship person organization](Assets/RelationshipsOrganizationsAndPersons.png)
 
 # Considered Standards
 In the following we list all considered standards. In addition, it is described if and how the specific standard was incorporated into the model.
