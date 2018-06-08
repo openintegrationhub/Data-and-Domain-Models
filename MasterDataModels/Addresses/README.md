@@ -5,6 +5,11 @@
 - [Basic Ideas](#basic-ideas)
 	- [Duplicates](#duplicates)
 	- [Relations](#relations)
+- [Considered Standards](#considered-standards)
+	- [vCard](#vcard)
+	- [Postal Standards](#postal-standards)
+	- [Electronic Data Interchange (EDIfact)](#electronic-data-interchange-edifact)
+	- [IBM Infosphere](#ibm-infosphere)
 - [Operations](#operations)
 - [Content](#content)
 	- [UML Diagram](#uml-diagram)
@@ -87,6 +92,21 @@ In the following diagrams you can see the different relationships between person
 ![Relations of organizations](Assets/relations-of-organizations.png)
 
 ![Relationship person organization](Assets/use-case-relationship-person-organization.png)
+
+# Considered Standards
+In the following we list all considered standards. In addition, it is described if and how the specific standard was incorporated into the model.
+
+## vCard
+Will follow soon.
+
+## Postal Standards
+Will follow soon.
+
+## Electronic Data Interchange (EDIfact)
+Will follow soon.
+
+## IBM Infosphere
+Will follow soon.
 
 # Operations
 CRUD functionalities can be performed based on the model.

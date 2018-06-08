@@ -4,15 +4,17 @@ For a template conform example please look at the [Master Data Model Addresses](
 
 ---
 
-
-
 **Table of Contents**
+
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Introduction](#introduction)
 - [Basic Ideas](#basic-ideas)
 	- [Basic Idea 1](#basic-idea-1)
 	- [Basic Idea 2](#basic-idea-2)
+- [Considered Standards](#considered-standards)
+	- [Standard 1](#standard-1)
+	- [Standard 2](#standard-2)
 - [Operations](#operations)
 - [Content](#content)
 	- [UML Diagram](#uml-diagram)
@@ -21,6 +23,7 @@ For a template conform example please look at the [Master Data Model Addresses](
 - [Additional Content](#additional-content)
 
 <!-- /TOC -->
+
 
 # Introduction
 
@@ -32,6 +35,14 @@ _Please describe the basic logic and ideas of the Master Data Model_
 ...
 
 ## Basic Idea 2
+...
+
+# Considered Standards
+_Please describe all other standards that were created during the creation process_
+## Standard 1
+...
+
+## Standard 2
 ...
 
 # Operations

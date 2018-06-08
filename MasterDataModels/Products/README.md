@@ -1,18 +1,5 @@
 **Table of Contents**
 
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-
-- [Introduction](#introduction)
-- [Basic Ideas](#basic-ideas)
-	- [Multiple Types](#multiple-types)
-- [Operations](#operations)
-- [Content](#content)
-	- [UML Diagram](#uml-diagram)
-	- [JSON Schema](#json-schema)
-	- [Description Table](#description-table)
-- [Additional Content](#additional-content)
-
-<!-- /TOC -->
 
 # Introduction
 
@@ -21,6 +8,13 @@ In the following the master data model for the domain products is explained in d
 # Basic Ideas
 ## Multiple Types
 ...
+
+# Considered Standards
+## BiPro
+Will follow soon.
+
+## Oagis
+Will follow soon.
 
 # Operations
 CRUD functionalities can be performed based on the model.
