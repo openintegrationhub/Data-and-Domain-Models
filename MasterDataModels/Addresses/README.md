@@ -88,7 +88,7 @@ With this we can solve for example the following user stories:
 In the following diagrams you can see the different relationships between persons, organizations and persons to organizations.
 
 ### Use Case -  Relationships among Organizations
-![Relations of persons](Assets\RelationshipsBetweenPersons.png)
+![Relations of persons](Assets/RelationshipsBetweenPersons.png)
 
 ### Use Case -  Relationships among Organizations
 ![Relations of organizations](Assets/RelationshipsBetweenOrganizations.png)
