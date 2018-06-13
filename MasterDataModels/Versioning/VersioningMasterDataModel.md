@@ -126,8 +126,8 @@ provide the new mandatory attribute. A solution for this problem would be that a
 version number of the master data model version it wants to use and that the corresponding versions of Connectors / REST APIs could
 be easily accessed (at runtime).
 
-**--> Resulting questions: Shall it only be allowed to extend the master data model by optional attributes? Shall it be allowed that
-APPs use different versions of the master data model in parallel?**
+`**--> Resulting questions: Shall it only be allowed to extend the master data model by optional attributes? Shall it be allowed that
+APPs use different versions of the master data model in parallel?**`
 
 #### Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)
 * Possible name conflicts: An attribute with the name of the Master Data Model's new attribute is already existing in the SDM.
@@ -156,8 +156,8 @@ b)  The type of the attribute changed:
     The type of the attribute in the data base object's schema must be changed and the attribute values in old
     data base objects must be converted to the new type. This is only possible if the conversion of the old data type to the new data type is compatible.
 
-**--> Resulting questions: Shall it be allowed to change the data type of an attribute? And, if the answer is yes,
-shall the new data type be compatible with the old one, so that there is no type demotion?**
+`**--> Resulting questions: Shall it be allowed to change the data type of an attribute? And, if the answer is yes,
+shall the new data type be compatible with the old one, so that there is no type demotion?**`
 
 #### Running APPs which use different versions of the master data model / Connector and REST API Versioning
 
@@ -165,8 +165,8 @@ APPs which use the old REST-APIs do not provide the new name or type of the attr
 version number of the master data model version it wants to use and that the corresponding versions of Connectors / REST APIs could
 be easily accessed (at runtime).
 
-**--> Resulting questions: Shall it be allowed to change an attribute of the master data model? And, once more: Shall it be allowed
-that APPs use different versions of the master data model in parallel?**
+`**--> Resulting questions: Shall it be allowed to change an attribute of the master data model? And, once more: Shall it be allowed
+that APPs use different versions of the master data model in parallel?**`
 
 #### Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)
 * Possible name conflicts: An attribute with the name of the Master Data Model's changed attribute name is already
@@ -193,7 +193,7 @@ APPs which use old REST-APIs could provide the deleted attribute. Even if the ol
 could be accessed, there remains still the problem that the corresponding data column does not exist any more (if no
 versionized data tables are used).
 
-**--> Resulting question: Shall it be allowed to delete an attribute?**
+`**--> Resulting question: Shall it be allowed to delete an attribute?**`
 
 #### Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)
 There are no further impacts.
