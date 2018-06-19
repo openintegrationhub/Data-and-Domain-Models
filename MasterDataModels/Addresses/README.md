@@ -100,13 +100,23 @@ In the following diagrams you can see the different relationships between person
 In the following we list all considered standards. In addition, it is described if and how the specific standard was incorporated into the model.
 
 ## vCard
-Will follow soon.
+A very common interchange format for addresses is vCard, also known as VCF (Virtual Contact File). The complete standard is referenced in https://tools.ietf.org/html/rfc6350.
+
+vCard defines different fields for work and home. The "work" value implies that the property is related to an individual's work place, while the "home" value implies that the property is related to an individual's personal life. Organizations can be mapped with the "org"-parameter. vCard mentions a "related"-parameter to specify a relationship between another entity and the entity represented by a vCard. vCard knows categories, also known as "tags". These are one or more text values separated by a comma character.
+
+This all sounds very useful. But be aware: Standards are great if everyone follows them. Unfortunately, nobody seems to be following the card standard. Simple contact information such as email addresses, telephones numbers or postal addresses can be represented using standard properties or using standard properties grouped together with non-standard properties. For that reason a lot of problems occur, when dropping vCards from different sources into a database which tries to guarantee high standards in address quality, because you can't match the fields properly.
 
 ## Postal Standards
-Will follow soon.
+The Universal Postal Union has developed two addressing standards: S42 and S53. S42 describes international postal address components and templates, where S53 describes the exchange of name and address data. Since 2004 there is a development process for an international ISO-Standard for international addresses.
+
+As we can see, this standard divides addressee specifications in organization or individual identification as we do. It provides a lot of named fields for detailed address specifications to which we can refer in the object attribute specification later on.
+
+For further information please read the ISO 19773 specification at http://metadata-standards.org/metadata-stds/Document-library/Meeting-reports/SC32WG2/2004-11-Washington/WG2-N0723_19773-08_rs1--upu_s42_postal_data--20041104.doc
 
 ## Electronic Data Interchange (EDIfact)
-Will follow soon.
+Electronic Data Interchange for administration, commerce and transport (EDIfact) is the concept of businesses communicating electronically certain information that was traditionally communicated on paper.
+
+In EDIfact addresses are specified directly. There is no further relevance for the Master Data Model.
 
 ## IBM Infosphere
 Will follow soon.
