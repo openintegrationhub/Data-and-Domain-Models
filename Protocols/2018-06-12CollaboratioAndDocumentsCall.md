@@ -4,23 +4,15 @@
 
 ## Protocol
 
-## Connected Event
-- Benötigte Materialien?
-- Anmeldung von Agindo fehlt noch https://www.xing.com/events/community-event-daten-integration-1946331 CODE: Connection1806
-- Vorgehen beim Worldcafé?
-  -
-
 ## Agindo
--
+- Absent because of important appointments
 
 ## ELO
-- Erster Draft für Objektdatenmodell
-- Unterscheidet sich an mehreren Stellen vom CIMS Modell
-- Datenmodell für Typen fehlt noch
-- Nächste Woche nochmal zusammensetzen um das bisherige zu überarbeiten, dann kommt die erste Version auf GitHub
+- First draft for object model
+- Differs from the CIMS model in multiple points
+- Datamodel for types is missing yet
+- Reconciliation next week to further work on the current version
+- Revised version will be published on GitHub
 
 ## Next Steps
-
-- [ ] ...
-- [ ] ...
-- [ ] ...
+- [ ] Prepare world café for summer connection event **Nils** & **Peter**
