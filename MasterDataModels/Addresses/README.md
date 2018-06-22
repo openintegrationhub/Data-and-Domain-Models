@@ -45,14 +45,12 @@ Some tools will use a label for different kind of mail accounts, but this does n
 
 The specific user stories for this problem could be like:
 
-| User story: | As a user I want to see the function of a person in his organization. |
-| :--- | :--- |
+| User Stories |
+| :--- |
+|As a user I want to see the function of a person in his organization. |
+| As a user I want to assign a person to different organizations with different contact data to see different roles of the same person. |
+| As a user I want to store same persons in different organizations, to get in contact with them currently at the time with the particular contact data. |
 
-| User story: | As a user I want to assign a person to different organizations with different contact data to see different roles of the same person. |
-| :--- | :--- |
-
-| User story: | As a user I want to store same persons in different organizations, to get in contact with them currently at the time with the particular contact data. |
-| :--- | :--- |
 
 Other problems raised by use cases, for example about the different locations of one organization, the structure of a group of companies etc., arise the same questions.
 
@@ -73,17 +71,12 @@ If the task would only be a relation between the two objects persons and organiz
 
 With this we can solve for example the following user stories:
 
-| User story: | As a user I want to see the structure of a group of companies, to get a better overview of my business dealings.  |
-| :--- | :--- |
-
-| User story: | As a user I want to assign one or more persons to an organization to communicate with all contacts of an organization |
-| :--- | :--- |
-
-| User story: | As a user I want to assign relations between contact persons of my customers to get an overview of their hierarchy. |
-| :--- | :--- |
-
-| User story: | As a user I want to see, if a specific person in an organization is the same person as in another organization |
-| :--- | :--- |
+| User Stories |
+| :--- |
+| As a user I want to see the structure of a group of companies, to get a better overview of my business dealings.  |
+| As a user I want to assign one or more persons to an organization to communicate with all contacts of an organization |
+| As a user I want to assign relations between contact persons of my customers to get an overview of their hierarchy. |
+| As a user I want to see, if a specific person in an organization is the same person as in another organization |
 
 In the following diagrams you can see the different relationships between persons, organizations and persons to organizations.
 
@@ -119,7 +112,9 @@ Electronic Data Interchange for administration, commerce and transport (EDIfact)
 In EDIfact addresses are specified directly. There is no further relevance for the Master Data Model.
 
 ## IBM Infosphere
-Will follow soon.
+The infosphere party model is a model to manage contacts. These contacts are separated into two sub models - person and organization. The party model outsources relationships between contacts and stores them in a separate table instead of having a direct reference within a contact object.
+
+As for the infosphere model the relations within the Master Data Model are outsourced and different relationship objects for all variants of relationships types between persons and objects are existent. In addition, a contact within the Master Data Model can also be either a person or a organization, thus similarities to the infosphere model are perceptible.
 
 # Operations
 CRUD functionalities can be performed based on the model.
