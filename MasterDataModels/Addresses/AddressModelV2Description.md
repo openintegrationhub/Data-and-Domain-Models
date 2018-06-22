@@ -30,7 +30,7 @@ Third iteration of the address data model description.
 |language|String|-|First language of the person|"German"|-|
 |nickname|String|-|Nickname of the person within the application|"Sisa"|-|
 |jobTitle|String|-|Job title of the person|"Sales Manager"|-|
-|photo|URI|-|Photo related to the person|http://example.org/photo.jpg|-|
+|photo|String|-|Photo related to the person|http://example.org/photo.jpg|-|
 |anniversary|date-time|-|Anniversary of the person|2018-07-01|-|
 |[categories](#category)|Array (of category objects)|-|Category the person falls into|A category object array|-|
 |[addresses](#address)|Array (of address objects)|-|Address of the person|An address object array|-|
@@ -43,12 +43,12 @@ Third iteration of the address data model description.
 
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|organizationName|String|-|Name of the organization|"Cloud Ecosystem e.V."|-|
-|logo|URI|-|Logo of the organization|"http://example.org/logo.png"|-|
+|name|String|-|Name of the organization|"Cloud Ecosystem e.V."|-|
+|logo|String|-|Logo of the organization|"http://example.org/logo.png"|-|
 |[category](#category)|Array (of category objects)|-|Category the organization falls into|A category object array|-|
 |[address](#address)|Array (of address objects)|-|Address of the organization|An address object array|-|
 |[contactData](#contactdata)|Array (of contactData objects)|-|Contact data of an organization|A contactData object array|-|
-|[PersonToOrganizationRelationship](#persontoorganizationrelationship)|Array (of personToOrganizationRelationships objects)|-|Relations of an organization to person|A personToOrganizationRelationship object array|-|
+|[OrganizationToPersonRelationship](#organizationtopersonrelationship)|Array (of personToOrganizationRelationships objects)|-|Relations of an organization to person|A personToOrganizationRelationship object array|-|
 |[OrganizationToOrganizationRelationship](#organizationtoorganizationrelationship)|Array (of personToOrganizationRelationships objects)|-|Relations of an organization to person|An OrganizationToOrganizationRelationship object array|-|
 
 ## Address
@@ -71,7 +71,7 @@ Third iteration of the address data model description.
 
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|categoryName|String|-|Category the person / organization belongs to|"Customer"|-|
+|name|String|-|Category the person / organization belongs to|"Customer"|-|
 |description|String|-|Additional description of the category|"type a"|-|
 
 ## ContactData
@@ -112,25 +112,25 @@ In order to secure proper data integration, please satisfy the prescribed standa
 ## Calendar
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|calendar|URI (iCal)|-|URI to the persons' calendar|http://cal.example.com/calA|-|
-|requestCalendar|URI|-|URL to request an appointment with the person|janedoe@example.com|-|
-|busyCalendar|URI|-|URL which described if the person is available or busy|http://www.example.com/busy/janedoe|-|
+|calendar|String|-|URI to the persons' calendar|http://cal.example.com/calA|-|
+|requestCalendar|String|-|URL to request an appointment with the person|janedoe@example.com|-|
+|busyCalendar|String|-|URL which described if the person is available or busy|http://www.example.com/busy/janedoe|-|
 |description|String|-|Can be used for a textual description the calendar|primary|-|
 
-## PersonToOrganizationRelationship
+## OrganizationToPersonRelationship
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|relationshipType|String|-|Describes the relationship between a person and an organization|"employee"|-|
+|label|String|-|Describes the relationship between a person and an organization|"employee"|-|
 |function|String|-|Function of the person within the organization|"project leader"|-|
 |department|String|-|Name of the department of the person's company |"Sales"|-|
 
 ## PersonToPersonRelationship
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|relationshipType|String|-|Describes the relationship between two persons|"employee"|-|
+|label|String|-|Describes the relationship between two persons|"employee"|-|
 
 
 ## PersonToOrganizationRelationship
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|relationshipType|String|-|Describes the relationship between two organizations|"employee"|-|
+|label|String|-|Describes the relationship between two organizations|"employee"|-|
