@@ -9,7 +9,7 @@
     }
   ],
   "properties": {
-    "organizationName": {
+    "name": {
       "type": "string",
       "description": "Name of the organization",
       "example": "Great Company"

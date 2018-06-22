@@ -10,10 +10,6 @@
     }
   ],
   "properties": {
-    "personUId": {
-      "type": "string",
-      "description": "Unique identifier of the person"
-    },
     "title":
     {
       "type": "string",

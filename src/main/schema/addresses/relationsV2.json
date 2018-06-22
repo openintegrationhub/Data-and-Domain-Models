@@ -21,7 +21,7 @@
     }
   ],
   "definitions":{
-    "PersonToOrganizationRelationship":{
+    "OrganizationToPersonRelationship":{
       "type": "object",
       "description": "Describes the relationship between a person and an organization",
       "properties": {

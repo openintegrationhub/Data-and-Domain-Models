@@ -125,7 +125,7 @@
       "type": "object",
       "description": "Category of the person / organization",
       "properties": {
-        "categoryName": {
+        "name": {
           "type": "string",
           "description": "Name of the category the person / organization belongs to",
           "examples": [
