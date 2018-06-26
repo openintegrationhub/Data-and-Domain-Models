@@ -10,22 +10,22 @@ The cases are seperated by different usage scenarios.
 
 | User Stories |
 | :--- |
-|As a user I want to ... |
+|As a user I want to synchronize a private person and his/her contact data |
 
 ## Using Relations
 
 | User Stories |
 | :--- |
-|As a user I want to synchronize my Outlook contact data via the Open Integration Hub |
+|As a user I want to synchronize a person and all his/her relations to different organizations |
 
 ## Using Duplicates
 
 | User Stories |
 | :--- |
-|As a user I want to ... |
+|As a user I want to synchronize a person and his/her contact data within the context of different organizations |
 
 ## Full scenario
 
 | User Stories |
 | :--- |
-|As a user I want to ... |
+|As a user I want to synchronize a person and all his/her relations to different organization as well as his/her contact data within the context of different organizations |
