@@ -12,11 +12,20 @@ The cases are seperated by different usage scenarios.
 | :--- |
 |As a user I want to synchronize a private person and his/her contact data |
 
+### Example Values
+<img src="Assets/PersonData.jpg" alt="Sublime's custom image" width="400" height="400"/>
+
+
 ## Using Relations
 
 | User Stories |
 | :--- |
 |As a user I want to synchronize a person and all his/her relations to different organizations |
+
+### Example Values
+<img src="Assets/PersonToOrganization.jpg" alt="Sublime's custom image" width="900" height="300"/>
+
+
 
 ## Using Duplicates
 
