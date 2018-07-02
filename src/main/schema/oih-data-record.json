@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://openintegrationhub.org/schemas/oih-data-record.json",
+  "$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/oih-data-record.json",
   "title": "OIHDataRecord",
   "type": "object",
   "properties": {
