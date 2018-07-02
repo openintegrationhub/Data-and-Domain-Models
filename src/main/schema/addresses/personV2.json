@@ -115,7 +115,7 @@
       "type": "array",
       "description": "Social media accounts of the person",
       "items": {
-        "$ref": "#/sharedDefinitionsV2.json#definitions/address"
+        "$ref": "/sharedDefinitionsV2.json#definitions/address"
       }
     },
     "contactData": {
