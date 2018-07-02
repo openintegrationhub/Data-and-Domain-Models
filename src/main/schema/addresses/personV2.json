@@ -115,7 +115,7 @@
       "type": "array",
       "description": "Social media accounts of the person",
       "items": {
-        "$ref": "/sharedDefinitionsV2.json#definitions/address"
+        "$ref": "https://raw.githubusercontent.com/openintegrationhub/Data-and-Domain-Models/master/src/main/schema/addresses/sharedDefinitionsV2.json#definitions/address"
       }
     },
     "contactData": {
