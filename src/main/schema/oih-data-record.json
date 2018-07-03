@@ -25,9 +25,6 @@
       "minItems": 1
     }
   },
-  "required": [
-    "oihApplicationRecords"
-  ],
   "definitions": {
     "ApplicationDataRecord": {
       "type": "object",
