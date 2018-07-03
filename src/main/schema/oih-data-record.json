@@ -19,12 +19,14 @@
     "oihApplicationRecords": {
       "type": "array",
       "items": {
-        allOf: [
-          "recordUid": {
+        "allOf": [
+          {
+            "recordUid": {
               "type": "string",
               "description": "The record's UID within the respective application."
+            }
           },
-          "$ref": "#/definitions/ApplicationDataRecord"
+          {"$ref": "#/definitions/ApplicationDataRecord"}
         ],
         "required": [
           "recordUid"
