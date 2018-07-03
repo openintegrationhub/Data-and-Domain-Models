@@ -19,7 +19,17 @@
     "oihApplicationRecords": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ApplicationDataRecord"
+        "type": "object",
+        "properties": {
+          "recordUid": {
+            "type": "string",
+            "description": "The record's UID within the respective application."
+          },
+          "$ref": "#/definitions/ApplicationDataRecord"
+        },
+        "required": [
+          "recordUid"
+        ]
       },
       "description": "Each application record maps the OIH data record to a corresponding record in an application or service which is integrated via the OIH.",
       "minItems": 1
@@ -37,10 +47,6 @@
           "type": "string",
           "description": "Identifies the application or service the record belongs to within the OIH."
         },
-        "recordUid": {
-          "type": "string",
-          "description": "The record's UID within the respective application."
-        },
         "created": {
           "type": "integer",
           "description": "The timestamp when the record was created within the application as a UNIX timestamp."
@@ -49,10 +55,7 @@
           "type": "integer",
           "description": "The timestamp when the record was modified in the application the last time as a UNIX timestamp."
         }
-      },
-      "required": [
-        "recordUid"
-      ]
+      }
     }
   }
 }
