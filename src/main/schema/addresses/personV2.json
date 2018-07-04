@@ -53,7 +53,7 @@
     "gender":
     {
       "type": "string",
-      "enum": ["male", "female", "intersexual"],
+      "enum": ["male", "female", "intersexual",""],
       "description": "Gender of the person"
     },
     "birthday":
