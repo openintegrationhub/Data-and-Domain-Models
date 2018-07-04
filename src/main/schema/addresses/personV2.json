@@ -113,7 +113,7 @@
     "address":
     {
       "type": "array",
-      "description": "Social media accounts of the person",
+      "description": "Addess data of of the person",
       "items": {
         "$ref": "sharedDefinitionsV2.json#/definitions/Address"
       }
