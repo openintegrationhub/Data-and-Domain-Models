@@ -110,7 +110,7 @@
       "type": "string",
       "description": "Anniversary of the person"
     },
-    "address":
+    "addresses":
     {
       "type": "array",
       "description": "Addess data of of the person",
