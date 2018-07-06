@@ -263,7 +263,13 @@
     "Set": {
       "type": "object",
       "properties": {
-        "version" : {"type": "string", "description": "version number of the set-list"}
+        "version" : {"type": "string", "description": "version number of the set-list"},
+        "setItems" : {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SetItem"
+          }
+        }
       },
       "required": [
         "version"
@@ -283,7 +289,13 @@
     "Bom": {
       "type": "object",
       "properties": {
-        "version" : {"type": "string", "description": "version number of the bom-list"}
+        "version" : {"type": "string", "description": "version number of the bom-list"},
+        "bomItems" : {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BomItem"
+          }
+        }
       },
       "required": [
         "version"
