@@ -70,51 +70,51 @@
       },
       "isSale":{
          "type":"boolean",
-         "description":"can this product be sold?"
+         "description":"can this product be sold"
       },
       "isPurchase":{
          "type":"boolean",
-         "description":"can this product be purchased?"
+         "description":"can this product be purchased"
       },
       "isWorkStep":{
          "type":"boolean",
-         "description":"has this product to be treated as a work-step?"
+         "description":"has this product to be treated as a work-step"
       },
       "isProduction":{
          "type":"boolean",
-         "description":"is the a product that has to be produced?"
+         "description":"is the a product that has to be produced"
       },
       "isStockItem":{
          "type":"boolean",
-         "description":"must all stock related in and out of this product be related to a storage location?"
+         "description":"must all stock related in and out of this product be related to a storage location"
       },
       "isStockTracing":{
          "type":"boolean",
-         "description":"shall all stock related in and out of this product be protocoled?"
+         "description":"shall all stock related in and out of this product be protocoled"
       },
       "isCheckStock":{
          "type":"boolean",
-         "description":"may the product be stored to an inspection stock on receive and before delivery? (for quality management)"
+         "description":"may the product be stored to an inspection stock on receive and before delivery (for quality management)"
       },
       "isService":{
          "type":"boolean",
-         "description":"has this product to be treated as a service?"
+         "description":"has this product to be treated as a service"
       },
       "isPacking":{
          "type":"boolean",
-         "description":"has this product to be treated as a packing?"
+         "description":"has this product to be treated as a packing"
       },
       "isConsumable":{
          "type":"boolean",
-         "description":"has this product to be treated as a consumable?"
+         "description":"has this product to be treated as a consumable"
       },
       "isDivisible":{
          "type":"boolean",
-         "description":"is this a divisible product?"
+         "description":"is this a divisible product"
       },
       "isShipping":{
          "type":"boolean",
-         "description":"has this product to be treated as a shipping?"
+         "description":"has this product to be treated as a shipping"
       },
       "isCharges":{
          "type":"boolean",
@@ -146,7 +146,7 @@
       },
       "isRohsCompliant":{
          "type":"boolean",
-         "description":"is this product compiant to the RoHS-policy 2011/65/EU of the European Union?"
+         "description":"is this product compiant to the RoHS-policy 2011/65/EU of the European Union"
       },
       "netWeight":{
          "type":"number",
@@ -190,15 +190,15 @@
       },
       "isDiscount":{
          "type":"boolean",
-         "description":"is it allowed to give a discount when selling the product?"
+         "description":"is it allowed to give a discount when selling the product"
       },
       "isReduction":{
          "type":"boolean",
-         "description":"is the price for the product reduced?"
+         "description":"is the price for the product reduced"
       },
       "isIntrastat":{
          "type":"boolean",
-         "description":"is the selling and buying of this product relevant to the EU-policy 638/2004, named intrastat?"
+         "description":"is the selling and buying of this product relevant to the EU-policy 638/2004, named intrastat"
       },
       "isPreferential":{
          "type":"boolean",
@@ -294,7 +294,7 @@
                      "default",
                      "shop"
                   ],
-                  "description":"what kind of article-group is this?"
+                  "description":"what kind of article-group is this"
                },
                "ArticleGroupCode":{
                   "type":"string",
@@ -318,7 +318,7 @@
                },
                "numberPlate":{
                   "type":"string",
-                  "description":"What is the international number-plate sign for the country?"
+                  "description":"What is the international number-plate sign for the country"
                },
                "description":{
                   "type":"string",
@@ -360,19 +360,19 @@
             "properties":{
                "isPurchase":{
                   "type":"boolean",
-                  "description":"Is this unit used in purchase-processes?"
+                  "description":"Is this unit used in purchase-processes"
                },
                "isSale":{
                   "type":"boolean",
-                  "description":"Is this unit used in sale-processes?"
+                  "description":"Is this unit used in sale-processes"
                },
                "isProduction":{
                   "type":"boolean",
-                  "description":"Is this unit used in production-processes?"
+                  "description":"Is this unit used in production-processes"
                },
                "name":{
                   "type":"string",
-                  "description":"What is the name of the unit?",
+                  "description":"What is the name of the unit",
                   "examples":[
                      "Pieces",
                      "meter",
@@ -383,7 +383,7 @@
                },
                "abbreviation":{
                   "type":"string",
-                  "description":"What is the short-name of the unit?"
+                  "description":"What is the short-name of the unit"
                },
                "required":[
                   "name"
@@ -438,43 +438,43 @@
                   },
                   "isStorageReceipt":{
                      "type":"boolean",
-                     "description":"Is this a storage for incoming goods?"
+                     "description":"Is this a storage for incoming goods"
                   },
                   "isStorageCheck":{
                      "type":"boolean",
-                     "description":"Is this a storage for goods in quality check?"
+                     "description":"Is this a storage for goods in quality check"
                   },
                   "isStorageSalvage":{
                      "type":"boolean",
-                     "description":"Is this a storage for blocked goods?"
+                     "description":"Is this a storage for blocked goods"
                   },
                   "isStorageCommission":{
                      "type":"boolean",
-                     "description":"Is this a storage for commissions?"
+                     "description":"Is this a storage for commissions"
                   },
                   "isStorageProducts":{
                      "type":"boolean",
-                     "description":"Is this a storage for self produced goods?"
+                     "description":"Is this a storage for self produced goods"
                   },
                   "isStorageDispatch":{
                      "type":"boolean",
-                     "description":"Is this a storage for the dispatch of goods?"
+                     "description":"Is this a storage for the dispatch of goods"
                   },
                   "isStorageConsignment":{
                      "type":"boolean",
-                     "description":"Is this a storage for consignment goods?"
+                     "description":"Is this a storage for consignment goods"
                   },
                   "isStorageExternal":{
                      "type":"boolean",
-                     "description":"Is this storage in an external warehouse?"
+                     "description":"Is this storage in an external warehouse"
                   },
                   "isSupermaket":{
                      "type":"boolean",
-                     "description":"Is this a storage a supermarket for kanban storage?"
+                     "description":"Is this a storage a supermarket for kanban storage"
                   },
                   "isDisposable":{
                      "type":"boolean",
-                     "description":"Is this a storage readily available?"
+                     "description":"Is this a storage readily available"
                   }
                },
                "required":[
@@ -528,7 +528,7 @@
                   },
                   "isSystemCurrency":{
                      "type":"boolean",
-                     "description":"Is this the system currency?"
+                     "description":"Is this the system currency"
                   }
                },
                "required":[
@@ -668,7 +668,7 @@
                   },
                   "isRequired":{
                      "type":"boolean",
-                     "description":"is this attribute mandatory?"
+                     "description":"is this attribute mandatory"
                   },
                   "dataType":{
                      "type":"number",
