@@ -4,10 +4,10 @@
 	"$id": "http://openintegrationhub.org/schemas/products/product.json",
 
 	"title" : "Product",
-	"allOf": [ 
-		{ 
-			"$ref" : "http://openintegrationhub.org/schemas/oih-data-record.json" 
-		} 
+	"allOf": [
+		{
+			"$ref" : "http://openintegrationhub.org/schemas/oih-data-record.json"
+		}
 	],
 	"properties" : {
 		"articleNo": { "type": "string" },
@@ -76,7 +76,7 @@
 			}
 		}
 	},
-	"required": ["articleNo"],	
+	"required": ["articleNo"],
 	"definitions" : {
 		"ArticleGroup": {
 			"type": "object",
@@ -85,7 +85,7 @@
 				"description": { "type": "string" }
 				},
 			"required": ["type"]
-		},	
+		},
 		"Country": {
 			"type": "object",
 			"properties": {
