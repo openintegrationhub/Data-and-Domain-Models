@@ -71,14 +71,14 @@ An OIH expects and needs, depending on the scenario and the involved components 
 
 * __Each of the the sub-models of an OMDM has to be marked as an *OIHDataRecord*.__
 
-I.e., the root of an OMDM's sub-model **must** inherit from / extend _OIHDataRecord_, no matter whether it is modeled as an 
+I.e., the root of an OMDM's sub-model **must** inherit from / extend _OIHDataRecord_, no matter whether it is modeled as an
 aggregate or as a single entity.
 
 * __Every record passed into an OIH instance must at least be provided with a reference to the record of the application or service being the source of the record__,
 
-called an _OIHApplicationDataRecord_ containing ... 
+called an _OIHApplicationDataRecord_ containing ...
 
-+ the OIH's identifier for the application, 
++ the OIH's identifier for the application,
 + the record's ID within the application (both mandatory) and
 + optionally its creation and last modification dates within the application.
 
@@ -155,6 +155,18 @@ For these models, there are some further rules and regulations to follow in orde
 * __All type and property naming has to be done in English language.__
 * __The prefixes _OIH_ and *OIH_*  (or _oih_ and *oih_* for properties) are reserved for types and properties of OIH related Types and fields and may not be used for definitions in concrete models.__
 
+Some attributes are used across multiple models (such as "description"). To ensure consistency across all models, some of these attributes and how they should be named wihtin OIH Data Models are listed in the following:
+
+|OIH Attribute Name|Other frequently used synonyms|Description|
+|:--|:--|:--|
+|deleted|deleted, removed||
+|type|type, baseType, productType, setType, ...| Different prefixes are used to specify a type. Wihtin the OIH data models, all types should be labeled with "type". Further specifications can be made within an additional description table. **Expection**: Two or more types attributes are needed for one object|
+|notes|notes, note, additionalInformation, extraInformation, etc.|Attributes to further describe the object should be labeled with "notes"|
+|url| url, link||
+|value|value, data|Attributes that include the acutal content. E.g. in classical <key><value> pair.|
+|is...|All boolean attributes without `is`|Attributes of type boolean should be labeled starting with `is`. E.g. "_is_Production", "_is_Direct", "_is_Exact"|
+
+
 #### 6.1.2 JSON-Schema
 
 * __Schema file names are always lowercase__.
@@ -162,7 +174,7 @@ For these models, there are some further rules and regulations to follow in orde
 * __The schema-ID (the _$id_ property in a JSON-Schema) is always structured as follows:__
 	* The global context is _http://openintegrationhub.org/schemas/_
 	* followed by a context directory and the name of the schema file (including the _.json_ suffix)
-	
+
 	Example: ```"$id": "http://openintegrationhub.org/schemas/products/product.json"```
 * __Every field in a JSON-Schema must have a _description_ property__, as long as it's (even potentially) not self-explanatory.
 
