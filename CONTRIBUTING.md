@@ -38,6 +38,11 @@ In addition to the OIH platform itself, the OIH community also provides and main
 
 For these models, there are some further rules and regulations to follow in order to be presented in a unified way. This helps to understand and, above all, use them (i.e., implementing OIH Connectors for applications to be integrated with - respectively via - an OIH).
 
+### Organisatory
+
+* Create a new folder within the _MasterDataModel folder_ and name it equally to the domain the model is provided for
+* The first page of the folder has to follow the structure of the [ReadmeTemplate](MasterDataModels/ReadmeTemplate.md) to guarantee a unified description of all master data models
+
 ### Naming Conventions
 
 #### Types and Properties
