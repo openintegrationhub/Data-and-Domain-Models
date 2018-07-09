@@ -63,7 +63,7 @@ The unified process for changing a model is explained in the following:
 If you want to contribute a new model for a currently not yet existing domain, please consider the following steps:
 
 
-Before you start please read the [introduction into Open Integration Hub master data models](MasterDataModels/README.md) and [how to contribute a new data model](CONTRIBUTING.md#contributing-a-new-data-model).
+Before you start please read the [**Introduction into Open Integration Hub master data models**](MasterDataModels/README.md) and [**How to contribute a new data model**](CONTRIBUTING.md#contributing-a-new-data-model).
 
 
 ### Contribution Guidelines
