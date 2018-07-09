@@ -62,7 +62,7 @@ Some attributes are used across multiple models (such as "description"). To ensu
 |notes|notes, note, additionalInformation, extraInformation, etc.|Used to provide additional information for the specific object (beyond description)|
 |url| url, link|Used for all kind of links associated with the specific object|
 |value|value, data|Used for the acutal content of a specific object E.g. in classical <key><value> pair. (Example: Contact Data (Type: Email, Value: ...@example.com"))|
-|is...|All boolean attributes without `is`|Attributes of type boolean. Should be labeled starting with `is`. E.g. "_is_Production", "_is_Direct", "_is_Exact"|
+|is...|All boolean attributes without `is`|Attributes of type boolean. Should be labeled starting with `is`. E.g. "isProduction", "isDirect", "isExact"|
 
 
 #### JSON-Schema
