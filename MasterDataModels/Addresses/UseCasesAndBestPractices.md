@@ -31,8 +31,7 @@ The cases are seperated by different usage scenarios.
 
 | User Stories |
 | :--- |
-|As a user I want to synchronize a person and his/her contact data within the context of different organizations |
-
+|As a user I want to synchronize a person and his/her contact data within different contexts of different organizations |
 ### Example Values
 <img src="Assets/Scenario2.jpg" alt="Sublime's custom image" width="900" height="300"/>
 
