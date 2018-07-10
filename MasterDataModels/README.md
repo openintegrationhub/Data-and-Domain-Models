@@ -1,22 +1,19 @@
 # Master Data Models
 
-<!-- toc -->
-  * [1. Preface](#1-preface)
-  * [2. What is a Master Data Model?](#2-what-is-a-master-data-model)
-  * [3. Structure](#3-structure)
-    + [3.1 Aggregates](#31-aggregates)
-  * [4. Global Rules and Regulations for OMDMs](#4-global-rules-and-regulations-for-omdms)
-    + [4.1 OIH Data Records](#41-oih-data-records)
-    + [4.2 JSON-Schema](#42-json-schema)
-      - [4.2.1 Making a sub-model of an OMDM an OIH Data Record on the schema level](#421-making-a-sub-model-of-an-omdm-an-oih-data-record-on-the-schema-level)
-  * [5. Example: the Order aggregate](#5-example-the-order-aggregate)
-  * [6. Rules and Regulations for OMDMs provided by the OIH community](#6-rules-and-regulations-for-omdms-provided-by-the-oih-community)
-    + [6.1 Naming Conventions](#61-naming-conventions)
-      - [6.1.1 Types and Properties](#611-types-and-properties)
-      - [6.1.2 JSON-Schema](#612-json-schema)
-    + [6.2 UML Class Diagrams](#62-uml-class-diagrams)
-    + [6.3 Clarify all further aspects of a model with diagrams and/or textually](#63-clarify-all-further-aspects-of-a-model-with-diagrams-andor-textually)
-<!-- end toc-->
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Master Data Models](#master-data-models)
+	- [1. Preface](#1-preface)
+	- [2. What is a Master Data Model?](#2-what-is-a-master-data-model)
+	- [3. Structure](#3-structure)
+		- [3.1 Aggregates](#31-aggregates)
+	- [4. Global Rules and Regulations for OMDMs](#4-global-rules-and-regulations-for-omdms)
+		- [4.1 OIH Data Records](#41-oih-data-records)
+		- [4.2 JSON-Schema](#42-json-schema)
+			- [4.2.1 Making a sub-model of an OMDM an OIH Data Record on the schema level](#421-making-a-sub-model-of-an-omdm-an-oih-data-record-on-the-schema-level)
+	- [5. Example: the Order aggregate](#5-example-the-order-aggregate)
+
+<!-- /TOC -->
 
 ## 1. Preface
 
@@ -71,14 +68,14 @@ An OIH expects and needs, depending on the scenario and the involved components 
 
 * __Each of the the sub-models of an OMDM has to be marked as an *OIHDataRecord*.__
 
-I.e., the root of an OMDM's sub-model **must** inherit from / extend _OIHDataRecord_, no matter whether it is modeled as an 
+I.e., the root of an OMDM's sub-model **must** inherit from / extend _OIHDataRecord_, no matter whether it is modeled as an
 aggregate or as a single entity.
 
 * __Every record passed into an OIH instance must at least be provided with a reference to the record of the application or service being the source of the record__,
 
-called an _OIHApplicationDataRecord_ containing ... 
+called an _OIHApplicationDataRecord_ containing ...
 
-+ the OIH's identifier for the application, 
++ the OIH's identifier for the application,
 + the record's ID within the application (both mandatory) and
 + optionally its creation and last modification dates within the application.
 
@@ -136,48 +133,3 @@ As an example to model an aggregate capable of being processed of an OIH instanc
 The Order's root defines the model as an OIH Data Record by extending it. This way, the _Order_ entity is the one and only entry point to the aggregate.
 
 The JSON schema for this example is accessible under [/src/examples/schema/order.json](../src/examples/schema/order.json).
-
-## 6. Rules and Regulations for OMDMs provided by the OIH community
-
-The OIH is an open-source platform maintained by the cloud community under the leadership of the [Cloud Ecosystem](http://www.cloudecosystem.org). It can be run with any model which is designed and implemented by the rules and regulations listed so far.
-
-In addition to the OIH platform itself, the OIH community also provides and maintains a number of concrete Master Data Models to be used by any OIH instance, such as models for contacts/addresses or products.
-
-For these models, there are some further rules and regulations to follow in order to be presented in a unified way. This helps to understand and, above all, use them (i.e., implementing OIH Connectors for applications to be integrated with - respectively via - an OIH).
-
-### 6.1 Naming Conventions
-
-#### 6.1.1 Types and Properties
-
-* __All type and property naming has to be in CamelCase:__
-	* Type names are always spelled in _upper_ camel case (e.g., UpperCamelCaseType).
-	* Property names are always spelled in _lower_ camel case (e.g., lowerCamelCaseProperty).
-* __All type and property naming has to be done in English language.__
-* __The prefixes _OIH_ and *OIH_*  (or _oih_ and *oih_* for properties) are reserved for types and properties of OIH related Types and fields and may not be used for definitions in concrete models.__
-
-#### 6.1.2 JSON-Schema
-
-* __Schema file names are always lowercase__.
-* __As a seperator within file names a hyphen (-) may be used__ (e.g. _some-schema.json_).
-* __The schema-ID (the _$id_ property in a JSON-Schema) is always structured as follows:__
-	* The global context is _http://openintegrationhub.org/schemas/_
-	* followed by a context directory and the name of the schema file (including the _.json_ suffix)
-	
-	Example: ```"$id": "http://openintegrationhub.org/schemas/products/product.json"```
-* __Every field in a JSON-Schema must have a _description_ property__, as long as it's (even potentially) not self-explanatory.
-
-### 6.2 UML Class Diagrams
-
-* __Every OMDM must be depicted by one or more UML Class Diagrams__, which illustrate the static aspect of the model. I.e., amongst others:
-	* of which different OIH Data Records and entities (types) the OMDM constists,
-	* how every OIH Data Record itself is composed,
-	* how the OIH Data Records are related to each other,
-	* which properties every entity (type) has.
-* __Every OIH Data Record is defined by a Generalization relation__ (_OIHDataRecord_ is modelled as the superclass of the respective sub-model, s. [5. Example: the Order aggregate](#5-example-the-order-aggregate)).
-* __Property types may, but must not be declared__ in the diagrams as the main purpose of these diagrams is to clarify the structure of an OMDM.
-
-### 6.3 Clarify all further aspects of a model with diagrams and/or textually
-
-Schemas and class diagrams only point out static aspects of a data model. Normally, there are further (e.g. dynamic) aspects of a model, that those descriptions do not point out (e.g. the conscious acceptance of redundancy). To enable ISVs and any other developers to understand and work with an OMDM,
-
-* __all relevant aspects of a model, that are not derivable from JSON-Schemas or UML Class Diagramms have to be described textually and by further illustrations of any kind.__
