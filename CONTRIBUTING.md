@@ -19,7 +19,7 @@
 2. Select _"Create a new branch for this commit and start a pull request."_
 3. Name the branch with a descriptive name
 4. Click on _"propose new file"_
-5. Assign **at least the workgroup manager responsible for you domain** to the pull request
+5. Assign **at least the workgroup manager responsible for your domain** to the pull request
 6. Assign a descriptive label to the pull request
 7. Click on _"create pull request"_
 
@@ -27,7 +27,7 @@
 For any issue (suggestion, bug, fix, etc.) there are fundamentally two ways an individual can contribute:
 
  - By helping to triage the issue: This can be done either by providing supporting details (a test case that demonstrates a bug), or providing suggestions on how to address the issue.
- - By helping to resolve the issue: Typically this is done either in the form of demonstrating that the issue reported is not a problem after all, or more often, by opening a Pull Request that changes some bit of something in Open Integrationb Hub in a concrete and reviewable manner.
+ - By helping to resolve the issue: Typically this is done either in the form of demonstrating that the issue reported is not a problem after all, or more often, by opening a Pull Request that changes some bit of something in Open Integration Hub in a concrete and reviewable manner.
 
 
 # Contributing a new data model
@@ -88,7 +88,7 @@ Some attributes are used across multiple models (such as "description"). To ensu
 * __Every OIH Data Record is defined by a Generalization relation__ (_OIHDataRecord_ is modelled as the superclass of the respective sub-model, s. [5. Example: the Order aggregate](#5-example-the-order-aggregate)).
 * __Property types may, but must not be declared__ in the diagrams as the main purpose of these diagrams is to clarify the structure of an OMDM.
 
-* Following the Domain-Driven-Desin all _standalone_ objects (such as _person_ and _organization_ within the address model) should be coloured in yellow
+* Following the Domain-Driven-Design all _standalone_ objects (such as _person_ and _organization_ within the address model) should be coloured in yellow
 * Other attributes should be coloured in blue (See: [Address model](/MasterDataModels/Addresses#uml-diagram))
 
 
@@ -96,4 +96,4 @@ Some attributes are used across multiple models (such as "description"). To ensu
 
 Schemas and class diagrams only point out static aspects of a data model. Normally, there are further (e.g. dynamic) aspects of a model, that those descriptions do not point out (e.g. the conscious acceptance of redundancy). To enable ISVs and any other developers to understand and work with an OMDM,
 
-* __all relevant aspects of a model, that are not derivable from JSON-Schemas or UML Class Diagramms have to be described textually and by further illustrations of any kind.__
+* __all relevant aspects of a model, that are not derivable from JSON-Schemas or UML Class Diagrams have to be described textually and by further illustrations of any kind.__
