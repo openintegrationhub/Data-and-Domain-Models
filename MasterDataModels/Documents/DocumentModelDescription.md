@@ -49,7 +49,7 @@ No additional properties available.
 ## Policy
 
 Policies can describe how objects are handled by the system. 
-Invoices for example must be stored in a tamper proof environment in order to compete local law.
+Invoices, for example, must be stored in a tamper-proof environment in order to comply with local law.
 Therefore policies can be used to define retention or deletion policies.
 
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|

@@ -28,13 +28,13 @@ In the following the master data model for the domain `Documents` is explained i
 # Basic Ideas
 
 One challenge of this model is to fit a wide array of services dealing with documents.
-The features from such services, like Dropbox and other more advanced systems like SharePoint or ELO are far apart.
+The features provided by heterogeneous services like Dropbox and other more advanced systems like SharePoint or ELO are far apart.
 
-In order to be suitable for all szenarios, this model is split into several implementations.
+In order to be suitable for all scenarios, this model is split into several implementations.
 
 * `Basic`   		Sharing documents between services
 * `Comfort`			Sharing documents and metadata between services
-* `Extended`		Sharing documents, metadata, policies and sub resources betweeen services 
+* `Extended`		Sharing documents, metadata, policies and sub-resources betweeen services 
 
 ## Managing documents by specialized systems
 
@@ -42,7 +42,7 @@ The following table classifies the complexity of document management systems cur
 
 |Type|Description|Example|
 |---|---|---|
-|Filestorage|A system that can store information (folders/ documents) in an hierarchically organized structure including limited metadata capabilities|DropBox, Filestorage, FTP, OneDrive|
+|File storage|A system that can store information (folders/ documents) in a hierarchically organized structure including limited metadata capabilities|DropBox, online file storage, FTP, OneDrive|
 |DMS|A system that stores and organizes documents based on additional metadata or hierarchically organized structures.|Box|
 |ECM/EIM|A system that captures, stores, delivers, manages and organizes information based on additional metadata or hierarchically organized structures.|Alfresco, ELO, M-Files, OpenText, SharePoint|
 
@@ -50,9 +50,9 @@ The following table classifies the complexity of document management systems cur
 
 In addition to systems that have been specifically designed to capture, store, deliver and manage documents and informations, there are additional services that have been designed in order to produce content.
 
-|Service/ System|Example Document types|
+|Service/ System|Sample document types|
 |---|---|---|
-|Inbox servics|Incoming Invoices, Notifications, ...|
+|Inbox services|Incoming Invoices, Notifications, ...|
 |ERP|Outgoing Invoices, Purchase Orders, ...|
 
 | User Stories |
@@ -63,18 +63,18 @@ In addition to systems that have been specifically designed to capture, store, d
 
 ## Business services consuming documents
 
-Company wide are a variety of systems that generate or recieve documents that are related to business transactions of other systems. If a document management system is used these documents are centralized in a repository that contains information that refers to the business transaction.
+From a companywide perspective, there are a variety of systems that generate or recieve documents that are related to business transactions of other systems. If a document management system is used, these documents are centralized in a repository that contains information that refers to the business transaction.
 
-Therefore ERP or CRM systems can view a list of related documents from document management systems or third party sources. The following table lists systems that are creating business transactions.
+Therefore ERP or CRM systems can view a list of related documents from document management systems or third party sources. The following table lists systems that create business transactions.
 
-|Service/ System|Example Document types|
+|Service/ System|Sample document types|
 |---|---|---|
 |CRM|Invoices, Purchase Orders, Billing documents, E-Mails, Communication, etc.|
 |ERP|Invoices, Purchase Orders, Billing documents, etc.|
 
 | User Stories |
 | :--- |
-| As a user I want to view stored documents of the current invoice transaction in the erp system. This gives me additional information like attached terms and conditions or the related delivery docket. |
+| As a user I want to view stored documents of the current invoice transaction in the ERP system. This gives me additional information like attached terms and conditions or the related delivery docket. |
 | As a user I want to add additional documents while displaying the customer record in the CRM system. |
 | As a user I want to pass all documents uploaded to a specific DropBox folder to be passed to the ERP system. |
 
@@ -101,7 +101,7 @@ The protocol is based on SOAP and is 335 pages long. In other words, small compa
 
 CRUD functionalities can be performed based on the model.
 
-This folder contains a draft of [operations](DocumentModelDescription.md) that can be used for building rest webservices.
+This folder contains a draft of [operations](DocumentModelDescription.md) that can be used for building REST webservices.
 
 # Content
 
@@ -121,6 +121,6 @@ In addition to the uml class diagram, this folder contains a [description table]
 - Type
 - Properties
 - Short description
-- Example values
+- Sample values
 - Enumeration options (if attribute is an enumeration)
 
