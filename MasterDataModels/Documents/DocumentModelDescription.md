@@ -80,3 +80,11 @@ DMS/ECM/EIM systems usually provide additional functionality like extracting ful
 |type|String|enum|Type of the relation|"link"|"link", "reference"|
 |targetUid|String||target object|"9bd1f8dd-5040-4b19-bbc9-c5cbb9c8d4b8"||
 |sourceUid|String||source object|"9bd1f8dd-5040-4b19-bbc9-c5cbb9c8d4b8"||
+
+
+## Modification
+
+|Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
+|---|---|---|---|---|---|
+|date|Date||Timestamp of the modification|"12.04.2018 23:20"||
+|user|User||User that performed the modification|||
