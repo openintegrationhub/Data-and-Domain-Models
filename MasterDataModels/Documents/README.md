@@ -107,7 +107,9 @@ This folder contains a draft of [operations](DocumentModelDescription.md) that c
 
 ## UML Diagram
 
-![Master Data Model - Documents](Assets/OIHDataModelDocuments.svg)
+![Master Data Model - Documents Extended Version](Assets/OIHDataModelDocuments.svg)
+
+![Master Data Model - Documents Basic Version](Assets/OIHDataModelDocumentsBasic.svg)
 
 ## JSON Schema
 
