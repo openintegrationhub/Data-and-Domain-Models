@@ -5,8 +5,9 @@
 
 - [Introduction](#introduction)
 - [Basic Ideas](#basic-ideas)
-	- [Basic Idea 1](#basic-idea-1)
-	- [Basic Idea 2](#basic-idea-2)
+	- [Managing documents by specialized systems](#managing-documents-by-specialized-systems)
+	- [Business services creating documents](#business-services-creating-documents)
+	- [Business services consuming documents](#business-services-consuming-documents)
 - [Considered Standards](#considered-standards)
 	- [WebDAV](#webdav)
 	- [CMIS](#cmis)
@@ -29,17 +30,53 @@ In the following the master data model for the domain `Documents` is explained i
 One challenge of this model is to fit a wide array of services dealing with documents.
 The features from such services, like Dropbox and other more advanced systems like SharePoint or ELO are far apart.
 
+In order to be suitable for all szenarios, this model is split into several implementations.
+
+* `Basic`   		Sharing documents between services
+* `Comfort`			Sharing documents and metadata between services
+* `Extended`		Sharing documents, metadata, policies and sub resources betweeen services 
+
+## Managing documents by specialized systems
+
+The following table classifies the complexity of document management systems currently available.
+
 |Type|Description|Example|
 |---|---|---|
-|Filestorage|A system that can store information (folders/ documents) in an hierarchically organized structure including limited metadata capabilities|Filestorage, FTP, DropBox, OneDrive|
-|DMS|A system that stores and organizes documents based on additional metadata or an hierarchically organized structures.|Box|
-|ECM/EIM|A system that stores and organizes documents and information based on additional metadata or an hierarchically organized structures.|SharePoint, ELO|
+|Filestorage|A system that can store information (folders/ documents) in an hierarchically organized structure including limited metadata capabilities|DropBox, Filestorage, FTP, OneDrive|
+|DMS|A system that stores and organizes documents based on additional metadata or hierarchically organized structures.|Box|
+|ECM/EIM|A system that captures, stores, delivers, manages and organizes information based on additional metadata or hierarchically organized structures.|Alfresco, ELO, M-Files, OpenText, SharePoint|
 
-In order to be suitable for both, this model is split into several implementations.
+## Business services creating documents
 
-## Transferring documents
+In addition to systems that have been specifically designed to capture, store, deliver and manage documents and informations, there are additional services that have been designed in order to produce content.
 
-## Working with exisiting documents
+|Service/ System|Example Document types|
+|---|---|---|
+|Inbox servics|Incoming Invoices, Notifications, ...|
+|ERP|Outgoing Invoices, Purchase Orders, ...|
+
+| User Stories |
+| :--- |
+| As a user I want to automatically send an email with the invoice created by the ERP system. |
+| As a user I want to automatically store generated outgoing documents in the document management system. |
+| As a user I want to use inbox services for digitalizing invoices for further processing. |
+
+## Business services consuming documents
+
+Company wide are a variety of systems that generate or recieve documents that are related to business transactions of other systems. If a document management system is used these documents are centralized in a repository that contains information that refers to the business transaction.
+
+Therefore ERP or CRM systems can view a list of related documents from document management systems or third party sources. The following table lists systems that are creating business transactions.
+
+|Service/ System|Example Document types|
+|---|---|---|
+|CRM|Invoices, Purchase Orders, Billing documents, E-Mails, Communication, etc.|
+|ERP|Invoices, Purchase Orders, Billing documents, etc.|
+
+| User Stories |
+| :--- |
+| As a user I want to view stored documents of the current invoice transaction in the erp system. This gives me additional information like attached terms and conditions or the related delivery docket. |
+| As a user I want to add additional documents while displaying the customer record in the CRM system. |
+| As a user I want to pass all documents uploaded to a specific DropBox folder to be passed to the ERP system. |
 
 # Considered Standards
 
