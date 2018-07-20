@@ -52,7 +52,7 @@ _Which functionalities can be performed on the model? Standard: CRUD_
 
 ## UML Diagram
 
-_Please provide the UML class diagram of the model._
+![CollaborationModel](OIHDataModelCollaboration.png)
 
 ## JSON Schema
 
