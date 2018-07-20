@@ -52,7 +52,7 @@ _Which functionalities can be performed on the model? Standard: CRUD_
 
 ## UML Diagram
 
-![CollaborationModel](OIHDataModelCollaboration.png)
+![CollaborationModel](Assets/OIHDataModelCollaboration.png)
 
 ## JSON Schema
 
