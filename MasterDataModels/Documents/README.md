@@ -42,16 +42,17 @@ The following table classifies the complexity of document management systems cur
 
 |Type|Description|Example|
 |---|---|---|
-|File storage|A system that can store information (folders/ documents) in a hierarchically organized structure including limited metadata capabilities|DropBox, online file storage, FTP, OneDrive|
-|DMS|A system that stores and organizes documents based on additional metadata or hierarchically organized structures.|Box|
-|ECM/EIM|A system that captures, stores, delivers, manages and organizes information based on additional metadata or hierarchically organized structures.|Alfresco, ELO, M-Files, OpenText, SharePoint|
+|File storage|A system that can store documents (folders/ documents) in a hierarchically organized structure including limited metadata capabilities|FTP, S3, Network fileshare|
+|Online file share|A system that can store information (folders/ documents) in a hierarchically organized structure. Allows sharing content easily. Some services do provide metadata capabilities.|DropBox, OneDrive, Box|
+|DMS|A system that stores and organizes documents based on additional metadata or hierarchically organized structures.||
+|ECM/EIM|A system that captures, stores, delivers, manages and organizes information based on additional metadata or hierarchically organized structures. In most cases DMS functionality can be seen as a fundamental part of these services.|Alfresco, ELO, M-Files, OpenText, SharePoint|
 
 ## Business services creating documents
 
 In addition to systems that have been specifically designed to capture, store, deliver and manage documents and informations, there are additional services that have been designed in order to produce content.
 
 |Service/ System|Sample document types|
-|---|---|---|
+|---|---|
 |Inbox services|Incoming Invoices, Notifications, ...|
 |ERP|Outgoing Invoices, Purchase Orders, ...|
 
@@ -68,7 +69,7 @@ From a companywide perspective, there are a variety of systems that generate or 
 Therefore ERP or CRM systems can view a list of related documents from document management systems or third party sources. The following table lists systems that create business transactions.
 
 |Service/ System|Sample document types|
-|---|---|---|
+|---|---|
 |CRM|Invoices, Purchase Orders, Billing documents, E-Mails, Communication, etc.|
 |ERP|Invoices, Purchase Orders, Billing documents, etc.|
 
