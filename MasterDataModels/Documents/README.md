@@ -38,14 +38,13 @@ In order to be suitable for all scenarios, this model is split into several impl
 
 ## Managing documents by specialized systems
 
-The following table classifies the complexity of document management systems currently available.
+The following table classifies the complexity of document management or sharing services currently available.
 
 |Type|Description|Example|
 |---|---|---|
-|File storage|A system that can store documents (folders/ documents) in a hierarchically organized structure including limited metadata capabilities|FTP, S3, Network fileshare|
-|Online file share|A system that can store information (folders/ documents) in a hierarchically organized structure. Allows sharing content easily. Some services do provide metadata capabilities.|DropBox, OneDrive, Box|
-|DMS|A system that stores and organizes documents based on additional metadata or hierarchically organized structures.||
-|ECM/EIM|A system that captures, stores, delivers, manages and organizes information based on additional metadata or hierarchically organized structures. In most cases DMS functionality can be seen as a fundamental part of these services.|Alfresco, ELO, M-Files, OpenText, SharePoint|
+|File storage|A service that can store documents (folders/ documents) in a hierarchically organized structure including limited metadata capabilities|FTP, S3, Network fileshare|
+|Online file share|A service that can store information (folders/ documents) in a hierarchically organized structure. Allows sharing content easily. Some services do provide metadata capabilities.|DropBox, OneDrive, Box|
+|ECM/EIM/Content services|A service that captures, stores, delivers, manages and organizes information based on additional metadata or hierarchically organized structures. In most cases DMS functionalities can be seen as a fundamental part of these services.|Alfresco, ELO, M-Files, OpenText, SharePoint|
 
 ## Business services creating documents
 
@@ -89,14 +88,15 @@ This standard is probably the most widely used one related to document authoring
 It is of widespread use and based on an extension of the HTTP protocol.
 It however suffers two drawbacks. First, it requires an extension in the web server itself, and cannot be built using plain HTTP.
 Second, the protocol and its XML format are both non-trivial and verbose. 
-The model presented here attempts to be compatible with it, but also extends it with a wide array of optional features.
 
 ## CMIS
 
 Reference: http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html
 
 This standard is used in the "Document Management Industry" to some extend.
-The protocol is based on SOAP and is 335 pages long. In other words, small companies might face a challenge due to its scope and complexity.
+The protocol is based on SOAP and is 335 pages long. In other words, small companies might face a challenge due to its scope and complexity. Besides the complexity it is one of the few standards that support a wide range of systems and use cases implemented by the enterprise.
+
+The model presented here attempts to be compatible with it in a simplified version that is designed to be used by rest services.
 
 # Operations
 
