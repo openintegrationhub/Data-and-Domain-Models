@@ -21,28 +21,30 @@
 
 # Introduction
 
-In the following the master data model for the domain collaboration is explained in detail. As for every Open Integration Hub Master Data Model, an UML class diagram, a JSON schema as well as a descrption table exists.
+In the following the master data model for the domain collaboration is explained in detail. As for every Open Integration Hub Master Data Model, an UML class diagram, a JSON schema (soon) as well as a descrption table exists.
 
-# Basic Ideas
+# Basic Idea
 The first version of the collaboration model will include models for e-mail, calendarevents and tasks.
 Through community feedback these were identified as the most important models in the collaboration domain.
 
-## Basic Idea 1
-...
-
-## Basic Idea 2
-...
+Because all three of the models have identical properties they will be set in relation to an central element.
+The models will inherit the most important properties from this element and extensions will be made if neccessary.
+The idea behind this: collaboration relies on certain knowledge factors to establish an effective use. One has to know which person, when and with which properties created a certain element.
 
 # Considered Standards
-_Please describe all other standards that were created during the creation process_
-## Standard 1
-...
 
-## Standard 2
-...
+## Standard for e-mail
+Finding a standard for e-mail properties proved to be difficult. Standards in the area of e-mail functions often specify the protocol, but not the properties of the e-mail. Therefore a analysation of different e-mail systems was made.
+Due to the extensive professional use of Microsoft Outlook the chosen e-mail standard is derived mostly from Outlook.
+
+## Standard for calendar
+An existing standard for calendarevents is "iCalender" (RFC 5545). In the following standard the properties of "iCalender" are incorporated and extended.
+
+## Standard for tasks
+There is no existing standard for tasks.
 
 # Operations
-_Which functionalities can be performed on the model? Standard: CRUD_
+CRUD functionalities can be performed based on the model.
 
 # Content
 
@@ -56,8 +58,11 @@ _Please provide link(s) to the JSON schemas of the model._
 
 ## Description Table
 
-_Please provide a link to the description table of the model._
+In addition to the uml class diagram, this folder contains a [description table](CollaborationModelDescription.md) which includes the following information for each attribute:
+- Type
+- Properties
+- Short description
+- Example values
+- Enumeration options (if attribute is an enumeration)
 
 # Additional Content
-
-_If existing, please provide additional content._
