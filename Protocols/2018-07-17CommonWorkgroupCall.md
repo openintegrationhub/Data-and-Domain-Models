@@ -29,4 +29,4 @@
 ## Next Steps
 - [ ] Talk to Lutz about transactionIDs within the oihdatarecord **Elke**
 - [ ] Read into the versioning documentation **all**
-- [ ] Reconsider thresholds for incorporating proposed model changes **all*
+- [ ] Reconsider thresholds for incorporating proposed model changes **all**
