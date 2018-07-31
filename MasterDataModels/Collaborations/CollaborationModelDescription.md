@@ -1,17 +1,19 @@
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-- [CalendarEvent] (#calendarevent)
+- [CalendarEvent](#calendarevent)
 - [Contact](#contact)
 - [Calendar](#calendar)
 - [Status](#status)
 - [EventDetails](#eventdetails)
 - [Thread](#thread)
+- [CollaborationElement](#collaborationelement)
 - [Header](#header)
 - [Date](#date)
 - [Properties](#properties)
 - [Content](#content)
 - [Attachment](#attachment)
-- [Details] (#details)
-- [Subtask] (#subtask)
+- [Task](#task)
+- [Details](#details)
+- [Subtask](#subtask)
 
 <!-- /TOC -->
 
