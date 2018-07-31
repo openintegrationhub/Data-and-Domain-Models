@@ -53,7 +53,7 @@
     "gender":
     {
       "type": "string",
-      "enum": ["male", "female", "intersexual"],
+      "enum": ["male", "female", "intersexual",""],
       "description": "Gender of the person"
     },
     "birthday":
@@ -110,30 +110,30 @@
       "type": "string",
       "description": "Anniversary of the person"
     },
-    "address":
+    "addresses":
     {
       "type": "array",
-      "description": "Social media accounts of the person",
+      "description": "Addess data of of the person",
       "items": {
-        "$ref": "#/sharedDefinitionsV2.json#definitions/address"
+        "$ref": "sharedDefinitionsV2.json#/definitions/Address"
       }
     },
     "contactData": {
       "type": "array",
       "items": {
-        "$ref": "/sharedDefinitionsV2.json#definitions/contactData"
+        "$ref": "sharedDefinitionsV2.json#/definitions/contactData"
       }
     },
     "calendars": {
       "type": "array",
       "items": {
-          "$ref": "/sharedDefinitionsV2.json#definitions/calendar"
+          "$ref": "sharedDefinitionsV2.json#/definitions/calendar"
       }
     },
     "categories": {
       "type": "array",
       "items": {
-          "$ref": "/sharedDefinitionsV2.json#definitions/category"
+          "$ref": "sharedDefinitionsV2.json#/definitions/category"
       }
     }
   }

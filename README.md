@@ -60,13 +60,10 @@ The unified process for changing a model is explained in the following:
 
 #### Contribute a new Model
 
-
 If you want to contribute a new model for a currently not yet existing domain, please consider the following steps:
 
 
-1. Before you start please read the [introduction into Open Integration Hub master data models](MasterDataModels/README.md)
-2. Create a new folder within the _MasterDataModel folder_ and name it equally to the domain the model is provided for
-3. The first page of the folder has to follow the structure of the [ReadmeTemplate](MasterDataModels/ReadmeTemplate.md) to guarantee a unified description of all master data models
+Before you start please read the [**Introduction into Open Integration Hub master data models**](MasterDataModels/README.md) and [**How to contribute a new data model**](CONTRIBUTING.md#contributing-a-new-data-model).
 
 
 ### Contribution Guidelines
