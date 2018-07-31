@@ -54,7 +54,7 @@ CRUD functionalities can be performed based on the model.
 
 ## JSON Schema
 
-_Please provide link(s) to the JSON schemas of the model._
+The JSON schema will follow on a later version of the model.
 
 ## Description Table
 
