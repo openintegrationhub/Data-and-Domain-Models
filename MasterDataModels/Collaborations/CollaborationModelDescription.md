@@ -2,7 +2,6 @@
 - [CalendarEvent](#calendarevent)
 - [Contact](#contact)
 - [Calendar](#calendar)
-- [Status](#status)
 - [EventDetails](#eventdetails)
 - [Thread](#thread)
 - [CollaborationElement](#collaborationelement)
@@ -40,12 +39,8 @@
 |---|---|---|---|---|---|
 |calendar|String|-|URI to the person's calendar|http://cal.example.com/calA|-|
 |requestCalendar|String|-|URL to request an appointment with the person|janedoe@example.com|-|
-
-## Status
-
-|Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
-|---|---|---|---|---|---|
 |status|String|-|URL which describes if the person is available or busy|http://www.example.com/busy/janedoe|-|
+
 
 ## Eventdetails
 
@@ -92,7 +87,7 @@
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |date|Date|-|Date|01.01.2018|-|
-|day|Day|-|Day of the week|"Monday"|"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"|
+|day|Enum|-|Day of the week|"Monday"|"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"|
 |time|Time|-|Timestamp|10:10:10|-|
 
 
@@ -128,9 +123,9 @@
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |subject|String|-|Subject of the Task|"Create a datamodel"|-|
-|startdate|Date|-|Date when the task starts|01.01.2018|-|
-|enddate|Date|-|Date when the task is closed|31.01.2018|-|
-|reminderdate|Date|-|Date when the task completion should be reminded|20.01.2018|-|
+|startdate|Datetime|-|Date when the task starts|01.01.2018 00:00|-|
+|enddate|Datetime|-|Date when the task is closed|31.01.2018 00:00|-|
+|reminderdate|Datetime|-|Date when the task completion should be reminded|20.01.2018 00:00|-|
 |content|String|-|description of the Task|"To create a datamodel we have to analyze different systems..."|-|
 |status|String|-|status of the Task|"completed"|"started", "in progress", "completed"|
 
