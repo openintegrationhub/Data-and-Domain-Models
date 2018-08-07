@@ -1,0 +1,40 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/collaboration/EMail.json",
+	"title": "EMail",
+	"description": "Describes the EMail",
+	"type": "object",
+	"allOf": [
+		{
+		"$ref": "../oih-data-record.json"
+		}
+	],
+	"properties": {
+		"CollaborationElement":
+		{
+		  "type": "array",
+		  "description": "CollaborationElement Data",
+		  "items": {
+			"$ref": "collaborationelement.json"
+		  }
+		},
+	}
+	"definitions" : {
+		"Thread": {
+			"type": "object",
+			"properties": {
+				"threadname": {
+					"type": "string",
+					"description": "Name of the Thread",
+					"examples": [
+						"Subject of the E-Mail"
+					]
+				},
+				"topic": {
+					"type": "string",
+					"description": "Identification of the thread"
+				}
+			}
+		}
+	}
+}
