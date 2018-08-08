@@ -17,7 +17,6 @@
             "$ref":"collaborationelement.json"
          }
       }
-
    },
    "definitions":{  
       "Contact":{  
@@ -36,36 +35,36 @@
                "examples":[  
                   "john.doe@email.com"
                ]
-            },        
+            },
             "Calendar":{  
                "type":"object",
                "properties":{  
-					"calendar":{  
-						"type":"string",
-						"description":"URI to the person's calendar",
-						"examples":[  
-							"http://cal.example.com/calA"
-						]
-					},
-					"requestCalendar":{  
-						"type":"string",
-						"description":"URL to request an appointment with the person",
-						"examples":[  
-							"janedoe@example.com"
-						]
-					},
-					"status":{  
-						"type":"string",
-						"description":"Identification of the thread",
-						"examples":[  
-							"http://www.example.com/busy/janedoe"
-						]
+                  "calendar":{  
+                     "type":"string",
+                     "description":"URI to the person's calendar",
+                     "examples":[  
+                        "http://cal.example.com/calA"
+                     ]
+                  },
+                  "requestCalendar":{  
+                     "type":"string",
+                     "description":"URL to request an appointment with the person",
+                     "examples":[  
+                        "janedoe@example.com"
+                     ]
+                  },
+                  "status":{  
+                     "type":"string",
+                     "description":"Identification of the thread",
+                     "examples":[  
+                        "http://www.example.com/busy/janedoe"
+                     ]
                   }
                }
             }
          }
-      },      
-	  "EventDetails":{  
+      },
+      "EventDetails":{  
          "type":"object",
          "properties":{  
             "location":{  
