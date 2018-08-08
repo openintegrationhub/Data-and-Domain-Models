@@ -17,10 +17,18 @@
 		  "items": {
 			"$ref": "collaborationelement.json"
 		  }
+		},
+		"Threads":
+		{
+		  "type": "array",
+		  "description": "thread information of the e-mail",
+		  "items": {
+			"$ref": "#/definitions/Threads"
+		  }
 		}
 	},
 	"definitions" : {
-		"Thread": {
+		"Threads": {
 			"type": "object",
 			"properties": {
 				"threadname": {
