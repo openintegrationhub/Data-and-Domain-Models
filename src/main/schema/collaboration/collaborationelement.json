@@ -8,6 +8,43 @@
          "$ref":"../oih-data-record.json"
       }
    ],
+   "properties": {
+		"Header":{
+			"type":"array",
+			"description":"header information of the element",
+			"items":{
+				"$ref":"#/definitions/Header"
+			}
+		},
+		"Date":{
+			"type":"array",
+			"description":"date information of the element",
+			"items":{
+				"$ref":"#/definitions/Date"
+			}
+		},
+		"Properties":{
+			"type":"array",
+			"description":"properties information of the element",
+			"items":{
+				"$ref":"#/definitions/Properties"
+			}
+		},
+		"Content":{
+			"type":"array",
+			"description":"content information of the element",
+			"items":{
+				"$ref":"#/definitions/Content"
+			}
+		},
+		"Attachments":{
+			"type":"array",
+			"description":"attachment information of the element",
+			"items":{
+				"$ref":"#/definitions/Attachments"
+			}
+		}
+   },
    "definitions":{  
       "Header":{  
          "type":"object",
@@ -133,7 +170,7 @@
             }
          }
       },
-	  "Attachment":{  
+	  "Attachments":{  
          "type":"object",
          "properties":{  
             "type":{  
