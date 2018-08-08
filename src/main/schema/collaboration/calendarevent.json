@@ -50,6 +50,15 @@
                   "john.doe@email.com"
                ]
             },
+			"Calendars":{
+				"type":"array",
+				"description":"EventDetails Data",
+				"items":{
+					"$ref":"#/definitions/Calendars"
+				}
+			}
+		 },
+		 "definitions":{
             "Calendars":{  
                "type":"object",
                "properties":{  
@@ -76,8 +85,9 @@
                   }
                }
             }
+		
          }
-      },
+	  },
       "EventDetails":{  
          "type":"object",
          "properties":{  
