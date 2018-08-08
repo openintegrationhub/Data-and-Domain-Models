@@ -17,6 +17,22 @@
 		  "items": {
 			"$ref": "collaborationelement.json"
 		  }
+		},
+		"Subtask":
+		{
+		  "type": "array",
+		  "description": "subtask information of the task",
+		  "items": {
+			"$ref": "subtask.json"
+		  }
+		},
+		"Details":
+		{
+		  "type": "array",
+		  "description": "detail information of the task",
+		  "items": {
+			"$ref": "#/definitions/Details"
+		  }
 		}
 	},
 	"definitions" : {
