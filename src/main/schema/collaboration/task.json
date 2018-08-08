@@ -17,17 +17,17 @@
 		  "items": {
 			"$ref": "collaborationelement.json"
 		  }
-		},
-	}
+		}
+	},
 	"definitions" : {
 		"Details": {
 			"type": "object",
 			"properties": {
 				"subject": {
 					"type": "string",
-					"description": "Subject of the Task	",
+					"description": "Subject of the Task",
 					"examples": [
-						"Subject of the E-Mail"
+						"Subject of the task"
 					]
 				},
 				"startdate": {
@@ -36,34 +36,34 @@
 					"examples": [
 						"01.01.2018 00:00"
 					]
-				}
+				},
 				"enddate": {
 					"type": "datetime",
 					"description": "Date when the task is closed",
 					"examples": [
 						"31.01.2018 00:00"
 					]
-				}
+				},
 				"reminderdate": {
 					"type": "datetime",
 					"description": "Date when the task completion should be reminded",
 					"examples": [
 						"20.01.2018 00:00"
 					]
-				}
+				},
 				"content": {
 					"type": "string",
 					"description": "description of the Task",
 					"examples": [
 						"To create a datamodel we have to analyze different systems..."
 					]
-				}
+				},
 				"status": {
 					"type": "string",
 					"description": "status of the Task",
 					"enum": [
 						"started", "in progress", "completed"
-					]
+					],
 					"examples": [
 						"completed"
 					]
