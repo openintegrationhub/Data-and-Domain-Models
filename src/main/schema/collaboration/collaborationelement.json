@@ -1,150 +1,156 @@
-{
-	"$schema": "http://json-schema.org/schema#",
-	"$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/collaboration/collaborationelement.json",
-	"title": "CollaborationElement",
-	"description": "Describes the Collaboration Element",
-	"allOf": [
-		{
-		"$ref": "../oih-data-record.json"
-		}
-	],
-	"definitions" : {
-		"Header": {
-			"type": "object",
-			"properties": {
-				"from": {
-					"type": "string",
-					"description": "E-Mail of sender",
-					"examples": [
-						"john.doe@email.com"
-					]
-				},
-				"to": {
-					"type": "string",
-					"description": "E-mail of receiver",
-					"examples": [
-						"jane.doe@email.com"
-					]
-				},
-				"cc": {
-					"type": "string",
-					"description": "E-mail of the contact in copy",
-					"examples": [
-						"janet.doe@email.com"
-					]
-				},
-				"bcc": {
-					"type": "string",
-					"description": "E-mail of the contact in blind copy",
-					"examples": [
-						"jonathan.doe@email.com"
-					]
-				},
-				"subject": {
-					"type": "string",
-					"description": "Subject line of the e-mail",
-					"examples": [
-						"RE: Your Question"
-					]
-				}
-			}
-		}
-		"Date": {
-			"type": "object",
-			"properties": {
-				"date": {
-					"type": "date",
-					"description": "Date",
-					"examples": [
-						"01.01.2018"
-					]
-				},
-				"day": {
-					"type": "enum",
-					"description": "Day of the week",
-					"examples": [
-						"Monday"
-					],
-					"enum": [
-					"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
-					]
-				},
-				"time": {
-					"type": "time",
-					"description": "Timestamp",
-					"examples": [
-						"10:10:10"
-					]
-				}
-			}
-		}
-		"Properties": {
-			"type": "object",
-			"properties": {
-				"messageID": {
-					"type": "string",
-					"description": "Unique ID of the E-Mail"
-				},
-				"language": {
-					"type": "string",
-					"description": "Language of the e-mail content",
-					"examples": [
-						"en"
-					]
-				},
-				"authentication": {
-					"type": "string",
-					"description": "Authentication Result",
-					"examples": [
-						"spf=pass smtp.mailfrom=email.com"
-					]
-				},
-				"MIMEversion": {
-					"type": "Decimal",
-					"description": "Version of MIME",
-					"examples": [
-						1.3
-					]
-				}
-			}
-		}
-		"Content": {
-			"type": "object",
-			"properties": {
-				"format": {
-					"type": "string",
-					"description": "Format of the email content",
-					"examples": [
-						"HTML"
-					]
-				},
-				"content": {
-					"type": "string",
-					"description": "Content of the e-mail",
-					"examples": [
-						"Dear John, please find attached"
-					]
-				}
-			}
-		}
-		"Attachment": {
-			"type": "object",
-			"properties": {
-				"type": {
-					"type": "string",
-					"description": "Datatype of the attachment",
-					"examples": [
-						"JPG"
-					]
-				},
-				"size": {
-					"type": "string",
-					"description": "Datasize of the e-mail attachment",
-					"examples": [
-						"54 KB"
-					]
-				}
-			}
-		}
-	}
+{  
+   "$schema":"http://json-schema.org/schema#",
+   "$id":"https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/collaboration/collaborationelement.json",
+   "title":"CollaborationElement",
+   "description":"Describes the Collaboration Element",
+   "allOf":[  
+      {  
+         "$ref":"../oih-data-record.json"
+      }
+   ],
+   "definitions":{  
+      "Header":{  
+         "type":"object",
+         "properties":{  
+            "from":{  
+               "type":"string",
+               "description":"E-Mail of sender",
+               "examples":[  
+                  "john.doe@email.com"
+               ]
+            },
+            "to":{  
+               "type":"string",
+               "description":"E-mail of receiver",
+               "examples":[  
+                  "jane.doe@email.com"
+               ]
+            },
+            "cc":{  
+               "type":"string",
+               "description":"E-mail of the contact in copy",
+               "examples":[  
+                  "janet.doe@email.com"
+               ]
+            },
+            "bcc":{  
+               "type":"string",
+               "description":"E-mail of the contact in blind copy",
+               "examples":[  
+                  "jonathan.doe@email.com"
+               ]
+            },
+            "subject":{  
+               "type":"string",
+               "description":"Subject line of the e-mail",
+               "examples":[  
+                  "RE: Your Question"
+               ]
+            }
+         }
+      },
+	  "Date":{  
+         "type":"object",
+         "properties":{  
+            "date":{  
+               "type":"date",
+               "description":"Date",
+               "examples":[  
+                  "01.01.2018"
+               ]
+            },
+            "day":{  
+               "type":"enum",
+               "description":"Day of the week",
+               "examples":[  
+                  "Monday"
+               ],
+               "enum":[  
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+               ]
+            },
+            "time":{  
+               "type":"time",
+               "description":"Timestamp",
+               "examples":[  
+                  "10:10:10"
+               ]
+            }
+         }
+      },
+	  "Properties":{  
+         "type":"object",
+         "properties":{  
+            "messageID":{  
+               "type":"string",
+               "description":"Unique ID of the E-Mail"
+            },
+            "language":{  
+               "type":"string",
+               "description":"Language of the e-mail content",
+               "examples":[  
+                  "en"
+               ]
+            },
+            "authentication":{  
+               "type":"string",
+               "description":"Authentication Result",
+               "examples":[  
+                  "spf=pass smtp.mailfrom=email.com"
+               ]
+            },
+            "MIMEversion":{  
+               "type":"Decimal",
+               "description":"Version of MIME",
+               "examples":[  
+                  1.3
+               ]
+            }
+         }
+      },
+	  "Content":{  
+         "type":"object",
+         "properties":{  
+            "format":{  
+               "type":"string",
+               "description":"Format of the email content",
+               "examples":[  
+                  "HTML"
+               ]
+            },
+            "content":{  
+               "type":"string",
+               "description":"Content of the e-mail",
+               "examples":[  
+                  "Dear John, please find attached"
+               ]
+            }
+         }
+      },
+	  "Attachment":{  
+         "type":"object",
+         "properties":{  
+            "type":{  
+               "type":"string",
+               "description":"Datatype of the attachment",
+               "examples":[  
+                  "JPG"
+               ]
+            },
+            "size":{  
+               "type":"string",
+               "description":"Datasize of the e-mail attachment",
+               "examples":[  
+                  "54 KB"
+               ]
+            }
+         }
+      }
+   }
 }
