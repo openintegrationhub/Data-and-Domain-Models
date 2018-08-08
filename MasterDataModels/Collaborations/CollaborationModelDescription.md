@@ -1,15 +1,15 @@
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 - [CalendarEvent](#calendarevent)
-- [Contact](#contact)
-- [Calendar](#calendar)
+- [Contacts](#contacts)
+- [Calendars](#calendars)
 - [EventDetails](#eventdetails)
-- [Thread](#thread)
+- [Threads](#threads)
 - [CollaborationElement](#collaborationelement)
 - [Header](#header)
 - [Date](#date)
 - [Properties](#properties)
 - [Content](#content)
-- [Attachment](#attachment)
+- [Attachments](#attachments)
 - [Task](#task)
 - [Details](#details)
 - [Subtask](#subtask)
@@ -22,7 +22,7 @@
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |[collaborationelement](#collaborationelement)|Array (of collaborationelement objects)|-|Collaboration properties values|A collaborationelement object array|-|
-|[contact](#contact)|Array (of contact objects)|-|Contact information of the person|A contact object array|-|
+|[contacts](#contacts)|Array (of contact objects)|-|Contact information of the person|A contact object array|-|
 |[eventdetails](#eventdetails)|Array (of eventdetails objects)|-|eventdetails information of the calendarevent|An eventdetail object array|-|
 
 ## Contact
@@ -31,9 +31,9 @@
 |---|---|---|---|---|---|
 |name|String|-|Name of the contact|"John Doe"|-|
 |eMail|String|-|E-mail of the contact|"john.doe@email.com"|-|
-|[calendar](#calendar)|Array (of calendar objects)|-|Calendar information of the person|A calendar object array|-|
+|[calendars](#calendars)|Array (of calendar objects)|-|Calendar information of the person|A calendar object array|-|
 
-## Calendar
+## Calendars
 
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
@@ -55,9 +55,9 @@
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |[collaborationelement](#collaborationelement)|Array (of collaborationelement objects)|-|Collaboration properties values|A collaborationelement object array|-|
-|[thread](#thread)|Array (of thread objects)|-|thread information of the e-mail|A thread object array|-|
+|[threads](#threads)|Array (of thread objects)|-|thread information of the e-mail|A thread object array|-|
 
-## Thread
+## Threads
 
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
@@ -72,7 +72,7 @@
 |[date](#date)|Array (of date objects)|-|date information of the element|A date object array|-|
 |[properties](#properties)|Array (of properties objects)|-|properties information of the element|A properties object array|-|
 |[content](#content)|Array (of content objects)|-|content information of the element|A content object array|-|
-|[attachment](#attachment)|Array (of attachment objects)|-|attachment information of the element|An attachment object array|-|
+|[attachments](#attachments)|Array (of attachment objects)|-|attachment information of the element|An attachment object array|-|
 
 ## Header
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
@@ -105,7 +105,7 @@
 |format|String|-|Format of the email content|"HTML"|-|
 |content|String|-|Content of the e-mail|"Dear John, please find attached"|-|
 
-## Attachment
+## Attachments
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |type|String|-|Datatype of the attachment|"JPG"|-|
