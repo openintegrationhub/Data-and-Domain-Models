@@ -16,10 +16,24 @@
          "items":{  
             "$ref":"collaborationelement.json"
          }
-      }
+      },
+	  "Contacts":{
+		"type":"array",
+		"description":"Contacts Data",
+		"items":{
+			"$ref":"#/definitions/Contacts"
+		}
+	  },
+	  "EventDetails":{
+		"type":"array",
+		"description":"EventDetails Data",
+		"items":{
+			"$ref":"#/definitions/EventDetails"
+		}
+	  }
    },
    "definitions":{  
-      "Contact":{  
+      "Contacts":{  
          "type":"object",
          "properties":{  
             "name":{  
@@ -36,10 +50,10 @@
                   "john.doe@email.com"
                ]
             },
-            "Calendar":{  
+            "Calendars":{  
                "type":"object",
                "properties":{  
-                  "calendar":{  
+                  "calendars":{  
                      "type":"string",
                      "description":"URI to the person's calendar",
                      "examples":[  
