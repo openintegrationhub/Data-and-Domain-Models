@@ -1,97 +1,97 @@
-{
-	"$schema": "http://json-schema.org/schema#",
-	"$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/collaboration/calendarevent.json",
-	"title": "CalendarEvent",
-	"description": "Describes the CalendarEvent",
-	"type": "object",
-	"allOf": [
-		{
-		"$ref": "../oih-data-record.json"
-		}
-	],
-	"properties": {
-		"CollaborationElement":
-		{
-		  "type": "array",
-		  "description": "CollaborationElement Data",
-		  "items": {
-			"$ref": "collaborationelement.json"
-		  }
-		},
-	}
-	"definitions" : {
-		"Contact": {
-			"type": "object",
-			"properties": {
-				"name": {
-					"type": "string",
-					"description": "Name of the contact",
-					"examples": [
-						"John Doe"
-					]
-				},
-				"eMail": {
-					"type": "string",
-					"description": "E-mail of the contact",
-					"examples": [
-						"john.doe@email.com"
-					]
-				}
-			}
-			"definitions": {
-				"Calendar": {
-					"type": "object",
-					"properties": {
-						"calendar": {
-							"type": "string",
-							"description": "URI to the person's calendar",
-							"examples": [
-								"http://cal.example.com/calA"
-							]
-						},
-						"requestCalendar": {
-							"type": "string",
-							"description": "URL to request an appointment with the person",
-							"examples": [
-								"janedoe@example.com"
-							]
-						}
-						"status": {
-							"type": "string",
-							"description": "Identification of the thread",
-							"examples": [
-								"http://www.example.com/busy/janedoe"
-							]
-						}
-					}
-				}
-			}
-		}
-		"EventDetails": {
-			"type": "object",
-				"properties": {
-					"location": {
-						"type": "string",
-						"description": "Name of the location",
-						"examples": [
-							"Room 123"
-						]
-					},
-					"start": {
-						"type": "date",
-						"description": "startdate of the event",
-						"examples": [
-							"01.01.2018"
-						]
-					},
-					"end": {
-						"type": "date",
-						"description": "enddate of the event",
-						"examples": [
-							"31.12.2018"
-						]
-					}
-				}
-		}
-	}
+{  
+   "$schema":"http://json-schema.org/schema#",
+   "$id":"https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/collaboration/calendarevent.json",
+   "title":"CalendarEvent",
+   "description":"Describes the CalendarEvent",
+   "type":"object",
+   "allOf":[  
+      {  
+         "$ref":"../oih-data-record.json"
+      }
+   ],
+   "properties":{  
+      "CollaborationElement":{  
+         "type":"array",
+         "description":"CollaborationElement Data",
+         "items":{  
+            "$ref":"collaborationelement.json"
+         }
+      }
+
+   },
+   "definitions":{  
+      "Contact":{  
+         "type":"object",
+         "properties":{  
+            "name":{  
+               "type":"string",
+               "description":"Name of the contact",
+               "examples":[  
+                  "John Doe"
+               ]
+            },
+            "eMail":{  
+               "type":"string",
+               "description":"E-mail of the contact",
+               "examples":[  
+                  "john.doe@email.com"
+               ]
+            }
+         },         
+		 "definitions":{  
+            "Calendar":{  
+               "type":"object",
+               "properties":{  
+                  "calendar":{  
+                     "type":"string",
+                     "description":"URI to the person's calendar",
+                     "examples":[  
+                        "http://cal.example.com/calA"
+                     ]
+                  },
+                  "requestCalendar":{  
+                     "type":"string",
+                     "description":"URL to request an appointment with the person",
+                     "examples":[  
+                        "janedoe@example.com"
+                     ]
+                  },
+				  "status":{  
+                     "type":"string",
+                     "description":"Identification of the thread",
+                     "examples":[  
+                        "http://www.example.com/busy/janedoe"
+                     ]
+                  }
+               }
+            }
+         }
+      },      
+	  "EventDetails":{  
+         "type":"object",
+         "properties":{  
+            "location":{  
+               "type":"string",
+               "description":"Name of the location",
+               "examples":[  
+                  "Room 123"
+               ]
+            },
+            "start":{  
+               "type":"date",
+               "description":"startdate of the event",
+               "examples":[  
+                  "01.01.2018"
+               ]
+            },
+            "end":{  
+               "type":"date",
+               "description":"enddate of the event",
+               "examples":[  
+                  "31.12.2018"
+               ]
+            }
+         }
+      }
+   }
 }
