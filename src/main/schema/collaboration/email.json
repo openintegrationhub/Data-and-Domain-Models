@@ -17,8 +17,8 @@
 		  "items": {
 			"$ref": "collaborationelement.json"
 		  }
-		},
-	}
+		}
+	},
 	"definitions" : {
 		"Thread": {
 			"type": "object",
