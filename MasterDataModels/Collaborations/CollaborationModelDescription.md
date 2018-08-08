@@ -25,7 +25,7 @@
 |[contacts](#contacts)|Array (of contact objects)|-|Contact information of the person|A contact object array|-|
 |[eventdetails](#eventdetails)|Array (of eventdetails objects)|-|eventdetails information of the calendarevent|An eventdetail object array|-|
 
-## Contact
+## Contacts
 
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
