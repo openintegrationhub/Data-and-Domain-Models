@@ -1,120 +1,117 @@
-{  
-   "$schema":"http://json-schema.org/schema#",
-   "$id":"https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/collaboration/calendarevent.json",
-   "title":"CalendarEvent",
-   "description":"Describes the CalendarEvent",
-   "type":"object",
-   "allOf":[  
-      {  
-         "$ref":"../oih-data-record.json"
+{
+  "$schema":"http://json-schema.org/schema#",
+  "$id":"https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/collaboration/calendarevent.json",
+  "title":"CalendarEvent",
+  "description":"Describes the CalendarEvent",
+  "type":"object",
+  "allOf":[
+    {
+      "$ref":"../oih-data-record.json"
+    }
+  ],
+  "properties":{
+    "CollaborationElement":{
+      "type":"array",
+      "description":"CollaborationElement Data",
+      "items":{
+        "$ref":"collaborationelement.json"
       }
-   ],
-   "properties":{  
-      "CollaborationElement":{  
-         "type":"array",
-         "description":"CollaborationElement Data",
-         "items":{  
-            "$ref":"collaborationelement.json"
-         }
-      },
-	  "Contacts":{
-		"type":"array",
-		"description":"Contacts Data",
-		"items":{
-			"$ref":"#/definitions/Contacts"
-		}
-	  },
-	  "EventDetails":{
-		"type":"array",
-		"description":"EventDetails Data",
-		"items":{
-			"$ref":"#/definitions/EventDetails"
-		}
-	  }
-   },
-   "definitions":{  
-      "Contacts":{  
-         "type":"object",
-         "properties":{  
-            "name":{  
-               "type":"string",
-               "description":"Name of the contact",
-               "examples":[  
-                  "John Doe"
-               ]
-            },
-            "eMail":{  
-               "type":"string",
-               "description":"E-mail of the contact",
-               "examples":[  
-                  "john.doe@email.com"
-               ]
-            },
-			"Calendars":{
-				"type":"array",
-				"description":"EventDetails Data",
-				"items":{
-					"$ref":"#/definitions/Calendars"
-				}
-			}
-		 },
-		 "definitions":{
-            "Calendars":{  
-               "type":"object",
-               "properties":{  
-                  "calendars":{  
-                     "type":"string",
-                     "description":"URI to the person's calendar",
-                     "examples":[  
-                        "http://cal.example.com/calA"
-                     ]
-                  },
-                  "requestCalendar":{  
-                     "type":"string",
-                     "description":"URL to request an appointment with the person",
-                     "examples":[  
-                        "janedoe@example.com"
-                     ]
-                  },
-                  "status":{  
-                     "type":"string",
-                     "description":"Identification of the thread",
-                     "examples":[  
-                        "http://www.example.com/busy/janedoe"
-                     ]
-                  }
-               }
-            }
-		
-         }
-	  },
-      "EventDetails":{  
-         "type":"object",
-         "properties":{  
-            "location":{  
-               "type":"string",
-               "description":"Name of the location",
-               "examples":[  
-                  "Room 123"
-               ]
-            },
-            "start":{  
-               "type":"string",
-	       "format":"date", 		    
-               "description":"startdate of the event",
-               "examples":[  
-                  "01.01.2018"
-               ]
-            },
-            "end":{  
-               "type":"string",
-	       "format":"date",
-               "description":"enddate of the event",
-               "examples":[  
-                  "31.12.2018"
-               ]
-            }
-         }
+    },
+    "Contacts":{
+      "type":"array",
+      "description":"Contacts Data",
+      "items":{
+        "$ref":"#/definitions/Contacts"
       }
-   }
+    },
+    "EventDetails":{
+      "type":"array",
+      "description":"EventDetails Data",
+      "items":{
+        "$ref":"#/definitions/EventDetails"
+      }
+    }
+  },
+  "definitions":{
+    "Contacts":{
+      "type":"object",
+      "properties":{
+        "name":{
+          "type":"string",
+          "description":"Name of the contact",
+          "examples":[
+            "John Doe"
+          ]
+        },
+        "eMail":{
+          "type":"string",
+          "description":"E-mail of the contact",
+          "examples":[
+            "john.doe@email.com"
+          ]
+        },
+        "Calendars":{
+          "type":"array",
+          "description":"EventDetails Data",
+          "items":{
+            "$ref":"#/definitions/Calendars"
+          }
+        }
+      }
+    },
+    "Calendars":{
+      "type":"object",
+      "properties":{
+        "calendars":{
+        "type":"string",
+        "description":"URI to the person's calendar",
+        "examples":[
+          "http://cal.example.com/calA"
+        ]
+        },
+        "requestCalendar":{
+          "type":"string",
+          "description":"URL to request an appointment with the person",
+          "examples":[
+            "janedoe@example.com"
+          ]
+        },
+        "status":{
+          "type":"string",
+          "description":"Identification of the thread",
+          "examples":[
+            "http://www.example.com/busy/janedoe"
+          ]
+        }
+      }
+    },
+    "EventDetails":{
+      "type":"object",
+      "properties":{
+        "location":{
+          "type":"string",
+          "description":"Name of the location",
+          "examples":[
+            "Room 123"
+          ]
+        },
+        "start":{
+          "type":"string",
+          "format":"date",
+          "description":"startdate of the event",
+          "examples":[
+            "01.01.2018"
+          ]
+        },
+        "end":{
+          "type":"string",
+          "format":"date",
+          "description":"enddate of the event",
+          "examples":[
+            "31.12.2018"
+          ]
+        }
+      }
+    }
+  }
 }

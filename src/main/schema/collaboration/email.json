@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/schema#",
-	"$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/collaboration/EMail.json",
+	"$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/collaboration/email.json",
 	"title": "EMail",
 	"description": "Describes the EMail",
 	"type": "object",
@@ -15,7 +15,7 @@
 		  "type": "array",
 		  "description": "CollaborationElement Data",
 		  "items": {
-			"$ref": "collaborationelement.json"
+        "$ref": "collaborationelement.json"
 		  }
 		},
 		"Threads":
@@ -23,12 +23,12 @@
 		  "type": "array",
 		  "description": "thread information of the e-mail",
 		  "items": {
-			"$ref": "#/definitions/Threads"
+				"$ref": "#/definitions/Thread"
 		  }
 		}
 	},
 	"definitions" : {
-		"Threads": {
+		"Thread": {
 			"type": "object",
 			"properties": {
 				"threadname": {

@@ -6,33 +6,33 @@
 	"type": "object",
 	"allOf": [
 		{
-		"$ref": "../oih-data-record.json"
+			"$ref": "../oih-data-record.json"
 		}
 	],
 	"properties": {
 		"CollaborationElement":
 		{
-		  "type": "array",
-		  "description": "CollaborationElement Data",
-		  "items": {
-			"$ref": "collaborationelement.json"
-		  }
+			"type": "array",
+			"description": "CollaborationElement Data",
+			"items": {
+				"$ref": "collaborationelement.json"
+			}
 		},
 		"Subtask":
 		{
-		  "type": "array",
-		  "description": "subtask information of the task",
-		  "items": {
-			"$ref": "subtask.json"
-		  }
+			"type": "array",
+			"description": "subtask information of the task",
+			"items": {
+				"$ref": "subtask.json"
+			}
 		},
 		"Details":
 		{
-		  "type": "array",
-		  "description": "detail information of the task",
-		  "items": {
-			"$ref": "#/definitions/Details"
-		  }
+			"type": "array",
+			"description": "detail information of the task",
+			"items": {
+				"$ref": "#/definitions/Details"
+			}
 		}
 	},
 	"definitions" : {
@@ -47,21 +47,24 @@
 					]
 				},
 				"startdate": {
-					"type": "datetime",
+					"type":"string",
+					"format": "date-time",
 					"description": "Date when the task starts",
 					"examples": [
 						"01.01.2018 00:00"
 					]
 				},
 				"enddate": {
-					"type": "datetime",
+					"type":"string",
+					"format": "date-time",
 					"description": "Date when the task is closed",
 					"examples": [
 						"31.01.2018 00:00"
 					]
 				},
 				"reminderdate": {
-					"type": "datetime",
+					"type":"string",
+					"format": "date-time",
 					"description": "Date when the task completion should be reminded",
 					"examples": [
 						"20.01.2018 00:00"
