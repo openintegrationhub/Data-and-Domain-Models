@@ -3,6 +3,7 @@
    "$id":"https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/collaboration/collaborationelement.json",
    "title":"CollaborationElement",
    "description":"Describes the Collaboration Element",
+   "type":"object,	
    "allOf":[  
       {  
          "$ref":"../oih-data-record.json"
