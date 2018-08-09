@@ -108,7 +108,7 @@
             },
             "end":{  
                "type":"string",
-	       "format":"date-time",
+	       "format":"date",
                "description":"enddate of the event",
                "examples":[  
                   "31.12.2018"
