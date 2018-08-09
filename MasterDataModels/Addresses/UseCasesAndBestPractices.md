@@ -86,11 +86,59 @@ The organization itself is held as a duplicate. The different addresses are held
 |u-AdEx5|As a user I want to synchronize a contact person from a company and his/her contact data |
 
 #### Example Values
-<img src="Assets/Scenario1.jpg" alt="Address Example" width="400" height="400"/>
+|Key|Value|Context|
+|:---|:---|:---|
+|firstName|Jon|-|
+|lastName|Doe|-|
+|Phone|+49123456789|Company `JDUB`|
+|mobilePhone|+499875612|Company `JDUB`|
+|EMail|jon.doe@jdub.com|Company `JDUB`|
+|department|B2B Integrations|Company `JDUB`|
+|function|Development Lead|Company `JDUB`|
+|Address1|Examplestreet 99, 50667 Cologne, Germany|Company `JDUB`|
+|Address2|Samplestreet 1, 50931 Cologne, Germany|Private|
+
+|Key|Value|
+|:---|:---|
+|name|JDub|
+|logo|http://www.examplelogo.com|
+
 
 #### Best Practice
 ##### u-AdEx5
 You have to use the needed attributes from the "Person" object, from the "Organization" object and from the "Address" object. The different phone numbers, email addresses and social media accounts are held within different "ContactData" objects. The link between the person and its organization is a "OrganizationToPersonRelationship".
+
+### PersonToPersonRelationships
+
+|User Story Id| User Stories |
+|:---| :--- |
+|u-AdEx6|As a user I want to synchronize two contact persons and their working relationship |
+
+#### Example Values
+|Key|Value|Context|
+|:---|:---|:---|
+|id|8|-|
+|firstName|Jon||
+|lastName|Doe|-|
+|supervisor|3|-|
+
+|Key|Value|Context|
+|:---|:---|:---|
+|id|3|-|
+|firstName|Foo|-|
+|lastName|Bar|-|
+|supervisor|1|-|
+
+
+|Key|Value|
+|:---|:---|
+|name|JDub|
+|logo|http://www.examplelogo.com|
+
+
+#### Best Practice
+##### u-AdEx6
+You have to use the needed attributes from the "Person" object for both persons.The link between the persons is a "OrganizationToPersonRelationship" e.g. with a label = supervisor__.
 
 ***
 
@@ -98,11 +146,9 @@ You have to use the needed attributes from the "Person" object, from the "Organi
 
 |User Story Id| User Stories |
 |:---| :--- |
-|u-AdEx6|As a user I want to see which person has a role in different organizations|
+|u-AdEx7|As a user I want to see which person has a role in different organizations|
 
-### Example Values
-<img src="Assets/Scenario4.jpg" alt="Address Example" width="900" height="300"/>
 
 ### Best Practice
-#### u-AdEx6
+#### u-AdEx7
 The link between the person and the different organizations is done via the object "OrganizationToPersonRelationship". The person itself is held as a duplicate for every specific role and is linked via a "PersonToPersonRelationship" and marked as "SamePerson".
