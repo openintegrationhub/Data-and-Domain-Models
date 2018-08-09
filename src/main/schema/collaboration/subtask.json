@@ -4,11 +4,6 @@
 	"title": "Subtask",
 	"description": "Describes the Subtask",
 	"type": "object",
-	"allOf": [
-		{
-			"$ref": "../oih-data-record.json"
-		}
-	],
 	"properties": {
 		"task": {
 			"type": "string",
