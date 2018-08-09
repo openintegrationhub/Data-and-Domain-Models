@@ -99,14 +99,16 @@
                ]
             },
             "start":{  
-               "type":"date",
+               "type":"string",
+	       "format":"date", 		    
                "description":"startdate of the event",
                "examples":[  
                   "01.01.2018"
                ]
             },
             "end":{  
-               "type":"date",
+               "type":"string",
+	       "format":"date-time",
                "description":"enddate of the event",
                "examples":[  
                   "31.12.2018"
