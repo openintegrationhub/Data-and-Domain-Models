@@ -95,7 +95,7 @@ informations for the analysis of the general requirements up to the description
 of the final master data model. Purpose of this document is to fill the backlog
 for the implementation of the first prototype of the Open Integration Hub.
 
-![Approach Modeling](Assets/archive/masterdatamodel-procedure.png)
+![Approach Modeling](Assets/Archive/masterdatamodel-procedure.png)
 
 ## 3. Requirements for a Master Data Model
 
@@ -597,13 +597,13 @@ Our main goal is the vision of a generic master data model for addresses. This v
 
 In Chapter 3.2.1 we encountered different types of objects. We named them organizations and persons with reference to the real world objects.
 
-![Type of addresses](Assets/archive/types-of-addresses.png)
+![Type of addresses](Assets/Archive/types-of-addresses.png)
 
 Organizations can be companies or associations. Persons can be contacts in organizations or employees of your own company.
 
 From this real world view we derive the two main objects and go deeper in the modeling. The following graphic describes the process.
 
-![Typing of addresses](Assets/archive/typing-of-addresses.png)
+![Typing of addresses](Assets/Archive/typing-of-addresses.png)
 
 With this dividing in persons and organizations we are able to solve the problems raised in chapter 3.2.2., so we can assign a different amount of persons to an organization, can assign on person to different organizations or can assign relations between persons.
 
@@ -635,7 +635,7 @@ The Universal Postal Union has developed two addressing standards: S42 and S53. 
 
 In ISO 19773 an unrendered postal address consists of four postal address segments: mailee specification (optional), addressee specification (optional), mail recipient dispatching information (optional), delivery point specification (mandatory).
 
-![Postal Address — All Components - diagram from UPU S42](Assets/archive/postal_adress_diagram_upus42.png)
+![Postal Address — All Components - diagram from UPU S42](Assets/Archive/postal_adress_diagram_upus42.png)
 
 The unrendered postal address is a nested structure comprised of elements. As we can see, this standard divides addressee specifications in organization or individual identification as we do. It provides a lot of named fields for detailed address specifications to which we can refer in the object attribute specification later on.
 
