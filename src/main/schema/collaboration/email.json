@@ -12,11 +12,12 @@
 	"properties": {
 		"CollaborationElement":
 		{
-		  "type": "array",
-		  "description": "CollaborationElement Data",
-		  "items": {
-        "$ref": "collaborationelement.json"
-		  }
+			"description":"CollaborationElement Data",
+      "allOf": [
+				{
+	        "$ref":"collaborationelement.json"
+	      }
+			]
 		},
 		"Threads":
 		{

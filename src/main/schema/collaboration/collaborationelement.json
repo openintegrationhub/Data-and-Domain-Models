@@ -6,38 +6,42 @@
   "type":"object",
   "properties": {
     "Header":{
-      "type":"array",
       "description":"header information of the element",
-      "items":{
-        "$ref":"#/definitions/Header"
-      }
+      "allOf": [
+        {
+          "$ref":"#/definitions/Header"
+        }
+      ]
     },
     "Date":{
-      "type":"array",
       "description":"date information of the element",
-      "items":{
+      "allOf": [
+				{
         "$ref":"#/definitions/Date"
-      }
+        }
+      ]
     },
     "Properties":{
-      "type":"array",
       "description":"properties information of the element",
-      "items":{
+      "allOf": [
+				{
         "$ref":"#/definitions/Properties"
-      }
+        }
+      ]
     },
     "Content":{
-      "type":"array",
       "description":"content information of the element",
-      "items":{
+      "allOf": [
+				{
         "$ref":"#/definitions/Content"
-      }
+        }
+      ]
     },
     "Attachments":{
       "type":"array",
       "description":"attachment information of the element",
       "items":{
-        "$ref":"#/definitions/Attachments"
+        "$ref":"#/definitions/Attachment"
       }
     }
   },
@@ -168,7 +172,7 @@
         }
       }
     },
-    "Attachments":{
+    "Attachment":{
       "type":"object",
       "properties":{
         "type":{

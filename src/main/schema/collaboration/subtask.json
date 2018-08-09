@@ -18,11 +18,12 @@
 			]
 		},
 		"details": {
-			"type": "array",
 			"description": "Task Details",
-			"items": {
-				"$ref": "task.json#/definitions/Details"
-			}
+			"allOf": [
+				{
+					"$ref": "task.json#/definitions/Details"
+				}
+			]
 		}
 	}
 }

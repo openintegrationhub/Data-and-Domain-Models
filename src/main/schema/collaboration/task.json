@@ -12,11 +12,12 @@
 	"properties": {
 		"CollaborationElement":
 		{
-			"type": "array",
-			"description": "CollaborationElement Data",
-			"items": {
-				"$ref": "collaborationelement.json"
-			}
+			"description":"CollaborationElement Data",
+      "allOf": [
+				{
+        	"$ref":"collaborationelement.json"
+      	}
+			]
 		},
 		"Subtask":
 		{
@@ -28,11 +29,12 @@
 		},
 		"Details":
 		{
-			"type": "array",
 			"description": "detail information of the task",
-			"items": {
-				"$ref": "#/definitions/Details"
-			}
+			"allOf": [
+				{
+					"$ref": "#/definitions/Details"
+				}
+			]
 		}
 	},
 	"definitions" : {
