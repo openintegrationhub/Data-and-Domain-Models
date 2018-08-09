@@ -145,7 +145,7 @@
                ]
             },
             "MIMEversion":{  
-               "type":"Decimal",
+               "type":"number",
                "description":"Version of MIME",
                "examples":[  
                   1.3
