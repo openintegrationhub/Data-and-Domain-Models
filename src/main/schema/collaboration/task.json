@@ -18,7 +18,7 @@
             }
          ]
       },
-      "subtask":{  
+      "subtasks":{  
          "type":"array",
          "description":"subtask information of the task",
          "items":{  
