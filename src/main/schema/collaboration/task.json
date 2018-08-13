@@ -10,7 +10,7 @@
 		}
 	],
 	"properties": {
-		"CollaborationElement":
+		"collaborationElement":
 		{
 			"description":"CollaborationElement Data",
       "allOf": [
