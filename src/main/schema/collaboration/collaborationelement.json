@@ -5,7 +5,7 @@
   "description":"Describes the Collaboration Element",
   "type":"object",
   "properties": {
-    "Header":{
+    "header":{
       "description":"header information of the element",
       "allOf": [
         {
@@ -13,7 +13,7 @@
         }
       ]
     },
-    "Date":{
+    "date":{
       "description":"date information of the element",
       "allOf": [
 				{
@@ -21,7 +21,7 @@
         }
       ]
     },
-    "Properties":{
+    "properties":{
       "description":"properties information of the element",
       "allOf": [
 				{
@@ -29,7 +29,7 @@
         }
       ]
     },
-    "Content":{
+    "content":{
       "description":"content information of the element",
       "allOf": [
 				{
@@ -37,7 +37,7 @@
         }
       ]
     },
-    "Attachments":{
+    "attachments":{
       "type":"array",
       "description":"attachment information of the element",
       "items":{
