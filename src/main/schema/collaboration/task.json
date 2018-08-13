@@ -19,7 +19,7 @@
       	}
 			]
 		},
-		"Subtask":
+		"subtask":
 		{
 			"type": "array",
 			"description": "subtask information of the task",
@@ -27,7 +27,7 @@
 				"$ref": "subtask.json"
 			}
 		},
-		"Details":
+		"details":
 		{
 			"description": "detail information of the task",
 			"allOf": [
