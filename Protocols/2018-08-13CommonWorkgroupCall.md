@@ -19,8 +19,9 @@
 - Common attribute table must be revised to check whether it is appropriate or not
 
 ## Next Steps
-- [ ] Create graphical overview of decision process workflow **andreas** 
-- [ ] Change threshold table of decision process **philipp**
+- [ ] Create graphical overview of [decision process workflow](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/cda-protocol-1/MasterDataModels/Versioning/VersioningMasterDataModel.md#workflows) **andreas** 
+- [ ] Change [threshold table](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/cda-protocol-1/MasterDataModels/Versioning/VersioningMasterDataModel.md#decision-process-guidelines) of decision process **philipp**
 - [ ] Define decision process more precisely **philipp**
-- [ ] Revise OIHMessage and Modification object **philipp**
-- [ ] Review changes and additions from all 4 tasks above **all**
+- [ ] Revise [OIHMessage and Modification object](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/d866cc99c172285f3f73bef810e24782f1758d24/MasterDataModels/Assets/OihMessageWithModifcation.png) **philipp**
+- [ ] Review [Release Cylce part](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/cda-protocol-1/MasterDataModels/Versioning/VersioningMasterDataModel.md#release-cycles) **Franz, Elke & Andreas**
+- [ ] Review changes and additions from all 5 tasks above **all**
