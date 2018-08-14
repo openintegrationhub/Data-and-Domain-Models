@@ -5,6 +5,7 @@
 
 - [New Files](#new-files)
 - [Reporting Issues](#reporting-issues)
+	- [Definition of Done](#definition-of-done)
 - [Contributing a new data model](#contributing-a-new-data-model)
 	- [Naming Conventions](#naming-conventions)
 		- [Types and Properties](#types-and-properties)
@@ -28,6 +29,13 @@ For any issue (suggestion, bug, fix, etc.) there are fundamentally two ways an i
 
  - By helping to triage the issue: This can be done either by providing supporting details (a test case that demonstrates a bug), or providing suggestions on how to address the issue.
  - By helping to resolve the issue: Typically this is done either in the form of demonstrating that the issue reported is not a problem after all, or more often, by opening a Pull Request that changes some bit of something in Open Integration Hub in a concrete and reviewable manner.
+
+## Definition of Done
+An issue is marked as done, if all of the following criteria are fulfilled:
+
+- All acceptance criteria have been fulfilled
+- All Workgroup committer approved the content
+- Content is Open Source under https://www.github.com/openintegrationhub/data-and-domain-models
 
 
 # Contributing a new data model
@@ -97,3 +105,6 @@ Some attributes are used across multiple models (such as "description"). To ensu
 Schemas and class diagrams only point out static aspects of a data model. Normally, there are further (e.g. dynamic) aspects of a model, that those descriptions do not point out (e.g. the conscious acceptance of redundancy). To enable ISVs and any other developers to understand and work with an OMDM,
 
 * __all relevant aspects of a model, that are not derivable from JSON-Schemas or UML Class Diagrams have to be described textually and by further illustrations of any kind.__
+
+
+
