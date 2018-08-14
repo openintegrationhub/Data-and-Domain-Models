@@ -13,7 +13,7 @@
 # OihMessage
 - OihMessage needs the oihMessage attribute changed into oihMessageHeader
 - Modification object should be more generic
-  - Split into "Actor", Type (Creation, Modification) and Timestamp
+  - Split into userId, Type (Creation, Modification) and Timestamp
 
 # Conventions
 - Common attribute table must be revised to check whether it is appropriate or not
