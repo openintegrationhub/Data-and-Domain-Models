@@ -102,31 +102,45 @@ When looking for further information or support, please contact: datamodels@open
 
 
 ### Member
-
-#### Addresse, Superordinated and Product Models
+#### Address
 | Member Name |GitHub Alias|Company| Role |
 | --- | --- | --- | --- |
 | Hansjörg Schmidt  |[hschmidthh](https://github.com/hschmidthh)|[Wice](https://wice.de/)| **Manager**  |
-| Lutz Ashauer |[lashauer](https://github.com/lashauer)|[StoneOne](http://stoneone.de)| Committer  |
-| Josef Bräuer|[JosefBraeuer](https://github.com/JosefBraeuer)|[yQ-it](http://www.yq-it.com/)| Committer  |
-| Andreas Giloj|[ag737](https://github.com/ag737)|[Fraunhofer IESE](https://www.iese.fraunhofer.de/)| Committer  |
 | Philipp Hoegner|[philecs](https://github.com/philecs)|[Cloud Ecosystem](http://www.cloudecosystem.org/)| Committer  |
-| Selim Achmerzaev|[sachmerz](https://github.com/sachmerz)|[Basaas](https://www.basaas.com/app-store)| Contributor  |
-| Jürgen Schüssler|[jschuesslerhh](https://github.com/jschuesslerhh)|[Wice](https://wice.de/)| Contributor  |
-| Franz  Degenhardt|[FranzDegenhardt](https://github.com/FranzDegenhardt)|[X-Integrate](https://x-integrate.com/x-integrate-startseite/)| Contributor  |
-| Dieter Dasberg|[ddasberg](https://github.com/ddasberg)|[yQ-it](http://www.yq-it.com/)| Contributor  |
+| Patrick Levie|[plevie](https://github.com/plevie)|[Interact.io](https://www.interact.io/)|Contributor|
+| Roman Okon | [ROKON1987](https://github.com/orgs/openintegrationhub/people/ROKON1987) | [1&1 Internet SE](https://www.1und1.de/)|Contributor|
 
-
-#### Collaboration and Document Models
+#### Common Data Model Aspects
 | Member Name |GitHub Alias|Company| Role |
 | --- | --- | --- | --- |
 | Philipp Hoegner|[philecs](https://github.com/philecs)|[Cloud Ecosystem](http://www.cloudecosystem.org/)| **Manager**  |
-| Peter Heimig |[heimig](https://github.com/Heimig)|[Agindo](https://agindo.de/)| Committer  |
+| Elke Altendorf |[ealtendorf](https://github.com/ealtendorf)|[StoneOne](http://stoneone.de)| Committer  |
+| Andreas Giloj|[ag737](https://github.com/ag737)|[Fraunhofer IESE](https://www.iese.fraunhofer.de/)| Committer  |
+| Franz  Degenhardt|[FranzDegenhardt](https://github.com/FranzDegenhardt)|[X-Integrate](https://x-integrate.com/x-integrate-startseite/)| Committer  |
+
+#### Collaboration Model
+| Member Name |GitHub Alias|Company| Role |
+| --- | --- | --- | --- |
+| Peter Heimig |[heimig](https://github.com/Heimig)|[Agindo](https://agindo.de/)| **Manager**  |
+| Dennis Steiniger|[dennisCES](https://github.com/dennisCES)|[Cloud Ecosystem](http://www.cloudecosystem.org/)| Committer |
+| Patrick Levie|[plevie](https://github.com/plevie)|[Interact.io](https://www.interact.io/)|Committer|
+
+#### Document Model
+| Member Name |GitHub Alias|Company| Role |
+| --- | --- | --- | --- |
+| Nils Mosbach|[nils-mosbach](https://github.com/nils-mosbach)|[ELO Digital Office](https://www.elo.com/de-de.html)| **Manager**  |
+| Philipp Hoegner|[philecs](https://github.com/philecs)|[Cloud Ecosystem](http://www.cloudecosystem.org/)| Committer  |
+| Matthias Thiele|[MatthiasThiele](https://github.com/MatthiasThiele)|[ELO Digital Office](https://www.elo.com/de-de.html)|Contributor|
+| Benoit Clernet-Gurnaud|[bclerget](https://github.com/bclerget)|[ELO Digital Office](https://www.elo.com/de-de.html)|Contributor|
+
+#### User, Tenants & Rights
+| Member Name |GitHub Alias|Company| Role |
+| --- | --- | --- | --- |
+|Hans Eggert|[heggert](https://github.com/orgs/openintegrationhub/people/heggert)|[Basaas](https://www.basaas.com/app-store)|**Manager**|
 | Nils Mosbach|[nils-mosbach](https://github.com/nils-mosbach)|[ELO Digital Office](https://www.elo.com/de-de.html)| Committer  |
-| Matthias Thiele|[MatthiasThiele](https://github.com/MatthiasThiele)|[ELO Digital Office](https://www.elo.com/de-de.html)| Committer  |
-| Benoit Clernet-Gurnaud|[bclerget](https://github.com/bclerget)|[ELO Digital Office](https://www.elo.com/de-de.html)| Committer  |
-
-
+| Philipp Hoegner|[philecs](https://github.com/philecs)|[Cloud Ecosystem](http://www.cloudecosystem.org/)| Committer  |
+| Hansjörg Schmidt  |[hschmidthh](https://github.com/hschmidthh)|[Wice](https://wice.de/)|Committer|
+| Peter Heimig |[heimig](https://github.com/Heimig)|[Agindo](https://agindo.de/)|Committer|
 
 ## Wording
 
