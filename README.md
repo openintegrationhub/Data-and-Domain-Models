@@ -108,7 +108,7 @@ When looking for further information or support, please contact: datamodels@open
 | Hansjörg Schmidt  |[hschmidthh](https://github.com/hschmidthh)|[Wice](https://wice.de/)| **Manager**  |
 | Philipp Hoegner|[philecs](https://github.com/philecs)|[Cloud Ecosystem](http://www.cloudecosystem.org/)| Committer  |
 | Patrick Levie|[plevie](https://github.com/plevie)|[Interact.io](https://www.interact.io/)|Contributor|
-| Roman Okon | [ROKON1987](https://github.com/orgs/openintegrationhub/people/ROKON1987) | [1&1 Internet SE](https://www.1und1.de/)|Contributor|
+| Roman Okon | [ROKON1987](https://github.com/ROKON1987) | [1&1 Internet SE](https://www.1und1.de/)|Contributor|
 
 #### Common Data Model Aspects
 | Member Name |GitHub Alias|Company| Role |
