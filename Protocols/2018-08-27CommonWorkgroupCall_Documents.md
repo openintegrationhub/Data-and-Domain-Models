@@ -29,4 +29,4 @@ So we would be restricted to the set of predefined attributes for them, right?
 - [ ] Create Excel sheet to discuss further standard metadata models **Dennis** 
 - [ ] Solve issue: redye standalone objects' color of the standard master data model into yellow, following the contribution guidelines **Nils**
 - [ ] Define and add further possible attributes in the Excel sheet [Discussion - Standard Metadata Models](https://docs.google.com/spreadsheets/d/1cm6fJFQqVmNusaQIIFaUK7CnMInM1LSz3m1tAz0FV4g/edit?usp=sharing) **All**
-- [ ] Review changes and additions from all 3 tasks above **All**
+- [ ] Review changes and additions from all 4 tasks above **All**
