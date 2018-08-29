@@ -114,7 +114,7 @@ The language attribute follows the [**IETF language tags**](https://en.wikipedia
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |type|String|-|Type of the contact data|email|-|
-|label|-|Can be used for a categorization of same types of contact data or for additional information|E.g. "Mobile" (type: phone) or "facebook" (type: social media)||
+|label|-|Used to specify the contact data|E.g. "Mobile" (type: phone) or "facebook" (type: social media)||
 |value|String|-|Value of the contact data|email@example.org|-|
 |description|string|-|Can be used to further describe the contact data|"Primary"||
 

@@ -78,9 +78,9 @@
             "Hermann Schmitz"
           ]
         },
-        "description":{
+        "label":{
           "type": "string",
-          "description": "Can be used for a textual description the address",
+          "description": "Can be used to label the address",
           "default": "primary",
           "examples": [
             "primary",
@@ -106,8 +106,23 @@
           "type": "string",
           "description": "Type of the contact data",
           "examples": [
+            "phone",
             "email",
-            "phone"
+            "url",
+            "fax",
+            "social media"
+          ]
+        },
+        "label":{
+          "type": "string",
+          "description": "Used to specify the contact data with a label",
+          "default": "",
+          "examples": [
+            "businessMobile",
+            "support",
+            "homepage",
+            "privateFax",
+            "linkedin"
           ]
         },
         "description":{
@@ -134,9 +149,9 @@
             "prospect"
           ]
         },
-        "description": {
+        "label": {
           "type": "string",
-          "description": "Additional information abot the category",
+          "description": "Used to label the category",
           "examples": [
             "a customer"
           ]
@@ -168,9 +183,9 @@
             "janedoe@example.com"
           ]
         },
-        "description":{
+        "label":{
           "type": "string",
-          "description": "Can be used for a textual description the calendar",
+          "description": "Used to label the calendar",
           "default": "primary",
           "examples": [
             "primary",
