@@ -24,7 +24,7 @@ Third iteration of the address data model description.
 |middleName|String|-|Middle name of the person|"Sandra"|-|
 |lastName|String|-|Last name of the person|"Schaefer"|-|
 |gender|String|enum|Gender of the person|"female"|"male", "female", "intersexual"|
-|birthday|Date-time|-|Birthday of the person|"24-06-1982"|-|
+|birthday|Date-time|-|Birthday of the person|"1982-06-24"|-|
 |notes|String|-|Personal notes for the person|"Met at the winter summit"|-|
 |displayName|String|-|Displayed name of the person within the application|"SiSchaefer"|-|
 |language|String|-|First language of the person|"German"|-|
@@ -38,6 +38,41 @@ Third iteration of the address data model description.
 |[PersonToOrganizationRelationship](#persontoorganizationrelationship)|Array (of personToOrganizationRelationships objects)|-|Relations of a person to organizations|A personToOrganizationRelationship object array|-|
 |[PersonToPersonRelationship](#persontopersonrelationship)|Array (of personToOrganizationRelationships objects)|-|Relations of two persons|An personToPersonRelationship object array|-|
 |[calendar](#calendar)|Array (of calendar objects)|-|Calendar information of the person|A calendar object array|-|
+
+In order to secure proper data integration, please satisfy the prescribed standard for the title and language attributes. This ensures that every connected application (and its connector) knows the format of incoming values. In the following a list of common title is presented:
+
+- dr.
+- dr.dr.
+- dr.mult.
+- dr.h.c.
+- prof.
+- prof.dr.
+- prof.dr.
+- ph.d.
+
+The language attribute follows the [**IETF language tags**](https://en.wikipedia.org/wiki/IETF_language_tag) format. In this format `each language tag is composed of one or more "subtags" separated by hyphens (-). Each subtag is composed of basic Latin letters or digits only.`(_Source:_ [_Wikipedia_]((https://en.wikipedia.org/wiki/IETF_language_tag)). In the following a short list of the most used language tags is presented.
+
+| English name for language |   Tag   |
+|:--------------------------|:--------|
+|English                    |en       |
+|English (United States)    |en-US    |
+|English (Great Britain)    |en-GB    |
+|French                     |fr       |
+|German                     |de       |
+|Polish                     |pl       |
+|Dutch                      |nl       |
+|Finnish                    |fi       |
+|Swedish                    |sv       |
+|Italian                    |it       |
+|Spanish (Spain)            |es       |
+|Portuguese (Portugal)      |pt       |
+|Russian                    |ru       |
+|Portuguese (Brazil)        |pt-BR    |
+|Spanish (Mexico)           |es-MX    |
+|Chinese (PRC)              |zh-CN    |
+|Chinese (Taiwan)           |zh-TW    |
+|Japanese                   |ja       |
+|Korean                     |ko       |
 
 ## Organization
 
@@ -65,49 +100,55 @@ Third iteration of the address data model description.
 |country|String|-|Country of the address|"Germany"|-|
 |countryCode|String|-|Countrycode of the address|"DE"|-|
 |primaryContact|String|-|Primary contact for the address|"Herbert Hermann"|-|
-|description|String|-|Can be used for a textual description the address|primary|-|
+|label|String|-|Can be used for a textual description the address|primary|-|
 
 ## Category
 
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |name|String|-|Category the person / organization belongs to|"Customer"|-|
-|description|String|-|Additional description of the category|"type a"|-|
+|label|String|-|Additional description of the category|"type a"|-|
 
 ## ContactData
 
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|value|String|-|Value of the contact data|email@example.org|-|
 |type|String|-|Type of the contact data|email|-|
-|description|string|-|Can be used for a categorization of same types of contact data or for additional information|"Primary"||
+|label|-|Can be used for a categorization of same types of contact data or for additional information|E.g. "Mobile" (type: phone) or "facebook" (type: social media)||
+|value|String|-|Value of the contact data|email@example.org|-|
+|description|string|-|Can be used to further describe the contact data|"Primary"||
 
-In order to secure proper data integration, please satisfy the prescribed standard for common contact data types. This ensures that every connected application (and its connector) knows the format of incomring common data types. In the following a list of common data types is presented:
+
+In order to secure proper data integration, please satisfy the prescribed standard for common contact data types. This ensures that every connected application (and its connector) knows the format of incoming values. In the following a list of common data types (and labels) is presented. If no further labelling is needed we suggest to leave the label field empty:
 
 **General contact types:**
 - email
 - phone
 - url
 - fax
+- social media
 
-**Common Social media / instant messenger contact types:**
-- facebook
-- xing
-- linkedin
-- skype
-- slack
-- google+
-- twitter
-- youtube
-- reddit
-- flickr
-- stackoverflow
-- pinterest
-- wechat
-- qq
-- whatapp
-- viber
-- telegram
+
+|Label:|email|phone|url|fax|social media|
+|---:|:---|:---|:---|:---|:---|
+||assistant|mobile|homepage|assistant|facebook|
+|||landline|subscription||xing|
+|||assistant|||linkedin|
+|||home|||skype|
+|||other|||slack|
+||||||google+|
+||||||twitter|
+||||||youtube|
+||||||reddit|
+||||||flickr|
+||||||stackoverflow|
+||||||pinterest|
+||||||wechat|
+||||||qq|
+||||||whatapp|
+||||||viber|
+||||||telegram|
+
 
 ## Calendar
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
@@ -115,7 +156,7 @@ In order to secure proper data integration, please satisfy the prescribed standa
 |calendar|String|-|URI to the persons' calendar|http://cal.example.com/calA|-|
 |requestCalendar|String|-|URL to request an appointment with the person|janedoe@example.com|-|
 |busyCalendar|String|-|URL which described if the person is available or busy|http://www.example.com/busy/janedoe|-|
-|description|String|-|Can be used for a textual description the calendar|primary|-|
+|label|String|-|Can be used for a textual description the calendar|primary|-|
 
 ## OrganizationToPersonRelationship
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
