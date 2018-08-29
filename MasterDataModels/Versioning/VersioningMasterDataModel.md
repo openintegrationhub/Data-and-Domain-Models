@@ -1,39 +1,41 @@
 # Versioning of Master Data Models
 
-<!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [Goals](#goals)
-	- [Definition of Workflows](#definition-of-workflows)
-	- [Technical Concept and Solution](#technical-concept-and-solution)
-- [Discussion of the Technical Concept and Solution](#discussion-of-the-technical-concept-and-solution)
-	- [What has to be done if a new attribute is added?](#what-has-to-be-done-if-a-new-attribute-is-added)
-		- [Impacts on Connectors](#impacts-on-connectors)
-		- [Impacts on REST API Models of OIH and ISV](#impacts-on-rest-api-models-of-oih-and-isv)
-		- [Impacts on Data Hub](#impacts-on-data-hub)
-		- [Running APPs which use different versions of the master data model / Connector and REST API Versioning](#running-apps-which-use-different-versions-of-the-master-data-model--connector-and-rest-api-versioning)
-		- [Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)](#impacts-on-specialized-data-models-sdm-and-private-data-models-pdm)
-	- [What has to be done if an attribute is changed?](#what-has-to-be-done-if-an-attribute-is-changed)
-		- [Impacts on Connectors](#impacts-on-connectors)
-		- [Impacts on REST API Models of OIH and ISV](#impacts-on-rest-api-models-of-oih-and-isv)
-		- [Impacts on Data Hub](#impacts-on-data-hub)
-		- [Running APPs which use different versions of the master data model / Connector and REST API Versioning](#running-apps-which-use-different-versions-of-the-master-data-model--connector-and-rest-api-versioning-1)
-		- [Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)](#impacts-on-specialized-data-models-sdm-and-private-data-models-pdm)
-	- [What has to be done if an attribute is deleted?](#what-has-to-be-done-if-an-attribute-is-deleted)
-		- [Impacts on Connectors](#impacts-on-connectors)
-		- [Impacts on REST API Models of OIH and ISV](#impacts-on-rest-api-models-of-oih-and-isv)
-		- [Impacts on Data Hub](#impacts-on-data-hub)
-		- [Running APPs which use different versions of the master data model / Connector and REST API Versioning](#running-apps-which-use-different-versions-of-the-master-data-model--connector-and-rest-api-versioning-2)
-		- [Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)](#impacts-on-specialized-data-models-sdm-and-private-data-models-pdm)
-- [Workflows](#workflows)
-	- [Decision Process Guidelines](#decision-process-guidelines)
-	- [Tracking of Changes](#tracking-of-changes)
-	- [Release Cycles](#release-cycles)
-	- [Update propagation](#update-propagation)
-		- [Channels](#channels)
-			- [Website](#website)
-			- [Newsletter](#newsletter)
-			- [GitHub](#github)
-			- [Technical](#technical)
+- [Versioning of Master Data Models](#versioning-of-master-data-models)
+	- [Goals](#goals)
+		- [Definition of Workflows](#definition-of-workflows)
+		- [Technical Concept and Solution](#technical-concept-and-solution)
+	- [Discussion of the Technical Concept and Solution](#discussion-of-the-technical-concept-and-solution)
+		- [What has to be done if a new attribute is added?](#what-has-to-be-done-if-a-new-attribute-is-added)
+			- [Impacts on Connectors](#impacts-on-connectors)
+			- [Impacts on REST API Models of OIH and ISV](#impacts-on-rest-api-models-of-oih-and-isv)
+			- [Impacts on Data Hub](#impacts-on-data-hub)
+			- [Running APPs which use different versions of the master data model / Connector and REST API Versioning](#running-apps-which-use-different-versions-of-the-master-data-model-connector-and-rest-api-versioning)
+			- [Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)](#impacts-on-specialized-data-models-sdm-and-private-data-models-pdm)
+		- [What has to be done if an attribute is changed?](#what-has-to-be-done-if-an-attribute-is-changed)
+			- [Impacts on Connectors](#impacts-on-connectors)
+			- [Impacts on REST API Models of OIH and ISV](#impacts-on-rest-api-models-of-oih-and-isv)
+			- [Impacts on Data Hub](#impacts-on-data-hub)
+			- [Running APPs which use different versions of the master data model / Connector and REST API Versioning](#running-apps-which-use-different-versions-of-the-master-data-model-connector-and-rest-api-versioning)
+			- [Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)](#impacts-on-specialized-data-models-sdm-and-private-data-models-pdm)
+		- [What has to be done if an attribute is deleted?](#what-has-to-be-done-if-an-attribute-is-deleted)
+			- [Impacts on Connectors](#impacts-on-connectors)
+			- [Impacts on REST API Models of OIH and ISV](#impacts-on-rest-api-models-of-oih-and-isv)
+			- [Impacts on Data Hub](#impacts-on-data-hub)
+			- [Running APPs which use different versions of the master data model / Connector and REST API Versioning](#running-apps-which-use-different-versions-of-the-master-data-model-connector-and-rest-api-versioning)
+			- [Impacts on Specialized Data Models (SDM) and Private Data Models (PDM)](#impacts-on-specialized-data-models-sdm-and-private-data-models-pdm)
+	- [Workflows](#workflows)
+		- [Version Labeling](#version-labeling)
+		- [Decision Process Guidelines](#decision-process-guidelines)
+		- [Tracking of Changes](#tracking-of-changes)
+		- [Release Cycles](#release-cycles)
+		- [Update propagation](#update-propagation)
+			- [Channels](#channels)
+				- [Website](#website)
+				- [Newsletter](#newsletter)
+				- [GitHub](#github)
+				- [Technical](#technical)
 
 <!-- /TOC -->
 
@@ -199,42 +201,64 @@ versionized data tables are used).
 There are no further impacts.
 
 ## Workflows
+A workflow describes the process of changing an existing master data model. Each workflow consists of different steps such as labeling the new version, deciding on which changes should be incorporated into the model, how the changes in a model can be tracked etc.
+
+These steps are further described in the following.
+
+### Version Labeling
+To secure a common version labeling across all master data models it is necessary to establish a unified process/method.
+One established way of labeling versions is [SemVer - Semantic Versioning 2.0.0](https://semver.org/).
+
+SemVer is `... a simple set of rules and requirements that dictate how version numbers are assigned and incremented.`
+
+Short description on how SemVer version numbers are composited:
+
+**A normal version number MUST take the form X.Y.Z where X, Y, and Z are non-negative integers, and MUST NOT contain leading zeroes. X is the major version, Y is the minor version, and Z is the patch version. Each element MUST increase numerically. For instance: 1.9.0 -> 1.10.0 -> 1.11.0.**
+
+1. Major version zero (0.y.z) is for initial development. Anything may change at any time. The public API should not be considered stable.
+
+2. Version 1.0.0 defines the public API. The way in which the version number is incremented after this release is dependent on this public API and how it changes.
+
+3. Patch version Z (x.y.Z | x > 0) MUST be incremented if only backwards compatible bug fixes are introduced. A bug fix is defined as an internal change that fixes incorrect behavior.
+
+
+Source: _https://semver.org/_
 
 ### Decision Process Guidelines
 
-epending on the change a certain threshold has to be passed in order to change a model.
+Depending on the change a certain threshold has to be passed in order to change a model.
 
-The following table defines some thresholds for the different changes. All thresholds are suggestions. For some cases it might makes sense to make the decision based on other criteria:
+The following table defines some thresholds for the different changes. All thresholds are suggestions. For most of the changes the committer of the data model workgroup have to decide whether the change is incorporated into the model or not. Only for some changes (such as adding a nullable attribute) there is no need for an extra decision and the change should automatically be included in the model with the next release. For some cases it might makes sense to make the decision based on further criteria:
 
 | Change | Threshold |
 |---|---|
 |Adding a nullable attrribute|Suggested at least 3 times|
 |Adding an object to the model|Suggested at least 3 times|
 |Adding an option to an enumaration|Suggested at least 3 suggestions|
-|Renaming an existing attribute|> 66 % of all connected applications|
-|Renaming an existing enumeration option|> 66 % of all connected applications|
-|Changing the type of an existing attribute|> 66 % of all connected applications|
-|Changing an attributes' property from _nullable_ to _not nullable_|> 66 % of all connected applications|
-|Deleting an existing attribute|100% of all connected applications|
-|Renaming an existing object|> 66 % of all connected applications|
-|Deleting an existing object|100% of all connected applications|
-|Adding an attribute that is not nullable|> 50 % of all connected applications|
+|Renaming an existing attribute|>= 66 % of all data model workgroup comitter|
+|Renaming an existing enumeration option|>= 66 % of all data model workgroup comitter|
+|Changing the type of an existing attribute|>= 66 % of all data model workgroup comitter|
+|Changing an attributes' property from _nullable_ to _not nullable_|>= 66 % of all data model workgroup comitter|
+|Deleting an existing attribute|100 % of all data model workgroup comitter|
+|Renaming an existing object|>= 66 % of all data model workgroup comitter|
+|Deleting an existing object|100% of all data model workgroup comitter|
+|Adding an attribute that is not nullable|>= 50 % of all data model workgroup comitter|
 
 The idea behind a threshold of _"suggested at least 3 times"_ is that for 2 suggestions a peer-to-peer integration can be realized and there is no need to include it into the Open Integration Hub.
 
 ### Tracking of Changes
 
-A changelog should exist for each version number, to track all changes of a model. This changelog needs to include information about the _action_ (what was done), the _affected object_, the _new value_, the _date-time_ of the change and the _model version_. Thus, a changelog could look like the one presented in the following:
+A changelog should exist for each version number, to track all changes of a model. This changelog needs to include information about the _model version_, the _action_ (what was done), the _affected object_, the _affected attribute_, the _old value_ the _new value_ and the _date-time_. Thus, a changelog could look like the one presented in the following:
 
-|Model Version|Action|Category|Affected Object|Affected Attriute|Old Value|New Value|updated at|
+|Model Version|Action|Affected Object|Affected Attribute|Old Value|New Value|updated at|
 |---|---|---|---|---|---|---|---|
-|OIHMasterDataModelAddresses_v1.1.0|Optional attribute added|minor|Person|jobTitle|-|jobTitle|2018-01-01|
-|OIHMasterDataModelAddresses_v1.1.0|Optional attribute added|minor|OrganizationCategory|abcType|-|abcType|2018-01-01|
-|OIHMasterDataModelAddresses_v1.2.0|Optional attribute added|minor|Organization|logo|-|logo|2018-07-01|
-|OIHMasterDataModelAddresses_v2.0.0|Object added|minor|Social|-|-|Social Object|2019-01-01|
-|OIHMasterDataModelAddresses_v2.0.0|Optional attribute added|minor|Phone|messenger|-|messenger|2019-01-01|
-|OIHMasterDataModelAddresses_v2.0.0|Attribute type change|major|Address|unit|integer|string|2019-01-01|
-|...|...|...|...|...|...|...|...|
+|OIHMasterDataModelAddresses_v1.1.0|Optional attribute added|Person|jobTitle|-|jobTitle|2018-01-01|
+|OIHMasterDataModelAddresses_v1.1.0|Optional attribute added|OrganizationCategory|abcType|-|abcType|2018-01-01|
+|OIHMasterDataModelAddresses_v1.2.0|Optional attribute added|Organization|logo|-|logo|2018-07-01|
+|OIHMasterDataModelAddresses_v2.0.0|Object added|Social|-|-|Social Object|2019-01-01|
+|OIHMasterDataModelAddresses_v2.0.0|Optional attribute added|Phone|messenger|-|messenger|2019-01-01|
+|OIHMasterDataModelAddresses_v2.0.0|Attribute type change|Address|unit|integer|string|2019-01-01|
+|...|...|...|...|...|...|...|
 
 ### Release Cycles
 A release cycle defines in which intervals new model versions are released. Pros and cons exist for various durations of a release cycle.
