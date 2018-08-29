@@ -1,16 +1,18 @@
-Third iteration of the address data model description.
-<!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [Person](#person)
-- [Organization](#organization)
-- [Address](#address)
-- [ContactData](#contactdata)
-- [Calendar](#calendar)
-- [PersonToOrganizationRelationship](#persontoorganizationrelationship)
-- [PersonToPersonRelationship](#persontopersonrelationship)
-- [OrganizationToOrganizationRelationship](#organizationtoorganizationrelationship)
+- [Objects](#objects)
+	- [Person](#person)
+	- [Organization](#organization)
+	- [Address](#address)
+	- [Category](#category)
+	- [ContactData](#contactdata)
+	- [Calendar](#calendar)
+	- [OrganizationToPersonRelationship](#organizationtopersonrelationship)
+	- [PersonToPersonRelationship](#persontopersonrelationship)
+	- [PersonToOrganizationRelationship](#persontoorganizationrelationship)
 
 <!-- /TOC -->
+
 
 # Objects
 ## Person
