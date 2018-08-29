@@ -4,7 +4,6 @@ Third iteration of the address data model description.
 - [Person](#person)
 - [Organization](#organization)
 - [Address](#address)
-- [OrganizationType](#organizationtype)
 - [ContactData](#contactdata)
 - [Calendar](#calendar)
 - [PersonToOrganizationRelationship](#persontoorganizationrelationship)
@@ -46,7 +45,6 @@ In order to secure proper data integration, please satisfy the prescribed standa
 - dr.mult.
 - dr.h.c.
 - prof.
-- prof.dr.
 - prof.dr.
 - ph.d.
 
@@ -129,14 +127,14 @@ In order to secure proper data integration, please satisfy the prescribed standa
 - social media
 
 
-|Label:|email|phone|url|fax|social media|
+|Type:|email|phone|url|fax|social media|
 |---:|:---|:---|:---|:---|:---|
-||assistant|mobile|homepage|assistant|facebook|
-|||landline|subscription||xing|
-|||assistant|||linkedin|
-|||home|||skype|
-|||other|||slack|
-||||||google+|
+|**Labels**|assistant|privateMobile|homepage|assistant|facebook|
+||privateEmail|privateLandline|subscription|privateFax|xing|
+||businessEmail|assistant||businessFax|linkedin|
+||support|businessMobile|||skype|
+|||businessMobile|||slack|
+|||support|||google+|
 ||||||twitter|
 ||||||youtube|
 ||||||reddit|
