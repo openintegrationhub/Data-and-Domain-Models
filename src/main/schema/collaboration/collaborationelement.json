@@ -46,15 +46,15 @@
     }
   },
   "definitions":{
-    "Header":{
+    "header":{
       "type":"object",
       "properties":{
         "from":{
-        "type":"string",
-        "description":"E-Mail of sender",
-        "examples":[
-          "john.doe@email.com"
-        ]
+          "type":"string",
+          "description":"E-Mail of sender",
+          "examples":[
+            "john.doe@email.com"
+          ]
         },
         "to":{
           "type":"string",
@@ -86,7 +86,7 @@
         }
       }
     },
-    "Date":{
+    "date":{
       "type":"object",
       "properties":{
         "date":{
@@ -123,7 +123,7 @@
         }
       }
     },
-    "Properties":{
+    "properties":{
       "type":"object",
       "properties":{
         "messageID":{
@@ -144,7 +144,7 @@
             "spf=pass smtp.mailfrom=email.com"
           ]
         },
-        "MIMEversion":{
+        "mimeVversion":{
           "type":"number",
           "description":"Version of MIME",
           "examples":[
@@ -153,7 +153,7 @@
         }
       }
     },
-    "Content":{
+    "content":{
       "type":"object",
       "properties":{
         "format":{
@@ -172,7 +172,7 @@
         }
       }
     },
-    "Attachment":{
+    "attachment":{
       "type":"object",
       "properties":{
         "type":{

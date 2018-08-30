@@ -27,7 +27,7 @@
       }
    },
    "definitions":{
-      "Thread":{
+      "thread":{
          "type":"object",
          "properties":{
             "threadname":{

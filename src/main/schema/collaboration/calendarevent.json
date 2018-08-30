@@ -10,7 +10,7 @@
     }
   ],
   "properties":{
-    "CollaborationElement":{
+    "collaborationElement":{
       "description":"CollaborationElement Data",
       "allOf": [
         {
@@ -18,14 +18,14 @@
         }
       ]
     },
-    "Contacts":{
+    "contacts":{
       "type":"array",
       "description":"Contacts Data",
       "items":{
         "$ref":"#/definitions/Contact"
       }
     },
-    "EventDetails":{
+    "eventDetails":{
       "description":"EventDetails Data",
       "allOf":[
         {
@@ -35,7 +35,7 @@
     }
   },
   "definitions":{
-    "Contact":{
+    "contact":{
       "type":"object",
       "properties":{
         "name":{
@@ -52,7 +52,7 @@
             "john.doe@email.com"
           ]
         },
-        "Calendars":{
+        "calendars":{
           "type":"array",
           "description":"EventDetails Data",
           "items":{
@@ -61,7 +61,7 @@
         }
       }
     },
-    "Calendars":{
+    "calendars":{
       "type":"object",
       "properties":{
         "calendars":{
@@ -87,7 +87,7 @@
         }
       }
     },
-    "EventDetails":{
+    "eventDetails":{
       "type":"object",
       "properties":{
         "location":{
