@@ -29,7 +29,7 @@
          "description":"detail information of the task",
          "allOf":[
             {
-               "$ref":"#/definitions/Details"
+               "$ref":"#/definitions/details"
             }
          ]
       }
@@ -50,7 +50,7 @@
                "format":"date-time",
                "description":"Date when the task starts",
                "examples":[
-                  "01.01.2018 00:00"
+                  "2018-01-01T10:10:10Z"
                ]
             },
             "enddate":{
@@ -58,7 +58,7 @@
                "format":"date-time",
                "description":"Date when the task is closed",
                "examples":[
-                  "31.01.2018 00:00"
+                  "2018-03-01T10:10:10Z"
                ]
             },
             "reminderdate":{
@@ -66,7 +66,7 @@
                "format":"date-time",
                "description":"Date when the task completion should be reminded",
                "examples":[
-                  "20.01.2018 00:00"
+                  "2018-02-01T10:10:10Z"
                ]
             },
             "content":{

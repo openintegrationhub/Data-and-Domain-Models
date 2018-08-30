@@ -22,14 +22,14 @@
       "type":"array",
       "description":"Contacts Data",
       "items":{
-        "$ref":"#/definitions/Contact"
+        "$ref":"#/definitions/contact"
       }
     },
     "eventDetails":{
       "description":"EventDetails Data",
       "allOf":[
         {
-          "$ref":"#/definitions/EventDetails"
+          "$ref":"#/definitions/eventDetails"
         }
       ]
     }
@@ -56,34 +56,34 @@
           "type":"array",
           "description":"EventDetails Data",
           "items":{
-            "$ref":"#/definitions/Calendars"
+            "$ref":"#/definitions/calendars"
           }
-        }
-      }
-    },
-    "calendars":{
-      "type":"object",
-      "properties":{
+        },
         "calendars":{
-          "type":"string",
-          "description":"URI to the person's calendar",
-          "examples":[
-            "http://cal.example.com/calA"
-          ]
-        },
-        "requestCalendar":{
-          "type":"string",
-          "description":"URL to request an appointment with the person",
-          "examples":[
-            "janedoe@example.com"
-          ]
-        },
-        "status":{
-          "type":"string",
-          "description":"Identification of the thread",
-          "examples":[
-            "http://www.example.com/busy/janedoe"
-          ]
+          "type":"object",
+          "properties":{
+            "calendars":{
+              "type":"string",
+              "description":"URI to the person's calendar",
+              "examples":[
+                "http://cal.example.com/calA"
+              ]
+            },
+            "requestCalendar":{
+              "type":"string",
+              "description":"URL to request an appointment with the person",
+              "examples":[
+                "janedoe@example.com"
+              ]
+            },
+            "status":{
+              "type":"string",
+              "description":"Identification of the thread",
+              "examples":[
+                "http://www.example.com/busy/janedoe"
+              ]
+            }
+          }
         }
       }
     },
@@ -102,7 +102,7 @@
           "format":"date",
           "description":"startdate of the event",
           "examples":[
-            "01.01.2018"
+            "2018-01-01"
           ]
         },
         "end":{
@@ -110,7 +110,7 @@
           "format":"date",
           "description":"enddate of the event",
           "examples":[
-            "31.12.2018"
+            "2018-12-18"
           ]
         }
       }

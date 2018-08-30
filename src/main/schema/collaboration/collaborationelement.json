@@ -9,7 +9,7 @@
       "description":"header information of the element",
       "allOf": [
         {
-          "$ref":"#/definitions/Header"
+          "$ref":"#/definitions/header"
         }
       ]
     },
@@ -17,7 +17,7 @@
       "description":"date information of the element",
       "allOf": [
 				{
-        "$ref":"#/definitions/Date"
+        "$ref":"#/definitions/date"
         }
       ]
     },
@@ -25,7 +25,7 @@
       "description":"properties information of the element",
       "allOf": [
 				{
-        "$ref":"#/definitions/Properties"
+        "$ref":"#/definitions/properties"
         }
       ]
     },
@@ -33,7 +33,7 @@
       "description":"content information of the element",
       "allOf": [
 				{
-        "$ref":"#/definitions/Content"
+        "$ref":"#/definitions/content"
         }
       ]
     },
@@ -41,7 +41,7 @@
       "type":"array",
       "description":"attachment information of the element",
       "items":{
-        "$ref":"#/definitions/Attachment"
+        "$ref":"#/definitions/attachment"
       }
     }
   },
@@ -94,7 +94,7 @@
           "format":"date",
           "description":"Date",
           "examples":[
-            "01.01.2018"
+            "2018-01-01"
           ]
         },
         "day":{
@@ -144,7 +144,7 @@
             "spf=pass smtp.mailfrom=email.com"
           ]
         },
-        "mimeVversion":{
+        "mimeVersion":{
           "type":"number",
           "description":"Version of MIME",
           "examples":[

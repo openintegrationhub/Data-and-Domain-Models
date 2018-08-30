@@ -1,22 +1,22 @@
-{  
+{
    "$schema":"http://json-schema.org/schema#",
    "$id":"https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/collaboration/subtask.json",
    "title":"Subtask",
    "description":"Describes the Subtask",
    "type":"object",
-   "properties":{  
-      "task":{  
+   "properties":{
+      "task":{
          "type":"string",
          "description":"name of the subtask",
-         "examples":[  
+         "examples":[
             "Analyze different systems"
          ]
       },
-      "details":{  
+      "details":{
          "description":"Task Details",
-         "allOf":[  
-            {  
-               "$ref":"task.json#/definitions/Details"
+         "allOf":[
+            {
+               "$ref":"task.json#/definitions/details"
             }
          ]
       }

@@ -22,7 +22,7 @@
          "type":"array",
          "description":"thread information of the e-mail",
          "items":{
-            "$ref":"#/definitions/Thread"
+            "$ref":"#/definitions/thread"
          }
       }
    },
