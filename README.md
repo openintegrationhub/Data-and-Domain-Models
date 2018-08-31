@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/Assets/medium-oih-einzeilig-zentriert.jpg" alt="Sublime's custom image" width="400"/>
-
+  <img src="https://github.com/openintegrationhub/Microservices/blob/master/Assets/medium-oih-einzeilig-zentriert.jpg" alt="Sublime's custom image" width="400"/>
+</p>
 
 The revolution in data synchronization — the Open Integration Hub enables simple data synchronization between any software applications and thus accelerates digitalisation
 
-Visit the official [Open Integration Hub homepage](https://www.openintegrationhub.de/)
+Visit the official [Open Integration Hub homepage](https://www.openintegrationhub.org/)
 
 ## Table of Content
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
