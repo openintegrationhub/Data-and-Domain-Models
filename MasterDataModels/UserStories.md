@@ -3,6 +3,11 @@
 This documents lists user stories for all currently existing domains. These user stories are derived from different stakeholders such as software vendors and integration provider.
 The user stories are sorted by domains.
 
+- [Addresses](#addresses)
+- [Collaboration](#collaboration)
+- [Documents](#documents)
+- [Products](#products)
+
 # Addresses
 
 |User Story Id| User Story |
