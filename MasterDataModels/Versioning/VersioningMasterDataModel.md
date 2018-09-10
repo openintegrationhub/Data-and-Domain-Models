@@ -251,7 +251,7 @@ The idea behind a threshold of _"suggested at least 3 times"_ is that for 2 sugg
 A changelog should exist for each version number, to track all changes of a model. This changelog needs to include information about the _model version_, the _action_ (what was done), the _affected object_, the _affected attribute_, the _old value_ the _new value_ and the _date-time_. Thus, a changelog could look like the one presented in the following:
 
 |Model Version|Action|Affected Object|Affected Attribute|Old Value|New Value|updated at|
-|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|
 |OIHMasterDataModelAddresses_v1.1.0|Optional attribute added|Person|jobTitle|-|jobTitle|2018-01-01|
 |OIHMasterDataModelAddresses_v1.1.0|Optional attribute added|OrganizationCategory|abcType|-|abcType|2018-01-01|
 |OIHMasterDataModelAddresses_v1.2.0|Optional attribute added|Organization|logo|-|logo|2018-07-01|
