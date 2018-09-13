@@ -57,8 +57,8 @@ The overall process is depicted in the following two workflow diagrams.
 #### Change Request Workflow
 ![change-request-workflow](Images/change_request.svg "Change Request Workflow")
 
-#### Realization Sub-Task
-![realization-workflow](Images/realization.svg "Realization Sub-Task")
+#### Realization of Request Sub-Task
+![realization-workflow](Images/realization.svg "Realization of Request Sub-Task")
 
 For these processes we should define:
 
