@@ -30,6 +30,9 @@
 		- [Decision Process Guidelines](#decision-process-guidelines)
 		- [Tracking of Changes](#tracking-of-changes)
 		- [Release Cycles](#release-cycles)
+			- [Short Release Cycles](#short-release-cycles)
+			- [Long Release Cycles](#long-release-cycles)
+			- [Conclusion](#conclusion)
 		- [Update propagation](#update-propagation)
 			- [Channels](#channels)
 				- [Website](#website)
@@ -263,28 +266,36 @@ A changelog should exist for each version number, to track all changes of a mode
 ### Release Cycles
 A release cycle defines in which intervals new model versions are released. Pros and cons exist for various durations of a release cycle.
 
-_Advantages of short release cycles (e.g. weekly/monthly):_
+#### Short Release Cycles
+Release cycles of, e.g., every week or month.
+
+_Advantages:_
 - Changes are quickly incorporated into the model
 - Low rework per release because of the small(er) amount of changes
 
-_Disadvantages of short release cycles:_
+_Disadvantages:_
 - Rework is needed often
 - Connected transformer are quickly outdated
 - The high frequency of the changes requires a high amount effort
 
-_Advantages of long release cycles(e.g. once/twice a year):_
+#### Long Release Cycles
+Release cycles of, e.g., annual or bi-annual.
+
+_Advantages:_
 - Rework is only needed once or twice a year because of bulk changes
 - Connected transformer are a least up-to-date for half a year
 - Due to bulk changes, the amount of effort is kept relatively low
 
-_Disadvantages of long release cycles:_
+_Disadvantages:_
 - It can take a long time until changes are incoprated into the model (e.g. when a change is proposed shortly after the last release cycle)
 - The bulk changes CAN (not necessarily - depending on the amount of changes incorpoated into the model) require a lot of rework
 
-Conclusion:
-All connected transformer (and their operators) need to be informed about new model versions. The high frequency of changes in short release cycles will cause a lot of rework, as every release needs to be communicated.
-Therefore **relatively long release cycles** are suggested. To avoid a degenerating timespan between proposal and model change, it is suggested to set the release cycles to **6 month** (twice a year).
+#### Conclusion
+All connected transformers (and their operators) need to be informed about new model versions, which means that with each change appropriate information about the change must be shared. In addition, depending on the change, it may be necessary to revise the connectors.
 
+Thus, on the one hand, the high frequency of changes in short release cycles will cause a lot of rework, as every release needs to be communicated. On the other hand, long release cycles could cause important changes (e.g., bugfixes) to be postponed too long.
+
+Therefore, a flexible, dynamic approach is needed to minimize the necessary revisions as well as to accommodate  short-term, critical changes like bugfixes. This is also where the [versioning concept](#tracking-of-changes) comes into play. Thus, we have decided to release major releases at most every six monts and to remain backwards compatible for at least six months. However, important updates are released as needed to respond to critical issues.
 
 ### Update propagation
 
