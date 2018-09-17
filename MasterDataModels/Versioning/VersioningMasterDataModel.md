@@ -55,6 +55,14 @@ We have to support the processing and the traceability of changes to a Master Da
 * Planning/Implementing/Evaluating the necessary changes
 * Releasing/deploying a new version
 
+The overall process is depicted in the following two workflow diagrams.
+
+#### Change Request Workflow
+![change-request-workflow](Images/change_request.svg "Change Request Workflow")
+
+#### Realization of Request Sub-Task
+![realization-workflow](Images/realization.svg "Realization of Request Sub-Task")
+
 For these processes we should define:
 
 * Who are the **contributing community members** (e.g. corporate members, associates,  individual members) and who are
