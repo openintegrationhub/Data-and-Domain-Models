@@ -60,11 +60,11 @@ The unified process for changing a model is explained in the following:
 
 **Change Request Flow:**
 
-![Change Request](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/Workflow-Images/MasterDataModels/Versioning/Images/change_request.svg)
+![Change Request](MasterDataModels/Versioning/Images/change_request.svg)
 
 **Realization of Request Sub-Task:**
 
-![Realization of Request](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/Workflow-Images/MasterDataModels/Versioning/Images/realization.svg)
+![Realization of Request](MasterDataModels/Versioning/Images/realization.svg)
 
 #### Contribute a new Model
 
