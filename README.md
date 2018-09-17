@@ -58,6 +58,14 @@ The unified process for changing a model is explained in the following:
 5. A new model version will be published within the next release
 
 
+**Change Request Flow:**
+
+![Change Request](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/Workflow-Images/MasterDataModels/Versioning/Images/change_request.svg)
+
+**Realization of Request Sub-Task:**
+
+![Realization of Request](https://github.com/openintegrationhub/Data-and-Domain-Models/blob/Workflow-Images/MasterDataModels/Versioning/Images/realization.svg)
+
 #### Contribute a new Model
 
 If you want to contribute a new model for a currently not yet existing domain, please consider the following steps:
