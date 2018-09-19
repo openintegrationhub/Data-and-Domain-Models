@@ -64,7 +64,7 @@ To enable the OIH to follow its purpose, the data records being processed have t
 
 An OIH expects and needs, depending on the scenario and the involved components (e.g. with or without a Data Hub involved), more or less meta data on a data record to integrate two or more applications. This is achieved by modelling each sub-model of an OMDM as a so called _OIH Data Record_. The OIHDataRecord defines a superset of mandatory and optional (meta) data for records processed by an OIH instance:
 
-![OIH Record](Assets/OihDataRecord.svg)
+![OIH Record](Assets/OIHDataRecord.svg)
 
 __Each of the the sub-models of an OMDM has to be marked as an *OIHDataRecord*.__
 
