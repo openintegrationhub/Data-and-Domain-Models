@@ -64,20 +64,28 @@ To enable the OIH to follow its purpose, the data records being processed have t
 
 An OIH expects and needs, depending on the scenario and the involved components (e.g. with or without a Data Hub involved), more or less meta data on a data record to integrate two or more applications. This is achieved by modelling each sub-model of an OMDM as a so called _OIH Data Record_. The OIHDataRecord defines a superset of mandatory and optional (meta) data for records processed by an OIH instance:
 
-![OIH Record](Assets/OIHDataRecord.svg)
+![OIH Record](Assets/OihDataRecord.svg)
 
-* __Each of the the sub-models of an OMDM has to be marked as an *OIHDataRecord*.__
+__Each of the the sub-models of an OMDM has to be marked as an *OIHDataRecord*.__
 
 I.e., the root of an OMDM's sub-model **must** inherit from / extend _OIHDataRecord_, no matter whether it is modeled as an
 aggregate or as a single entity.
 
-* __Every record passed into an OIH instance must at least be provided with a reference to the record of the application or service being the source of the record__,
+The *OIHDataRecord* contains...
 
-called an _OIHApplicationDataRecord_ containing ...
++ the datasets identifier within the OIH
++ its creation and last modification dates within the OIH.
++ an array of modification objects to track the modification history
+
+
+__Every record passed into an OIH instance must at least be provided with a reference to the record of the application or service being the source of the record__,
+
+called an _ApplicationDataRecord_ containing ...
 
 + the OIH's identifier for the application,
 + the record's ID within the application (both mandatory) and
-+ optionally its creation and last modification dates within the application.
++ its creation and last modification dates within the application.
++ an array of modification objects to track the modification history
 
 When receiving such a record from an OIH, there might also be entries of other applications being part of the integrations scenario with the same OMDM in the same OIH.
 
@@ -128,7 +136,7 @@ For a sales application, one could split the data model at least into the follow
 
 As an example to model an aggregate capable of being processed of an OIH instance, the following diagram shows a simplified order with its line items:
 
-![Aggregate example: Order](Assets/AggregateExample.svg)
+![Aggregate example: Order](Assets/DataRecordOrderExample.svg)
 
 The Order's root defines the model as an OIH Data Record by extending it. This way, the _Order_ entity is the one and only entry point to the aggregate.
 
