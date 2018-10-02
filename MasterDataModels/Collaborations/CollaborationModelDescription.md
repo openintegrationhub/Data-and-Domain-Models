@@ -26,7 +26,6 @@
 |[eventdetails](#eventdetails)|Array (of eventdetails objects)|-|eventdetails information of the calendarevent|An eventdetail object array|-|
 
 ## Contacts
-
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |name|String|-|Name of the contact|"John Doe"|-|
@@ -34,7 +33,6 @@
 |[calendars](#calendars)|Array (of calendar objects)|-|Calendar information of the person|A calendar object array|-|
 
 ## Calendars
-
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |calendar|String|-|URI to the person's calendar|http://cal.example.com/calA|-|
@@ -43,7 +41,6 @@
 
 
 ## Eventdetails
-
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |location|String|-|Name of the location|"Room 123"|-|
@@ -51,21 +48,18 @@
 |end|Date|-|enddate of the event|31.12.2018|-|
 
 ## Email
-
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |[collaborationelement](#collaborationelement)|Array (of collaborationelement objects)|-|Collaboration properties values|A collaborationelement object array|-|
 |[threads](#threads)|Array (of thread objects)|-|thread information of the e-mail|A thread object array|-|
 
 ## Threads
-
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |threadname|String|-|Name of the Thread|"Subject of the E-Mail"|-|
 |topic|String|-|Identification of the thread|randomized string|-|
 
 ## CollaborationElement
-
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |[header](#header)|Array (of header objects)|-|header information of the element|A header object array|-|
@@ -94,9 +88,8 @@
 ## Properties
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|message ID|String|-|Unique ID of the E-Mail|randomized string|-|
 |language|String|-|Language of the e-mail content|"en"|-|
-|authentification|String|-|Authentication Result|"spf=pass smtp.mailfrom=email.com"|-|
+|authentification|String|-|Authentification Result|"spf=pass smtp.mailfrom=email.com"|-|
 |MIME Version|Decimal|-|Version of MIME|1.3|-|
 
 ## Content
@@ -116,8 +109,8 @@
 |---|---|---|---|---|---|
 |[collaborationelement](#collaborationelement)|Array (of collaborationelement objects)|-|Collaboration properties values|A collaborationelement object array|-|
 |[subtask](#subtask)|Array (of subtask objects)|-|subtask information of the task|A subtask object array|-|
-|[details](#dateils)|Array (of details objects)|-|detail information of the task|A details object array|-|
-
+|[details](#details)|Array (of details objects)|-|detail information of the task|A details object array|-|
+|[category](#category)|Array (of category objects)|-|categroy information of the task|A category object array|-|
 
 ## Details
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
@@ -128,9 +121,16 @@
 |reminderdate|Datetime|-|Date when the task completion should be reminded|20.01.2018 00:00|-|
 |content|String|-|description of the Task|"To create a datamodel we have to analyze different systems..."|-|
 |status|String|-|status of the Task|"completed"|"started", "in progress", "completed"|
+|urgency|String|-|urgency of the Task|"low"|"low", "normal", "high"|
 
 ## Subtask
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|[details](#dateils)|Array (of details objects)|-|detail information of the task|A details object array|-|
 |task|String|-|name of the subtask|"Analyze different systems"|-|
+|[details](#details)|Array (of details objects)|-|detail information of the task|A details object array|-|
+|[category](#category)|Array (of category objects)|-|categroy information of the task|A category object array|-|
+
+## Category
+|Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
+|---|---|---|---|---|---|
+|category|String|-|category of the task or subtask|"Implementation"|-|
