@@ -13,6 +13,7 @@
 - [Task](#task)
 - [Details](#details)
 - [Subtask](#subtask)
+- [Category](#category)
 
 <!-- /TOC -->
 
