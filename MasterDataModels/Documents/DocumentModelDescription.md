@@ -42,7 +42,7 @@ No additional properties available.
 |---|---|---|---|---|---|
 |label|String||Label of the document version. Most likely used for version numbering.|"1.0.1"||
 |comment|String||Version comment by the author|"Rescanned document due to bad quality"||
-|creation|Modification|Timestamp and user that created the document version|||
+|creation|Modification||Timestamp and user that created the document version|||
 |isLatestVersion|Boolean||Flag that indicates if this is the latest version of the document|true||
 |isMajorVersion|Boolean||Flag that indicates if this is a major version of the document|true||
 |size|Number||Filesize of the document version in bytes|2097152||
