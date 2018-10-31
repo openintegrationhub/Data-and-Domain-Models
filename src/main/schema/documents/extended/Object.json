@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/documents/object.json",
+  "$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/documents/extended/object.json",
   "title": "Object",
   "description": "Objects describe base properties that are used by documents, folders or additional implementations.",
   "type": "object",
