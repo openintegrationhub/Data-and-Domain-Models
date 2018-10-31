@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/sharedDefinitionsV2.json",
+  "$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/documents/extended/sharedDefinitions.json",
   "title": "SharedDefinitions",
   "description": "Shared Definitions for the Master Data Model for Documents to use in the Open Integration Hub",
   "definitions": {
