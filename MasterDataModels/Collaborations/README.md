@@ -73,5 +73,3 @@ In addition to the uml class diagram, this folder contains a [description table]
 - Short description
 - Example values
 - Enumeration options (if attribute is an enumeration)
-
-# Additional Content
