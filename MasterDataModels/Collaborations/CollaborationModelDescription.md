@@ -2,13 +2,13 @@
 - [CalendarEvent](#calendarevent)
 - [Contacts](#contacts)
 - [Calendars](#calendars)
-- [EventDetails](#eventdetails)
 - [Threads](#threads)
 - [CollaborationElement](#collaborationelement)
 - [Attachments](#attachments)
 - [Task](#task)
 - [Details](#details)
 - [Category](#category)
+- [TaskToTaskRelation](#tasktotaskrelation)
 
 <!-- /TOC -->
 
@@ -19,6 +19,7 @@
 |---|---|---|---|---|---|
 |[collaborationElement](#collaborationelement)|Array (of collaborationElement objects)|-|Collaboration properties values|A collaborationElement object array|-|
 |[contacts](#contacts)|Array (of contact objects)|-|Contact information of the person|A contact object array|-|
+|[calendars](#calendars)|Array (of calendar objects)|-|Calendar connected to contacts|A contact object array|-|
 |location|String|-|Name of the location|"Room 123"|-|
 |start|Date|-|startdate of the event|01.01.2018|-|
 |end|Date|-|enddate of the event|31.12.2018|-|
@@ -60,6 +61,7 @@
 |date|Date|-|Date|01.01.2018|-|
 |day|Enum|-|Day of the week|"Monday"|"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"|
 |time|Time|-|Timestamp|10:10:10|-|
+|messageID|String|-|Id of the message|some token|-|
 |language|String|-|Language of the e-mail content|"en"|-|
 |authentification|String|-|Authentification Result|"spf=pass smtp.mailfrom=email.com"|-|
 |MIME Version|Decimal|-|Version of MIME|1.3|-|
@@ -79,7 +81,7 @@
 |[collaborationElement](#collaborationelement)|Array (of collaborationElement objects)|-|Collaboration properties values|A collaborationElement object array|-|
 |[details](#details)|Array (of details objects)|-|detail information of the task|A details object array|-|
 |[category](#category)|Array (of category objects)|-|category information of the task|A category object array|-|
-|[TaskToTaskRelation](#tasktotaskrelation)|String|-|Relation between two tasks|"subtask", "blocks", "is blocked by"|-|
+|[TaskToTaskRelation](#tasktotaskrelation)|String|-|Relation between two tasks|"is subtask to"|-|
 
 ## Details
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
@@ -92,9 +94,13 @@
 |status|String|-|status of the Task|"completed"|"started", "in progress", "completed"|
 |urgency|String|-|urgency of the Task|"low"|"low", "normal", "high"|
 
-
-
 ## Category
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |category|String|-|category of the task or subtask|"Implementation"|-|
+
+
+## TaskToTaskRelation
+|Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
+|---|---|---|---|---|---|
+|label|String|-|relation between two tasks|"is blocked by"|"subtask", "blocks", "is blocked by"|
