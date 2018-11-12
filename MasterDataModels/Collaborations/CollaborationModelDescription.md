@@ -104,4 +104,4 @@
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |label|String|-|relation between two tasks|"is blocked by"|"subtask", "blocks", "is blocked by"|
-|[Task](#task)|Array of task objects||Array (of task objects)|-|-|-|-|
+|[Task](#task)|Array of task objects|-|Array (of task objects)|-|-|-|-|
