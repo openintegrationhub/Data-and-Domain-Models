@@ -5,14 +5,9 @@
 - [EventDetails](#eventdetails)
 - [Threads](#threads)
 - [CollaborationElement](#collaborationelement)
-- [Header](#header)
-- [Date](#date)
-- [Properties](#properties)
-- [Content](#content)
 - [Attachments](#attachments)
 - [Task](#task)
 - [Details](#details)
-- [Subtask](#subtask)
 - [Category](#category)
 
 <!-- /TOC -->
@@ -22,9 +17,11 @@
 ## CalendarEvent
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|[collaborationelement](#collaborationelement)|Array (of collaborationelement objects)|-|Collaboration properties values|A collaborationelement object array|-|
+|[collaborationElement](#collaborationelement)|Array (of collaborationElement objects)|-|Collaboration properties values|A collaborationElement object array|-|
 |[contacts](#contacts)|Array (of contact objects)|-|Contact information of the person|A contact object array|-|
-|[eventdetails](#eventdetails)|Array (of eventdetails objects)|-|eventdetails information of the calendarevent|An eventdetail object array|-|
+|location|String|-|Name of the location|"Room 123"|-|
+|start|Date|-|startdate of the event|01.01.2018|-|
+|end|Date|-|enddate of the event|31.12.2018|-|
 
 ## Contacts
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
@@ -40,36 +37,19 @@
 |requestCalendar|String|-|URL to request an appointment with the person|janedoe@example.com|-|
 |status|String|-|URL which describes if the person is available or busy|http://www.example.com/busy/janedoe|-|
 
-
-## Eventdetails
-|Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
-|---|---|---|---|---|---|
-|location|String|-|Name of the location|"Room 123"|-|
-|start|Date|-|startdate of the event|01.01.2018|-|
-|end|Date|-|enddate of the event|31.12.2018|-|
-
 ## Email
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|[collaborationelement](#collaborationelement)|Array (of collaborationelement objects)|-|Collaboration properties values|A collaborationelement object array|-|
+|[collaborationElement](#collaborationelement)|Array (of collaborationElement objects)|-|Collaboration properties values|A collaborationElement object array|-|
 |[threads](#threads)|Array (of thread objects)|-|thread information of the e-mail|A thread object array|-|
 
 ## Threads
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|threadname|String|-|Name of the Thread|"Subject of the E-Mail"|-|
+|threadName|String|-|Name of the Thread|"Subject of the E-Mail"|-|
 |topic|String|-|Identification of the thread|randomized string|-|
 
 ## CollaborationElement
-|Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
-|---|---|---|---|---|---|
-|[header](#header)|Array (of header objects)|-|header information of the element|A header object array|-|
-|[date](#date)|Array (of date objects)|-|date information of the element|A date object array|-|
-|[properties](#properties)|Array (of properties objects)|-|properties information of the element|A properties object array|-|
-|[content](#content)|Array (of content objects)|-|content information of the element|A content object array|-|
-|[attachments](#attachments)|Array (of attachment objects)|-|attachment information of the element|An attachment object array|-|
-
-## Header
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |from|String|-|E-Mail of sender|"john.doe@email.com"|-|
@@ -77,27 +57,15 @@
 |cc|String|-|E-mail of the contact in copy|"janet.doe@email.com"|-|
 |bcc|String|-|E-mail of the contact in blind copy|"jonathan.doe@email.com"|-|
 |subject|String|-|Subject line of the e-mail|"RE: Your Question"|-|
-
-## Date
-|Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
-|---|---|---|---|---|---|
 |date|Date|-|Date|01.01.2018|-|
 |day|Enum|-|Day of the week|"Monday"|"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"|
 |time|Time|-|Timestamp|10:10:10|-|
-
-
-## Properties
-|Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
-|---|---|---|---|---|---|
 |language|String|-|Language of the e-mail content|"en"|-|
 |authentification|String|-|Authentification Result|"spf=pass smtp.mailfrom=email.com"|-|
 |MIME Version|Decimal|-|Version of MIME|1.3|-|
-
-## Content
-|Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
-|---|---|---|---|---|---|
 |format|String|-|Format of the email content|"HTML"|-|
 |content|String|-|Content of the e-mail|"Dear John, please find attached"|-|
+|[attachments](#attachments)|Array (of attachment objects)|-|attachment information of the element|An attachment object array|-|
 
 ## Attachments
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
@@ -108,10 +76,10 @@
 ## Task
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|[collaborationelement](#collaborationelement)|Array (of collaborationelement objects)|-|Collaboration properties values|A collaborationelement object array|-|
-|[subtask](#subtask)|Array (of subtask objects)|-|subtask information of the task|A subtask object array|-|
+|[collaborationElement](#collaborationelement)|Array (of collaborationElement objects)|-|Collaboration properties values|A collaborationElement object array|-|
 |[details](#details)|Array (of details objects)|-|detail information of the task|A details object array|-|
-|[category](#category)|Array (of category objects)|-|categroy information of the task|A category object array|-|
+|[category](#category)|Array (of category objects)|-|category information of the task|A category object array|-|
+|[TaskToTaskRelation](#tasktotaskrelation)|String|-|Relation between two tasks|"subtask", "blocks", "is blocked by"|-|
 
 ## Details
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
@@ -119,17 +87,12 @@
 |subject|String|-|Subject of the Task|"Create a datamodel"|-|
 |startdate|Datetime|-|Date when the task starts|01.01.2018 00:00|-|
 |enddate|Datetime|-|Date when the task is closed|31.01.2018 00:00|-|
-|reminderdate|Datetime|-|Date when the task completion should be reminded|20.01.2018 00:00|-|
+|reminderDate|Datetime|-|Date when the task completion should be reminded|20.01.2018 00:00|-|
 |content|String|-|description of the Task|"To create a datamodel we have to analyze different systems..."|-|
 |status|String|-|status of the Task|"completed"|"started", "in progress", "completed"|
 |urgency|String|-|urgency of the Task|"low"|"low", "normal", "high"|
 
-## Subtask
-|Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
-|---|---|---|---|---|---|
-|task|String|-|name of the subtask|"Analyze different systems"|-|
-|[details](#details)|Array (of details objects)|-|detail information of the task|A details object array|-|
-|[category](#category)|Array (of category objects)|-|categroy information of the task|A category object array|-|
+
 
 ## Category
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
