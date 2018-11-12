@@ -50,7 +50,7 @@ CRUD functionalities can be performed based on the model.
 
 ## UML Diagram
 
-![UML Draft OIH Master Data Model Collaboration](Assets/OIHDataModelCollaboration.png)
+![UML Draft OIH Master Data Model Collaboration](Assets/OIHDataModelCollaboration.svg)
 
 ## JSON Schema
 
