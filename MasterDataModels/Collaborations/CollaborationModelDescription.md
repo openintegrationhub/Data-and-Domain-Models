@@ -17,9 +17,9 @@
 ## CalendarEvent
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|[collaborationElement](#collaborationelement)|Array (of collaborationElement objects)|-|Collaboration properties values|A collaborationElement object array|-|
-|[contacts](#contacts)|Array (of contact objects)|-|Contact information of the person|A contact object array|-|
-|[calendars](#calendars)|Array (of calendar objects)|-|Calendar connected to contacts|A contact object array|-|
+|[CollaborationElement](#collaborationelement)|Array (of collaborationElement objects)|-|Collaboration properties values|A collaborationElement object array|-|
+|[Contacts](#contacts)|Array (of contact objects)|-|Contact information of the person|A contact object array|-|
+|[Calendars](#calendars)|Array (of calendar objects)|-|Calendar connected to contacts|A contact object array|-|
 |location|String|-|Name of the location|"Room 123"|-|
 |start|Date|-|startdate of the event|01.01.2018|-|
 |end|Date|-|enddate of the event|31.12.2018|-|
@@ -29,7 +29,7 @@
 |---|---|---|---|---|---|
 |name|String|-|Name of the contact|"John Doe"|-|
 |eMail|String|-|E-mail of the contact|"john.doe@email.com"|-|
-|[calendars](#calendars)|Array (of calendar objects)|-|Calendar information of the person|A calendar object array|-|
+|[Calendars](#calendars)|Array (of calendar objects)|-|Calendar information of the person|A calendar object array|-|
 
 ## Calendars
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
@@ -41,7 +41,7 @@
 ## Email
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|[collaborationElement](#collaborationelement)|Array (of collaborationElement objects)|-|Collaboration properties values|A collaborationElement object array|-|
+|[CollaborationElement](#collaborationelement)|Array (of collaborationElement objects)|-|Collaboration properties values|A collaborationElement object array|-|
 |[threads](#threads)|Array (of thread objects)|-|thread information of the e-mail|A thread object array|-|
 
 ## Threads
@@ -67,7 +67,7 @@
 |MIME Version|Decimal|-|Version of MIME|1.3|-|
 |format|String|-|Format of the email content|"HTML"|-|
 |content|String|-|Content of the e-mail|"Dear John, please find attached"|-|
-|[attachments](#attachments)|Array (of attachment objects)|-|attachment information of the element|An attachment object array|-|
+|[Attachments](#attachments)|Array (of attachment objects)|-|attachment information of the element|An attachment object array|-|
 
 ## Attachments
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
@@ -78,9 +78,9 @@
 ## Task
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|[collaborationElement](#collaborationelement)|Array (of collaborationElement objects)|-|Collaboration properties values|A collaborationElement object array|-|
-|[details](#details)|Array (of details objects)|-|detail information of the task|A details object array|-|
-|[category](#category)|Array (of category objects)|-|category information of the task|A category object array|-|
+|[CollaborationElement](#collaborationelement)|Array (of collaborationElement objects)|-|Collaboration properties values|A collaborationElement object array|-|
+|[Details](#details)|Array (of details objects)|-|detail information of the task|A details object array|-|
+|[Category](#category)|Array (of category objects)|-|category information of the task|A category object array|-|
 |[TaskToTaskRelation](#tasktotaskrelation)|String|-|Relation between two tasks|"is subtask to"|-|
 
 ## Details
@@ -104,3 +104,4 @@
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |label|String|-|relation between two tasks|"is blocked by"|"subtask", "blocks", "is blocked by"|
+|Task|String|(#task)|Array (of task objects)|-|-|-|-|
