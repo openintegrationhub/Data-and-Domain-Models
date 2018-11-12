@@ -25,12 +25,27 @@
         "$ref":"#/definitions/contact"
       }
     },
-    "eventDetails":{
-      "description":"EventDetails Data",
-      "allOf":[
-        {
-          "$ref":"#/definitions/eventDetails"
-        }
+    "location":{
+      "type":"string",
+      "description":"Name of the location",
+      "examples":[
+        "Room 123"
+      ]
+    },
+    "start":{
+      "type":"string",
+      "format":"date",
+      "description":"startdate of the event",
+      "examples":[
+        "2018-01-01"
+      ]
+    },
+    "end":{
+      "type":"string",
+      "format":"date",
+      "description":"enddate of the event",
+      "examples":[
+        "2018-12-18"
       ]
     }
   },
@@ -84,34 +99,6 @@
               ]
             }
           }
-        }
-      }
-    },
-    "eventDetails":{
-      "type":"object",
-      "properties":{
-        "location":{
-          "type":"string",
-          "description":"Name of the location",
-          "examples":[
-            "Room 123"
-          ]
-        },
-        "start":{
-          "type":"string",
-          "format":"date",
-          "description":"startdate of the event",
-          "examples":[
-            "2018-01-01"
-          ]
-        },
-        "end":{
-          "type":"string",
-          "format":"date",
-          "description":"enddate of the event",
-          "examples":[
-            "2018-12-18"
-          ]
         }
       }
     }

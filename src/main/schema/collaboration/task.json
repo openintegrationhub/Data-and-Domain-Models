@@ -18,13 +18,6 @@
             }
          ]
       },
-      "subtasks":{
-         "type":"array",
-         "description":"subtask information of the task",
-         "items":{
-            "$ref":"subtask.json"
-         }
-      },
       "details":{
          "description":"detail information of the task",
          "allOf":[
@@ -86,6 +79,16 @@
                ],
                "examples":[
                   "completed"
+               ]
+            },
+            "urgency":{
+               "type":"string",
+               "description":"urgency of the Task",
+               "examples":[
+                  "very high",
+                  "high",
+                  "medium",
+                  "low"
                ]
             }
          }
