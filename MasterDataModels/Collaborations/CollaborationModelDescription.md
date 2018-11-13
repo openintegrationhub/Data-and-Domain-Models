@@ -1,10 +1,10 @@
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 - [CalendarEvent](#calendarevent)
 - [Contacts](#contacts)
-- [Calendars](#calendars)
-- [Threads](#threads)
+- [Calendars](#calendar)
+- [Threads](#thread)
 - [CollaborationElement](#collaborationelement)
-- [Attachments](#attachments)
+- [Attachments](#attachment)
 - [Task](#task)
 - [Details](#details)
 - [Category](#category)
