@@ -60,8 +60,6 @@ CRUD functionalities can be performed based on the model.
   - Technical description of an CalendarEvent object
 - `Task` Schema: [task](../../src/main/schema/collaboration/task.json)
   - Technical description of an Task object
-- `Subtask` Schema: [subtask](../../src/main/schema/collaboration/subtask.json)
-  - Technical description of a subtask object
 - `CollaborationElement` Schema: [collaborationelement](../../src/main/schema/collaboration/collaborationelement.json)
   - Technical description of shared definitions of e-mail, task and calendar in the CollaborationElement object
 
