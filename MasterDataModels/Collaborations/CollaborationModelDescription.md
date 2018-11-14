@@ -6,7 +6,6 @@
 - [CollaborationElement](#collaborationelement)
 - [Attachments](#attachment)
 - [Task](#task)
-- [Details](#details)
 - [Category](#category)
 - [TaskToTaskRelation](#tasktotaskrelation)
 
@@ -79,20 +78,20 @@
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |[collaborationElement](#collaborationelement)|Array (of collaborationElement objects)|-|Collaboration properties values|A collaborationElement object array|-|
-|[details](#details)|Array (of details objects)|-|detail information of the task|A details object array|-|
 |[category](#category)|Array (of category objects)|-|category information of the task|A category object array|-|
 |[taskToTaskRelation](#tasktotaskrelation)|String|-|Relation between two tasks|"is subtask to"|-|
-
-## Details
-|Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
-|---|---|---|---|---|---|
 |subject|String|-|Subject of the Task|"Create a datamodel"|-|
-|startdate|Datetime|-|Date when the task starts|01.01.2018 00:00|-|
-|enddate|Datetime|-|Date when the task is closed|31.01.2018 00:00|-|
+|startDate|Datetime|-|Date when the task starts|01.01.2018 00:00|-|
+|endDate|Datetime|-|Date when the task is closed|31.01.2018 00:00|-|
 |reminderDate|Datetime|-|Date when the task completion should be reminded|20.01.2018 00:00|-|
 |content|String|-|description of the Task|"To create a datamodel we have to analyze different systems..."|-|
 |status|String|-|status of the Task|"completed"|"started", "in progress", "completed"|
 |urgency|String|-|urgency of the Task|"low"|"low", "normal", "high"|
+
+## Details
+|Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
+|---|---|---|---|---|---|
+
 
 ## Category
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
