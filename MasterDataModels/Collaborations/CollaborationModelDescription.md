@@ -80,7 +80,7 @@
 |---|---|---|---|---|---|
 |[collaborationElement](#collaborationelement)|Array (of collaborationElement objects)|-|Collaboration properties values|A collaborationElement object array|-|
 |[details](#details)|Array (of details objects)|-|detail information of the task|A details object array|-|
-|[categories](#category)|Array (of category objects)|-|category information of the task|A category object array|-|
+|[category](#category)|Array (of category objects)|-|category information of the task|A category object array|-|
 |[taskToTaskRelation](#tasktotaskrelation)|String|-|Relation between two tasks|"is subtask to"|-|
 
 ## Details
