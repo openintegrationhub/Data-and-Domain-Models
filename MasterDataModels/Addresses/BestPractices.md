@@ -94,7 +94,7 @@ The link between the person and its organization is a "OrganizationToPersonRelat
 
 Use the `Organization` object to create the organization. The different addresses are held within different "Address" objects. The link between the organization and an address is modeled by using an `OrganizationToAddressRelation` object.
 
-![organizationAddresses](Assets/OrganizationToAddress.PNG)
+![organizationAddresses](Assets/organizationToAddress.PNG)
 
 ### PersonAddresses
 
@@ -103,6 +103,7 @@ Use the `Organization` object to create the organization. The different addresse
 |u-AdEx5|As a user I want to synchronize a person and his or her addresses |
 
 **Example Values:**
+
 |Key|Value|Context|
 |:---|:---|:---|
 |firstName|Jon|-|
@@ -117,7 +118,7 @@ Use the `Organization` object to create the organization. The different addresse
 
 Use the `Person` object to create the person. Use the `ContactData` to store the contact data of the person. The different addresses are held within different `Address` objects. The link between the organization and an address is modeled by using an `PersonToAddressRelation` object.
 
-![personAddresses](Assets/PersonToAddress.PNG)
+![personAddresses](Assets/personToAddress.PNG)
 
 ### PersonRelations
 
@@ -190,6 +191,7 @@ Proprietary system has a unique ID stored for each address.
 Proprietary system does not have a unique ID stored for each address.
 
 **Example Value (u-AdEx7.1):**
+
 |Key|Value|
 |:---|:---|
 |id|77|
@@ -206,6 +208,7 @@ Proprietary system does not have a unique ID stored for each address.
 |description|-|
 
 **Example Value (u-AdEx7.2):**
+
 |Key|Value|
 |:---|:---|
 |street|example street|
