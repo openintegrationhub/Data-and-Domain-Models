@@ -1,28 +1,27 @@
-**Table of Contents**
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-
-- [Introduction](#introduction)
-- [Basic Ideas](#basic-ideas)
-	- [Duplicates](#duplicates)
-	- [Relations](#relations)
-- [Considered Standards](#considered-standards)
-	- [vCard](#vcard)
-	- [Postal Standards](#postal-standards)
-	- [Electronic Data Interchange (EDIfact)](#electronic-data-interchange-edifact)
-	- [IBM Infosphere](#ibm-infosphere)
-- [Operations](#operations)
-- [Content](#content)
-	- [UML Diagram](#uml-diagram)
-	- [JSON Schema](#json-schema)
-	- [Description Table](#description-table)
-- [Additional Content](#additional-content)
-
-<!-- /TOC -->
 # Introduction
 
 In the following the master data model for the domain addresses is explained in detail. As for every Open Integration Hub Master Data Model, an UML class diagram, a JSON schema as well as a description table exists.
 
-# Basic Ideas
+- [Introduction](#introduction)
+	- [Basic Ideas](#basic-ideas)
+		- [Duplicates](#duplicates)
+		- [Relations](#relations)
+			- [Use Case - Relationships among Persons](#use-case---relationships-among-persons)
+			- [Use Case - Relationships among Organizations](#use-case---relationships-among-organizations)
+			- [Use Case - Relationships between Organizations and Persons](#use-case---relationships-between-organizations-and-persons)
+	- [Considered Standards](#considered-standards)
+		- [vCard](#vcard)
+		- [Postal Standards](#postal-standards)
+		- [Electronic Data Interchange (EDIfact)](#electronic-data-interchange-edifact)
+		- [IBM Infosphere](#ibm-infosphere)
+	- [Operations](#operations)
+	- [Content](#content)
+		- [UML Diagram](#uml-diagram)
+		- [JSON Schema](#json-schema)
+		- [Description Table](#description-table)
+	- [Additional Content](#additional-content)
+
+## Basic Ideas
 
 The master data model for the addresses consists of different types of objects. We named them organizations and persons with reference to the real world objects.
 
@@ -32,7 +31,7 @@ With this dividing in persons and organizations we are able to solve different p
 
 From this real world view we derive the two main objects and go deeper in the modeling.
 
-## Duplicates
+### Duplicates
 
 There are some use cases where traditional data models are having problems. For example you
 have a person, who occupies different roles in different organizations and you must be able
@@ -51,18 +50,18 @@ The specific user stories for this problem could be like:
 | As a user I want to assign a person to different organizations with different contact data to see different roles of the same person. |
 | As a user I want to store same persons in different organizations, to get in contact with them currently at the time with the particular contact data. |
 
-
 Other problems raised by use cases, for example about the different locations of one organization, the structure of a group of companies etc., arise the same questions.
 
 Our solution to solve this problem is by allowing duplicates and link them by our relation modeling.
 
 For the example above, we will store the person with his contact details for his ceo role in the company and store another entity of this person for his role as a board member in the association. Then we link them together via a relation and describe them as a "same person"-relation.
 
-## Relations
+### Relations
 
 Dealing with relations is a crucial requirement in the address management.
 
 Generally there are three types of relations:
+
 - Persons to organizations
 - Persons to persons
 - Organizations to organizations
@@ -80,52 +79,61 @@ With this we can solve for example the following user stories:
 
 In the following diagrams you can see the different relationships between persons, organizations and persons to organizations.
 
-### Use Case -  Relationships among Organizations
+#### Use Case -  Relationships among Persons
+
 ![Relations of persons](Assets/RelationshipsBetweenPersons.png)
 
-### Use Case -  Relationships among Organizations
+#### Use Case -  Relationships among Organizations
+
 ![Relations of organizations](Assets/RelationshipsBetweenOrganizations.png)
 
-### Use Case -  Relationships between Organizations and Persons
+#### Use Case -  Relationships between Organizations and Persons
+
 ![Relationship person organization](Assets/RelationshipsBetweenOrganizationsAndPersons.png)
 
-# Considered Standards
+## Considered Standards
+
 In the following we list all considered standards. In addition, it is described if and how the specific standard was incorporated into the model.
 
-## vCard
-A very common interchange format for addresses is vCard, also known as VCF (Virtual Contact File). The complete standard is referenced in https://tools.ietf.org/html/rfc6350.
+### vCard
+
+A very common interchange format for addresses is vCard, also known as VCF (Virtual Contact File). The complete standard is referenced in <https://tools.ietf.org/html/rfc6350>.
 
 vCard defines different fields for work and home. The "work" value implies that the property is related to an individual's work place, while the "home" value implies that the property is related to an individual's personal life. Organizations can be mapped with the "org"-parameter. vCard mentions a "related"-parameter to specify a relationship between another entity and the entity represented by a vCard. vCard knows categories, also known as "tags". These are one or more text values separated by a comma character.
 
 This all sounds very useful. But be aware: Standards are great if everyone follows them. Unfortunately, nobody seems to be following the card standard. Simple contact information such as email addresses, telephones numbers or postal addresses can be represented using standard properties or using standard properties grouped together with non-standard properties. For that reason a lot of problems occur, when dropping vCards from different sources into a database which tries to guarantee high standards in address quality, because you can't match the fields properly.
 
-## Postal Standards
+### Postal Standards
+
 The Universal Postal Union has developed two addressing standards: S42 and S53. S42 describes international postal address components and templates, where S53 describes the exchange of name and address data. Since 2004 there is a development process for an international ISO-Standard for international addresses.
 
 As we can see, this standard divides addressee specifications in organization or individual identification as we do. It provides a lot of named fields for detailed address specifications to which we can refer in the object attribute specification later on.
 
-For further information please read the ISO 19773 specification at http://metadata-standards.org/metadata-stds/Document-library/Meeting-reports/SC32WG2/2004-11-Washington/WG2-N0723_19773-08_rs1--upu_s42_postal_data--20041104.doc
+For further information please read the ISO 19773 specification at <http://metadata-standards.org/metadata-stds/Document-library/Meeting-reports/SC32WG2/2004-11-Washington/WG2-N0723_19773-08_rs1--upu_s42_postal_data--20041104.doc>
 
-## Electronic Data Interchange (EDIfact)
+### Electronic Data Interchange (EDIfact)
+
 Electronic Data Interchange for administration, commerce and transport (EDIfact) is the concept of businesses communicating electronically certain information that was traditionally communicated on paper.
 
 In EDIfact addresses are specified directly. There is no further relevance for the Master Data Model.
 
-## IBM Infosphere
+### IBM Infosphere
+
 The infosphere party model is a model to manage contacts. These contacts are separated into two sub models - person and organization. The party model outsources relationships between contacts and stores them in a separate table instead of having a direct reference within a contact object.
 
 As for the infosphere model the relations within the Master Data Model are outsourced and different relationship objects for all variants of relationships types between persons and objects are existent. In addition, a contact within the Master Data Model can also be either a person or a organization, thus similarities to the infosphere model are perceptible.
 
-# Operations
+## Operations
+
 CRUD functionalities can be performed based on the model.
 
-# Content
+## Content
 
-## UML Diagram
+### UML Diagram
 
 ![MasterDataModelAddressesV2](Assets/MasterDataModelAddressV2.svg)
 
-## JSON Schema
+### JSON Schema
 
 - `Person` Schema: [personV2](../../src/main/schema/addresses/personV2.json)
   - Technical description of a person object
@@ -136,15 +144,16 @@ CRUD functionalities can be performed based on the model.
 - `Shared Definitions` Schema: [shared-definitionsV2](../../src/main/schema/addresses/sharedDefinitionsV2.json)
   - Technical description of shared definitions of persons and organizations
 
-## Description Table
+### Description Table
 
 In addition to the uml class diagram, this folder contains a [description table](AddressModelV2Description.md) which includes the following information for each attribute:
+
 - Type
 - Properties
 - Short description
 - Example values
 - Enumeration options (if attribute is an enumeration)
 
-# Additional Content
+## Additional Content
 
 - `MappingTableSnazzyContactsAddressModel.md`: A concrete mapping between the data model of SnazzyContacts and the master data model for addresses.

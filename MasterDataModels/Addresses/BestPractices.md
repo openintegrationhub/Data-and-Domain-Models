@@ -1,15 +1,11 @@
-
-
 # Introduction
+
 This file is designed to present some common use cases and best practices for using the master data model for addresses for the specific use cases.
 Each case includes some exemplary user stories as well as a mapping and a short description.
 
 The cases are seperated by different usage scenarios.
 
-
-[[TOC]]
-
-# Persons
+## Persons
 
 |User Story Id| User Stories |
 |:---| :--- |
@@ -31,7 +27,7 @@ Use the `Person` and `ContactData` objects whereas different phone numbers, emai
 
 ![person](Assets/Person.PNG)
 
-# Organizations
+## Organizations
 
 |User Story Id| User Stories |
 |:---| :--- |
@@ -43,7 +39,7 @@ Use the `Person` and `ContactData` objects whereas different phone numbers, emai
 |Key|Value|Context|
 |:---|:---|:---|
 |name|JDub|-|
-|logo|http://www.examplelogo.com|-|
+|logo|<http://www.examplelogo.com>|-|
 |Phone|+49123456789|Support|
 |EMail|support@jdub.com|Support|
 
@@ -53,8 +49,9 @@ See best [practice for u-Ex1](#u-ex1) but use the "Organization" object instead 
 
 ![Organization](Assets/Organization.PNG)
 
-# Relations
-## OrganizationsAndPersons
+## Relations
+
+### OrganizationsAndPersons
 
 |User Story Id| User Stories |
 |:---| :--- |
@@ -76,7 +73,7 @@ The link between the person and its organization is a "OrganizationToPersonRelat
 
 ![organizationToPerson](Assets/personToOrganization.PNG)
 
-## OrganizationAddresses
+### OrganizationAddresses
 
 |User Story Id| User Stories |
 |:---| :--- |
@@ -87,7 +84,7 @@ The link between the person and its organization is a "OrganizationToPersonRelat
 |Key|Value|Context|
 |:---|:---|:---|
 |name|JDub|-|
-|logo|http://www.examplelogo.com|-|
+|logo|<http://www.examplelogo.com>|-|
 |Phone|+49123456789|Support|
 |EMail|support@jdub.com|Support|
 |Address1|Examplestreet 99, 50667 Cologne, Germany|Delivery|
@@ -95,11 +92,11 @@ The link between the person and its organization is a "OrganizationToPersonRelat
 
 **Best Practice:**
 
-Use the `Organization` object to create the organization. The different addresses are held within different "Address" objects. The link between the organization and an address is modeled by using an `OrganizationToAddressRelation` object. 
+Use the `Organization` object to create the organization. The different addresses are held within different "Address" objects. The link between the organization and an address is modeled by using an `OrganizationToAddressRelation` object.
 
 ![organizationAddresses](Assets/OrganizationToAddress.PNG)
 
-## PersonAddresses
+### PersonAddresses
 
 |User Story Id| User Stories |
 |:---| :--- |
@@ -118,11 +115,11 @@ Use the `Organization` object to create the organization. The different addresse
 
 **Best Practice:**
 
-Use the `Person` object to create the person. Use the `ContactData` to store the contact data of the person. The different addresses are held within different `Address` objects. The link between the organization and an address is modeled by using an `PersonToAddressRelation` object. 
+Use the `Person` object to create the person. Use the `ContactData` to store the contact data of the person. The different addresses are held within different `Address` objects. The link between the organization and an address is modeled by using an `PersonToAddressRelation` object.
 
 ![personAddresses](Assets/PersonToAddress.PNG)
 
-## PersonRelations
+### PersonRelations
 
 |User Story Id| User Stories |
 |:---| :--- |
@@ -150,7 +147,7 @@ You have to use the needed attributes from the `Person` object for both persons.
 
 ![personToPerson](Assets/PersonToPerson.PNG)
 
-## OrganizationRelations
+### OrganizationRelations
 
 |User Story Id| User Stories |
 |:---| :--- |
@@ -162,14 +159,14 @@ You have to use the needed attributes from the `Person` object for both persons.
 |:---|:---|
 |id|7|
 |name|JDub|
-|logo|http://www.examplelogo.com|
+|logo|<http://www.examplelogo.com>|
 |subsidiary|18|
 
 |Key|Value|
 |:---|:---|
 |id|18|
 |name|DHub|
-|logo|http://www.examplelogo.org|
+|logo|<http://www.examplelogo.org>|
 |subsidiary|-|
 
 **Best Practice:**
@@ -178,7 +175,7 @@ You have to use the needed attributes from the `Organization` object for both or
 
 ![organizationToOrganization](Assets/organizationToOrganization.PNG)
 
-# Addresses
+## Addresses
 
 |User Story Id| User Stories |
 |:---| :--- |
@@ -208,7 +205,6 @@ Proprietary system does not have a unique ID stored for each address.
 |primaryContact|-|
 |description|-|
 
-
 **Example Value (u-AdEx7.2):**
 |Key|Value|
 |:---|:---|
@@ -230,13 +226,13 @@ Use the `Address` object to store the address information. The id is stored with
 
 ![Address](Assets/Address.PNG)
 
-
 **Best Practice (u-AdEx7.2):**
 Use the `Address` object to store the address information. As there is no unique Id that can be provided by the application, the **recordUid** from the `applicationDataRecord` must be mocked/calculated. This is done by performing the following steps:
 
 **recordUid** = organization or person Id from the system (wether the address belongs to) + **.** + Iterator to count the addresses that belong to this organization or person.
 
-**Example:** 
+**Example:**
+
 - 1st address: 32.0
 - 2nd address: 32.1
 - 3rd address: 32.2
@@ -244,6 +240,3 @@ Use the `Address` object to store the address information. As there is no unique
 Whereas 32 is the id of the relating person, `.` is the delimiter and 0,1 & 2 are the 1st, 2nd and 3rd addresses of the person with id 32. Each of these addresses needs to be stored in a seperate address object.
 
 To simplify the process of attaching the address to a person or organization `personToAddressRelation` objects or `organizationToAddressRelation` object should be created.
-
-
-
