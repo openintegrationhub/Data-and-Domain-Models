@@ -28,7 +28,7 @@
 |---|---|---|---|---|---|
 |name|String|-|Name of the contact|"John Doe"|-|
 |eMail|String|-|E-mail of the contact|"john.doe@email.com"|-|
-|[calendars](#calendar)|Array (of calendar objects)|-|Calendar information of the person|A calendar object array|-|
+|[calendar](#calendar)|Array (of calendar objects)|-|Calendar information of the person|A calendar object array|-|
 
 ## Calendar
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
@@ -41,7 +41,7 @@
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |[collaborationElement](#collaborationelement)|Collaboration object|-|Collaboration properties values|A collaborationElement object array|-|
-|[threads](#thread)|Array (of thread objects)|-|thread information of the e-mail|A thread object array|-|
+|[thread](#thread)|Array (of thread objects)|-|thread information of the e-mail|A thread object array|-|
 
 ## Thread
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
@@ -63,7 +63,7 @@
 |messageID|String|-|Id of the message|some token|-|
 |language|String|-|Language of the e-mail content|"en"|-|
 |authentification|String|-|Authentification Result|"spf=pass smtp.mailfrom=email.com"|-|
-|MIME Version|Decimal|-|Version of MIME|1.3|-|
+|MIMEVersion|Decimal|-|Version of MIME|1.3|-|
 |format|String|-|Format of the email content|"HTML"|-|
 |content|String|-|Content of the e-mail|"Dear John, please find attached"|-|
 |[attachments](#attachment)|Array (of attachment objects)|-|attachment information of the element|An attachment object array|-|
@@ -88,16 +88,10 @@
 |status|String|-|status of the Task|"completed"|"started", "in progress", "completed"|
 |urgency|String|-|urgency of the Task|"low"|"low", "normal", "high"|
 
-## Details
-|Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
-|---|---|---|---|---|---|
-
-
 ## Category
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |category|String|-|category of the task or subtask|"Implementation"|-|
-
 
 ## TaskToTaskRelation
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
