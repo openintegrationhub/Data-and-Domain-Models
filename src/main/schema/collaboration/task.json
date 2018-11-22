@@ -1,91 +1,94 @@
-{  
+{
    "$schema":"http://json-schema.org/schema#",
    "$id":"https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/collaboration/task.json",
    "title":"Task",
    "description":"Describes the Task",
    "type":"object",
-   "allOf":[  
-      {  
+   "allOf":[
+      {
          "$ref":"../oih-data-record.json"
       }
    ],
-   "properties":{  
-      "collaborationElement":{  
+   "properties":{
+      "collaborationElement":{
          "description":"CollaborationElement Data",
-         "allOf":[  
-            {  
+         "allOf":[
+            {
                "$ref":"collaborationelement.json"
             }
          ]
       },
-      "subtasks":{  
-         "type":"array",
-         "description":"subtask information of the task",
-         "items":{  
-            "$ref":"subtask.json"
-         }
-      },
-      "details":{  
+      "details":{
          "description":"detail information of the task",
-         "allOf":[  
-            {  
-               "$ref":"#/definitions/Details"
+         "allOf":[
+            {
+               "$ref":"#/definitions/details"
             }
          ]
       }
    },
-   "definitions":{  
-      "Details":{  
+   "definitions":{
+      "details":{
          "type":"object",
-         "properties":{  
-            "subject":{  
+         "properties":{
+            "subject":{
                "type":"string",
                "description":"Subject of the Task",
-               "examples":[  
+               "examples":[
                   "Subject of the task"
                ]
             },
-            "startdate":{  
+            "startdate":{
                "type":"string",
                "format":"date-time",
                "description":"Date when the task starts",
-               "examples":[  
-                  "01.01.2018 00:00"
+               "examples":[
+                  "2018-01-01T10:10:10Z"
                ]
             },
-            "enddate":{  
+            "enddate":{
                "type":"string",
                "format":"date-time",
                "description":"Date when the task is closed",
-               "examples":[  
-                  "31.01.2018 00:00"
+               "examples":[
+                  "2018-03-01T10:10:10Z"
                ]
             },
-            "reminderdate":{  
+            "reminderdate":{
                "type":"string",
                "format":"date-time",
                "description":"Date when the task completion should be reminded",
-               "examples":[  
-                  "20.01.2018 00:00"
+               "examples":[
+                  "2018-02-01T10:10:10Z"
                ]
             },
-            "content":{  
+            "content":{
                "type":"string",
                "description":"description of the Task",
-               "examples":[  
+               "examples":[
                   "To create a datamodel we have to analyze different systems..."
                ]
             },
-            "status":{  
+            "status":{
                "type":"string",
                "description":"status of the Task",
-               "enum":[  
+               "enum":[
                   "started",
                   "in progress",
                   "completed"
                ],
-               "examples":[  
+               "examples":[
                   "completed"
+               ]
+            },
+            "urgency":{
+               "type":"string",
+               "description":"urgency of the Task",
+               "examples":[
+                  "very high",
+                  "high",
+                  "medium",
+                  "low"
                ]
             }
          }

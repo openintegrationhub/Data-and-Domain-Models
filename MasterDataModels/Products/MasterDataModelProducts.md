@@ -49,8 +49,8 @@
         - [User stories standardization](#user-stories-standardization)
         - [Use case Standardization data formats](#use-case-standardization-data-formats)
     - [4. Results](#4-results)
-      - [4.1 UML Diagram of the OIH Master Data Model for Addresses](#41-uml-diagram-of-the-oih-master-data-model-for-addresses)
-      - [4.2 JSON Schema of the OIH Master Data Model for Addresses](#42-json-schema-of-the-oih-master-data-model-for-addresses)<!-- /TOC -->
+      - [4.1 UML Diagram of the OIH Master Data Model for Products](#41-uml-diagram-of-the-oih-master-data-model-for-products)
+      - [4.2 JSON Schema of the OIH Master Data Model for Products](#42-json-schema-of-the-oih-master-data-model-for-products)<!-- /TOC -->
 
 ## 1. Introduction
 ### 1.1 Purpose of this document
@@ -560,11 +560,11 @@ A typical product contains the following fields:
 
 ## 4. Results
 
-### 4.1 UML Diagram of the OIH Master Data Model for Addresses
+### 4.1 UML Diagram of the OIH Master Data Model for Products
 
 ![UML Draft OIH Master Data Model Products](Assets/OIHDataModelProducts.svg)
 
-### 4.2 JSON Schema of the OIH Master Data Model for Addresses
+### 4.2 JSON Schema of the OIH Master Data Model for Products
 
 The OIH specifies JSON as the format that data is processed with.
 Accordingly, JSON Schema is the given format to describe MDMs.

@@ -3,18 +3,16 @@
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Introduction](#introduction)
-- [Basic Ideas](#basic-ideas)
-	- [Basic Idea 1](#basic-idea-1)
-	- [Basic Idea 2](#basic-idea-2)
+- [Basic Idea](#basic-idea)
 - [Considered Standards](#considered-standards)
-	- [Standard 1](#standard-1)
-	- [Standard 2](#standard-2)
+	- [Standard for e-mail](#standard-for-e-mail)
+	- [Standard for calendar](#standard-for-calendar)
+	- [Standard for tasks](#standard-for-tasks) 
 - [Operations](#operations)
 - [Content](#content)
 	- [UML Diagram](#uml-diagram)
 	- [JSON Schema](#json-schema)
 	- [Description Table](#description-table)
-- [Additional Content](#additional-content)
 
 <!-- /TOC -->
 
@@ -50,7 +48,7 @@ CRUD functionalities can be performed based on the model.
 
 ## UML Diagram
 
-![UML Draft OIH Master Data Model Collaboration](Assets/OIHDataModelCollaboration.png)
+![UML Draft OIH Master Data Model Collaboration](Assets/OIHDataModelCollaboration.svg)
 
 ## JSON Schema
 
@@ -60,10 +58,10 @@ CRUD functionalities can be performed based on the model.
   - Technical description of an CalendarEvent object
 - `Task` Schema: [task](../../src/main/schema/collaboration/task.json)
   - Technical description of an Task object
-- `Subtask` Schema: [subtask](../../src/main/schema/collaboration/subtask.json)
-  - Technical description of a subtask object
 - `CollaborationElement` Schema: [collaborationelement](../../src/main/schema/collaboration/collaborationelement.json)
   - Technical description of shared definitions of e-mail, task and calendar in the CollaborationElement object
+- `TaskToTaskRelation` Schema: [taskToTaskRelation](../../src/main/schema/collaboration/taskToTaskRelation.json)
+  - Technical description of a task to task relation object
 
 ## Description Table
 
@@ -73,5 +71,3 @@ In addition to the uml class diagram, this folder contains a [description table]
 - Short description
 - Example values
 - Enumeration options (if attribute is an enumeration)
-
-# Additional Content

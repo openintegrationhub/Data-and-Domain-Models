@@ -10,7 +10,7 @@
     }
   ],
   "properties":{
-    "CollaborationElement":{
+    "collaborationElement":{
       "description":"CollaborationElement Data",
       "allOf": [
         {
@@ -18,24 +18,39 @@
         }
       ]
     },
-    "Contacts":{
+    "contacts":{
       "type":"array",
       "description":"Contacts Data",
       "items":{
-        "$ref":"#/definitions/Contact"
+        "$ref":"#/definitions/contact"
       }
     },
-    "EventDetails":{
-      "description":"EventDetails Data",
-      "allOf":[
-        {
-          "$ref":"#/definitions/EventDetails"
-        }
+    "location":{
+      "type":"string",
+      "description":"Name of the location",
+      "examples":[
+        "Room 123"
+      ]
+    },
+    "start":{
+      "type":"string",
+      "format":"date",
+      "description":"startdate of the event",
+      "examples":[
+        "2018-01-01"
+      ]
+    },
+    "end":{
+      "type":"string",
+      "format":"date",
+      "description":"enddate of the event",
+      "examples":[
+        "2018-12-18"
       ]
     }
   },
   "definitions":{
-    "Contact":{
+    "contact":{
       "type":"object",
       "properties":{
         "name":{
@@ -52,66 +67,38 @@
             "john.doe@email.com"
           ]
         },
-        "Calendars":{
+        "calendars":{
           "type":"array",
           "description":"EventDetails Data",
           "items":{
-            "$ref":"#/definitions/Calendars"
+            "$ref":"#/definitions/calendars"
           }
-        }
-      }
-    },
-    "Calendars":{
-      "type":"object",
-      "properties":{
+        },
         "calendars":{
-          "type":"string",
-          "description":"URI to the person's calendar",
-          "examples":[
-            "http://cal.example.com/calA"
-          ]
-        },
-        "requestCalendar":{
-          "type":"string",
-          "description":"URL to request an appointment with the person",
-          "examples":[
-            "janedoe@example.com"
-          ]
-        },
-        "status":{
-          "type":"string",
-          "description":"Identification of the thread",
-          "examples":[
-            "http://www.example.com/busy/janedoe"
-          ]
-        }
-      }
-    },
-    "EventDetails":{
-      "type":"object",
-      "properties":{
-        "location":{
-          "type":"string",
-          "description":"Name of the location",
-          "examples":[
-            "Room 123"
-          ]
-        },
-        "start":{
-          "type":"string",
-          "format":"date",
-          "description":"startdate of the event",
-          "examples":[
-            "01.01.2018"
-          ]
-        },
-        "end":{
-          "type":"string",
-          "format":"date",
-          "description":"enddate of the event",
-          "examples":[
-            "31.12.2018"
-          ]
+          "type":"object",
+          "properties":{
+            "calendars":{
+              "type":"string",
+              "description":"URI to the person's calendar",
+              "examples":[
+                "http://cal.example.com/calA"
+              ]
+            },
+            "requestCalendar":{
+              "type":"string",
+              "description":"URL to request an appointment with the person",
+              "examples":[
+                "janedoe@example.com"
+              ]
+            },
+            "status":{
+              "type":"string",
+              "description":"Identification of the thread",
+              "examples":[
+                "http://www.example.com/busy/janedoe"
+              ]
+            }
+          }
         }
       }
     }
