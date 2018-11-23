@@ -23,7 +23,7 @@ CRUD functionalities can be performed based on the model.
 
 ## UML Diagram
 
-![MasterDataModelProductssV2](Assets/MasterDataModelProductsV2.svg)
+![MasterDataModelProductssV2](Assets/productModelV2.svg)
 
 ## JSON Schema
 
