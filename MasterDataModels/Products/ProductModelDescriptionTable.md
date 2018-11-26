@@ -8,6 +8,7 @@ Dscription table which includes the following information for each object:
 - Example values
 - Enumeration options (if attribute is an enumeration)
 
+**Table of Contents:**
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Product Model Description](#product-model-description)
