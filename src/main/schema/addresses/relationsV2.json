@@ -11,7 +11,7 @@
   ],
   "anyOf": [
     {
-      "$ref": "#/definitions/PersonToOrganizationRelationship"
+      "$ref": "#/definitions/OrganizationToPersonRelationship"
     },
     {
       "$ref": "#/definitions/PersonToPersonRelationship"
