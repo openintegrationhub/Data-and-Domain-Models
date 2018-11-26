@@ -1,3 +1,7 @@
+# Introduction
+
+In the following the master data model for the domain collaboration is explained in detail. As for every Open Integration Hub Master Data Model, an UML class diagram, a JSON schema as well as a description table exists.
+
 **Table of Contents**
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
@@ -15,11 +19,6 @@
 	- [Description Table](#description-table)
 
 <!-- /TOC -->
-
-
-# Introduction
-
-In the following the master data model for the domain collaboration is explained in detail. As for every Open Integration Hub Master Data Model, an UML class diagram, a JSON schema as well as a description table exists.
 
 # Basic Idea
 The first version of the collaboration model will include models for e-mail, calendar events and tasks.
