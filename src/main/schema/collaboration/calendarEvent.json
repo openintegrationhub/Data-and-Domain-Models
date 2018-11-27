@@ -14,7 +14,7 @@
       "description":"CollaborationElement Data",
       "allOf": [
         {
-          "$ref":"collaborationelement.json"
+          "$ref":"collaborationElement.json"
         }
       ]
     },
@@ -71,7 +71,7 @@
           "type":"array",
           "description":"EventDetails Data",
           "items":{
-            "$ref":"#/definitions/calendars"
+            "$ref":"#/definitions/calendar"
           }
         },
         "calendars":{
