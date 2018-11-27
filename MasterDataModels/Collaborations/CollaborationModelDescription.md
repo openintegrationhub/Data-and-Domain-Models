@@ -16,14 +16,14 @@
 ## CalendarEvent
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|[collaborationElement](#collaborationelement)|Collaboration object|-|Collaboration properties values|A collaborationElement object array|-|
+|[collaborationElement](#collaborationelement)|Array (of collaborationElement objects)|-|Collaboration properties values|A collaborationElement object array|-|
 |[contacts](#contacts)|Array (of contact objects)|-|Contact information of the person|A contact object array|-|
 |[calendars](#calendars)|Array (of calendar objects)|-|Calendar connected to contacts|A contact object array|-|
 |location|String|-|Name of the location|"Room 123"|-|
 |start|Date|-|startdate of the event|01.01.2018|-|
 |end|Date|-|enddate of the event|31.12.2018|-|
 
-## Contacts
+## Contact
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |name|String|-|Name of the contact|"John Doe"|-|
@@ -40,7 +40,7 @@
 ## Email
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|[collaborationElement](#collaborationelement)|Collaboration object|-|Collaboration properties values|A collaborationElement object array|-|
+|[collaborationElement](#collaborationelement)|Array (of collaboration objects)|-|Collaboration properties values|A collaborationElement object array|-|
 |[thread](#thread)|Array (of thread objects)|-|thread information of the e-mail|A thread object array|-|
 
 ## Thread
@@ -58,7 +58,7 @@
 |bcc|String|-|E-mail of the contact in blind copy|"jonathan.doe@email.com"|-|
 |subject|String|-|Subject line of the e-mail|"RE: Your Question"|-|
 |date|Date|-|Date|01.01.2018|-|
-|day|Enum|-|Day of the week|"Monday"|"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"|
+|day|String|Enum|Day of the week|"Monday"|"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"|
 |time|Time|-|Timestamp|10:10:10|-|
 |messageID|String|-|Id of the message|some token|-|
 |language|String|-|Language of the e-mail content|"en"|-|
@@ -85,7 +85,7 @@
 |endDate|Datetime|-|Date when the task is closed|31.01.2018 00:00|-|
 |reminderDate|Datetime|-|Date when the task completion should be reminded|20.01.2018 00:00|-|
 |content|String|-|description of the Task|"To create a datamodel we have to analyze different systems..."|-|
-|status|String|-|status of the Task|"completed"|"started", "in progress", "completed"|
+|status|String|Enum|status of the Task|"completed"|"started", "in progress", "completed"|
 |urgency|String|-|urgency of the Task|"low"|"low", "normal", "high"|
 
 ## Category
