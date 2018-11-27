@@ -270,6 +270,7 @@ The language attribute follows the [**IETF language tags**](https://en.wikipedia
 
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
+|name|string|Required|Name of the set|-|-|
 |amount|Number|-|How many times is the product needed in the list|-|-|
 |factor|Number|-|Factor that multiplies the amount|1|-|
 
