@@ -48,7 +48,7 @@ CRUD functionalities can be performed based on the model.
 
 ## UML Diagram
 
-![UML Draft OIH Master Data Model Collaboration](Assets/OIHDataModelCollaboration.svg)
+![UML Draft OIH Master Data Model Collaboration](Assets/OIH collaboration.svg)
 
 ## JSON Schema
 
