@@ -90,7 +90,7 @@
       },
       "additionalProperties": false
     },
-    "contactData": {
+    "ContactData": {
       "type": "object",
       "description": "Phone information",
       "properties": {
@@ -136,7 +136,7 @@
         }
       }
     },
-    "category": {
+    "Category": {
       "type": "object",
       "description": "Category of the person / organization",
       "properties": {
@@ -158,7 +158,7 @@
         }
       }
     },
-    "calendar": {
+    "Calendar": {
       "type": "object",
       "description": "Phone information",
       "properties": {
