@@ -277,6 +277,7 @@ The language attribute follows the [**IETF language tags**](https://en.wikipedia
 
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
+|name|string|Required|Name of the set|-|-|
 |version|String|Required|Version number of the bom-list|-|-|
 |[bomItems](#bomItem)|Object Array (of type BomItem)|-|Bom list items|BomItem object|-|
 
