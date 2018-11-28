@@ -1,8 +1,6 @@
 {
-	"$schema": "http://json-schema.org/schema#",
-
-	"$id": "http://openintegrationhub.org/schemas/products/product.json",
-
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/DSCES-UpdatedCollaboration/src/main/schema/products/product.json",
 	"title" : "Product",
 	"allOf": [
 		{
