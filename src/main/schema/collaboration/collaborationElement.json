@@ -120,7 +120,7 @@
     }
   },
   "definitions":{
-    "attachment":{
+    "Attachment":{
       "type":"object",
       "properties":{
         "type":{
