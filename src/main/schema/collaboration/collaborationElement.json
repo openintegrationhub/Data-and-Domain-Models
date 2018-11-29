@@ -1,6 +1,6 @@
 {
   "$schema":"http://json-schema.org/schema#",
-  "$id":"https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/collaboration/collaborationelement.json",
+  "$id":"https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/collaboration/collaborationElement.json",
   "title":"CollaborationElement",
   "description":"Describes the Collaboration Element",
   "type":"object",
