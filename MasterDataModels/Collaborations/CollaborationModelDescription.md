@@ -1,6 +1,6 @@
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 - [CalendarEvent](#calendarevent)
-- [Contacts](#contacts)
+- [Contacts](#contact)
 - [Calendars](#calendar)
 - [Threads](#thread)
 - [CollaborationElement](#collaborationelement)
@@ -98,3 +98,5 @@
 |---|---|---|---|---|---|
 |label|String|-|relation between two tasks|"is blocked by"|"subtask", "blocks", "is blocked by"|
 |[tasks](#task)|Array of task objects|-|Array (of task objects)|-|-|-|-|
+|targetUiid|String|-|ID from the targeted task|-|-|
+|sourceUiid|String|-|-|ID from the source task|-|
