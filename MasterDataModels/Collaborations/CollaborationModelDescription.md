@@ -99,4 +99,4 @@
 |label|String|-|relation between two tasks|"is blocked by"|"subtask", "blocks", "is blocked by"|
 |[tasks](#task)|Array of task objects|-|Array (of task objects)|-|-|-|-|
 |targetUiid|String|-|ID from the targeted task|-|-|
-|sourceUiid|String|-|-|ID from the source task|-|
+|sourceUiid|String|-|ID from the source task|-|-|
