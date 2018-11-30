@@ -28,7 +28,7 @@
 |---|---|---|---|---|---|
 |name|String|-|Name of the contact|"John Doe"|-|
 |eMail|String|-|E-mail of the contact|"john.doe@email.com"|-|
-|[calendar](#calendar)|Array (of calendar objects)|-|Calendar information of the person|A calendar object array|-|
+|[calendars](#calendar)|Array (of calendar objects)|-|Calendar information of the person|A calendar object array|-|
 
 ## Calendar
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
@@ -40,8 +40,8 @@
 ## Email
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|[collaborationElement](#collaborationelement)|Array (of collaboration objects)|-|Collaboration properties values|A collaborationElement object array|-|
-|[thread](#thread)|Array (of thread objects)|-|thread information of the e-mail|A thread object array|-|
+|[collaborationElements](#collaborationElement)|Array (of collaboration objects)|-|Collaboration properties values|A collaborationElement object array|-|
+|[threads](#thread)|Array (of thread objects)|-|thread information of the e-mail|A thread object array|-|
 
 ## Thread
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
