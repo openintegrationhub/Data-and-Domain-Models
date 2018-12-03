@@ -16,7 +16,7 @@
 	- [UML Diagram](#uml-diagram)
 	- [JSON Schema](#json-schema)
 	- [Description Table](#description-table)
-- [Additional Content](#additional-content)
+
 
 <!-- /TOC -->
 
@@ -118,7 +118,16 @@ The basic model specification describe a basic implementation for sharing docume
 
 ## JSON Schema
 
-JSON Schema definitions will follow as soon as the model has been reviewed.
+- `Documents` Schema: [document](../../src/main/schema/documents/extended/Document.json)
+  - Technical description of a documents object
+- `Documents` Schema: [folder](../../src/main/schema/documents/extended/Folder.json)
+  - Technical description of a folder object
+- `Documents` Schema: [object](../../src/main/schema/documents/extended/Object.json)
+  - Technical description of an 'object' object
+- `Documents` Schema: [relation](../../src/main/schema/documents/extended/Relation.json)
+  - Technical description of a relation object
+- `Documents` Schema: [sharedDefinitions](../../src/main/schema/documents/extended/sharedDefinitions.json)
+  - Technical description of a documents object
 
 ## Description Table
 
@@ -128,4 +137,3 @@ In addition to the uml class diagram, this folder contains a [description table]
 - Short description
 - Sample values
 - Enumeration options (if attribute is an enumeration)
-
