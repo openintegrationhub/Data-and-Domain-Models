@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/sharedDefinitionsV2.json",
+  "title": "SharedDefinitions",
+  "description": "Shared Definitions for the Master Data Model for Addresses to use in the Open Integration Hub",
+  "definitions": {
+    "ContactData": {
+      "type": "object",
+      "description": "Phone information",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "Value of the contact data",
+          "examples": [
+            "example@test.de",
+            "0123456789"
+          ]
+        },
+        "type": {
+          "type": "string",
+          "description": "Type of the contact data",
+          "examples": [
+            "phone",
+            "email",
+            "url",
+            "fax",
+            "social media"
+          ]
+        },
+        "label":{
+          "type": "string",
+          "description": "Used to specify the contact data with a label",
+          "default": "",
+          "examples": [
+            "businessMobile",
+            "support",
+            "homepage",
+            "privateFax",
+            "linkedin"
+          ]
+        },
+        "description":{
+          "type": "string",
+          "description": "Can be used for a categorization of same types of contact data or for additional information",
+          "default": "primary",
+          "examples": [
+            "primary",
+            "secondary"
+          ]
+        }
+      }
+    },
+    "Category": {
+      "type": "object",
+      "description": "Category of the person / organization",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the category the person / organization belongs to",
+          "examples": [
+            "customer",
+            "supplier",
+            "prospect"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "description": "Used to label the category",
+          "examples": [
+            "a customer"
+          ]
+        }
+      }
+    },
+    "Calendar": {
+      "type": "object",
+      "description": "Phone information",
+      "properties": {
+        "calendar": {
+          "type": "string",
+          "description": "URI to the calendar of the person",
+          "examples": [
+            "http://www.example.com/calA"
+          ]
+        },
+        "busyCalendar": {
+          "type": "string",
+          "description": "URI to get see when the person is available/blocked",
+          "examples": [
+            "http://www.example.com/busy/janedoe"
+          ]
+        },
+        "requestCalendar": {
+          "type": "string",
+          "description": "URI to request an appointment with the person",
+          "examples": [
+            "janedoe@example.com"
+          ]
+        },
+        "label":{
+          "type": "string",
+          "description": "Used to label the calendar",
+          "default": "primary",
+          "examples": [
+            "primary",
+            "secondary"
+          ]
+        }
+      }
+    }
+  }
+}

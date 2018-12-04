@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/schema#",
+  "$schema": "http://json-schema.org/draft-06/schema#",
   "$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/oih-data-record.json",
   "title": "OIHDataRecord",
   "type": "object",
@@ -59,7 +59,6 @@
         }
       },
       "required": [
-        "applicationUid",
         "recordUid"
       ]
     },

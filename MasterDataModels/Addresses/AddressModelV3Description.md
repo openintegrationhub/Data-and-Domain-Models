@@ -10,11 +10,13 @@
 	- [OrganizationToPersonRelationship](#organizationtopersonrelationship)
 	- [PersonToPersonRelationship](#persontopersonrelationship)
 	- [PersonToOrganizationRelationship](#persontoorganizationrelationship)
+	- [OrganizationToAddressRelationship](#organizationtoaddressrelationship)
+	- [PersonToAddressRelationship](#persontoaddressrelationship)
 
 <!-- /TOC -->
 
-
 # Objects
+
 ## Person
 
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
@@ -34,7 +36,6 @@
 |photo|String|-|Photo related to the person|http://example.org/photo.jpg|-|
 |anniversary|date-time|-|Anniversary of the person|2018-07-01|-|
 |[categories](#category)|Array (of category objects)|-|Category the person falls into|A category object array|-|
-|[addresses](#address)|Array (of address objects)|-|Address of the person|An address object array|-|
 |[contactData](#contactdata)|Array (of contactData objects)|-|Contact data of a person|A contactData object array|-|
 |[PersonToOrganizationRelationship](#persontoorganizationrelationship)|Array (of personToOrganizationRelationships objects)|-|Relations of a person to organizations|A personToOrganizationRelationship object array|-|
 |[PersonToPersonRelationship](#persontopersonrelationship)|Array (of personToOrganizationRelationships objects)|-|Relations of two persons|An personToPersonRelationship object array|-|
@@ -81,7 +82,6 @@ The language attribute follows the [**IETF language tags**](https://en.wikipedia
 |name|String|-|Name of the organization|"Cloud Ecosystem e.V."|-|
 |logo|String|-|Logo of the organization|"http://example.org/logo.png"|-|
 |[category](#category)|Array (of category objects)|-|Category the organization falls into|A category object array|-|
-|[address](#address)|Array (of address objects)|-|Address of the organization|An address object array|-|
 |[contactData](#contactdata)|Array (of contactData objects)|-|Contact data of an organization|A contactData object array|-|
 |[OrganizationToPersonRelationship](#organizationtopersonrelationship)|Array (of personToOrganizationRelationships objects)|-|Relations of an organization to person|A personToOrganizationRelationship object array|-|
 |[OrganizationToOrganizationRelationship](#organizationtoorganizationrelationship)|Array (of personToOrganizationRelationships objects)|-|Relations of an organization to person|An OrganizationToOrganizationRelationship object array|-|
@@ -101,6 +101,7 @@ The language attribute follows the [**IETF language tags**](https://en.wikipedia
 |countryCode|String|-|Countrycode of the address|"DE"|-|
 |primaryContact|String|-|Primary contact for the address|"Herbert Hermann"|-|
 |label|String|-|Can be used for a textual description the address|primary|-|
+|[category](#category)|Array (of category objects)|-|Category the address falls into|A category object array|-|
 
 ## Category
 
@@ -149,8 +150,8 @@ In order to secure proper data integration, please satisfy the prescribed standa
 ||||||viber|
 ||||||telegram|
 
-
 ## Calendar
+
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |calendar|String|-|URI to the persons' calendar|http://cal.example.com/calA|-|
@@ -159,19 +160,43 @@ In order to secure proper data integration, please satisfy the prescribed standa
 |label|String|-|Can be used for a textual description the calendar|primary|-|
 
 ## OrganizationToPersonRelationship
+
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |label|String|-|Describes the relationship between a person and an organization|"employee"|-|
 |function|String|-|Function of the person within the organization|"project leader"|-|
 |department|String|-|Name of the department of the person's company |"Sales"|-|
+|targetUid|String|-|Target Object|"9bd1f8dd-5040-4b19-bbc9-c5cbb9c8d4b8"|-|
+|sourceUid|String|-|Source Object|"9bd1f8dd-5040-4b19-bbc9-c5cbb9c8d4b8"|-|
 
 ## PersonToPersonRelationship
+
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |label|String|-|Describes the relationship between two persons|"employee"|-|
-
+|targetUid|String|-|Target Object|"9bd1f8dd-5040-4b19-bbc9-c5cbb9c8d4b8"|-|
+|sourceUid|String|-|Source Object|"9bd1f8dd-5040-4b19-bbc9-c5cbb9c8d4b8"|-|
 
 ## PersonToOrganizationRelationship
+
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |label|String|-|Describes the relationship between two organizations|"employee"|-|
+|targetUid|String|-|Target Object|"9bd1f8dd-5040-4b19-bbc9-c5cbb9c8d4b8"|-|
+|sourceUid|String|-|Source Object|"9bd1f8dd-5040-4b19-bbc9-c5cbb9c8d4b8"|-|
+
+## OrganizationToAddressRelationship
+
+|Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
+|---|---|---|---|---|---|
+|label|String|-|Describes the relationship between an organization and an address|"delivery", "head quarter"|-|
+|targetUid|String|-|Target Object|"9bd1f8dd-5040-4b19-bbc9-c5cbb9c8d4b8"|-|
+|sourceUid|String|-|Source Object|"9bd1f8dd-5040-4b19-bbc9-c5cbb9c8d4b8"|-|
+
+## PersonToAddressRelationship
+
+|Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
+|---|---|---|---|---|---|
+|label|String|-|Describes the relationship between two organizations|"employee"|-|
+|targetUid|String|-|Target Object|"9bd1f8dd-5040-4b19-bbc9-c5cbb9c8d4b8"|-|
+|sourceUid|String|-|Source Object|"9bd1f8dd-5040-4b19-bbc9-c5cbb9c8d4b8"|-|

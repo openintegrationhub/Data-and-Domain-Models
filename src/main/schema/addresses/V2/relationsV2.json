@@ -18,6 +18,12 @@
     },
     {
       "$ref": "#/definitions/OrganizationToOrganizationRelationship"
+    },
+    {
+      "$ref": "#/definitions/OrganizationToAddressRelationship"
+    },
+    {
+      "$ref": "#/definitions/PersonToAddressRelationship"
     }
   ],
   "definitions":{
@@ -25,11 +31,11 @@
       "type": "object",
       "description": "Describes the relationship between a person and an organization",
       "properties": {
-        "organizationOihUId": {
+        "targetUId": {
           "type": "string",
           "description": "Unique identifier of the organization"
         },
-        "personOihUId": {
+        "sourceUId": {
           "type": "string",
           "description": "Unique identifier of the person"
         },
@@ -53,11 +59,11 @@
       "type": "object",
       "description": "Describes the relationship between two persons",
       "properties": {
-        "personOneOihUId": {
+        "targetUId": {
           "type": "string",
           "description": "Unique identifier of the first person"
         },
-        "personTwoOihUId2": {
+        "sourceUId": {
           "type": "string",
           "description": "Unique identifier of the second person"
         }
@@ -67,13 +73,41 @@
       "type": "object",
       "description": "Describes the relationship between two organizations",
       "properties": {
-        "organizationOneOihUId": {
+        "targetUId": {
           "type": "string",
           "description": "Unique identifier of the first organization"
         },
-        "organizationTwoOihUId2": {
+        "sourceUId": {
           "type": "string",
           "description": "Unique identifier of the second organization"
+        }
+      }
+    },
+    "OrganizationToAddressRelationship": {
+      "type": "object",
+      "description": "Describes the relationship between two organizations",
+      "properties": {
+        "targetUId": {
+          "type": "string",
+          "description": "Unique identifier of the organization"
+        },
+        "sourceUId": {
+          "type": "string",
+          "description": "Unique identifier of the address"
+        }
+      }
+    },
+    "PersonToAddressRelationship": {
+      "type": "object",
+      "description": "Describes the relationship between two organizations",
+      "properties": {
+        "targetUId": {
+          "type": "string",
+          "description": "Unique identifier of the person"
+        },
+        "sourceUId": {
+          "type": "string",
+          "description": "Unique identifier of the address"
         }
       }
     }
@@ -84,9 +118,8 @@
       "description": "Describes the type of relationship",
       "examples": [
         "employee",
-        "same person",
-        "colleague",
-        "same organization"
+        "delivery",
+        "subsidiary"
       ]
     }
   }

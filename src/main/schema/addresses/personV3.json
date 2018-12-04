@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/personV2.json",
+  "$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/personV3.json",
   "title": "Person",
   "description": "Describes a natural person",
   "type": "object",
@@ -110,30 +110,23 @@
       "type": "string",
       "description": "Anniversary of the person"
     },
-    "addresses":
-    {
-      "type": "array",
-      "description": "Addess data of of the person",
-      "items": {
-        "$ref": "sharedDefinitionsV2.json#/definitions/Address"
-      }
-    },
+
     "contactData": {
       "type": "array",
       "items": {
-        "$ref": "sharedDefinitionsV2.json#/definitions/ContactData"
+        "$ref": "sharedDefinitionsV3.json#/definitions/ContactData"
       }
     },
     "calendars": {
       "type": "array",
       "items": {
-          "$ref": "sharedDefinitionsV2.json#/definitions/Calendar"
+          "$ref": "sharedDefinitionsV3.json#/definitions/Calendar"
       }
     },
     "categories": {
       "type": "array",
       "items": {
-          "$ref": "sharedDefinitionsV2.json#/definitions/Category"
+          "$ref": "sharedDefinitionsV3.json#/definitions/Category"
       }
     }
   }

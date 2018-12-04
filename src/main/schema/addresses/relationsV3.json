@@ -1,0 +1,119 @@
+{  
+  "$schema":"http://json-schema.org/draft-06/schema#",
+  "$id":"https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/relationsV3.json",
+  "title":"Relation",
+  "description":"Describes the Relation between two objects",
+  "type":"object",
+  "allOf":[  
+    {  
+      "$ref":"../oih-data-record.json"
+    }
+  ],
+  "anyOf": [
+    {
+      "$ref": "#/definitions/OrganizationToPersonRelation"
+    },
+    {
+      "$ref": "#/definitions/PersonToPersonRelation"
+    },
+    {
+      "$ref": "#/definitions/OrganizationToOrganizationRelation"
+    },
+    {
+      "$ref": "#/definitions/OrganizationToAddressRelation"
+    },
+    {
+      "$ref": "#/definitions/PersonToAddressRelation"
+    }
+  ],
+  "properties":{  
+    "label":{  
+      "type":"string",
+      "description":"Describes the type of relation",
+      "examples":[  
+        "employee",
+        "delivery",
+        "subsidiary"
+      ]
+    }
+  },
+  "definitions": {
+    "OrganizationToPersonRelation":{  
+      "type":"object",
+      "description":"Describes the Relation between a person and an organization",
+      "properties":{  
+        "department":{  
+          "type":"string",
+          "description":"Department the person works at",
+          "examples":[  
+            "sales"
+          ]
+        },
+        "targetUId":{  
+          "type":"string",
+          "description":"Unique identifier of the organization object"
+        },
+        "sourceUId":{  
+          "type":"string",
+          "description":"Unique identifier of the person object"
+        }
+      }
+    },
+    "PersonToPersonRelation":{  
+      "type":"object",
+      "description":"Describes the Relation between two persons",
+      "properties":{  
+        "targetUId":{  
+          "type":"string",
+          "description":"Unique identifier of the first person object"
+        },
+        "sourceUId":{  
+          "type":"string",
+          "description":"Unique identifier of the second person object"
+        }
+      }
+    },
+    "OrganizationToOrganizationRelation":{  
+      "type":"object",
+      "description":"Describes the Relation between two organizations",
+      "properties":{  
+        "targetUId":{  
+          "type":"string",
+          "description":"Unique identifier of the first organization object"
+        },
+        "sourceUId":{  
+          "type":"string",
+          "description":"Unique identifier of the second organization object"
+        }
+      }
+    },
+    "OrganizationToAddressRelation":{  
+      "type":"object",
+      "description":"Describes the Relation between an organization and an address",
+      "properties":{  
+        "targetUId":{  
+          "type":"string",
+          "description":"Unique identifier of the organization object"
+        },
+        "sourceUId":{  
+          "type":"string",
+          "description":"Unique identifier of the address object"
+        }
+      }
+    },
+    "PersonToAddressRelation":{  
+      "type":"object",
+      "description":"Describes the Relation between a person and an address",
+      "properties":{  
+        "targetUId":{  
+          "type":"string",
+          "description":"Unique identifier of the person object"
+        },
+        "sourceUId":{  
+          "type":"string",
+          "description":"Unique identifier of the address object"
+        }
+      }
+    }    
+  }
+}

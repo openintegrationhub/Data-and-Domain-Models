@@ -131,7 +131,7 @@ CRUD functionalities can be performed based on the model.
 
 ### UML Diagram
 
-![MasterDataModelAddressesV2](Assets/MasterDataModelAddressV2.svg)
+![MasterDataModelAddressesV3](Assets/AddressModelV3.svg)
 
 ### JSON Schema
 

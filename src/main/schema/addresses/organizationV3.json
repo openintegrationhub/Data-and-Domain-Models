@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/organizationV2.json",
+  "$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/addresses/organizationV3.json",
   "title": "Organization",
   "type": "object",
   "allOf": [
@@ -19,28 +19,22 @@
       "description": "Logo of the organization",
       "example": "http://example.org/logo.png"
     },
-    "addresses": {
-      "type": "array",
-      "items": {
-        "$ref": "sharedDefinitionsV2.json#/definitions/Address"
-      }
-    },
     "contactData": {
       "type": "array",
       "items": {
-        "$ref": "sharedDefinitionsV2.json#/definitions/ContactData"
+        "$ref": "sharedDefinitionsV3.json#/definitions/ContactData"
       }
     },
     "categories": {
       "type": "array",
       "items": {
-          "$ref": "sharedDefinitionsV2.json#/definitions/Category"
+          "$ref": "sharedDefinitionsV3.json#/definitions/Category"
       }
     },
     "calendars": {
       "type": "array",
       "items": {
-          "$ref": "sharedDefinitionsV2.json#/definitions/Calendar"
+          "$ref": "sharedDefinitionsV3.json#/definitions/Calendar"
       }
     }
   }
