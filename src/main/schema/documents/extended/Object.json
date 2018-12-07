@@ -34,10 +34,6 @@
       "description": "Path from root to the objects parent",
       "examples": ["/Invoices/Company Corp./2018/"]
     },
-    "lockBy": {
-      "$ref": "../../oih-data-record.json#/definitions/Modification",
-      "description": "Modification Object of the user that currently has locked the object."
-    },
     "metadata": {
       "type": "object",
       "description": "Map that contains all metadata as specified by: specification of generic metadata."
