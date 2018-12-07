@@ -10,11 +10,11 @@
     }
   ],
   "properties":{
-    "sourceTaskUid": {
+    "sourceTaskUiid": {
       "type": "string",
       "description": "Unique identifier of the organization"
     },
-    "targetTaskUid": {
+    "targetTaskUiid": {
       "type": "string",
       "description": "Unique identifier of the person"
     },

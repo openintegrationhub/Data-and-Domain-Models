@@ -14,31 +14,18 @@
          "description":"CollaborationElement Data",
          "allOf":[
             {
-               "$ref":"collaborationelement.json"
+               "$ref":"collaborationElement.json"
             }
          ]
       },
-      "details":{
-         "description":"detail information of the task",
-         "allOf":[
-            {
-               "$ref":"#/definitions/details"
-            }
-         ]
-      }
-   },
-   "definitions":{
-      "details":{
-         "type":"object",
-         "properties":{
-            "subject":{
+      "subject":{
                "type":"string",
                "description":"Subject of the Task",
                "examples":[
                   "Subject of the task"
                ]
             },
-            "startdate":{
+      "startdate":{
                "type":"string",
                "format":"date-time",
                "description":"Date when the task starts",
@@ -46,7 +33,7 @@
                   "2018-01-01T10:10:10Z"
                ]
             },
-            "enddate":{
+       "enddate":{
                "type":"string",
                "format":"date-time",
                "description":"Date when the task is closed",
@@ -54,7 +41,7 @@
                   "2018-03-01T10:10:10Z"
                ]
             },
-            "reminderdate":{
+       "reminderdate":{
                "type":"string",
                "format":"date-time",
                "description":"Date when the task completion should be reminded",
@@ -62,14 +49,14 @@
                   "2018-02-01T10:10:10Z"
                ]
             },
-            "content":{
+       "content":{
                "type":"string",
                "description":"description of the Task",
                "examples":[
                   "To create a datamodel we have to analyze different systems..."
                ]
             },
-            "status":{
+       "status":{
                "type":"string",
                "description":"status of the Task",
                "enum":[
@@ -81,7 +68,7 @@
                   "completed"
                ]
             },
-            "urgency":{
+        "urgency":{
                "type":"string",
                "description":"urgency of the Task",
                "examples":[
@@ -90,7 +77,19 @@
                   "medium",
                   "low"
                ]
-            }
+         }      
+   },
+   "definitions":{
+      "Category":{
+         "type":"object",
+         "properties":{
+           "type":{
+            "type":"string",
+            "description":"category of the task or subtask",
+            "examples":[
+             "Implementation"
+            ]
+           }
          }
       }
    }

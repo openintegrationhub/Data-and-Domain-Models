@@ -1,3 +1,7 @@
+# Introduction
+
+In the following the master data model for the domain collaboration is explained in detail. As for every Open Integration Hub Master Data Model, an UML class diagram, a JSON schema as well as a description table exists.
+
 **Table of Contents**
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
@@ -7,7 +11,7 @@
 - [Considered Standards](#considered-standards)
 	- [Standard for e-mail](#standard-for-e-mail)
 	- [Standard for calendar](#standard-for-calendar)
-	- [Standard for tasks](#standard-for-tasks) 
+	- [Standard for tasks](#standard-for-tasks)
 - [Operations](#operations)
 - [Content](#content)
 	- [UML Diagram](#uml-diagram)
@@ -16,13 +20,8 @@
 
 <!-- /TOC -->
 
-
-# Introduction
-
-In the following the master data model for the domain collaboration is explained in detail. As for every Open Integration Hub Master Data Model, an UML class diagram, a JSON schema (soon) as well as a descrption table exists.
-
 # Basic Idea
-The first version of the collaboration model will include models for e-mail, calendarevents and tasks.
+The first version of the collaboration model will include models for e-mail, calendar events and tasks.
 Through community feedback these were identified as the most important models in the collaboration domain.
 
 Because all three of the models have identical properties they will be set in relation to an central element.
@@ -36,7 +35,7 @@ Finding a standard for e-mail properties proved to be difficult. Standards in th
 Due to the extensive professional use of Microsoft Outlook the chosen e-mail standard is derived mostly from Outlook.
 
 ## Standard for calendar
-An existing standard for calendarevents is "iCalender" (RFC 5545). In the following standard the properties of "iCalender" are incorporated and extended.
+An existing standard for calendar events is "iCalender" (RFC 5545). In the following standard the properties of "iCalender" are incorporated and extended.
 
 ## Standard for tasks
 There is no existing standard for tasks.
@@ -48,17 +47,17 @@ CRUD functionalities can be performed based on the model.
 
 ## UML Diagram
 
-![UML Draft OIH Master Data Model Collaboration](Assets/OIH collaboration.svg)
+![UML Draft OIH Master Data Model Collaboration](Assets/OIHcollaboration.svg)
 
 ## JSON Schema
 
 - `EMail` Schema: [email](../../src/main/schema/collaboration/email.json)
   - Technical description of an E-Mail object
-- `CalendarEvent` Schema: [calendarevent](../../src/main/schema/collaboration/calendarevent.json)
+- `CalendarEvent` Schema: [calendarEvent](../../src/main/schema/collaboration/calendarevent.json)
   - Technical description of an CalendarEvent object
 - `Task` Schema: [task](../../src/main/schema/collaboration/task.json)
   - Technical description of an Task object
-- `CollaborationElement` Schema: [collaborationelement](../../src/main/schema/collaboration/collaborationelement.json)
+- `CollaborationElement` Schema: [collaborationElement](../../src/main/schema/collaboration/collaborationElement.json)
   - Technical description of shared definitions of e-mail, task and calendar in the CollaborationElement object
 - `TaskToTaskRelation` Schema: [taskToTaskRelation](../../src/main/schema/collaboration/taskToTaskRelation.json)
   - Technical description of a task to task relation object

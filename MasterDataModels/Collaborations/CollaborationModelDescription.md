@@ -1,6 +1,6 @@
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 - [CalendarEvent](#calendarevent)
-- [Contacts](#contacts)
+- [Contacts](#contact)
 - [Calendars](#calendar)
 - [Threads](#thread)
 - [CollaborationElement](#collaborationelement)
@@ -16,14 +16,14 @@
 ## CalendarEvent
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|[collaborationElement](#collaborationelement)|Collaboration object|-|Collaboration properties values|A collaborationElement object array|-|
+|[collaborationElement](#collaborationelement)|Array (of collaborationElement objects)|-|Collaboration properties values|A collaborationElement object array|-|
 |[contacts](#contacts)|Array (of contact objects)|-|Contact information of the person|A contact object array|-|
 |[calendars](#calendars)|Array (of calendar objects)|-|Calendar connected to contacts|A contact object array|-|
 |location|String|-|Name of the location|"Room 123"|-|
 |start|Date|-|startdate of the event|01.01.2018|-|
 |end|Date|-|enddate of the event|31.12.2018|-|
 
-## Contacts
+## Contact
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |name|String|-|Name of the contact|"John Doe"|-|
@@ -40,7 +40,7 @@
 ## Email
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|[collaborationElement](#collaborationelement)|Collaboration object|-|Collaboration properties values|A collaborationElement object array|-|
+|[collaborationElements](#collaborationElement)|Array (of collaboration objects)|-|Collaboration properties values|A collaborationElement object array|-|
 |[threads](#thread)|Array (of thread objects)|-|thread information of the e-mail|A thread object array|-|
 
 ## Thread
@@ -58,12 +58,12 @@
 |bcc|String|-|E-mail of the contact in blind copy|"jonathan.doe@email.com"|-|
 |subject|String|-|Subject line of the e-mail|"RE: Your Question"|-|
 |date|Date|-|Date|01.01.2018|-|
-|day|Enum|-|Day of the week|"Monday"|"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"|
+|day|String|Enum|Day of the week|"Monday"|"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"|
 |time|Time|-|Timestamp|10:10:10|-|
 |messageID|String|-|Id of the message|some token|-|
 |language|String|-|Language of the e-mail content|"en"|-|
 |authentification|String|-|Authentification Result|"spf=pass smtp.mailfrom=email.com"|-|
-|MIME Version|Decimal|-|Version of MIME|1.3|-|
+|MIMEVersion|Decimal|-|Version of MIME|1.3|-|
 |format|String|-|Format of the email content|"HTML"|-|
 |content|String|-|Content of the e-mail|"Dear John, please find attached"|-|
 |[attachments](#attachment)|Array (of attachment objects)|-|attachment information of the element|An attachment object array|-|
@@ -85,22 +85,18 @@
 |endDate|Datetime|-|Date when the task is closed|31.01.2018 00:00|-|
 |reminderDate|Datetime|-|Date when the task completion should be reminded|20.01.2018 00:00|-|
 |content|String|-|description of the Task|"To create a datamodel we have to analyze different systems..."|-|
-|status|String|-|status of the Task|"completed"|"started", "in progress", "completed"|
+|status|String|Enum|status of the Task|"completed"|"started", "in progress", "completed"|
 |urgency|String|-|urgency of the Task|"low"|"low", "normal", "high"|
-
-## Details
-|Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
-|---|---|---|---|---|---|
-
 
 ## Category
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |category|String|-|category of the task or subtask|"Implementation"|-|
 
-
 ## TaskToTaskRelation
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |label|String|-|relation between two tasks|"is blocked by"|"subtask", "blocks", "is blocked by"|
 |[tasks](#task)|Array of task objects|-|Array (of task objects)|-|-|-|-|
+|targetUiid|String|-|ID from the targeted task|-|-|
+|sourceUiid|String|-|ID from the source task|-|-|
