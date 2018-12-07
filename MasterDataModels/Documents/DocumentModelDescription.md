@@ -23,7 +23,6 @@ Objects describe base properties that are used by documents, folders or addition
 |baseType|String|enum|Base type of the object|"document"|"document","folder"|
 |parentUid|String||Id of the parent element if hierarchically organized|"291ecb5e-cd8f-46fd-ae0d-40b5e280f23a"||
 |path|String||Path from root to the objects parent|"/Invoices/Company Corp./2018/"||
-|lockedBy|Modification||Modification Object of the user that currently has locked the object.|{ "timestamp": "2012-04-21T18:25:43-05:00", "userId": "12322" }||
 |metadata|Map<String, Object>||Map that contains all metadata as specified by: [specification of generic metadata](DocumentModelMetadataDescription.md)|||
 
 ## Document
