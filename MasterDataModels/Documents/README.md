@@ -114,7 +114,7 @@ The extended model specification does contain all properties that are required i
 
 The basic model specification describe a basic implementation for sharing documents and files without the need of handling metadata or additional information.
 
-![Master Data Model - Documents Basic Version](Assets/OIHDataModelDocumentsBasic.svg)
+![Master Data Model - Documents Basic Version](Assets/OIH_Documents_Basic_Model.png)
 
 ## JSON Schema
 
