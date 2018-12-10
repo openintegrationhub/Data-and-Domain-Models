@@ -8,7 +8,7 @@
     "$ref": "../../oih-data-record.json"
   }],
   "properties": {
-    "name": {
+    "label": {
       "type": "string",
       "description": "Name of the object",
       "examples": ["Invoice #2018061023"]
