@@ -30,8 +30,8 @@ Objects describe base properties that are used by documents, folders or addition
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
 |currentVersion|Version||Current version of this document||||
-|version|Array (of version objects)|-|Current version of this document|||
-|subRessource|Array (of subResource objects)|-|Describes sub resources|||
+|versions|Array (of version objects)|-|Current version of this document|||
+|subRessources|Array (of subResource objects)|-|Describes sub resources|||
 
 ## Item
 
