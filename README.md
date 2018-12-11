@@ -2,7 +2,7 @@
   <img src="https://github.com/openintegrationhub/Microservices/blob/master/Assets/medium-oih-einzeilig-zentriert.jpg" alt="Sublime's custom image" width="400"/>
 </p>
 
-The revolution in data synchronization — the Open Integration Hub enables simple data synchronization between any software applications and thus accelerates digitalisation
+The revolution in data synchronization — the Open Integration Hub enables simple data synchronization between any software applications and thus accelerates digitalisation.
 
 Visit the official [Open Integration Hub homepage](https://www.openintegrationhub.org/)
 
@@ -28,19 +28,15 @@ Visit the official [Open Integration Hub homepage](https://www.openintegrationhu
 
 <!-- /TOC -->
 
-
 ## Introduction
 
 The Open Integration Hub enables data synchronization across a variety of applications. This requires unified data structures — the master data models of the Open Integration Hub. Currently, there are models for the domains addresses and products. In addition, two more models for the domains collaboration and documents will follow soon. More models are to be developed in the very near future. To elaborate further models and to make the Open Integration Hub even better - we need you! So join us and help us grow as an open source community!
-<br><br>
-
 
 ## Contribution
+
 ### Getting Started
 
-
 Within the scope of the master data models of the Open Integration Hub you can contribute in two different ways. You can either request/propose a change to an already existing model or contribute a new model for an currently not existing domain.
-
 
 #### Propose a Model Change
 
@@ -57,7 +53,6 @@ The unified process for changing a model is explained in the following:
 4. If the proposal is approved the change will be incorporated into the model
 5. A new model version will be published within the next release
 
-
 **Change Request Flow:**
 
 ![Change Request](MasterDataModels/Versioning/Assets/change_request.svg)
@@ -70,9 +65,7 @@ The unified process for changing a model is explained in the following:
 
 If you want to contribute a new model for a currently not yet existing domain, please consider the following steps:
 
-
 Before you start please read the [**Introduction into Open Integration Hub master data models**](MasterDataModels/README.md) and [**How to contribute a new data model**](CONTRIBUTING.md#contributing-a-new-data-model).
-
 
 ### Contribution Guidelines
 
@@ -87,6 +80,7 @@ To see how members of the community are expected to behave, please read the [cod
 When looking for further information or support, please contact: datamodels@openintegrationhub.com .
 
 ## Content
+
 ### Folders
 
 - [Decisions](Decisions): This folder contains all outstanding/made decisions by the workgroup categorized by open and closed decisions
@@ -94,61 +88,29 @@ When looking for further information or support, please contact: datamodels@open
 - [Protocols](Protocols): Contains meeting protocols of the workgroup meetings
 - [src](src): All JSON schemes can be found here. This includes JSON schemes for all existing master data models, the overarching OIHDataRecord and a generic example as a starting point for writing JSON schemes for the relating data model
 
-
 ### Documents
 
 - [CONTRIBUTING](CONTRIBUTING.md): Gathers any rule considering the contribution for the Open Integration Hub project
 - [Onboarding](Onboarding.md): Describes how to proceed when developing a master data model and a connector. It lists the most important documents from the connectors repository and the data and domain models repository, to simplify the onboarding process.
 - [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md): Contains an explanation of the expected behavior of the community members, following  the code of conduct defined by the Contributor Covenant
-<br><br>
-
+  
 ## Workgroup
+
 ### Information
+
 - Each workgroup has atleast one status call every two weeks
 - Every committer must attend the status call
 - The governance model defines the workgroup members' roles into managers, committers or contributors
 
-
 ### Member
-#### Address
-| Member Name |GitHub Alias|Company| Role |
-| --- | --- | --- | --- |
-| Hansjörg Schmidt  |[hschmidthh](https://github.com/hschmidthh)|[Wice](https://wice.de/)| **Manager**  |
-| Philipp Hoegner|[philecs](https://github.com/philecs)|[Cloud Ecosystem](http://www.cloudecosystem.org/)| Committer  |
-| Patrick Levie|[plevie](https://github.com/plevie)|[Interact.io](https://www.interact.io/)|Contributor|
-| Roman Okon | [ROKON1987](https://github.com/ROKON1987) | [1&1 Internet SE](https://www.1und1.de/)|Contributor|
 
-#### Common Data Model Aspects
 | Member Name |GitHub Alias|Company| Role |
 | --- | --- | --- | --- |
 | Philipp Hoegner|[philecs](https://github.com/philecs)|[Cloud Ecosystem](http://www.cloudecosystem.org/)| **Manager**  |
+| Hansjörg Schmidt  |[hschmidthh](https://github.com/hschmidthh)|[Wice](https://wice.de/)| Committer  |
 | Elke Altendorf |[ealtendorf](https://github.com/ealtendorf)|[StoneOne](http://stoneone.de)| Committer  |
 | Andreas Giloj|[ag737](https://github.com/ag737)|[Fraunhofer IESE](https://www.iese.fraunhofer.de/)| Committer  |
 | Franz  Degenhardt|[FranzDegenhardt](https://github.com/FranzDegenhardt)|[X-Integrate](https://x-integrate.com/x-integrate-startseite/)| Committer  |
-
-#### Collaboration Model
-| Member Name |GitHub Alias|Company| Role |
-| --- | --- | --- | --- |
-| Peter Heimig |[heimig](https://github.com/Heimig)|[Agindo](https://agindo.de/)| **Manager**  |
-| Dennis Steiniger|[dennisCES](https://github.com/dennisCES)|[Cloud Ecosystem](http://www.cloudecosystem.org/)| Committer |
-| Patrick Levie|[plevie](https://github.com/plevie)|[Interact.io](https://www.interact.io/)|Committer|
-
-#### Document Model
-| Member Name |GitHub Alias|Company| Role |
-| --- | --- | --- | --- |
-| Nils Mosbach|[nils-mosbach](https://github.com/nils-mosbach)|[ELO Digital Office](https://www.elo.com/de-de.html)| **Manager**  |
-| Philipp Hoegner|[philecs](https://github.com/philecs)|[Cloud Ecosystem](http://www.cloudecosystem.org/)| Committer  |
-| Matthias Thiele|[MatthiasThiele](https://github.com/MatthiasThiele)|[ELO Digital Office](https://www.elo.com/de-de.html)|Contributor|
-| Benoit Clernet-Gurnaud|[bclerget](https://github.com/bclerget)|[ELO Digital Office](https://www.elo.com/de-de.html)|Contributor|
-
-#### User, Tenants & Rights
-| Member Name |GitHub Alias|Company| Role |
-| --- | --- | --- | --- |
-|Hans Eggert|[heggert](https://github.com/orgs/openintegrationhub/people/heggert)|[Basaas](https://www.basaas.com/app-store)|**Manager**|
-| Nils Mosbach|[nils-mosbach](https://github.com/nils-mosbach)|[ELO Digital Office](https://www.elo.com/de-de.html)| Committer  |
-| Philipp Hoegner|[philecs](https://github.com/philecs)|[Cloud Ecosystem](http://www.cloudecosystem.org/)| Committer  |
-| Hansjörg Schmidt  |[hschmidthh](https://github.com/hschmidthh)|[Wice](https://wice.de/)|Committer|
-| Peter Heimig |[heimig](https://github.com/Heimig)|[Agindo](https://agindo.de/)|Committer|
 
 ## Wording
 
