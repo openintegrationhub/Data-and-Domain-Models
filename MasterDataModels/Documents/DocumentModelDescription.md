@@ -18,19 +18,24 @@ Objects describe base properties that are used by documents, folders or addition
 
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|name|String||Name of the object|"Invoice #2018061023"||
+|label|String||Name of the object|"Invoice #2018061023"||
 |description|String||Additional information describing the object|"Invoice was sent on March 28th"||
 |baseType|String|enum|Base type of the object|"document"|"document","folder"|
 |parentUid|String||Id of the parent element if hierarchically organized|"291ecb5e-cd8f-46fd-ae0d-40b5e280f23a"||
 |path|String||Path from root to the objects parent|"/Invoices/Company Corp./2018/"||
-|lockedBy|Modification||Modification Object of the user that currently has locked the object.|{ "timestamp": "2012-04-21T18:25:43-05:00", "userId": "12322" }||
 |metadata|Map<String, Object>||Map that contains all metadata as specified by: [specification of generic metadata](DocumentModelMetadataDescription.md)|||
 
 ## Document
 
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|currentVersion|Version||Current version of this document|||
+|currentVersion|Version||Current version of this document||||
+|versions|Array (of version objects)|-|Current version of this document|||
+|subRessources|Array (of subResource objects)|-|Describes sub resources|||
+
+## Item
+
+No additional properties available.
 
 ## Folder
 
@@ -50,14 +55,12 @@ No additional properties available.
 |url|String||Download url for the document version.|"http://myservice.com/api/document/get/9bd1f8dd-5040-4b19-bbc9-c5cbb9c8d4b8"||
 |uid|String||Id of the document version|"9bd1f8dd-5040-4b19-bbc9-c5cbb9c8d4b8"||
 |type|String|enum|Type of the document version.|"image"|"image", "mail", "word", "audio", "video"|
-|extenstion|String||Type of the documents extension.|"pdf"|"jpg", "png"|
-
-Document types are currently beeing specified.
+|extension|String||Type of the documents extension.|"pdf"|"jpg", "png"|
 
 ## Document Property
 
-Document properties can describe additional information depending on the documents type.
-e.g. Systems that allow processing images can add the image size (width/height) in pixels.
+Document properties can describe additional information depending on the documents type,
+e.g. systems that allow processing images can add the image size (width/height) in pixels.
 
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
@@ -94,11 +97,7 @@ DMS/ECM/EIM systems usually provide additional functionality like extracting ful
 
 |Attribute|Type|Properties|Description|Example|Possible Enumeration Options|
 |---|---|---|---|---|---|
-|name|String||Name of the relation|"Relates to"||
+|label|String||Name of the relation|"Relates to"||
 |type|String|enum|Type of the relation|"link"|"link", "reference"|
 |targetUid|String||target object|"9bd1f8dd-5040-4b19-bbc9-c5cbb9c8d4b8"||
 |sourceUid|String||source object|"9bd1f8dd-5040-4b19-bbc9-c5cbb9c8d4b8"||
-
-## Modification
-
-As defined by OIHDataRecord.

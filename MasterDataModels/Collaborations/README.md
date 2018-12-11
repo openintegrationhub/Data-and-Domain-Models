@@ -11,7 +11,7 @@ In the following the master data model for the domain collaboration is explained
 - [Considered Standards](#considered-standards)
 	- [Standard for e-mail](#standard-for-e-mail)
 	- [Standard for calendar](#standard-for-calendar)
-	- [Standard for tasks](#standard-for-tasks) 
+	- [Standard for tasks](#standard-for-tasks)
 - [Operations](#operations)
 - [Content](#content)
 	- [UML Diagram](#uml-diagram)

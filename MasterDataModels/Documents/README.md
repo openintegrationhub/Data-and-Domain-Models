@@ -16,14 +16,14 @@
 	- [UML Diagram](#uml-diagram)
 	- [JSON Schema](#json-schema)
 	- [Description Table](#description-table)
-- [Additional Content](#additional-content)
+
 
 <!-- /TOC -->
 
 
 # Introduction
 
-In the following the master data model for the domain `Documents` is explained in detail. As for every Open Integration Hub Master Data Model, an UML class diagram, a JSON schema as well as a descrption table exists.
+In the following the master data model for the domain `Documents` is explained in detail. As for every Open Integration Hub Master Data Model, an UML class diagram, a JSON schema as well as a description table exists.
 
 # Basic Ideas
 
@@ -114,11 +114,20 @@ The extended model specification does contain all properties that are required i
 
 The basic model specification describe a basic implementation for sharing documents and files without the need of handling metadata or additional information.
 
-![Master Data Model - Documents Basic Version](Assets/OIHDataModelDocumentsBasic.svg)
+![Master Data Model - Documents Basic Version](Assets/OIH_Documents_Basic_Model.png)
 
 ## JSON Schema
 
-JSON Schema definitions will follow as soon as the model has been reviewed.
+- `Documents` Schema: [document](../../src/main/schema/documents/extended/Document.json)
+  - Technical description of a documents object
+- `Documents` Schema: [folder](../../src/main/schema/documents/extended/Folder.json)
+  - Technical description of a folder object
+- `Documents` Schema: [object](../../src/main/schema/documents/extended/Object.json)
+  - Technical description of an 'object' object
+- `Documents` Schema: [relation](../../src/main/schema/documents/extended/Relation.json)
+  - Technical description of a relation object
+- `Documents` Schema: [sharedDefinitions](../../src/main/schema/documents/extended/sharedDefinitions.json)
+  - Technical description of a documents object
 
 ## Description Table
 
@@ -128,4 +137,3 @@ In addition to the uml class diagram, this folder contains a [description table]
 - Short description
 - Sample values
 - Enumeration options (if attribute is an enumeration)
-
