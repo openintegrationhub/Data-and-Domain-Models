@@ -106,8 +106,8 @@ When looking for further information or support, please contact: datamodels@open
 
 | Member Name |GitHub Alias|Company| Role |
 | --- | --- | --- | --- |
+| Philipp Hoegner|[philecs](https://github.com/philecs)|[Cloud Ecosystem](http://www.cloudecosystem.org/)| **Manager**  |
 | Hansjörg Schmidt  |[hschmidthh](https://github.com/hschmidthh)|[Wice](https://wice.de/)| Committer  |
-| Philipp Hoegner|[philecs](https://github.com/philecs)|[Cloud Ecosystem](http://www.cloudecosystem.org/)| Committer  |
 | Elke Altendorf |[ealtendorf](https://github.com/ealtendorf)|[StoneOne](http://stoneone.de)| Committer  |
 | Andreas Giloj|[ag737](https://github.com/ag737)|[Fraunhofer IESE](https://www.iese.fraunhofer.de/)| Committer  |
 | Franz  Degenhardt|[FranzDegenhardt](https://github.com/FranzDegenhardt)|[X-Integrate](https://x-integrate.com/x-integrate-startseite/)| Committer  |
