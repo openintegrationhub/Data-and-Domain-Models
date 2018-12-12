@@ -15,8 +15,8 @@ The user stories are sorted by domains.
 |u-ad1|As a Company, I want to Import all Contacts from my DMS so that I have all my business partners in my CRM |
 |u-ad2|As a Company, I want Export all my CRM Contacts to my DMS so that I can easily assign Sender/Receiver to Documents|
 |u-ad3|As a OIH User I want to import/export Contacts so that the references to my documents stay intact|
-|u-ad4|As a Company want export my contacts to my DMS so that I can easily start business cases with them|
-|u-ad5|As a Company, I want export my contacts to my DMS so that I can easily send  them documents|
+|u-ad4|As a Company, I want to export my contacts to my DMS so that I can easily start business cases with them|
+|u-ad5|As a Company, I want to export my contacts to my DMS so that I can easily send  them documents|
 |u-ad6|As a user, I want to synchronize my contacts through the Open Integration Hub with other applications such as a net PBX so that my contact data is up-to-date in all of my applications|
 |u-ad7|As a user, I want other people in my company to work together on shared contacts so that we all have one contact base|
 |u-ad8|As a system administrator, I want to backup all contacts in just one place so that I have just one contact repository|
@@ -33,7 +33,7 @@ The user stories are sorted by domains.
 |u-ad19|As a controller, I want to read out the duration of all appointments with a specific customer over a given period (e.g. last month) to create a project KPI within my ECM|
 |u-ad20|As an arbitrary user, I want to use the e-mail addresses stored within the CRM system to get a list of possible recipients when creating an e-mail within my ECM|
 |u-ad21|As a CRM user, I want to forward created contacts in my CRM so that they can be used in the other system|
-|u-ad22|As a CRM user, I want to see contacts that were created in a different system in mine so that I can use them in ways the other system doe not allow|
+|u-ad22|As a CRM user, I want to see contacts in my system that were created in a different system so that I can use them in ways the other system does not allow|
 |u-ad23|As a CRM user, I want see contacts updates forwarded to the other system so that they are always up-to-date|
 |u-ad24|As a CRM user, I want to see contacts updates forwarded from the other system into mine so that they are always up-to-date|
 |u-ad25|As a CRM user, I want forward contact deletions from my system into the other so that I don’t process invalid leads|
