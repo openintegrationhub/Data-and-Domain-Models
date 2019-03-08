@@ -1,0 +1,179 @@
+{
+    "definitions": {
+      "status": {
+        "type": "object",
+        "description": "tbd",
+        "properties":{
+          "qualifier":{
+            "type": "string",
+            "description": "tbd",
+            "example": ""
+          },
+          "value":{
+            "type": "string",
+            "description": "tbd",
+            "example": ""
+          },
+          "qualifiedOn":{
+            "type": "string",
+            "format": "date-time",
+            "description": "tbd",
+            "example": ""
+          }
+        }
+      },
+      "reference": {
+        "type": "object",
+        "description": "tbd",
+        "properties":{
+          "externalId":{
+            "type": "string",
+            "description": "tbd",
+            "example": ""
+          },
+          "externalApplicationName":{
+            "type": "string",
+            "description": "tbd",
+            "example": ""
+          },
+          "description":{
+            "type": "string",
+            "description": "tbd",
+            "example": ""
+          }
+        }
+      }
+    },
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/orders/order.json",
+    "title": "Order",
+    "type": "object",
+    "allOf": [
+      {
+        "$ref": "../oih-data-record.json"
+      }
+    ],
+    "properties": {
+      "invoiceAmount": {
+        "type": "number",
+        "description": "tbd",
+        "example": "tbd"
+      },
+      "orderNumber": {
+        "type": "string",
+        "description": "tbd",
+        "example": "tbd"
+      },
+      "hiddenInfos": {
+        "type": "string",
+        "description": "tbd",
+        "example": "tbd"
+      },
+      "information": {
+        "type": "string",
+        "description": "tbd",
+        "example": "tbd"
+      },
+      "additionalInformation": {
+        "type": "string",
+        "description": "tbd",
+        "example": "tbd"
+      },
+      "billUrl": {
+        "type": "string",
+        "description": "tbd",
+        "example": "tbd"
+      },
+      "paymentMethodName": {
+        "type": "string",
+        "description": "tbd",
+        "example": "tbd"
+      },
+      "invoiceNumber": {
+        "type": "number",
+        "description": "tbd",
+        "example": "tbd"
+      },
+      "paidAmount": {
+        "type": "number",
+        "description": "tbd",
+        "example": "tbd"
+      },
+      "currency": {
+        "type": "string",
+        "description": "tbd",
+        "example": "tbd"
+      },
+      "startDate": {
+        "type": "string",
+        "format": "date-time",
+        "description": "tbd",
+        "example": "tbd"
+      },
+      "endDate": {
+        "type": "string",
+        "format": "date-time",
+        "description": "tbd",
+        "example": "tbd"
+      },
+      "status": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/status"
+        }
+      },
+      "references": {
+        "type": "string",
+        "items": {
+          "$ref": "#/definitions/reference"
+        }
+      },
+      "shipping": {
+        "type": "object",
+        "description": "tbd",
+        "properties": {
+          "fee": {
+            "type": "string",
+            "format": "date-time",
+            "description": "tbd",
+            "example": "tbd"
+          },
+          "feeCurrency": {
+            "type": "string",
+            "format": "date-time",
+            "description": "tbd",
+            "example": "tbd"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "description": "tbd",
+            "example": "tbd"
+          },
+          "deliverer": {
+            "type": "string",
+            "format": "date-time",
+            "description": "tbd",
+            "example": "tbd"
+          },
+          "code": {
+            "type": "string",
+            "format": "date-time",
+            "description": "tbd",
+            "example": "tbd"
+          },
+          "method": {
+            "type": "string",
+            "format": "date-time",
+            "description": "tbd",
+            "example": "tbd"
+          },
+          "address":
+          {
+            "$ref": "../addresses/sharedDefinitionsV2.json#/definitions/Address"
+          }
+        }
+      }
+    }
+  }
+  

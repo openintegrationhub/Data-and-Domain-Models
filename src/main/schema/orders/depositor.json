@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/src/main/schema/orders/depositor.json",
+    "title": "Depositor",
+    "type": "object",
+    "allOf": [
+      {
+        "$ref": "../oih-data-record.json",
+        "$ref": "../addresses/personV2.json"
+      }
+    ],
+    "properties": {
+      "bankName": {
+        "type": "number",
+        "description": "tbd",
+        "example": "tbd"
+      },
+      "bankSortCode": {
+        "type": "string",
+        "description": "tbd",
+        "example": "tbd"
+      },
+      "bankAccountNumer": {
+        "type": "string",
+        "description": "tbd",
+        "example": "tbd"
+      }
+    }
+  }
+  
