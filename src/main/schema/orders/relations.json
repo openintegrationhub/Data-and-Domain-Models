@@ -9,54 +9,21 @@
           "$ref": "../oih-data-record.json"
         }
       ],
-    "anyOf": [
-      {
-        "$ref": "#/definitions/OrderToDepositorRelation"
-      },
-      {
-        "$ref": "#/definitions/OrderToLineItemRelation"
-      }
-    ],
-    "definitions":{
-      "OrderToDepositorRelation":{
-        "type": "object",
-        "description": "Describes the relationship between a person and an organization",
-        "properties": {
-          "depositorUid": {
-            "type": "string",
-            "description": "Unique identifier of the depositor"
-          },
-          "orderUid": {
-            "type": "string",
-            "description": "Unique identifier of the order",
-            "examples": [
-              "Software architect"
-            ]
-          }
-        }
-      },
-      "OrderToLineItemRelation": {
-        "type": "object",
-        "description": "Describes the relationship between two persons",
-        "properties": {
-          "lineItemUid": {
-            "type": "string",
-            "description": "Unique identifier of the lineItem"
-          },
-          "orderUid": {
-            "type": "string",
-            "description": "Unique identifier of the order",
-            "examples": [
-              "Software architect"
-            ]
-          }
-        }
-      }
-    },
     "properties": {
       "label": {
         "type": "string",
         "description": "Describes the type of relationship"
+      },
+      "depositorUid": {
+        "type": "string",
+        "description": "Unique identifier of the depositor"
+      },
+      "orderUid": {
+        "type": "string",
+        "description": "Unique identifier of the order",
+        "examples": [
+          "Software architect"
+        ]
       }
     }
   }
