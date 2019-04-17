@@ -19,63 +19,69 @@
          ]
       },
       "startdate":{
-               "type":"string",
-               "format":"date-time",
-               "description":"Date when the task starts",
-               "examples":[
-                  "2018-01-01T10:10:10Z"
-               ]
-            },
-       "enddate":{
-               "type":"string",
-               "format":"date-time",
-               "description":"Date when the task is closed",
-               "examples":[
-                  "2018-03-01T10:10:10Z"
-               ]
-            },
-       "reminderdate":{
-               "type":"string",
-               "format":"date-time",
-               "description":"Date when the task completion should be reminded",
-               "examples":[
-                  "2018-02-01T10:10:10Z"
-               ]
-            },
-       "status":{
-               "type":"string",
-               "description":"status of the Task",
-               "enum":[
-                  "started",
-                  "in progress",
-                  "completed"
-               ],
-               "examples":[
-                  "completed"
-               ]
-            },
-        "urgency":{
-               "type":"string",
-               "description":"urgency of the Task",
-               "examples":[
-                  "very high",
-                  "high",
-                  "medium",
-                  "low"
-               ]
-         }      
+         "type":"string",
+         "format":"date-time",
+         "description":"Date when the task starts",
+         "examples":[
+            "2018-01-01T10:10:10Z"
+         ]
+      },
+      "enddate":{
+         "type":"string",
+         "format":"date-time",
+         "description":"Date when the task is closed",
+         "examples":[
+            "2018-03-01T10:10:10Z"
+         ]
+      },
+      "reminderdate":{
+         "type":"string",
+         "format":"date-time",
+         "description":"Date when the task completion should be reminded",
+         "examples":[
+            "2018-02-01T10:10:10Z"
+         ]
+      },
+      "status":{
+         "type":"string",
+         "description":"status of the Task",
+         "enum":[
+            "started",
+            "in progress",
+            "completed"
+         ],
+         "examples":[
+            "completed"
+         ]
+      },
+      "urgency":{
+         "type":"string",
+         "description":"urgency of the Task",
+         "examples":[
+            "very high",
+            "high",
+            "medium",
+            "low"
+         ]
+      },
+      "categories":{
+         "type":"array",
+         "items":{
+            "$ref":"#/definitions/category"
+         }
+      }
    },
    "definitions":{
-      "Category":{
+      "category":{
          "type":"object",
          "properties":{
-           "type":{
-            "type":"string",
-            "description":"category of the task or subtask",
-            "examples":[
-             "Implementation"
-            ]
-           }
+            "type":{
+               "type":"string",
+               "description":"category of the task or subtask",
+               "examples":[
+                  "Implementation"
+               ]
+            }
          }
       }
    }
