@@ -18,13 +18,6 @@
             }
          ]
       },
-      "subject":{
-               "type":"string",
-               "description":"Subject of the Task",
-               "examples":[
-                  "Subject of the task"
-               ]
-            },
       "startdate":{
                "type":"string",
                "format":"date-time",
