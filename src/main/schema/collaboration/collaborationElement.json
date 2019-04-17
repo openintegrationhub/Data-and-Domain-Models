@@ -117,9 +117,7 @@
       "items":{
         "$ref":"#/definitions/attachment"
       }
-    }
-  },
-  "definitions":{
+    },
     "Attachment":{
       "type":"object",
       "properties":{
