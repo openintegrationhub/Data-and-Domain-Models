@@ -42,13 +42,6 @@
                   "2018-02-01T10:10:10Z"
                ]
             },
-       "content":{
-               "type":"string",
-               "description":"description of the Task",
-               "examples":[
-                  "To create a datamodel we have to analyze different systems..."
-               ]
-            },
        "status":{
                "type":"string",
                "description":"status of the Task",
