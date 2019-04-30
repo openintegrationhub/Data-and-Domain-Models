@@ -3,9 +3,8 @@
 **Table of Content**
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [New Files](#new-files)
-- [Reporting Issues](#reporting-issues)
-	- [Definition of Done](#definition-of-done)
+- [Getting started](#getting-started)
+- [Definition of Done](#definition-of-done)
 - [Contributing a new data model](#contributing-a-new-data-model)
 	- [Naming Conventions](#naming-conventions)
 		- [Types and Properties](#types-and-properties)
@@ -15,22 +14,12 @@
 
 <!-- /TOC -->
 
-# New Files
-1. Commit new file(s) e.g. data models
-2. Select _"Create a new branch for this commit and start a pull request."_
-3. Name the branch with a descriptive name
-4. Click on _"propose new file"_
-5. Assign **at least the workgroup manager responsible for your domain** to the pull request
-6. Assign a descriptive label to the pull request
-7. Click on _"create pull request"_
+# Getting started
+If you plan to make your first contribution, please start with the [**Contributor Guide**](https://github.com/openintegrationhub/BusinessCommittee/tree/master/Contributing/Guide) for general information about making contributions to the Open Integration Hub project.
 
-# Reporting Issues
-For any issue (suggestion, bug, fix, etc.) there are fundamentally two ways an individual can contribute:
+The following represent additional rules specifically for contributions in this workgroup and repository.
 
- - By helping to triage the issue: This can be done either by providing supporting details (a test case that demonstrates a bug), or providing suggestions on how to address the issue.
- - By helping to resolve the issue: Typically this is done either in the form of demonstrating that the issue reported is not a problem after all, or more often, by opening a Pull Request that changes some bit of something in Open Integration Hub in a concrete and reviewable manner.
-
-## Definition of Done
+# Definition of Done
 An issue is marked as done, if all of the following criteria are fulfilled:
 
 - All acceptance criteria have been fulfilled
