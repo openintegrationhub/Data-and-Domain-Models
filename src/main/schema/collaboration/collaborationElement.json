@@ -67,7 +67,7 @@
           }
         },
         "cc":{
-          "type":"string",
+          "type":"array",
           "description":"E-mail of the contact(s) in copy",
           "examples":[
             "janet.doe@email.com"
@@ -77,7 +77,7 @@
           }
         },
         "bcc":{
-          "type":"string",
+          "type":"array",
           "description":"E-mail of the contact(s) in blind copy",
           "examples":[
             "jonathan.doe@email.com"
