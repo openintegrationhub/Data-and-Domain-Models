@@ -6,10 +6,14 @@ The revolution in data synchronization — the Open Integration Hub enables simp
 
 Visit the official [Open Integration Hub homepage](https://www.openintegrationhub.org/)
 
-## Table of Content
+## Introduction
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](LICENSE)
+
+The Open Integration Hub enables data synchronization across a variety of applications. This requires unified data structures — the master data models of the Open Integration Hub. Currently, there are models for the domains addresses and products. In addition, two more models for the domains collaboration and documents will follow soon. More models are to be developed in the very near future. To elaborate further models and to make the Open Integration Hub even better - we need you! So join us and help us grow as an open source community!
+
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [Table of Content](#table-of-content)
 - [Introduction](#introduction)
 - [Contribution](#contribution)
 	- [Getting Started](#getting-started)
@@ -27,10 +31,6 @@ Visit the official [Open Integration Hub homepage](https://www.openintegrationhu
 - [Wording](#wording)
 
 <!-- /TOC -->
-
-## Introduction
-
-The Open Integration Hub enables data synchronization across a variety of applications. This requires unified data structures — the master data models of the Open Integration Hub. Currently, there are models for the domains addresses and products. In addition, two more models for the domains collaboration and documents will follow soon. More models are to be developed in the very near future. To elaborate further models and to make the Open Integration Hub even better - we need you! So join us and help us grow as an open source community!
 
 ## Contribution
 
