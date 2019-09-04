@@ -2,11 +2,6 @@
   "$schema": "http://json-schema.org/schema#",
   "$id": "http://openintegrationhub.org/examples/schemas/order.json",
   "title": "Order",
-  "allOf": [
-    {
-      "$ref": "http://openintegrationhub.org/schemas/oih-data-record.json"
-    }
-  ],
   "properties": {
     "orderNumber": {
       "type": "string"
