@@ -2,11 +2,6 @@
 	"$schema":"http://json-schema.org/draft-06/schema#",
 	"$id":"https://github.com/openintegrationhub/Data-and-Domain-Models/blob/DSCES-UpdatedCollaboration/src/main/schema/products/product.json",
 	"title":"Product",
-	"allOf":[  
-	  {  
-		"$ref":"../oih-data-record.json"
-	  }
-	],
 	"properties":{  
 	  "articleNo":{  
 		"type":"string",
