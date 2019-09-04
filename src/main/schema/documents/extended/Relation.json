@@ -4,9 +4,6 @@
   "title": "Object",
   "description": "Relation between two objects in the system.",
   "type": "object",
-  "allOf": [{
-    "$ref": "../../oih-data-record.json"
-  }],
   "properties": {
     "label": {
       "type": "string",

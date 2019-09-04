@@ -4,11 +4,6 @@
     "title": "Relations",
     "description": "Describes the relationship between two business objects",
     "type": "object",
-    "allOf": [
-        {
-          "$ref": "../oih-data-record.json"
-        }
-      ],
     "anyOf": [
       {
         "$ref": "#/definitions/OrganizationToPersonRelation"
