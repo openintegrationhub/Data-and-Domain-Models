@@ -75,9 +75,6 @@ Before you contribute please read our [contribution guidelines](CONTRIBUTING.md)
 
 To see how members of the community are expected to behave, please read the [code of conduct](CODE_OF_CONDUCT.md). We apply the code of conduct defined by the Contributor Covenant, which is used across many open source projects, such as [NodeJS](https://github.com/nodejs/node), [Atom](https://github.com/atom/atom) and [Kubernetes](https://github.com/kubernetes/kubernetes).
 
-## Contact
-
-When looking for further information or support, please contact: datamodels@openintegrationhub.com .
 
 ## Content
 
@@ -94,13 +91,7 @@ When looking for further information or support, please contact: datamodels@open
 - [Onboarding](Onboarding.md): Describes how to proceed when developing a master data model and a connector. It lists the most important documents from the connectors repository and the data and domain models repository, to simplify the onboarding process.
 - [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md): Contains an explanation of the expected behavior of the community members, following  the code of conduct defined by the Contributor Covenant
   
-## Workgroup
-
-### Information
-
-- Each workgroup has atleast one status call every two weeks
-- Every committer must attend the status call
-- The governance model defines the workgroup members' roles into managers, committers or contributors
+## Worgroup
 
 ### Member
 
