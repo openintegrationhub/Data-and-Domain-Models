@@ -4,6 +4,11 @@
   "title":"CalendarEvent",
   "description":"Describes the CalendarEvent",
   "type":"object",
+  "allOf":[
+    {
+      "$ref":"../oih-data-record.json"
+    }
+  ],
   "properties":{
     "collaborationElement":{
       "description":"CollaborationElement Data",
@@ -17,7 +22,7 @@
       "type":"array",
       "description":"Contacts Data",
       "items":{
-        "$ref":"#/definitions/contact"
+        "$ref":"#/definitions/Contact"
       }
     },
     "location":{

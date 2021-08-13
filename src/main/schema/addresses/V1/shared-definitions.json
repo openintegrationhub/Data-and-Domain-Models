@@ -54,7 +54,7 @@
       "type": "object",
       "properties": {
         "eMail": {
-          "type": "email"
+          "type": "string"
         }
       }
     },

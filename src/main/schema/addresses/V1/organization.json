@@ -5,7 +5,7 @@
 	"description": "Master Data Model for Addresses to use in the Open Integration Hub",
 	"allOf": [
 		{
-			"$ref": "http://openintegrationhub.org/schemas/oih-data-record.json"
+			"$ref": "../../oih-data-record.json"
 		}
 	],
 	"properties": {

@@ -4,6 +4,11 @@
    "title":"EMail",
    "description":"Describes the EMail",
    "type":"object",
+   "allOf":[
+      {
+         "$ref":"../oih-data-record.json"
+      }
+   ],
    "properties":{
       "collaborationElement":{
          "description":"CollaborationElement Data",
@@ -17,7 +22,7 @@
          "type":"array",
          "description":"thread information of the e-mail",
          "items":{
-            "$ref":"#/definitions/thread"
+            "$ref":"#/definitions/Thread"
          }
       }
    },

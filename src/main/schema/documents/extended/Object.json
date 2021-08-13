@@ -4,6 +4,9 @@
   "title": "Object",
   "description": "Objects describe base properties that are used by documents, folders or additional implementations.",
   "type": "object",
+  "allOf": [{
+    "$ref": "../../oih-data-record.json"
+  }],
   "properties": {
     "label": {
       "type": "string",

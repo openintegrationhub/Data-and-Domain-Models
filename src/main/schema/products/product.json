@@ -2,6 +2,11 @@
 	"$schema":"http://json-schema.org/draft-06/schema#",
 	"$id":"https://github.com/openintegrationhub/Data-and-Domain-Models/blob/DSCES-UpdatedCollaboration/src/main/schema/products/product.json",
 	"title":"Product",
+	"allOf":[  
+	  {  
+		"$ref":"../oih-data-record.json"
+	  }
+	],
 	"properties":{  
 	  "articleNo":{  
 		"type":"string",
@@ -238,14 +243,14 @@
 		"type":"array",
 		"description":"Related pictures and documents to a product from out of the DMS",
 		"items":{  
-		  "$ref":"#/definitions/PictureAndNumber"
+		  "$ref":"#/definitions/PictureAndDocument"
 		}
 	  },
 	  "dynamicAttributes":{  
 		"type":"array",
 		"description":"User defined product attributes",
 		"items":{  
-		  "$ref":"#/definitions/DynamicAttribute"
+		  "$ref":"#/definitions/DynamicAttributes"
 		}
 	  },
 	  "sets":{  
