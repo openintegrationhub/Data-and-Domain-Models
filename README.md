@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://github.com/openintegrationhub/Data-and-Domain-Models/blob/master/Assets/medium-oih-einzeilig-zentriert.jpg" alt="Sublime's custom image" width="400"/>
+  <img src="https://github.com/openintegrationhub/openintegrationhub/blob/master/Assets/medium-oih-einzeilig-zentriert.jpg" alt="Open Integration Hub (OIH)" width="400"/>
 </p>
 
-The revolution in data synchronization — the Open Integration Hub enables simple data synchronization between any software applications and thus accelerates digitalisation.
+Open source framework for easy data synchronization between business applications.
 
 Visit the official [Open Integration Hub homepage](https://www.openintegrationhub.org/)
 
@@ -10,27 +10,11 @@ Visit the official [Open Integration Hub homepage](https://www.openintegrationhu
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](LICENSE)
 
-The Open Integration Hub enables data synchronization across a variety of applications. This requires unified data structures — the master data models of the Open Integration Hub. Currently, there are models for the domains addresses and products. In addition, two more models for the domains collaboration and documents will follow soon. More models are to be developed in the very near future. To elaborate further models and to make the Open Integration Hub even better - we need you! So join us and help us grow as an open source community!
+The Open Integration Hub enables data synchronization across a variety of applications. This requires unified data structures — the master data models of the Open Integration Hub. These master data models can make your life easier, but are optional. You can always just do a 1:1 mapping or use your own data models. The models are developed and maintained by the community, so please do not hesitate to give feedback, suggest changes or propose new models.
 
-<!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+## Join the Community
 
-- [Introduction](#introduction)
-- [Contribution](#contribution)
-	- [Getting Started](#getting-started)
-		- [Propose a Model Change](#propose-a-model-change)
-		- [Contribute a new Model](#contribute-a-new-model)
-	- [Contribution Guidelines](#contribution-guidelines)
-	- [Code of Conduct](#code-of-conduct)
-- [Contact](#contact)
-- [Content](#content)
-	- [Folders](#folders)
-	- [Documents](#documents)
-- [Workgroup](#workgroup)
-	- [Information](#information)
-	- [Member](#member)
-- [Wording](#wording)
-
-<!-- /TOC -->
+Do you have questions, ideas, feedback or just want to chat about integration? Please join our growing developer community on [Slack](https://join.slack.com/t/openintegrationhub/shared_invite/zt-mba97vn9-xus3ZbVxnMr2oQwGegIk5Q)!
 
 ## Contribution
 
@@ -42,12 +26,11 @@ Within the scope of the master data models of the Open Integration Hub you can c
 
 An existing model can be change in different ways. The possibility exists to add or remove something from the model or to change an existing part, such as an attribute.
 
-If you want to propose a model change please use the [request for model change survey](https://docs.google.com/forms/d/e/1FAIpQLScTkJNCEPTIBlc7Cumn7Y-6pfIPV90E5tVox2djnJbLUSyi4g/viewform) (Currently only available for the domain _addresses_).
-
+If you want to propose a model change please open an issue here or against the [monopreo](https://github.com/openintegrationhub/openintegrationhub/issues).
 
 The unified process for changing a model is explained in the following:
 
-1. Fill out the request for model change survey
+1. Fill out the request for model change
 2. Submit the proposal
 3. The relating workgroup will check the proposal according to fix rules
 4. If the proposal is approved the change will be incorporated into the model
@@ -75,7 +58,6 @@ Before you contribute please read our [contribution guidelines](CONTRIBUTING.md)
 
 To see how members of the community are expected to behave, please read the [code of conduct](CODE_OF_CONDUCT.md). We apply the code of conduct defined by the Contributor Covenant, which is used across many open source projects, such as [NodeJS](https://github.com/nodejs/node), [Atom](https://github.com/atom/atom) and [Kubernetes](https://github.com/kubernetes/kubernetes).
 
-
 ## Content
 
 ### Folders
@@ -88,21 +70,4 @@ To see how members of the community are expected to behave, please read the [cod
 ### Documents
 
 - [CONTRIBUTING](CONTRIBUTING.md): Gathers any rule considering the contribution for the Open Integration Hub project
-- [Onboarding](Onboarding.md): Describes how to proceed when developing a master data model and a connector. It lists the most important documents from the connectors repository and the data and domain models repository, to simplify the onboarding process.
-- [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md): Contains an explanation of the expected behavior of the community members, following  the code of conduct defined by the Contributor Covenant
-  
-## Worgroup
-
-### Member
-
-| Member Name |GitHub Alias|Company| Role |
-| --- | --- | --- | --- |
-| Robin Brinkmann|[@RobinBrinkmann](https://github.com/RobinBrinkmann)|[Cloud Ecosystem](http://www.cloudecosystem.org/)| **Manager**  |
-| Hansjörg Schmidt  |[hschmidthh](https://github.com/hschmidthh)|[Wice](https://wice.de/)| Committer  |
-| Elke Altendorf |[ealtendorf](https://github.com/ealtendorf)|[StoneOne](http://stoneone.de)| Committer  |
-| Andreas Giloj|[ag737](https://github.com/ag737)|[Fraunhofer IESE](https://www.iese.fraunhofer.de/)| Committer  |
-| Franz  Degenhardt|[FranzDegenhardt](https://github.com/FranzDegenhardt)|[X-Integrate](https://x-integrate.com/x-integrate-startseite/)| Committer  |
-
-## Wording
-
-Within the project different terms and abbreviations are frequently used. All terms and abbrevations are explained within the [glossary](https://github.com/openintegrationhub/Connectors/wiki/Glossary) and our [list of abbrevations](https://github.com/openintegrationhub/Connectors/wiki/Abbreviations).
+- [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md): Contains an explanation of the expected behavior of the community members, following the code of conduct defined by the Contributor Covenant
